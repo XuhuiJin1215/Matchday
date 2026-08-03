@@ -24,60 +24,61 @@ meta,decision,
 meta,referee,Yuichi Nishimura
 meta,referee_country,JPN
 
-# --- TEAMS ----- team,side,name,country,coach,coach_country,formation,shirt,trim,shorts,pattern,squad_value
-# pattern: solid | stripes | hoops | halves | sash | checks
-team,home,Hong Kong,HKG,Kim Pan-gon,KOR,4-4-2,#D2232A,#FFFFFF,#FFFFFF,solid,
-team,away,Argentina,ARG,Gerardo Martino,ARG,4-3-3,#75AADB,#FFFFFF,#0B2B5C,stripes,
+# --- TEAMS ------- team,side,name,country,coach,coach_country,formation,squad_value
+team,home,Hong Kong,HKG,Kim Pan-gon,KOR,4-4-2,
+team,away,Argentina,ARG,Gerardo Martino,ARG,4-3-3,
 
-# --- PLAYERS ------------- player,side,role,number,name,country,pos,on,off,value
+# --- PLAYERS --- player,side,role,number,name,kit_name,country,pos,on,off,value
+# kit_name is the name printed on the shirt / shown on the pitch. Leave it blank
+# and the last word of the full name is used instead.
 # role: start | sub (came on) | bench (unused). List starters in shape order:
 # goalkeeper first, then each line from right to left as you look at the pitch.
-player,home,start,1,Yapp Hung Fai,HKG,GK,,,
-player,home,start,2,Lee Chi Ho,HKG,RB,,,
-player,home,start,15,Chan Wai Ho,HKG,CB,,,
-player,home,start,3,Wisdom Fofo Agbo,HKG,CB,,,
-player,home,start,13,Cheung Kin Fung,HKG,LB,,,
-player,home,start,6,Huang Yang,HKG,RM,,,
-player,home,start,23,Ju Yingzhi,HKG,CM,,,
-player,home,start,5,Andy Nägelein,HKG,CM,,,
-player,home,start,8,Xu Deshuai,HKG,LM,,,
-player,home,start,9,Lee Wai Lim,HKG,ST,,,
-player,home,start,18,Godfred Karikari,HKG,ST,,,
-player,home,sub,4,Leung Kwun Chung,HKG,,,,
-player,home,sub,11,Christian Annan,HKG,,,,
-player,home,sub,10,Lam Ka Wai,HKG,,,,
-player,home,sub,21,Kwok Kin Pong,HKG,,,,
-player,home,sub,14,Jack Sealy,HKG,,,,
-player,home,sub,12,Lo Kwan Yee,HKG,,,,
-player,home,bench,16,Leung Chun Pong,HKG,,,,
-player,home,bench,17,Wong Wai,HKG,,,,
-player,home,bench,19,Wang Zhenpeng,HKG,,,,
-player,home,bench,20,Chan Man Fai,HKG,,,,
-player,home,bench,22,Lam Hok Hei,HKG,,,,
-player,home,bench,24,Chan Siu Ki,HKG,,,,
-player,away,start,21,Nahuel Guzmán,ARG,GK,,,
-player,away,start,2,Santiago Vergini,ARG,RB,,,
-player,away,start,13,Facundo Roncaglia,ARG,CB,,,
-player,away,start,6,Nicolás Otamendi,ARG,CB,,,
-player,away,start,3,Leonel Vangioni,ARG,LB,,,
-player,away,start,19,Éver Banega,ARG,CM,,,
-player,away,start,5,Fernando Gago,ARG,DM,,,
-player,away,start,8,Enzo Pérez,ARG,CM,,,
-player,away,start,22,Javier Pastore,ARG,RW,,,
-player,away,start,9,Gonzalo Higuaín,ARG,CF,,,
-player,away,start,20,Nicolás Gaitán,ARG,LW,,,
-player,away,sub,12,Agustín Marchesín,ARG,,,,
-player,away,sub,4,Pablo Zabaleta,ARG,,,,
-player,away,sub,10,Lionel Messi,ARG,,,,
-player,away,sub,7,Ángel Di María,ARG,,,,
-player,away,sub,14,Javier Mascherano,ARG,,,,
-player,away,sub,23,Roberto Pereyra,ARG,,,,
-player,away,bench,1,Sergio Romero,ARG,,,,
-player,away,bench,11,Sergio Agüero,ARG,,,,
-player,away,bench,15,Martín Demichelis,ARG,,,,
-player,away,bench,16,Marcos Rojo,ARG,,,,
-player,away,bench,17,Federico Fernández,ARG,,,,
-player,away,bench,18,Erik Lamela,ARG,,,,
+player,home,start,1,Yapp Hung Fai,Yapp,HKG,GK,,,
+player,home,start,2,Lee Chi Ho,Lee,HKG,RB,,,
+player,home,start,15,Chan Wai Ho,Chan,HKG,CB,,,
+player,home,start,3,Wisdom Fofo Agbo,Agbo,HKG,CB,,,
+player,home,start,13,Cheung Kin Fung,Cheung,HKG,LB,,,
+player,home,start,6,Huang Yang,Huang,HKG,RM,,,
+player,home,start,23,Ju Yingzhi,Ju,HKG,CM,,,
+player,home,start,5,Andy Nägelein,Nägelein,HKG,CM,,,
+player,home,start,8,Xu Deshuai,Xu,HKG,LM,,,
+player,home,start,9,Lee Wai Lim,Lee,HKG,ST,,,
+player,home,start,18,Godfred Karikari,Karikari,HKG,ST,,,
+player,home,sub,4,Leung Kwun Chung,Leung,HKG,,,,
+player,home,sub,11,Christian Annan,Annan,HKG,,,,
+player,home,sub,10,Lam Ka Wai,Lam,HKG,,,,
+player,home,sub,21,Kwok Kin Pong,Kwok,HKG,,,,
+player,home,sub,14,Jack Sealy,Sealy,HKG,,,,
+player,home,sub,12,Lo Kwan Yee,Lo,HKG,,,,
+player,home,bench,16,Leung Chun Pong,Leung,HKG,,,,
+player,home,bench,17,Wong Wai,Wong,HKG,,,,
+player,home,bench,19,Wang Zhenpeng,Wang,HKG,,,,
+player,home,bench,20,Chan Man Fai,Chan,HKG,,,,
+player,home,bench,22,Lam Hok Hei,Lam,HKG,,,,
+player,home,bench,24,Chan Siu Ki,Chan,HKG,,,,
+player,away,start,21,Nahuel Guzmán,,ARG,GK,,,
+player,away,start,2,Santiago Vergini,,ARG,RB,,,
+player,away,start,13,Facundo Roncaglia,,ARG,CB,,,
+player,away,start,6,Nicolás Otamendi,,ARG,CB,,,
+player,away,start,3,Leonel Vangioni,,ARG,LB,,,
+player,away,start,19,Éver Banega,,ARG,CM,,,
+player,away,start,5,Fernando Gago,,ARG,DM,,,
+player,away,start,8,Enzo Pérez,,ARG,CM,,,
+player,away,start,22,Javier Pastore,,ARG,RW,,,
+player,away,start,9,Gonzalo Higuaín,,ARG,CF,,,
+player,away,start,20,Nicolás Gaitán,,ARG,LW,,,
+player,away,sub,12,Agustín Marchesín,,ARG,,,,
+player,away,sub,4,Pablo Zabaleta,,ARG,,,,
+player,away,sub,10,Lionel Messi,,ARG,,,,
+player,away,sub,7,Ángel Di María,,ARG,,,,
+player,away,sub,14,Javier Mascherano,,ARG,,,,
+player,away,sub,23,Roberto Pereyra,,ARG,,,,
+player,away,bench,1,Sergio Romero,,ARG,,,,
+player,away,bench,11,Sergio Agüero,,ARG,,,,
+player,away,bench,15,Martín Demichelis,,ARG,,,,
+player,away,bench,16,Marcos Rojo,,ARG,,,,
+player,away,bench,17,Federico Fernández,,ARG,,,,
+player,away,bench,18,Erik Lamela,,ARG,,,,
 
 # --- GOALS ------------------------- goal,minute,side,scorer,type,assist
 # type: goal | penalty | own goal. side = the team the goal counted for.
@@ -103,7 +104,6 @@ weather,temp_c,26
 weather,feels_c,29
 weather,humidity,78
 weather,wind_kph,11
-weather,precip_mm,0
 
 # --- MATCHDAY (yours) ------------------------ personal,field,value
 # PLACEHOLDER — replace. Leave seat blank for unreserved/general admission.
@@ -114,9 +114,6 @@ personal,section,Lower Tier West
 personal,row,,
 personal,seat,
 personal,seating,unreserved
-personal,company,
-personal,rating,8
-personal,notes,First international I ever went to. Messi came off the bench to a roar and scored twice.
 
 # --- PHOTOS ---------------------------------- photo,file,caption
 photo,M001_1.jpg,Teams lining up before kick-off
