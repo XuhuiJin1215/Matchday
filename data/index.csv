@@ -1,0 +1,6 @@
+# Manifest: one line per match. The id must match a CSV file name in this folder.
+# Attended matches use M###. Matches you have tickets for but have not been to yet
+# use U### (upcoming) — rename the file and this line to the next free M### afterwards.
+id
+M001
+M031
