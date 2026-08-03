@@ -16,49 +16,51 @@ meta,decision,
 meta,referee,Felix Brych
 meta,referee_country,GER
 
-# --- TEAMS ------- team,side,name,country,coach,coach_country,formation,squad_value
-team,home,Juventus,ITA,Massimiliano Allegri,ITA,4-2-3-1,585
-team,away,Real Madrid,ESP,Zinedine Zidane,FRA,4-3-1-2,760
+# --- TEAMS --- team,side,name,country,coach,coach_country,formation,squad_value,pitch_fill,pitch_number,gk_fill,stat_color
+team,home,Juventus,ITA,Massimiliano Allegri,ITA,4-2-3-1,585,#FFFFFF,#141C24,#F2B705,#141C24
+team,away,Real Madrid,ESP,Zinedine Zidane,FRA,4-3-1-2,760,#F4F1E6,#141C24,#F2B705,#5B6FE0
 
-# --- PLAYERS --- player,side,role,number,name,kit_name,country,pos,on,off,value
-# kit_name is the name printed on the shirt / shown on the pitch. Leave it blank
-# and the last word of the full name is used instead.
-player,home,start,1,Gianluigi Buffon,,ITA,GK,,,4
-player,home,start,15,Andrea Barzagli,,ITA,RB,,,4
-player,home,start,19,Leonardo Bonucci,,ITA,CB,,,40
-player,home,start,3,Giorgio Chiellini,,ITA,CB,,,20
-player,home,start,12,Alex Sandro,,BRA,LB,,,45
-player,home,start,6,Sami Khedira,,GER,DM,,,25
-player,home,start,5,Miralem Pjanić,,BIH,DM,,,55
-player,home,start,23,Dani Alves,,BRA,RM,,,12
-player,home,start,21,Paulo Dybala,,ARG,AM,,,90
-player,home,start,17,Mario Mandžukić,,CRO,LM,,,28
-player,home,start,9,Gonzalo Higuaín,,ARG,ST,,,75
-player,home,sub,7,Juan Cuadrado,,COL,,,,30
-player,home,sub,8,Claudio Marchisio,,ITA,,,,18
-player,home,sub,18,Mario Lemina,,GAB,,,,14
-player,home,bench,4,Medhi Benatia,,MAR,,,,20
-player,home,bench,22,Kwadwo Asamoah,,GHA,,,,9
-player,home,bench,25,Neto,,BRA,,,,7
-player,home,bench,26,Stephan Lichtsteiner,,SUI,,,,6
-player,away,start,1,Keylor Navas,,CRC,GK,,,14
-player,away,start,2,Dani Carvajal,,ESP,RB,,,35
-player,away,start,4,Sergio Ramos,,ESP,CB,,,35
-player,away,start,5,Raphaël Varane,,FRA,CB,,,55
-player,away,start,12,Marcelo,,BRA,LB,,,40
-player,away,start,14,Casemiro,,BRA,DM,,,50
-player,away,start,8,Toni Kroos,,GER,CM,,,70
-player,away,start,19,Luka Modrić,,CRO,CM,,,50
-player,away,start,22,Isco,,ESP,AM,,,70
-player,away,start,7,Cristiano Ronaldo,,POR,ST,,,90
-player,away,start,9,Karim Benzema,,FRA,ST,,,50
-player,away,sub,11,Gareth Bale,,WAL,,,,80
-player,away,sub,20,Marco Asensio,,ESP,,,,40
-player,away,sub,21,Álvaro Morata,,ESP,,,,60
-player,away,bench,6,Nacho,,ESP,,,,20
-player,away,bench,13,Kiko Casilla,,ESP,,,,5
-player,away,bench,16,Mateo Kovačić,,CRO,,,,30
-player,away,bench,23,Danilo,,BRA,,,,20
+# --- PLAYERS -- player,side,role,number,name,kit_name,country,pos,captain,on,off,value
+# kit_name: name shown on the pitch diagram; blank uses the last word of the full name.
+# captain: write "yes" for the captain, otherwise leave blank.
+# on/off: the minute this player entered/left the pitch. Blank "on" = started the
+# match; blank "off" = still on at the final whistle.
+player,home,start,1,Gianluigi Buffon,,ITA,GK,yes,,,4
+player,home,start,15,Andrea Barzagli,,ITA,RB,,,,4
+player,home,start,19,Leonardo Bonucci,,ITA,CB,,,,40
+player,home,start,3,Giorgio Chiellini,,ITA,CB,,,,20
+player,home,start,12,Alex Sandro,,BRA,LB,,,,45
+player,home,start,6,Sami Khedira,,GER,DM,,,,25
+player,home,start,5,Miralem Pjanić,,BIH,DM,,,,55
+player,home,start,23,Dani Alves,,BRA,RM,,,,12
+player,home,start,21,Paulo Dybala,,ARG,AM,,,,90
+player,home,start,17,Mario Mandžukić,,CRO,LM,,,,28
+player,home,start,9,Gonzalo Higuaín,,ARG,ST,,,,75
+player,home,sub,7,Juan Cuadrado,,COL,,,,,30
+player,home,sub,8,Claudio Marchisio,,ITA,,,,,18
+player,home,sub,18,Mario Lemina,,GAB,,,,,14
+player,home,bench,4,Medhi Benatia,,MAR,,,,,20
+player,home,bench,22,Kwadwo Asamoah,,GHA,,,,,9
+player,home,bench,25,Neto,,BRA,,,,,7
+player,home,bench,26,Stephan Lichtsteiner,,SUI,,,,,6
+player,away,start,1,Keylor Navas,,CRC,GK,,,,14
+player,away,start,2,Dani Carvajal,,ESP,RB,,,,35
+player,away,start,4,Sergio Ramos,,ESP,CB,yes,,,35
+player,away,start,5,Raphaël Varane,,FRA,CB,,,,55
+player,away,start,12,Marcelo,,BRA,LB,,,,40
+player,away,start,14,Casemiro,,BRA,DM,,,,50
+player,away,start,8,Toni Kroos,,GER,CM,,,,70
+player,away,start,19,Luka Modrić,,CRO,CM,,,,50
+player,away,start,22,Isco,,ESP,AM,,,,70
+player,away,start,7,Cristiano Ronaldo,,POR,ST,,,,90
+player,away,start,9,Karim Benzema,,FRA,ST,,,,50
+player,away,sub,11,Gareth Bale,,WAL,,,,,80
+player,away,sub,20,Marco Asensio,,ESP,,,,,40
+player,away,sub,21,Álvaro Morata,,ESP,,,,,60
+player,away,bench,6,Nacho,,ESP,,,,,20
+player,away,bench,13,Kiko Casilla,,ESP,,,,,5
+player,away,bench,16,Mateo Kovačić,,CRO,,,,,30
+player,away,bench,23,Danilo,,BRA,,,,,20
 
 # --- GOALS ------------------------- goal,minute,side,scorer,type,assist
 goal,20,away,Cristiano Ronaldo,goal,Dani Carvajal

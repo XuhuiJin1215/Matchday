@@ -143,7 +143,6 @@ nav.tabs a.on{background:var(--ink);color:var(--paper)}
 .fx-team{display:flex;align-items:center;gap:10px;min-width:0}
 .fx-team.away{flex-direction:row-reverse;text-align:right}
 .fx-team .nm{font-weight:600;font-size:17px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.fx-team.lost .nm{color:var(--muted);font-weight:400}
 .fx-score{
   font-family:var(--font-display);font-weight:800;font-size:24px;letter-spacing:.02em;
   font-variant-numeric:tabular-nums;padding:2px 12px;background:var(--ink);color:#fff;border-radius:2px;
@@ -210,17 +209,13 @@ nav.tabs a.on{background:var(--ink);color:var(--paper)}
   font-size:clamp(44px,9vw,76px);line-height:.9;letter-spacing:-.03em;font-variant-numeric:tabular-nums;
 }
 .hero-score .extra{margin-top:8px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
-.hero-foot{
-  display:flex;flex-wrap:wrap;gap:0;border-top:1px solid var(--line);
-  position:relative;z-index:1;
-}
-.hero-foot div{
-  flex:1 1 150px;padding:13px 24px;border-right:1px solid var(--line);min-width:0;
-}
-.hero-foot div.wide{flex:2.4 1 300px}
-.hero-foot div:last-child{border-right:none}
+.hero-foot{position:relative;z-index:1;border-top:1px solid var(--line)}
+.hero-venue{padding:13px 24px;border-bottom:1px solid var(--line);min-width:0}
+.hero-meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1px;background:var(--line)}
+.hero-meta>div{background:var(--card);padding:13px 24px;min-width:0}
 .hero-foot .k{font-family:var(--font-display);font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:3px}
-.hero-foot .v{font-size:14px;display:flex;align-items:center;gap:7px}
+.hero-foot .v{font-size:14px;display:flex;align-items:center;gap:7px;min-width:0}
+.hero-foot .v span{min-width:0;overflow-wrap:break-word}
 
 /* sections */
 .sec{margin:38px 0}
@@ -238,12 +233,12 @@ nav.tabs a.on{background:var(--ink);color:var(--paper)}
   justify-self:center;font-family:var(--font-display);font-weight:700;font-size:12px;
   background:var(--ink);color:#fff;padding:3px 9px;border-radius:999px;font-variant-numeric:tabular-nums;
 }
-.tl-side{display:flex;align-items:center;gap:10px;min-width:0}
-.tl-side.home{justify-content:flex-end}
-.tl-side.away{justify-content:flex-start}
-.tl-name{font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tl-side{display:flex;flex-direction:column;gap:2px;min-width:0;justify-content:center}
+.tl-side.home{align-items:flex-end;text-align:right}
+.tl-side.away{align-items:flex-start;text-align:left}
+.tl-name{font-weight:600;white-space:normal;word-break:break-word}
 .tl-name .kind{font-size:11px;color:var(--muted);font-weight:400}
-.tl-assist{font-size:12px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tl-assist{font-size:12px;color:var(--muted);white-space:normal;word-break:break-word}
 
 /* pitch */
 .pitches{display:grid;grid-template-columns:1fr 1fr;gap:16px}
@@ -264,7 +259,7 @@ nav.tabs a.on{background:var(--ink);color:var(--paper)}
   font-family:var(--font-display);font-size:10px;font-weight:700;letter-spacing:.14em;
   text-transform:uppercase;color:var(--muted);
 }
-.pl{display:flex;align-items:center;gap:10px;padding:7px 16px;font-size:14px}
+.pl{display:flex;align-items:center;gap:8px;padding:7px 16px;font-size:14px;flex-wrap:wrap;row-gap:5px}
 .pl+.pl{border-top:1px solid var(--line-soft)}
 .pl .no{
   width:24px;flex:none;text-align:center;font-family:var(--font-display);font-weight:700;
@@ -275,6 +270,11 @@ nav.tabs a.on{background:var(--ink);color:var(--paper)}
   background:rgba(20,28,36,.05);padding:2px 5px;border-radius:2px}
 .pl .val{font-family:var(--font-display);font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}
 .pl.dim{color:var(--muted)}
+.badge{position:relative;display:inline-flex;align-items:center;justify-content:center;flex:none;border-radius:3px;overflow:hidden}
+.badge .fb{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:800;font-size:8px}
+.badge img{position:relative;z-index:1;width:100%;height:100%;object-fit:contain}
+.card-tag{display:inline-flex;align-items:center;gap:3px}
+.card-min{font-size:11px;color:var(--muted)}
 
 /* stat bars */
 .statrow{padding:13px 18px}
@@ -284,8 +284,6 @@ nav.tabs a.on{background:var(--ink);color:var(--paper)}
 .statrow .lbl b{font-family:var(--font-display);font-variant-numeric:tabular-nums;font-size:15px}
 .bar{display:flex;height:7px;gap:3px;border-radius:999px;overflow:hidden;background:var(--line-soft)}
 .bar i{display:block;height:100%;border-radius:999px}
-.bar .h{background:var(--ink)}
-.bar .a{background:var(--accent)}
 
 /* key-value blocks */
 .kv{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));margin:0 -1px -1px 0}
@@ -293,11 +291,22 @@ nav.tabs a.on{background:var(--ink);color:var(--paper)}
 .kv .k{font-family:var(--font-display);font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
 .kv .v{font-size:15px;display:flex;align-items:center;gap:7px}
 .kv .v .big{font-family:var(--font-display);font-weight:700;font-size:19px;font-variant-numeric:tabular-nums}
-.note{padding:16px 18px;font-size:15px;line-height:1.6;border-top:1px solid var(--line-soft)}
-.note em{color:var(--muted);font-style:normal}
-.rating{display:flex;gap:3px;align-items:center}
-.rating i{width:9px;height:9px;border-radius:50%;background:var(--line);display:block}
-.rating i.on{background:var(--amber)}
+/* matchday experience — a ticket rendered as a component */
+.ticket-card{
+  display:grid;grid-template-columns:1fr auto 1fr;align-items:center;
+  background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);
+  min-height:132px;
+}
+.ticket-card.one{grid-template-columns:1fr}
+.ticket-half{padding:20px 24px;min-width:0}
+.ticket-half .k{font-family:var(--font-display);font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.ticket-price{font-family:var(--font-display);font-weight:800;font-size:29px;color:var(--ink);letter-spacing:-.01em}
+.ticket-usd{font-size:13px;color:var(--muted);margin-top:4px}
+.ticket-seat{font-size:17px;font-weight:600;line-height:1.4}
+.ticket-div{position:relative;align-self:stretch;width:1px;background:repeating-linear-gradient(180deg,var(--line) 0 6px,transparent 6px 12px);margin:14px 0}
+.ticket-div::before,.ticket-div::after{content:"";position:absolute;left:-6.5px;width:13px;height:13px;border-radius:50%;background:var(--paper)}
+.ticket-div::before{top:-6.5px}
+.ticket-div::after{bottom:-6.5px}
 
 /* photos */
 .photos{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
@@ -312,7 +321,7 @@ nav.tabs a.on{background:var(--ink);color:var(--paper)}
   line-height:.84;letter-spacing:-.05em;font-variant-numeric:tabular-nums;
 }
 .big-claim .n span{color:var(--accent)}
-.big-claim p{margin:14px 0 0;font-size:19px;color:var(--ink-2);max-width:70ch;text-wrap:pretty}
+.big-claim p{margin:14px 0 0;font-size:19px;color:var(--ink-2);max-width:58ch}
 .tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(158px,1fr));gap:12px;margin:28px 0 0}
 .tile{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px 17px;box-shadow:var(--shadow)}
 .tile .k{font-family:var(--font-display);font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
@@ -351,7 +360,13 @@ footer{border-top:1px solid var(--line);margin-top:50px;padding:22px 0 50px;colo
 
 @media (max-width:860px){
   .grid-2,.pitches{grid-template-columns:1fr}
+  .ticket-card{grid-template-columns:1fr}
+  .ticket-div{width:auto;height:1px;align-self:auto;margin:0 24px;background:repeating-linear-gradient(90deg,var(--line) 0 6px,transparent 6px 12px)}
+  .ticket-div::before,.ticket-div::after{left:auto;top:-6.5px}
+  .ticket-div::before{left:-6.5px}
+  .ticket-div::after{right:-6.5px;left:auto}
   .hero-main{gap:10px;padding:26px 14px 22px}
+  .hero-venue,.hero-meta>div{padding:11px 14px}
   .hero-team .crest{width:48px;height:48px}
   .hero-team .nm{font-size:15px}
   .stub{grid-template-columns:38px 1fr}
@@ -418,21 +433,25 @@ const numOr=v=>blank(v)?null:(isNaN(parseFloat(v))?null:parseFloat(v));
    2. Match model
    ===================================================================== */
 function parseMatch(text,id){
-  const m={id,meta:{},teams:{},players:[],goals:[],stats:[],weather:{},personal:{},photos:[]};
+  const m={id,meta:{},teams:{},players:[],goals:[],cards:[],stats:[],weather:{},personal:{},photos:[]};
   for(const r of parseCSV(text)){
     const t=(r[0]||"").toLowerCase();
     if(t==="meta") m.meta[r[1]]=val(r[2]);
     else if(t==="team") m.teams[r[1]]={
       side:r[1],name:val(r[2])||"?",country:val(r[3]),coach:val(r[4]),coachCountry:val(r[5]),
-      formation:val(r[6]),squadValue:numOr(r[7])
+      formation:val(r[6]),squadValue:numOr(r[7]),
+      pitchFill:val(r[8]),pitchNumber:val(r[9]),gkFill:val(r[10]),statColor:val(r[11])
     };
     else if(t==="player") m.players.push({
       side:r[1],role:(r[2]||"bench").toLowerCase(),number:val(r[3]),name:val(r[4])||"?",
-      kitName:val(r[5]),country:val(r[6]),pos:val(r[7]),on:val(r[8]),off:val(r[9]),value:numOr(r[10])
+      kitName:val(r[5]),country:val(r[6]),pos:val(r[7]),captain:val(r[8]),on:val(r[9]),off:val(r[10]),value:numOr(r[11])
     });
     else if(t==="goal") m.goals.push({
       minute:val(r[1]),side:r[2],scorer:val(r[3])||"?",
       type:(val(r[4])||"goal").toLowerCase(),assist:val(r[5])
+    });
+    else if(t==="card") m.cards.push({
+      minute:val(r[1]),side:r[2],player:val(r[3])||"?",type:(val(r[4])||"yellow").toLowerCase()
     });
     else if(t==="stat"){
       const h=val(r[2]),a=val(r[3]);
@@ -502,6 +521,15 @@ function weatherIcon(c){
   if(/clear|sun/.test(t)) return w(sun);
   return w(cloud);
 }
+function badge(file,label,bg,fg,size){
+  return `<span class="badge" style="width:${size}px;height:${size}px"><span class="fb" style="background:${bg};color:${fg}">${esc(label)}</span><img src="icons/${file}.png" alt="${esc(label)}" loading="lazy" onerror="this.style.display=\'none\'"></span>`;
+}
+function cardInfo(type){
+  const t=(type||"").toLowerCase();
+  if(/second|2nd/.test(t)) return {file:"second-yellow",label:"2Y",bg:"linear-gradient(135deg,var(--amber) 50%,var(--accent) 50%)",fg:"#fff",bucket:"red"};
+  if(/red/.test(t)) return {file:"red",label:"R",bg:"var(--accent)",fg:"#fff",bucket:"red"};
+  return {file:"yellow",label:"Y",bg:"var(--amber)",fg:"#3A2C00",bucket:"yellow"};
+}
 
 /* =====================================================================
    5. Pitch + formation
@@ -511,7 +539,7 @@ function kitName(p){
   const parts=(p.name||"").trim().split(/\s+/);
   return parts[parts.length-1]||"";
 }
-function trimName(n){return n.length>13?n.slice(0,12)+"…":n}
+function trimName(n){return n.length>11?n.slice(0,10)+"…":n}
 
 /* Horizontal spread per line: a back four sits wider than a front two. */
 const SPREAD={1:0,2:24,3:26,4:23,5:20,6:16.5};
@@ -545,10 +573,11 @@ function layout(formation,starters){
 }
 function pitchSVG(team,starters,matchId){
   const spots=layout(team.formation,starters);
+  const fill=team.pitchFill||"#F8FAF9", gkFill=team.gkFill||"#F2B705", numC=team.pitchNumber||"#141C24";
   const marks=spots.map(s=>`<g transform="translate(${s.x.toFixed(2)} ${s.y.toFixed(2)})">
-      <circle r="5.2" fill="${s.gk?"#F2B705":"#F8FAF9"}" stroke="rgba(0,0,0,.4)" stroke-width=".6"/>
-      <text y="1.9" text-anchor="middle" font-family="Archivo, sans-serif" font-weight="800" font-size="5.4" fill="#141C24">${esc(s.p.number||"")}</text>
-      <text y="11.6" text-anchor="middle" font-family="Archivo, sans-serif" font-weight="600" font-size="4" fill="#FFFFFF" stroke="rgba(0,0,0,.62)" stroke-width="1.15" paint-order="stroke">${esc(trimName(kitName(s.p)))}</text>
+      <circle r="3.6" fill="${esc(s.gk?gkFill:fill)}" stroke="rgba(0,0,0,.35)" stroke-width=".45"/>
+      <text text-anchor="middle" dominant-baseline="central" font-family="Archivo, sans-serif" font-weight="800" font-size="3.6" fill="${esc(numC)}">${esc(s.p.number||"")}</text>
+      <text y="7.1" text-anchor="middle" font-family="Archivo, sans-serif" font-weight="600" font-size="2.9" fill="#F2F5F3" stroke="rgba(0,0,0,.6)" stroke-width="0.85" paint-order="stroke">${esc(trimName(kitName(s.p)))}</text>
     </g>`).join("");
   return `<div class="pitch"><svg viewBox="0 0 100 100" role="img" aria-label="Formation">
     <defs>
@@ -578,7 +607,6 @@ const F={q:"",comp:"",country:"",year:""};
 function stubHTML(m){
   const played=m.status==="played"&&m.hg!=null;
   const h=m.teams.home||{name:"?"}, a=m.teams.away||{name:"?"};
-  const homeLost=played&&m.hg<m.ag, awayLost=played&&m.ag<m.hg;
   const score=played
     ? `<span class="fx-score num">${m.hg}<span style="opacity:.45;padding:0 3px">–</span>${m.ag}</span>`
     : `<span class="fx-score pending">${esc(m.status==="upcoming"?"Upcoming":m.status)}</span>`;
@@ -592,14 +620,13 @@ function stubHTML(m){
         <span class="date num">${fmtDate(m.date)}</span>
       </div>
       <div class="fixture">
-        <span class="fx-team ${homeLost?"lost":""}">${crest(m.id,"home",h.name)}<span class="nm">${esc(h.name)}</span></span>
+        <span class="fx-team">${crest(m.id,"home",h.name)}<span class="nm">${esc(h.name)}</span></span>
         ${score}
-        <span class="fx-team away ${awayLost?"lost":""}">${crest(m.id,"away",a.name)}<span class="nm">${esc(a.name)}</span></span>
+        <span class="fx-team away">${crest(m.id,"away",a.name)}<span class="nm">${esc(a.name)}</span></span>
       </div>
       <div class="stub-foot">
         ${flag(m.meta.country)}<span>${bits.join("")}</span>
         ${m.attendance?`<span class="dot">·</span><span>Attendance <span class="num">${nf(m.attendance)}</span></span>`:""}
-        ${m.meta.neutral==="yes"?`<span class="tag grey">Neutral</span>`:""}
         ${m.status!=="played"?`<span class="tag">${esc(m.status)}</span>`:""}
       </div>
     </div>
@@ -649,21 +676,33 @@ function renderList(){
 function lineupBlock(m,side){
   const t=m.teams[side]||{};
   const of=r=>m.players.filter(p=>p.side===side&&p.role===r);
-  const row=(p,dim)=>`<div class="pl ${dim?"dim":""}">
+  const row=(p,dim)=>{
+    const badges=[];
+    if(p.captain) badges.push(badge("captain","C","var(--ink)","#fff",15));
+    if((p.pos||"").toUpperCase()==="GK") badges.push(badge("gk","GK","var(--turf)","#fff",15));
+    const cardTags=m.cards.filter(c=>c.side===side&&c.player===p.name).map(c=>{
+      const ci=cardInfo(c.type);
+      return `<span class="card-tag">${badge(ci.file,ci.label,ci.bg,ci.fg,14)}<span class="card-min num">${esc(c.minute)}'</span></span>`;
+    }).join("");
+    return `<div class="pl ${dim?"dim":""}">
       <span class="no">${esc(p.number||"")}</span>
       ${p.country?flag(p.country):""}
       <span class="nm">${esc(p.name)}</span>
+      ${badges.join("")}
       ${p.pos?`<span class="pos">${esc(p.pos)}</span>`:""}
-      ${p.on?`<span class="pos">${esc(p.on)}'</span>`:""}
+      ${p.on?`<span class="pos">On ${esc(p.on)}'</span>`:""}
+      ${p.off?`<span class="pos">Off ${esc(p.off)}'</span>`:""}
+      ${cardTags}
       ${p.value!=null?`<span class="val">€${p.value}m</span>`:""}
     </div>`;
+  };
   const block=(title,arr,dim)=>arr.length?`<h4>${title}</h4>${arr.map(p=>row(p,dim)).join("")}`:"";
   return `<div class="panel lineup">
     <div class="lineup-top">${crest(m.id,side,t.name)}<span>${esc(t.name||"")}</span>${t.country?flag(t.country):""}</div>
     ${t.coach?`<div class="coach"><span class="k">Head coach</span>${t.coachCountry?flag(t.coachCountry):""}<span>${esc(t.coach)}</span></div>`:""}
-    ${block("Starting eleven",of("start"),false)}
-    ${block("Came on",of("sub"),false)}
-    ${block("Unused",of("bench"),true)}
+    ${block("Starting 11",of("start"),false)}
+    ${block("Substitutions",of("sub"),false)}
+    ${block("Bench",of("bench"),true)}
   </div>`;
 }
 
@@ -678,8 +717,8 @@ function renderMatch(id){
     <div class="panel tl">${m.goals.map(g=>{
       const kind=g.type==="penalty"?"pen":(g.type==="own goal"?"o.g.":"");
       const scorer=`<span class="tl-name">${esc(g.scorer)}${kind?` <span class="kind">${kind}</span>`:""}</span>`;
-      const assist=g.assist?`<span class="tl-assist">${esc(g.assist)}</span>`:"";
-      const home=g.side==="home"?`<span class="tl-side home">${assist}${scorer}</span>`:"<span></span>";
+      const assist=g.assist?`<span class="tl-assist">assist ${esc(g.assist)}</span>`:"";
+      const home=g.side==="home"?`<span class="tl-side home">${scorer}${assist}</span>`:"<span></span>";
       const away=g.side==="away"?`<span class="tl-side away">${scorer}${assist}</span>`:"<span></span>";
       return `<div class="tl-row">${home}<span class="tl-min">${esc(g.minute)}'</span>${away}</div>`;
     }).join("")}</div></section>`:"";
@@ -703,7 +742,7 @@ function renderMatch(id){
       const hp=ok?Math.round(hv/(hv+av)*100):50;
       return `<div class="statrow">
         <div class="lbl"><b class="num">${esc(s.home??"—")}</b><span class="mid">${esc(s.name)}</span><b class="num">${esc(s.away??"—")}</b></div>
-        <div class="bar"><i class="h" style="width:${hp}%"></i><i class="a" style="width:${100-hp}%"></i></div>
+        <div class="bar"><i style="width:${hp}%;background:${esc(h.statColor||"var(--ink)")}"></i><i style="width:${100-hp}%;background:${esc(a.statColor||"var(--accent)")}"></i></div>
       </div>`;
     }).join("")}</div></section>`:"";
 
@@ -719,12 +758,20 @@ function renderMatch(id){
     ? (p.section?`${esc(p.section)} · unreserved`:"Unreserved")
     : [p.section,p.row?"Row "+esc(p.row):"",p.seat?"Seat "+esc(p.seat):""].filter(Boolean).map(esc).join(" · ");
   const price=p.ticket_price?`${esc(p.ticket_price)} ${esc(p.ticket_currency||"")}`.trim():null;
-  const hasMine=p.ticket_price||p.section||p.seat;
-  const mine=hasMine?`<div class="panel">
-    <div class="kv">
-      ${price?`<div><div class="k">Ticket</div><div class="v"><span class="big">${price}</span>${(p.ticket_price_usd&&(p.ticket_currency||"").toUpperCase()!=="USD")?`<span style="color:var(--muted);font-size:13px">≈ ${esc(p.ticket_price_usd)} USD</span>`:""}</div></div>`:""}
-      ${(p.section||p.seat)?`<div><div class="k">Where I sat</div><div class="v">${seat}</div></div>`:""}
-    </div>
+  const showUsd=p.ticket_price_usd&&(p.ticket_currency||"").toUpperCase()!=="USD";
+  const hasPrice=!!price, hasSeat=!!(p.section||p.seat);
+  const hasMine=hasPrice||hasSeat;
+  const mine=hasMine?`<div class="ticket-card ${(hasPrice&&hasSeat)?"":"one"}">
+    ${hasPrice?`<div class="ticket-half">
+      <div class="k">Ticket price</div>
+      <div class="ticket-price num">${price}</div>
+      ${showUsd?`<div class="ticket-usd num">≈ ${esc(p.ticket_price_usd)} USD</div>`:""}
+    </div>`:""}
+    ${(hasPrice&&hasSeat)?`<div class="ticket-div"></div>`:""}
+    ${hasSeat?`<div class="ticket-half">
+      <div class="k">Seat</div>
+      <div class="ticket-seat">${seat}</div>
+    </div>`:""}
   </div>`:"";
 
   const photos=m.photos.length?`<section class="sec" id="photo-sec"><div class="sec-h"><h2>Photos</h2></div>
@@ -754,10 +801,12 @@ function renderMatch(id){
         </div>
       </div>
       <div class="hero-foot">
-        <div class="wide"><div class="k">Venue</div><div class="v">${flag(m.meta.country)} <span>${esc(m.meta.venue||"—")}${m.meta.city?", "+esc(m.meta.city):""}</span></div></div>
-        <div><div class="k">Attendance</div><div class="v num">${nf(m.attendance)}</div></div>
-        <div><div class="k">Referee</div><div class="v">${m.meta.referee_country?flag(m.meta.referee_country):""} ${esc(m.meta.referee||"—")}</div></div>
-        ${w.condition?`<div><div class="k">Weather</div><div class="v">${weatherIcon(w.condition)} <span>${esc(w.condition)}${w.temp_c?`, ${esc(w.temp_c)}°C`:""}</span></div></div>`:""}
+        <div class="hero-venue"><div class="k">Venue</div><div class="v">${flag(m.meta.country)} <span>${esc(m.meta.venue||"—")}${m.meta.city?", "+esc(m.meta.city):""}</span></div></div>
+        <div class="hero-meta">
+          <div><div class="k">Attendance</div><div class="v num">${nf(m.attendance)}</div></div>
+          <div><div class="k">Referee</div><div class="v">${m.meta.referee_country?flag(m.meta.referee_country):""} <span>${esc(m.meta.referee||"—")}</span></div></div>
+          ${w.condition?`<div><div class="k">Weather</div><div class="v">${weatherIcon(w.condition)} <span>${esc(w.condition)}${w.temp_c?`, ${esc(w.temp_c)}°C`:""}</span></div></div>`:""}
+        </div>
       </div>
     </div>
     ${goals}
@@ -766,7 +815,7 @@ function renderMatch(id){
       <div class="grid-2">${lineupBlock(m,"home")}${lineupBlock(m,"away")}</div>
     </section>
     ${stats}
-    ${(weather||mine)?`<section class="sec"><div class="sec-h"><h2>My matchday</h2></div><div class="grid-2">${mine}${weather}</div></section>`:""}
+    ${(weather||mine)?`<section class="sec"><div class="sec-h"><h2>Matchday experience</h2></div><div class="grid-2">${mine}${weather}</div></section>`:""}
     ${photos}
   </div>`;
   window.scrollTo(0,0);
@@ -783,8 +832,11 @@ function renderStats(){
 
   const tally=arr=>{const c={};arr.filter(Boolean).forEach(k=>c[k]=(c[k]||0)+1);
     return Object.entries(c).sort((a,b)=>b[1]-a[1]||a[0].localeCompare(b[0]));};
+  const appearances=m=>m.players.filter(p=>p.role==="start"||p.role==="sub");
   const teamsSeen=tally(MATCHES.flatMap(m=>[(m.teams.home||{}).name,(m.teams.away||{}).name]));
-  const playersSeen=tally(MATCHES.flatMap(m=>m.players.filter(p=>p.role!=="bench").map(p=>p.name)));
+  const playersSeen=tally(MATCHES.flatMap(appearances).map(p=>p.name));
+  const natSeen=tally(MATCHES.flatMap(appearances).map(p=>p.country));
+  const coachesSeen=tally(MATCHES.flatMap(m=>[(m.teams.home||{}).coach,(m.teams.away||{}).coach]));
   const refsSeen=tally(MATCHES.map(m=>m.meta.referee));
   const venuesSeen=tally(MATCHES.map(m=>m.meta.venue));
   const compsSeen=tally(MATCHES.map(m=>m.meta.competition));
@@ -801,9 +853,14 @@ function renderStats(){
 
   const bigCrowd=played.filter(m=>m.attendance).sort((a,b)=>b.attendance-a.attendance).slice(0,5);
   const goalfest=played.slice().sort((a,b)=>(b.hg+b.ag)-(a.hg+a.ag)).slice(0,5);
-  const temps=MATCHES.map(m=>parseFloat(m.weather.temp_c)).filter(n=>!isNaN(n));
+  const cardBucket=t=>cardInfo(t).bucket;
+  const yellowCounts=MATCHES.map(m=>({m,n:m.cards.filter(c=>cardBucket(c.type)==="yellow").length})).filter(x=>x.n>0).sort((a,b)=>b.n-a.n).slice(0,5);
+  const redCounts=MATCHES.map(m=>({m,n:m.cards.filter(c=>cardBucket(c.type)==="red").length})).filter(x=>x.n>0).sort((a,b)=>b.n-a.n).slice(0,5);
+  const temps=MATCHES.map(m=>({m,v:parseFloat(m.weather.temp_c)})).filter(x=>!isNaN(x.v));
+  const tempVals=temps.map(x=>x.v);
+  const tempTop=temps.slice().sort((a,b)=>b.v-a.v).slice(0,5);
   const spendUSD=MATCHES.map(m=>parseFloat(m.personal.ticket_price_usd)).filter(n=>!isNaN(n));
-  const ratings=MATCHES.map(m=>parseFloat(m.personal.rating)).filter(n=>!isNaN(n));
+  const priciest=MATCHES.map(m=>({m,v:parseFloat(m.personal.ticket_price_usd)})).filter(x=>!isNaN(x.v)).sort((a,b)=>b.v-a.v).slice(0,5);
   const values=MATCHES.flatMap(m=>["home","away"].map(s=>{
     const t=m.teams[s]; if(!t) return null;
     const v=t.squadValue!=null?t.squadValue:
@@ -819,6 +876,7 @@ function renderStats(){
       <span class="n">${v}${unit||""}</span></div>`).join("")}</div>`:`<div class="empty">Nothing recorded yet.</div>`}</div>`;
   };
   const listCard=(title,rows)=>`<div class="card"><h3>${title}</h3>${rows.length?`<div class="rank">${rows.join("")}</div>`:`<div class="empty">Nothing recorded yet.</div>`}</div>`;
+  const matchRow=(m,right)=>`<div class="rank-row"><span class="nm"><a href="#/m/${esc(m.id)}">${esc((m.teams.home||{}).name)} v ${esc((m.teams.away||{}).name)}</a></span><span class="dt">${fmtDate(m.date)}</span><span class="n">${right}</span></div>`;
 
   app.innerHTML=`<div class="wrap">
     <section class="big-claim">
@@ -830,7 +888,7 @@ function renderStats(){
       <div class="tile"><div class="k">Watched alongside</div><div class="v num">${nf(crowd)}</div><div class="s">people, in total</div></div>
       <div class="tile"><div class="k">Competitions</div><div class="v num">${comps.length}</div><div class="s">${esc(compsSeen.length?compsSeen[0][0]:"—")} most often</div></div>
       <div class="tile"><div class="k">Grounds</div><div class="v num">${venues.length}</div><div class="s">in ${countries.length} countries</div></div>
-      ${ratings.length?`<div class="tile"><div class="k">Average night</div><div class="v num">${(ratings.reduce((a,b)=>a+b,0)/ratings.length).toFixed(1)}</div><div class="s">out of 10, ${ratings.length} rated</div></div>`:""}
+      ${tempVals.length?`<div class="tile"><div class="k">Conditions</div><div class="v num">${(tempVals.reduce((a,b)=>a+b,0)/tempVals.length).toFixed(1)}°C</div><div class="s">avg · ${Math.min(...tempVals)}° to ${Math.max(...tempVals)}°</div></div>`:""}
       ${spendUSD.length?`<div class="tile"><div class="k">Tickets</div><div class="v num">$${nf(Math.round(spendUSD.reduce((a,b)=>a+b,0)))}</div><div class="s">$${Math.round(spendUSD.reduce((a,b)=>a+b,0)/spendUSD.length)} average, ${spendUSD.length} logged</div></div>`:""}
     </div>
 
@@ -843,7 +901,7 @@ function renderStats(){
       </div><div style="height:14px"></div></div>
     </section>
 
-    <section class="sec"><div class="sec-h"><h2>Where and what</h2></div>
+    <section class="sec"><div class="sec-h"><h2>Competitions and locations</h2></div>
       <div class="cards">
         ${rankCard("Competitions",compsSeen)}
         ${listCard("Countries",countrySeen.map(([c,v])=>`<div class="rank-row">${flag(c,"lg")}<span class="nm">${esc(c)}</span><span class="n">${v}</span></div>`))}
@@ -851,19 +909,24 @@ function renderStats(){
       </div>
     </section>
 
-    <section class="sec"><div class="sec-h"><h2>Who I have watched</h2></div>
+    <section class="sec"><div class="sec-h"><h2>Teams and players</h2></div>
       <div class="cards">
         ${rankCard("Teams",teamsSeen)}
-        ${rankCard("Players on the pitch",playersSeen)}
-        ${rankCard("Scorers I saw",scorers)}
+        ${rankCard("Appearances",playersSeen)}
+        ${listCard("Players by nationality",natSeen.map(([c,v])=>`<div class="rank-row">${flag(c,"lg")}<span class="nm">${esc(c)}</span><span class="n">${v}</span></div>`))}
+        ${rankCard("Scorers",scorers)}
+        ${rankCard("Head coach",coachesSeen)}
         ${rankCard("Referees",refsSeen)}
       </div>
     </section>
 
     <section class="sec"><div class="sec-h"><h2>Extremes</h2></div>
       <div class="cards">
-        ${listCard("Biggest crowds",bigCrowd.map(m=>`<div class="rank-row"><span class="nm"><a href="#/m/${esc(m.id)}">${esc((m.teams.home||{}).name)} v ${esc((m.teams.away||{}).name)}</a></span><span class="dt">${fmtDate(m.date)}</span><span class="n">${nf(m.attendance)}</span></div>`))}
-        ${listCard("Most goals",goalfest.map(m=>`<div class="rank-row"><span class="nm"><a href="#/m/${esc(m.id)}">${esc((m.teams.home||{}).name)} v ${esc((m.teams.away||{}).name)}</a></span><span class="dt">${fmtDate(m.date)}</span><span class="n">${m.hg+m.ag}</span></div>`))}
+        ${listCard("Biggest crowds",bigCrowd.map(m=>matchRow(m,nf(m.attendance))))}
+        ${listCard("Most goals",goalfest.map(m=>matchRow(m,m.hg+m.ag)))}
+        ${listCard("Most yellow cards",yellowCounts.map(x=>matchRow(x.m,x.n)))}
+        ${listCard("Most red cards",redCounts.map(x=>matchRow(x.m,x.n)))}
+        ${listCard("Most expensive tickets",priciest.map(x=>matchRow(x.m,"$"+Math.round(x.v))))}
         ${listCard("Most valuable squads seen",values.map(v=>`<div class="rank-row"><span class="nm"><a href="#/m/${esc(v.id)}">${esc(v.name)}</a></span><span class="dt">${fmtDate(v.date)}</span><span class="n">€${Math.round(v.v)}m</span></div>`))}
       </div>
     </section>
@@ -871,10 +934,7 @@ function renderStats(){
     <section class="sec"><div class="sec-h"><h2>Conditions</h2></div>
       <div class="cards">
         ${rankCard("Weather",weatherSeen)}
-        <div class="card"><h3>Temperature</h3>${temps.length?`<div class="body">
-          <div style="font-family:var(--font-display);font-weight:800;font-size:31px" class="num">${(temps.reduce((a,b)=>a+b,0)/temps.length).toFixed(1)}°C</div>
-          <div style="color:var(--muted);font-size:13px">average at kick-off · coldest ${Math.min(...temps)}°C · warmest ${Math.max(...temps)}°C</div>
-        </div>`:`<div class="empty">No readings recorded yet.</div>`}</div>
+        ${listCard("Temperature",tempTop.map(x=>matchRow(x.m,x.v+"°C")))}
       </div>
     </section>
   </div>`;
