@@ -259,16 +259,16 @@ nav.tabs a.on{background:var(--ink);color:var(--paper)}
   font-family:var(--font-display);font-size:10px;font-weight:700;letter-spacing:.14em;
   text-transform:uppercase;color:var(--muted);
 }
-.pl{display:flex;align-items:center;gap:8px;padding:7px 16px;font-size:14px;flex-wrap:wrap;row-gap:5px}
+.pl{display:flex;align-items:center;gap:7px;padding:7px 16px;font-size:14px;flex-wrap:wrap;row-gap:5px}
 .pl+.pl{border-top:1px solid var(--line-soft)}
 .pl .no{
   width:24px;flex:none;text-align:center;font-family:var(--font-display);font-weight:700;
   font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums;
 }
-.pl .nm{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pl .nm{flex:0 1 auto;min-width:0}
 .pl .pos{font-family:var(--font-display);font-size:10px;font-weight:700;letter-spacing:.08em;color:var(--muted);
   background:rgba(20,28,36,.05);padding:2px 5px;border-radius:2px}
-.pl .val{font-family:var(--font-display);font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}
+.pl .val{margin-left:auto;padding-left:8px;font-family:var(--font-display);font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums;flex:none}
 .pl.dim{color:var(--muted)}
 .badge{position:relative;display:inline-flex;align-items:center;justify-content:center;flex:none}
 .badge .fb{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:800;font-size:8px}
@@ -306,8 +306,11 @@ nav.tabs a.on{background:var(--ink);color:var(--paper)}
 .ticket-price{font-family:var(--font-display);font-weight:800;font-size:29px;color:var(--ink);letter-spacing:-.01em}
 .ticket-usd{font-size:13px;color:var(--muted);margin-top:4px}
 .ticket-seat{font-size:17px;font-weight:600;line-height:1.4}
-.ticket-cond{display:flex;align-items:center;gap:9px;font-size:17px;font-weight:600;line-height:1.4}
-.ticket-cond .wx{width:21px;height:21px;color:var(--muted)}
+.weather-body{display:flex;align-items:center;gap:16px}
+.weather-body .wx-icon{flex:none;display:inline-flex;color:var(--muted)}
+.weather-body .wx-icon .wx{width:34px;height:34px}
+.weather-temp{font-family:var(--font-display);font-weight:800;font-size:29px;color:var(--ink);letter-spacing:-.01em;line-height:1.1}
+.weather-cond{font-size:14px;color:var(--muted);margin-top:2px}
 .ticket-div{position:relative;align-self:stretch;width:1px;background:repeating-linear-gradient(180deg,var(--line) 0 6px,transparent 6px 12px);margin:14px 0}
 .ticket-div::before,.ticket-div::after{content:"";position:absolute;left:-6.5px;width:13px;height:13px;border-radius:50%;background:var(--paper)}
 .ticket-div::before{top:-6.5px}
@@ -502,7 +505,7 @@ function flag(code,cls){
 function crest(matchId,side,name){
   const letter=esc((name||"?").replace(/[^A-Za-z\u00C0-\u024F]/g," ").trim().split(/\s+/).map(w=>w[0]).slice(0,2).join("").toUpperCase());
   const f=`emblems/${esc(matchId)}${side==="home"?"a":"b"}.png`;
-  return `<span class="crest"><span class="fb">${letter}</span><img src="${f}" alt="" loading="lazy" onerror="this.style.display='none'"></span>`;
+  return `<span class="crest"><span class="fb">${letter}</span><img src="${f}" alt="" loading="lazy" onerror="this.style.display='none'" onload="this.previousElementSibling.style.display='none'"></span>`;
 }
 
 /* =====================================================================
@@ -744,7 +747,7 @@ function renderMatch(id){
     <div class="panel tl">${m.goals.map(g=>{
       const kind=g.type==="penalty"?"pen":(g.type==="own goal"?"o.g.":"");
       const scorer=`<span class="tl-name">${esc(g.scorer)}${kind?` <span class="kind">${kind}</span>`:""}</span>`;
-      const assist=g.assist?`<span class="tl-assist">assist ${esc(g.assist)}</span>`:"";
+      const assist=g.assist?`<span class="tl-assist">${esc(g.assist)}</span>`:"";
       const home=g.side==="home"?`<span class="tl-side home">${scorer}${assist}</span>`:"<span></span>";
       const away=g.side==="away"?`<span class="tl-side away">${scorer}${assist}</span>`:"<span></span>";
       return `<div class="tl-row">${home}<span class="tl-min">${esc(g.minute)}'</span>${away}</div>`;
@@ -775,16 +778,17 @@ function renderMatch(id){
 
   const wIcon=(w.condition||"").toLowerCase();
   const hasCond=!!w.condition, hasTemp=w.temp_c!=null&&w.temp_c!=="";
-  const weather=(hasCond||hasTemp)?`<div class="ticket-card ${(hasCond&&hasTemp)?"":"one"}">
-    ${hasCond?`<div class="ticket-half">
-      <div class="k">Conditions</div>
-      <div class="ticket-cond">${weatherIcon(w.condition)}<span>${esc(w.condition)}</span></div>
-    </div>`:""}
-    ${(hasCond&&hasTemp)?`<div class="ticket-div"></div>`:""}
-    ${hasTemp?`<div class="ticket-half">
-      <div class="k">Temperature</div>
-      <div class="ticket-price num">${esc(w.temp_c)}°C</div>
-    </div>`:""}
+  const weather=(hasCond||hasTemp)?`<div class="ticket-card one">
+    <div class="ticket-half">
+      <div class="k">Weather</div>
+      <div class="weather-body">
+        ${hasCond?`<span class="wx-icon">${weatherIcon(w.condition)}</span>`:""}
+        <div class="weather-text">
+          ${hasTemp?`<div class="weather-temp num">${esc(w.temp_c)}°C</div>`:""}
+          ${hasCond?`<div class="weather-cond">${esc(w.condition)}</div>`:""}
+        </div>
+      </div>
+    </div>
   </div>`:"";
 
   const seat=p.seating==="unreserved"||!p.seat
