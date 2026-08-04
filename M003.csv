@@ -1,0 +1,89 @@
+,,,,,,,,,,,,,,,
+# --- MATCH --- meta,field,value,,,,,,,,,,,,,
+meta,id,M003,,,,,,,,,,,,,
+meta,status,played,,,,,,,,,,,,,
+meta,competition,Chinese Super League,,,,,,,,,,,,,
+meta,round,Matchday 11,,,,,,,,,,,,,
+meta,date,2015-05-23,,,,,,,,,,,,,
+meta,kickoff,20:00,,,,,,,,,,,,,
+meta,venue,Tianhe Stadium,,,,,,,,,,,,,
+meta,city,Guangzhou,,,,,,,,,,,,,
+meta,country,CHN,,,,,,,,,,,,,
+meta,neutral,no,,,,,,,,,,,,,
+meta,attendance,43790,,,,,,,,,,,,,
+meta,score,2-2,,,,,,,,,,,,,
+meta,aggregate,,,,,,,,,,,,,,
+meta,decision,,,,,,,,,,,,,,
+meta,referee,Wang Di,,,,,,,,,,,,,
+meta,referee_country,CHN,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- TEAMS --- team,side,name,country,coach,coach_country,formation,squad_value,pitch_fill,pitch_number,gk_fill,stat_color,,,,
+team,home,Guangzhou Evergrande Taobao,CHN,Fabio Cannavaro,ITA,4-3-3,17.4,#D00B18,#FFFFFF,,#D00B18,,,,
+team,away,Guangzhou R&F,CHN,Cosmin Contra,ROU,4-4-1-1,7,#3D64CC,#FFFFFF,,#3D64CC,,,,
+,,,,,,,,,,,,,,,
+# --- PLAYERS -- player,side,role,number,name,kit_name,country,pos,captain,goalkeeper,on,off,yellow,double yellow,red,value
+player,home,start,19,Zeng Cheng,Zeng,CHN,,,yes,,,,,,0.5
+player,home,start,25,Zou Zheng,Zou,CHN,,,,,52,,,,0.1
+player,home,start,35,Li Xuepeng,Li,CHN,,,,,,,,,0.5
+player,home,start,15,Yi Teng,Yi,CHN,,,,,71,,,,0.1
+player,home,start,3,Mei Fang,Mei,CHN,,,,,,62,,,0.4
+player,home,start,21,Zhao Xuri,Zhao,CHN,,,,,71,,,,0.3
+player,home,start,17,Liu Jian,Liu,CHN,,,,,,,,,0.4
+player,home,start,4,Zhang Jiaqi,Zhang,CHN,,,,,,42,,,0.3
+player,home,start,27,Zheng Long,Zheng,CHN,,,,,,,,,0.2
+player,home,start,29,Gao Lin,Gao,CHN,,yes,,,,,,,0.8
+player,home,start,12,Wang Shangyuan,Wang,CHN,,,,,,,,,0.2
+player,home,sub,34,Wang Junhui,,CHN,,,,52,,,,,0.1
+player,home,sub,10,Zheng Zhi,,CHN,,,,71,,76,,,0.5
+player,home,sub,11,Ricardo Goulart,,BRA,,,,71,,,,,11
+player,home,bench,5,Zhang Linpeng,,CHN,,,,,,,,,1
+player,home,bench,6,Feng Xiaoting,,CHN,,,,,,,,,0.5
+player,home,bench,13,Fang Jingqi,,CHN,,,yes,,,,,,0.1
+player,home,bench,20,Yu Hanchao,,CHN,,,,,,,,,0.6
+player,away,start,27,Liu Dianzuo,Liu,CHN,,,yes,,,,,,0.1
+player,away,start,11,Jiang Zhipeng,Jiang,CHN,,,,,,,,,0.5
+player,away,start,15,Jang Hyun-soo,Jang,KOR,,,,,,,,,0.9
+player,away,start,5,Zhang Yaokun,Zhang,CHN,,yes,,,,,,,0.1
+player,away,start,20,Tang Miao,Tang,CHN,,,,,,,,,0.3
+player,away,start,6,Wang Song,Wang,CHN,,,,,84,,,,0.3
+player,away,start,8,Park Jong-woo,Park,KOR,,,,,,,,,0.8
+player,away,start,10,Míchel,,ESP,,,,,,,,,1.4
+player,away,start,21,Chang Feiya,Chang,CHN,,,,,68,,,,0.3
+player,away,start,7,Jiang Ning,Jiang,CHN,,,,,,,,,0.3
+player,away,start,25,Aaron Samuel Olanare,,NGA,,,,,79,72,,,1
+player,away,sub,35,Min Junlin,,CHN,,,,68,,,,,0.1
+player,away,sub,13,Ye Chugui,,CHN,,,,79,,,,,0.1
+player,away,sub,23,Lu Lin,,CHN,,,,84,,,,,0.3
+player,away,bench,1,Cheng Yuelei,,CHN,,,yes,,,,,,0.2
+player,away,bench,3,Yu Yang,,CHN,,,,,,,,,0.2
+player,away,bench,18,Zhang Yuan,,CHN,,,,,,,,,0.3
+player,away,bench,33,Li Yan,,CHN,,,,,,,,,0.1
+,,,,,,,,,,,,,,,
+# --- GOALS --- goal,minute,side,scorer,type,assist,,,,,,,,,,
+goal,38,away,Míchel,goal,Aaron Samuel Olanare,,,,,,,,,,
+goal,74,home,Gao Lin,penalty,,,,,,,,,,,
+goal,79,home,Ricardo Goulart,goal,Zheng Long,,,,,,,,,,
+goal,86,away,Míchel,penalty,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- MATCH STATS --- stat,name,home,away,,,,,,,,,,,,
+stat,Possession,59,41,,,,,,,,,,,,
+stat,Expected goals (xG),,,,,,,,,,,,,,
+stat,Shots,10,9,,,,,,,,,,,,
+stat,Shots on target,3,4,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- WEATHER --- weather,field,value,,,,,,,,,,,,,
+weather,condition,Drizzle,,,,,,,,,,,,,
+weather,temp_c,25,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- MATCHDAY --- personal,field,value,,,,,,,,,,,,,
+personal,ticket_price,200,,,,,,,,,,,,,
+personal,ticket_currency,CNY,,,,,,,,,,,,,
+personal,ticket_price_usd,32,,,,,,,,,,,,,
+personal,section,Section 18,,,,,,,,,,,,,
+personal,row,32,,,,,,,,,,,,,
+personal,seat,44,,,,,,,,,,,,,
+personal,seating,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- PHOTOS --- photo,file,caption,,,,,,,,,,,,,
+photo,,,,,,,,,,,,,,,
+photo,,,,,,,,,,,,,,,
