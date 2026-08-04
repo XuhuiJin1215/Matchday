@@ -23,15 +23,15 @@ team,away,Guizhou Renhe,CHN,Zhu Jiong,CHN,4-4-2,5.3,#C0492B,#FFFFFF,,#C0492B,,,,
 ,,,,,,,,,,,,,,,
 # --- PLAYERS -- player,side,role,number,name,kit_name,country,pos,captain,goalkeeper,on,off,yellow,double yellow,red,value
 player,home,start,27,Liu Dianzuo,Liu,CHN,,,yes,,,,,,0.1
-player,home,start,20,Tang Miao,Tang,CHN,,,,,,,,,0.3
-player,home,start,5,Zhang Yaokun,Zhang,CHN,,yes,,,,,,,0.1
-player,home,start,4,Jin Yangyang,Jin,CHN,,,,,,,,,0.2
 player,home,start,11,Jiang Zhipeng,Jiang,CHN,,,,,78,,,,0.5
+player,home,start,4,Jin Yangyang,Jin,CHN,,,,,,,,,0.2
+player,home,start,5,Zhang Yaokun,Zhang,CHN,,yes,,,,,,,0.1
+player,home,start,20,Tang Miao,Tang,CHN,,,,,,,,,0.3
 player,home,start,8,Park Jong-woo,Park,KOR,,,,,56,36,,,0.8
-player,home,start,7,Jiang Ning,Jiang,CHN,,,,,,,,,0.3
-player,home,start,6,Wang Song,Wang,CHN,,,,,,,,,0.3
-player,home,start,10,Míchel,,ESP,,,,,,,,,1.4
 player,home,start,23,Lu Lin,Lu,CHN,,,,,,,,,0.3
+player,home,start,10,Míchel,,ESP,,,,,,,,,1.4
+player,home,start,6,Wang Song,Wang,CHN,,,,,,,,,0.3
+player,home,start,7,Jiang Ning,Jiang,CHN,,,,,,,,,0.3
 player,home,start,9,Abderrazak Hamdallah,,MAR,,,,,70,,,,2.5
 player,home,sub,33,Li Yan,,CHN,,,,56,,,,,0.1
 player,home,sub,13,Ye Chugui,,CHN,,,,70,,,,,0.1
@@ -41,16 +41,16 @@ player,home,bench,3,Yu Yang,,CHN,,,,,,,,,0.2
 player,home,bench,16,Feng Zhuoyi,,CHN,,,,,,,,,0.1
 player,home,bench,21,Chang Feiya,,CHN,,,,,,,,,0.3
 player,away,start,29,Sheng Peng,Sheng,CHN,,,yes,,,,,,0.1
-player,away,start,5,Liu Yang,Liu,CHN,,,,,,,,,0.1
-player,away,start,3,Zhang Chenglin,Zhang,CHN,,,,,,,,,0.3
-player,away,start,27,Park Joo-sung,Park,KOR,,,,,,,,,0.2
 player,away,start,19,Liu Tianqi,Liu,CHN,,,,,,,,,0.1
-player,away,start,30,Feng Renliang,Feng,CHN,,,,,,,,,0.2
-player,away,start,33,Zhu Baojie,Zhu,CHN,,,,,64,,,,0.2
-player,away,start,15,Chen Jie,Chen,CHN,,yes,,,,,,,0.2
+player,away,start,27,Park Joo-sung,Park,KOR,,,,,,,,,0.2
+player,away,start,3,Zhang Chenglin,Zhang,CHN,,,,,,,,,0.3
+player,away,start,5,Liu Yang,Liu,CHN,,,,,,,,,0.1
 player,away,start,10,Magnus Eriksson,,SWE,,,,,86,,,,0.8
-player,away,start,18,Shen Tianfeng,Shen,CHN,,,,,,,,,0.1
+player,away,start,15,Chen Jie,Chen,CHN,,yes,,,,,,,0.2
+player,away,start,33,Zhu Baojie,Zhu,CHN,,,,,64,,,,0.2
+player,away,start,30,Feng Renliang,Feng,CHN,,,,,,,,,0.2
 player,away,start,17,Hyuri,,BRA,,,,,46,,,,0.9
+player,away,start,18,Shen Tianfeng,Shen,CHN,,,,,,,,,0.1
 player,away,sub,7,Krzysztof Mączyński,,POL,,,,46,,,,,0.9
 player,away,sub,6,Fan Yunlong,,CHN,,,,64,,,,,0.1
 player,away,sub,11,Ricardo Santos,,BRA,,,,86,,,,,0.5

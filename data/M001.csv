@@ -23,16 +23,16 @@ team,away,Argentina,,Gerardo Martino,ARG,4-2-3-1,467,#1D4B87,#FFFFFF,,#1D4B87,,,
 ,,,,,,,,,,,,,,,
 # --- PLAYERS -- player,side,role,number,name,kit_name,country,pos,captain,goalkeeper,on,off,yellow,double yellow,red,value
 player,home,start,1,Yapp Hung Fai,Yapp,HKG,GK,,yes,,,,,,0.2
-player,home,start,2,Lee Chi Ho,Lee,HKG,RB,,,,46,,,,0.1
-player,home,start,15,Chan Wai Ho,Chan,HKG,CB,yes,,,,,,,0.1
-player,home,start,3,Wisdom Fofo Agbo,Agbo,HKG,CB,,,,,,,,0.1
 player,home,start,13,Cheung Kin Fung,Cheung,HKG,LB,,,,65,,,,0.1
-player,home,start,8,Xu Deshuai,Xu,HKG,RM,,,,71,,,,0.1
-player,home,start,6,Huang Yang,Huang,HKG,CM,,,,81,,,,0.1
-player,home,start,23,Ju Yingzhi,Ju,HKG,CM,,,,61,,,,0.1
+player,home,start,3,Wisdom Fofo Agbo,Agbo,HKG,CB,,,,,,,,0.1
+player,home,start,15,Chan Wai Ho,Chan,HKG,CB,yes,,,,,,,0.1
+player,home,start,2,Lee Chi Ho,Lee,HKG,RB,,,,46,,,,0.1
 player,home,start,5,Andy Nägelein,Nägelein,HKG,LM,,,,,55,,,0.1
-player,home,start,18,Godfred Karikari,Karikari,HKG,ST,,,,,,,,0.1
+player,home,start,23,Ju Yingzhi,Ju,HKG,CM,,,,61,,,,0.1
+player,home,start,6,Huang Yang,Huang,HKG,CM,,,,81,,,,0.1
+player,home,start,8,Xu Deshuai,Xu,HKG,RM,,,,71,,,,0.1
 player,home,start,9,Lee Wai Lim,Lee,HKG,ST,,,,46,,,,0.1
+player,home,start,18,Godfred Karikari,Karikari,HKG,ST,,,,,,,,0.1
 player,home,sub,14,Jack Sealy,Sealy,HKG,,,,46,,,,,0.2
 player,home,sub,11,Christian Annan,Annan,HKG,,,,46,,,,,0.1
 player,home,sub,16,Leung Chun Pong,Leung,HKG,,,,61,,,,,0.1
@@ -46,15 +46,15 @@ player,home,bench,20,Chan Man Fai,Chan,HKG,,,,,,,,,0.1
 player,home,bench,22,Lam Hok Hei,Lam,HKG,,,,,,,,,
 player,home,bench,24,Chan Siu Kwan,Chan,HKG,,,,,,,,,0.1
 player,away,start,21,Nahuel Guzmán,,ARG,GK,,yes,,46,,,,2
-player,away,start,2,Santiago Vergini,,ARG,RB,,,,,,,,1
-player,away,start,13,Facundo Roncaglia,,ARG,CB,,,,61,,,,4
-player,away,start,6,Nicolás Otamendi,,ARG,CB,,,,,,,,12
 player,away,start,3,Leonel Vangioni,,ARG,LB,,,,,,,,1.5
-player,away,start,5,Fernando Gago,,ARG,DM,yes,,,73,,,,4
+player,away,start,6,Nicolás Otamendi,,ARG,CB,,,,,,,,12
+player,away,start,13,Facundo Roncaglia,,ARG,CB,,,,61,,,,4
+player,away,start,2,Santiago Vergini,,ARG,RB,,,,,,,,1
 player,away,start,19,Éver Banega,,ARG,DM,,,,,,,,8
-player,away,start,8,Enzo Pérez,,ARG,RM,,,,73,,,,23
-player,away,start,22,Javier Pastore,,ARG,AM,,,,61,,,,18
+player,away,start,5,Fernando Gago,,ARG,DM,yes,,,73,,,,4
 player,away,start,20,Nicolás Gaitán,,ARG,LM,,,,73,,,,25
+player,away,start,22,Javier Pastore,,ARG,AM,,,,61,,,,18
+player,away,start,8,Enzo Pérez,,ARG,RM,,,,73,,,,23
 player,away,start,9,Gonzalo Higuaín,,ARG,ST,,,,,,,,40
 player,away,sub,12,Agustín Marchesín,,ARG,,,yes,46,,,,,2.5
 player,away,sub,4,Pablo Zabaleta,,ARG,,,,61,,,,,19
@@ -92,11 +92,11 @@ weather,temp_c,24,,,,,,,,,,,,,
 personal,ticket_price,490,,,,,,,,,,,,,
 personal,ticket_currency,HKD,,,,,,,,,,,,,
 personal,ticket_price_usd,63,,,,,,,,,,,,,
-personal,section,Section 119,,,,,,,,,,,,,
+personal,section,Block 119,,,,,,,,,,,,,
 personal,row,22,,,,,,,,,,,,,
 personal,seat,7,,,,,,,,,,,,,
 personal,seating,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,
 # --- PHOTOS --- photo,file,caption,,,,,,,,,,,,,
 photo,M001_1.jpg,,,,,,,,,,,,,,
-photo,M001_2.jpg,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
