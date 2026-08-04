@@ -131,7 +131,7 @@ nav.tabs a.on{background:var(--ink);color:var(--paper)}
   color:var(--muted);writing-mode:vertical-rl;transform:rotate(180deg);
 }
 .stub-body{padding:14px 18px 13px;min-width:0}
-.stub-head{display:flex;align-items:baseline;gap:10px;margin-bottom:9px}
+.stub-head{display:flex;align-items:center;gap:9px;margin-bottom:9px}
 .stub-head .comp{
   font-family:var(--font-display);font-size:11px;font-weight:700;letter-spacing:.12em;
   text-transform:uppercase;color:var(--ink-2);
@@ -270,11 +270,14 @@ nav.tabs a.on{background:var(--ink);color:var(--paper)}
   background:rgba(20,28,36,.05);padding:2px 5px;border-radius:2px}
 .pl .val{font-family:var(--font-display);font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}
 .pl.dim{color:var(--muted)}
-.badge{position:relative;display:inline-flex;align-items:center;justify-content:center;flex:none;border-radius:3px;overflow:hidden}
+.badge{position:relative;display:inline-flex;align-items:center;justify-content:center;flex:none}
 .badge .fb{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:800;font-size:8px}
 .badge img{position:relative;z-index:1;width:100%;height:100%;object-fit:contain}
-.card-tag{display:inline-flex;align-items:center;gap:3px}
-.card-min{font-size:11px;color:var(--muted)}
+.ev{display:inline-flex;align-items:center;gap:3px;flex:none}
+.ev-min{font-size:11px;color:var(--muted)}
+.lineup-top .sv{margin-left:auto;font-family:var(--font-display);font-weight:700;font-size:13px;color:var(--muted)}
+.comp-logo{position:relative;display:inline-flex;align-items:center;justify-content:center;flex:none}
+.comp-logo img{width:100%;height:100%;object-fit:contain}
 
 /* stat bars */
 .statrow{padding:13px 18px}
@@ -303,6 +306,8 @@ nav.tabs a.on{background:var(--ink);color:var(--paper)}
 .ticket-price{font-family:var(--font-display);font-weight:800;font-size:29px;color:var(--ink);letter-spacing:-.01em}
 .ticket-usd{font-size:13px;color:var(--muted);margin-top:4px}
 .ticket-seat{font-size:17px;font-weight:600;line-height:1.4}
+.ticket-cond{display:flex;align-items:center;gap:9px;font-size:17px;font-weight:600;line-height:1.4}
+.ticket-cond .wx{width:21px;height:21px;color:var(--muted)}
 .ticket-div{position:relative;align-self:stretch;width:1px;background:repeating-linear-gradient(180deg,var(--line) 0 6px,transparent 6px 12px);margin:14px 0}
 .ticket-div::before,.ticket-div::after{content:"";position:absolute;left:-6.5px;width:13px;height:13px;border-radius:50%;background:var(--paper)}
 .ticket-div::before{top:-6.5px}
@@ -444,14 +449,12 @@ function parseMatch(text,id){
     };
     else if(t==="player") m.players.push({
       side:r[1],role:(r[2]||"bench").toLowerCase(),number:val(r[3]),name:val(r[4])||"?",
-      kitName:val(r[5]),country:val(r[6]),pos:val(r[7]),captain:val(r[8]),on:val(r[9]),off:val(r[10]),value:numOr(r[11])
+      kitName:val(r[5]),country:val(r[6]),pos:val(r[7]),captain:val(r[8]),goalkeeper:val(r[9]),
+      on:val(r[10]),off:val(r[11]),yellow:val(r[12]),doubleYellow:val(r[13]),red:val(r[14]),value:numOr(r[15])
     });
     else if(t==="goal") m.goals.push({
       minute:val(r[1]),side:r[2],scorer:val(r[3])||"?",
       type:(val(r[4])||"goal").toLowerCase(),assist:val(r[5])
-    });
-    else if(t==="card") m.cards.push({
-      minute:val(r[1]),side:r[2],player:val(r[3])||"?",type:(val(r[4])||"yellow").toLowerCase()
     });
     else if(t==="stat"){
       const h=val(r[2]),a=val(r[3]);
@@ -461,6 +464,11 @@ function parseMatch(text,id){
     else if(t==="personal"){ if(val(r[2])!==null) m.personal[r[1]]=val(r[2]); }
     else if(t==="photo") m.photos.push({file:val(r[1]),caption:val(r[2])});
   }
+  m.players.forEach(p=>{
+    if(p.yellow) m.cards.push({minute:p.yellow,side:p.side,player:p.name,type:"yellow"});
+    if(p.doubleYellow) m.cards.push({minute:p.doubleYellow,side:p.side,player:p.name,type:"second yellow"});
+    if(p.red) m.cards.push({minute:p.red,side:p.side,player:p.name,type:"red"});
+  });
   m.id=m.meta.id||id;
   m.status=(m.meta.status||"played").toLowerCase();
   const sc=(m.meta.score||"").split("-");
@@ -521,15 +529,22 @@ function weatherIcon(c){
   if(/clear|sun/.test(t)) return w(sun);
   return w(cloud);
 }
-function badge(file,label,bg,fg,size){
-  return `<span class="badge" style="width:${size}px;height:${size}px"><span class="fb" style="background:${bg};color:${fg}">${esc(label)}</span><img src="icons/${file}.png" alt="${esc(label)}" loading="lazy" onerror="this.style.display=\'none\'"></span>`;
+function iconBadge(file,fallback,w,h,title){
+  return `<span class="badge" style="width:${w}px;height:${h}px"${title?` title="${esc(title)}"`:""}>${fallback}<img src="icons/${file}.png" alt="" loading="lazy" onerror="this.style.display=\'none\'"></span>`;
 }
+const swatch=bg=>`<span class="fb" style="background:${bg};border-radius:2px"></span>`;
+const letterFb=(bg,fg,txt)=>`<span class="fb" style="background:${bg};color:${fg};border-radius:3px">${txt}</span>`;
+const arrowFb=(color,up)=>`<span class="fb"><svg viewBox="0 0 12 12" width="100%" height="100%" aria-hidden="true"><path d="${up?"M6 1.6 10.4 8.4H1.6Z":"M6 10.4 1.6 3.6h8.8Z"}" fill="${color}"/></svg></span>`;
 function cardInfo(type){
   const t=(type||"").toLowerCase();
-  if(/second|2nd/.test(t)) return {file:"second-yellow",label:"2Y",bg:"linear-gradient(135deg,var(--amber) 50%,var(--accent) 50%)",fg:"#fff",bucket:"red"};
-  if(/red/.test(t)) return {file:"red",label:"R",bg:"var(--accent)",fg:"#fff",bucket:"red"};
-  return {file:"yellow",label:"Y",bg:"var(--amber)",fg:"#3A2C00",bucket:"yellow"};
+  if(/second|2nd|double/.test(t)) return {file:"second-yellow",bg:"linear-gradient(135deg,var(--amber) 48%,var(--accent) 52%)",bucket:"red"};
+  if(/red/.test(t)) return {file:"red",bg:"var(--accent)",bucket:"red"};
+  return {file:"yellow",bg:"var(--amber)",bucket:"yellow"};
 }
+function compLogo(matchId,size){
+  return `<span class="comp-logo" style="width:${size}px;height:${size}px"><img src="emblems/${esc(matchId)}c.png" alt="" loading="lazy" onerror="this.closest(\'.comp-logo\').style.display=\'none\'"></span>`;
+}
+const minNum=v=>parseInt(String(v).replace(/[^0-9].*$/,""),10)||0;
 
 /* =====================================================================
    5. Pitch + formation
@@ -616,6 +631,7 @@ function stubHTML(m){
     <div class="counterfoil"><span>${esc(m.id)}</span></div>
     <div class="stub-body">
       <div class="stub-head">
+        ${compLogo(m.id,18)}
         <span class="comp">${esc(m.meta.competition||"")}${m.meta.round?` <span class="round">/ ${esc(m.meta.round)}</span>`:""}</span>
         <span class="date num">${fmtDate(m.date)}</span>
       </div>
@@ -673,32 +689,43 @@ function renderList(){
   if(r) r.addEventListener("click",()=>{F.q="";F.comp="";F.country="";F.year="";renderList();});
 }
 
+function squadValue(m,side){
+  const t=m.teams[side]; if(!t) return null;
+  if(t.squadValue!=null) return t.squadValue;
+  const vals=m.players.filter(p=>p.side===side&&p.value!=null);
+  return vals.length?vals.reduce((a,b)=>a+b.value,0):null;
+}
+const fmtVal=v=>Number.isInteger(v)?String(v):String(Math.round(v*10)/10);
 function lineupBlock(m,side){
   const t=m.teams[side]||{};
   const of=r=>m.players.filter(p=>p.side===side&&p.role===r);
   const row=(p,dim)=>{
-    const badges=[];
-    if(p.captain) badges.push(badge("captain","C","var(--ink)","#fff",15));
-    if((p.pos||"").toUpperCase()==="GK") badges.push(badge("gk","GK","var(--turf)","#fff",15));
-    const cardTags=m.cards.filter(c=>c.side===side&&c.player===p.name).map(c=>{
-      const ci=cardInfo(c.type);
-      return `<span class="card-tag">${badge(ci.file,ci.label,ci.bg,ci.fg,14)}<span class="card-min num">${esc(c.minute)}'</span></span>`;
-    }).join("");
+    /* status first: goalkeeper, then captain */
+    const status=[];
+    if(p.goalkeeper) status.push(iconBadge("gk",letterFb("var(--turf)","#fff","GK"),19,15,"Goalkeeper"));
+    if(p.captain) status.push(iconBadge("captain",letterFb("var(--ink)","#fff","C"),15,15,"Captain"));
+    /* then everything that happened, in the order it happened */
+    const ev=[];
+    if(p.on) ev.push({min:p.on,icon:iconBadge("sub-on",arrowFb("#1E9E5A",true),13,13,"Came on"),t:"Came on"});
+    if(p.off) ev.push({min:p.off,icon:iconBadge("sub-off",arrowFb("#D93A25",false),13,13,"Came off"),t:"Came off"});
+    [["yellow",p.yellow],["second yellow",p.doubleYellow],["red",p.red]].forEach(([type,min])=>{
+      if(min){const ci=cardInfo(type);ev.push({min,icon:iconBadge(ci.file,swatch(ci.bg),11,15,type),t:type});}
+    });
+    ev.sort((a,b)=>minNum(a.min)-minNum(b.min));
+    const events=ev.map(e=>`<span class="ev">${e.icon}<span class="ev-min num">${esc(e.min)}'</span></span>`).join("");
     return `<div class="pl ${dim?"dim":""}">
       <span class="no">${esc(p.number||"")}</span>
       ${p.country?flag(p.country):""}
       <span class="nm">${esc(p.name)}</span>
-      ${badges.join("")}
-      ${p.pos?`<span class="pos">${esc(p.pos)}</span>`:""}
-      ${p.on?`<span class="pos">On ${esc(p.on)}'</span>`:""}
-      ${p.off?`<span class="pos">Off ${esc(p.off)}'</span>`:""}
-      ${cardTags}
+      ${status.join("")}
+      ${events}
       ${p.value!=null?`<span class="val">€${p.value}m</span>`:""}
     </div>`;
   };
   const block=(title,arr,dim)=>arr.length?`<h4>${title}</h4>${arr.map(p=>row(p,dim)).join("")}`:"";
   return `<div class="panel lineup">
-    <div class="lineup-top">${crest(m.id,side,t.name)}<span>${esc(t.name||"")}</span>${t.country?flag(t.country):""}</div>
+    <div class="lineup-top">${crest(m.id,side,t.name)}<span>${esc(t.name||"")}</span>${t.country?flag(t.country):""}
+      ${squadValue(m,side)!=null?`<span class="sv num">€${fmtVal(squadValue(m,side))}m</span>`:""}</div>
     ${t.coach?`<div class="coach"><span class="k">Head coach</span>${t.coachCountry?flag(t.coachCountry):""}<span>${esc(t.coach)}</span></div>`:""}
     ${block("Starting 11",of("start"),false)}
     ${block("Substitutions",of("sub"),false)}
@@ -747,12 +774,18 @@ function renderMatch(id){
     }).join("")}</div></section>`:"";
 
   const wIcon=(w.condition||"").toLowerCase();
-  const weather=Object.keys(w).length?`<div class="panel"><div class="kv">
-    ${w.condition?`<div><div class="k">Conditions</div><div class="v">${weatherIcon(w.condition)} <span>${esc(w.condition)}</span></div></div>`:""}
-    ${w.temp_c?`<div><div class="k">Temperature</div><div class="v"><span class="big">${esc(w.temp_c)}°</span>${w.feels_c?`<span style="color:var(--muted);font-size:13px">feels ${esc(w.feels_c)}°</span>`:""}</div></div>`:""}
-    ${w.wind_kph?`<div><div class="k">Wind</div><div class="v"><span class="big">${esc(w.wind_kph)}</span><span style="color:var(--muted);font-size:13px">km/h</span></div></div>`:""}
-    ${w.humidity?`<div><div class="k">Humidity</div><div class="v"><span class="big">${esc(w.humidity)}%</span></div></div>`:""}
-  </div></div>`:"";
+  const hasCond=!!w.condition, hasTemp=w.temp_c!=null&&w.temp_c!=="";
+  const weather=(hasCond||hasTemp)?`<div class="ticket-card ${(hasCond&&hasTemp)?"":"one"}">
+    ${hasCond?`<div class="ticket-half">
+      <div class="k">Conditions</div>
+      <div class="ticket-cond">${weatherIcon(w.condition)}<span>${esc(w.condition)}</span></div>
+    </div>`:""}
+    ${(hasCond&&hasTemp)?`<div class="ticket-div"></div>`:""}
+    ${hasTemp?`<div class="ticket-half">
+      <div class="k">Temperature</div>
+      <div class="ticket-price num">${esc(w.temp_c)}°C</div>
+    </div>`:""}
+  </div>`:"";
 
   const seat=p.seating==="unreserved"||!p.seat
     ? (p.section?`${esc(p.section)} · unreserved`:"Unreserved")
@@ -781,6 +814,7 @@ function renderMatch(id){
     <a class="back" href="#/">← All matches</a>
     <div class="hero">
       <div class="hero-top">
+        ${compLogo(m.id,22)}
         <span class="eyebrow">${esc(m.meta.competition||"")}</span>
         ${m.meta.round?`<span class="sep">/</span><span class="eyebrow">${esc(m.meta.round)}</span>`:""}
         <span class="right num">${esc(m.id)} · ${fmtDate(m.date,true)}${m.meta.kickoff?" · "+esc(m.meta.kickoff):""}</span>
@@ -805,7 +839,6 @@ function renderMatch(id){
         <div class="hero-meta">
           <div><div class="k">Attendance</div><div class="v num">${nf(m.attendance)}</div></div>
           <div><div class="k">Referee</div><div class="v">${m.meta.referee_country?flag(m.meta.referee_country):""} <span>${esc(m.meta.referee||"—")}</span></div></div>
-          ${w.condition?`<div><div class="k">Weather</div><div class="v">${weatherIcon(w.condition)} <span>${esc(w.condition)}${w.temp_c?`, ${esc(w.temp_c)}°C`:""}</span></div></div>`:""}
         </div>
       </div>
     </div>
@@ -863,10 +896,14 @@ function renderStats(){
   const priciest=MATCHES.map(m=>({m,v:parseFloat(m.personal.ticket_price_usd)})).filter(x=>!isNaN(x.v)).sort((a,b)=>b.v-a.v).slice(0,5);
   const values=MATCHES.flatMap(m=>["home","away"].map(s=>{
     const t=m.teams[s]; if(!t) return null;
-    const v=t.squadValue!=null?t.squadValue:
-      (p=>p.length?p.reduce((a,b)=>a+b.value,0):null)(m.players.filter(p=>p.side===s&&p.value!=null));
+    const v=squadValue(m,s);
     return v==null?null:{name:t.name,v,id:m.id,date:m.date};
-  })).filter(Boolean).sort((a,b)=>b.v-a.v).slice(0,5);
+  })).filter(Boolean).sort((a,b)=>b.v-a.v).slice(0,8);
+  const playerValues=MATCHES.flatMap(m=>appearances(m).filter(p=>p.value!=null)
+    .map(p=>({name:p.name,v:p.value,id:m.id,date:m.date})))
+    .sort((a,b)=>b.v-a.v).slice(0,8);
+  const clubCountry=tally(MATCHES.flatMap(m=>[(m.teams.home||{}).country,(m.teams.away||{}).country]));
+  const goalDiff=played.slice().sort((a,b)=>Math.abs(b.hg-b.ag)-Math.abs(a.hg-a.ag)).slice(0,5);
 
   const rankCard=(title,rows,unit)=>{
     const max=rows.length?rows[0][1]:1;
@@ -881,13 +918,13 @@ function renderStats(){
   app.innerHTML=`<div class="wrap">
     <section class="big-claim">
       <div class="n num">${played.length}<span>.</span></div>
-      <p>matches watched in person${spanFrom?` between ${spanFrom} and ${spanTo}`:""} — ${goals} goals, ${venues.length} grounds, ${countries.length} countries.</p>
+      <p>matches watched in person${spanFrom?` between ${spanFrom} and ${spanTo}`:""} — ${goals} goals, ${venues.length} stadiums, ${countries.length} countries.</p>
     </section>
     <div class="tiles">
       <div class="tile"><div class="k">Goals seen</div><div class="v num">${goals}</div><div class="s">${played.length?(goals/played.length).toFixed(2):"0"} per match</div></div>
       <div class="tile"><div class="k">Watched alongside</div><div class="v num">${nf(crowd)}</div><div class="s">people, in total</div></div>
       <div class="tile"><div class="k">Competitions</div><div class="v num">${comps.length}</div><div class="s">${esc(compsSeen.length?compsSeen[0][0]:"—")} most often</div></div>
-      <div class="tile"><div class="k">Grounds</div><div class="v num">${venues.length}</div><div class="s">in ${countries.length} countries</div></div>
+      <div class="tile"><div class="k">Stadiums</div><div class="v num">${venues.length}</div><div class="s">in ${countries.length} countries</div></div>
       ${tempVals.length?`<div class="tile"><div class="k">Conditions</div><div class="v num">${(tempVals.reduce((a,b)=>a+b,0)/tempVals.length).toFixed(1)}°C</div><div class="s">avg · ${Math.min(...tempVals)}° to ${Math.max(...tempVals)}°</div></div>`:""}
       ${spendUSD.length?`<div class="tile"><div class="k">Tickets</div><div class="v num">$${nf(Math.round(spendUSD.reduce((a,b)=>a+b,0)))}</div><div class="s">$${Math.round(spendUSD.reduce((a,b)=>a+b,0)/spendUSD.length)} average, ${spendUSD.length} logged</div></div>`:""}
     </div>
@@ -905,29 +942,32 @@ function renderStats(){
       <div class="cards">
         ${rankCard("Competitions",compsSeen)}
         ${listCard("Countries",countrySeen.map(([c,v])=>`<div class="rank-row">${flag(c,"lg")}<span class="nm">${esc(c)}</span><span class="n">${v}</span></div>`))}
-        ${rankCard("Grounds",venuesSeen)}
+        ${rankCard("Stadiums",venuesSeen)}
       </div>
     </section>
 
     <section class="sec"><div class="sec-h"><h2>Teams and players</h2></div>
       <div class="cards">
-        ${rankCard("Teams",teamsSeen)}
-        ${rankCard("Appearances",playersSeen)}
+        ${rankCard("Teams by appearances",teamsSeen)}
+        ${listCard("Teams by market value",values.map(v=>`<div class="rank-row"><span class="nm"><a href="#/m/${esc(v.id)}">${esc(v.name)}</a></span><span class="dt">${fmtDate(v.date)}</span><span class="n">€${fmtVal(v.v)}m</span></div>`))}
+        ${listCard("Clubs by country",clubCountry.map(([c,v])=>`<div class="rank-row">${flag(c,"lg")}<span class="nm">${esc(c)}</span><span class="n">${v}</span></div>`))}
+        ${rankCard("Players by appearances",playersSeen)}
+        ${listCard("Players by market value",playerValues.map(v=>`<div class="rank-row"><span class="nm"><a href="#/m/${esc(v.id)}">${esc(v.name)}</a></span><span class="dt">${fmtDate(v.date)}</span><span class="n">€${fmtVal(v.v)}m</span></div>`))}
         ${listCard("Players by nationality",natSeen.map(([c,v])=>`<div class="rank-row">${flag(c,"lg")}<span class="nm">${esc(c)}</span><span class="n">${v}</span></div>`))}
         ${rankCard("Scorers",scorers)}
         ${rankCard("Head coach",coachesSeen)}
-        ${rankCard("Referees",refsSeen)}
+        ${rankCard("Referee",refsSeen)}
       </div>
     </section>
 
-    <section class="sec"><div class="sec-h"><h2>Extremes</h2></div>
+    <section class="sec"><div class="sec-h"><h2>Records</h2></div>
       <div class="cards">
         ${listCard("Biggest crowds",bigCrowd.map(m=>matchRow(m,nf(m.attendance))))}
         ${listCard("Most goals",goalfest.map(m=>matchRow(m,m.hg+m.ag)))}
+        ${listCard("Biggest goal differences",goalDiff.map(m=>matchRow(m,Math.abs(m.hg-m.ag))))}
         ${listCard("Most yellow cards",yellowCounts.map(x=>matchRow(x.m,x.n)))}
         ${listCard("Most red cards",redCounts.map(x=>matchRow(x.m,x.n)))}
         ${listCard("Most expensive tickets",priciest.map(x=>matchRow(x.m,"$"+Math.round(x.v))))}
-        ${listCard("Most valuable squads seen",values.map(v=>`<div class="rank-row"><span class="nm"><a href="#/m/${esc(v.id)}">${esc(v.name)}</a></span><span class="dt">${fmtDate(v.date)}</span><span class="n">€${Math.round(v.v)}m</span></div>`))}
       </div>
     </section>
 

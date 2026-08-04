@@ -6,10 +6,10 @@ No build step, no dependencies — drop it in a GitHub repo, turn on Pages, done
 ```
 index.html          the whole site
 data/               one CSV per match + index.csv (the manifest)
-emblems/            club/country crests: M001a.png (home), M001b.png (away)
+emblems/            crests: M001a.png (home), M001b.png (away), M001c.png (competition)
 kit/                kit icons on the formation card: M001a.png, M001b.png
 flags/              FIFA 3-letter codes, reused across matches: HKG.png, ARG.png…
-icons/              captain.png, gk.png, yellow.png, red.png, second-yellow.png
+icons/              gk, captain, sub-on, sub-off, yellow, second-yellow, red (.png)
 photos/             M001_1.jpg, M001_2.jpg…
 ```
 
@@ -22,7 +22,8 @@ photo just disappears.
 1. Copy an existing CSV in `data/` to the next number, e.g. `M042.csv`.
 2. Fill it in. Any field you leave blank is simply not displayed.
 3. Add `M042` as a new line in `data/index.csv`.
-4. Drop `M042a.png` / `M042b.png` into `emblems/` and `kit/`.
+4. Drop `M042a.png` / `M042b.png` into `emblems/` and `kit/`, plus `M042c.png` in `emblems/`
+   for the competition logo.
 
 **Matches you have tickets for but haven't been to yet:** name them `U001`, `U002`… and set
 `meta,status,upcoming`. They show in the list with an "upcoming" tag and are excluded from the
@@ -39,28 +40,26 @@ that will never exist; it's treated the same as blank.
 |---|---|
 | `meta` | `field,value` — id, status, competition, round, date (`YYYY-MM-DD`), kickoff, venue, city, country, neutral, attendance, score (`0-7`), aggregate, decision (`AET`, `Pens 4-3`), referee, referee_country |
 | `team` | `side,name,country,coach,coach_country,formation,squad_value,pitch_fill,pitch_number,gk_fill,stat_color` |
-| `player` | `side,role,number,name,kit_name,country,pos,captain,on,off,value` |
+| `player` | `side,role,number,name,kit_name,country,pos,captain,goalkeeper,on,off,yellow,double yellow,red,value` |
 | `goal` | `minute,side,scorer,type,assist` — type is `goal`, `penalty` or `own goal`; `side` is the team the goal counted **for** |
-| `card` | `minute,side,player,type` — type is `yellow`, `red` or `second yellow` |
 | `stat` | `name,home,away` — any stat you like; add rows freely |
-| `weather` | `field,value` — condition, temp_c, feels_c, humidity, wind_kph |
+| `weather` | `field,value` — condition, temp_c |
 | `personal` | `field,value` — ticket_price, ticket_currency, ticket_price_usd, section, row, seat, seating |
 | `photo` | `file,caption` |
 
 **Players.** `role` is `start`, `sub` (came on) or `bench` (unused). List the starting eleven in
 shape order — goalkeeper first, then each line as you'd read it across the pitch — because that
-order plus `formation` is what positions them on the diagram. `pos` also controls the goalkeeper
-badge: write `GK` and that player gets the goalkeeper icon wherever they're listed. `kit_name` is
-the name shown on the pitch; leave it blank and the last word of the full name is used, which is
-why *Lee Chi Ho* needs `Lee` written in but *Gonzalo Higuaín* doesn't. `captain` is `yes` for the
-captain, otherwise blank. `on` / `off` are the minutes this player entered / left the pitch —
-leave `on` blank for a player who started, and `off` blank for a player still on at full time.
-`value` is market value in € millions; if every player has one the squad total is computed,
-otherwise `squad_value` on the `team` row is used.
+order plus `formation` is what positions them on the diagram. `kit_name` is the name shown on the
+pitch; leave it blank and the last word of the full name is used, which is why *Lee Chi Ho* needs
+`Lee` written in but *Gonzalo Higuaín* doesn't. `pos` is no longer displayed — it's yours to keep
+as a note if useful. `value` is market value in € millions; if every player has one the squad
+total is computed, otherwise `squad_value` on the `team` row is used.
 
-**Cards.** One row per booking. `player` is matched against the name in the `player` rows for the
-same `side`, so spell it identically. A second yellow counts as a dismissal in the statistics
-(under "most red cards") as well as being its own icon.
+**Player markers.** `captain` and `goalkeeper` take `yes` (or anything non-blank); everything else
+takes a **minute**: `on` and `off` for entering and leaving the pitch, and `yellow`, `double
+yellow`, `red` for cards. Markers appear right after the player's name in a fixed order —
+goalkeeper, then captain, then every timed event in the order it happened. So a starter booked on
+55 and substituted on 71 shows the yellow card first, then the down arrow.
 
 **Formation colours.** `pitch_fill` / `pitch_number` set the fill and number colour for this
 team's outfield dots on the formation diagram; `gk_fill` does the same for the goalkeeper's dot.
@@ -91,6 +90,29 @@ python3 -m http.server
 # then open http://localhost:8000
 ```
 
+## Filling in weather automatically
+
+`fetch_weather.py` pulls historical weather from [Open-Meteo](https://open-meteo.com/) — free,
+no signup, no API key — and writes it straight into a match's `weather` block. It uses only the
+Python standard library, so there's nothing to `pip install`.
+
+1. Add each ground to `data/venues.csv` (name, latitude, longitude). The name must match a
+   match's `meta,venue,...` value exactly.
+2. Run it from the project folder:
+
+   ```bash
+   python3 fetch_weather.py M001            # one match
+   python3 fetch_weather.py M001 M014 M028  # a few matches
+   python3 fetch_weather.py --all           # every match in data/index.csv
+   ```
+
+A match that already has a weather condition filled in is left alone unless you add `--force`.
+Run with no arguments to see the full usage note.
+
+It fetches the temperature for the hour closest to kickoff, and turns Open-Meteo's numeric
+weather code into a short phrase the site already recognises for icons (see the Weather section
+above) — e.g. *"Overcast"*, *"Light rain"*, *"Partly cloudy"*.
+
 ## Editing CSVs on Windows
 
 Avoid opening these files by double-clicking in Excel — it will reinterpret things like a `0-7`
@@ -109,13 +131,13 @@ every column's type to Text in the import step.
 
 ## What's placeholder in the sample data
 
-`M001.csv` and `M031.csv` are parsed from the Word log, but a few things were invented and need
-replacing: **weather**, **ticket price and seat**, and the **formations** (the Word doc has pitch
-graphics, not shape strings). In `M031`, market values, match stats, and the pitch/stat colours
-are also illustrative. Card events are left out of both samples rather than guessed at. The
-captains shown (Messi for Argentina in 2014, Buffon and Ramos in the 2017 final) are real.
-Everything else — teams, scores, scorers, minutes, line-ups, coaches, referees, attendances —
-came straight out of the document.
+`M001.csv` is your own updated file — real data throughout.
+
+`M031.csv` was parsed from the Word log, with a few things invented that still need replacing:
+**weather**, **ticket price and seat**, the **formation** (the Word doc has pitch graphics, not
+shape strings), and the **market values**, **match stats** and **pitch/stat colours**. No card
+events are recorded in it. Everything else — teams, score, scorers, minutes, line-ups, coaches,
+referee, attendance — came straight out of the document.
 
 ## Fonts
 
