@@ -19,7 +19,7 @@ meta,referee_country,UZB,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,
 # --- TEAMS --- team,side,name,country,coach,coach_country,formation,squad_value,pitch_fill,pitch_number,gk_fill,stat_color,,,,
 team,home,Guangzhou Evergrande,CHN,Fabio Cannavaro,ITA,4-3-3,17.7,#D00B18,#FFFFFF,,#D00B18,,,,
-team,away,Seongnam FC,KOR,Kim Hak-beom,KOR,4-2-3-1,7.4,#595959,#FFFFFF,,#595959,,,,
+team,away,Seongnam FC,KOR,Kim Hak-beom,KOR,4-2-3-1,7.4,#111111,#FFFFFF,,#111111,,,,
 ,,,,,,,,,,,,,,,
 # --- PLAYERS -- player,side,role,number,name,kit_name,country,pos,captain,goalkeeper,on,off,yellow,double yellow,red,value
 player,home,start,19,Zeng Cheng,Zeng,CHN,,,yes,,,,,,0.5
