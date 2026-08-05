@@ -18,7 +18,7 @@ meta,referee,Wang Di,,,,,,,,,,,,,
 meta,referee_country,CHN,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,
 # --- TEAMS --- team,side,name,country,coach,coach_country,formation,squad_value,pitch_fill,pitch_number,gk_fill,stat_color,,,,
-team,home,Guangzhou Evergrande Taobao,CHN,Fabio Cannavaro,ITA,4-3-3,17.4,#D00B18,#FFFFFF,,#D00B18,,,,
+team,home,Guangzhou Evergrande,CHN,Fabio Cannavaro,ITA,4-3-3,17.4,#D00B18,#FFFFFF,,#D00B18,,,,
 team,away,Guangzhou R&F,CHN,Cosmin Contra,ROU,4-4-1-1,7,#3D64CC,#FFFFFF,,#3D64CC,,,,
 ,,,,,,,,,,,,,,,
 # --- PLAYERS -- player,side,role,number,name,kit_name,country,pos,captain,goalkeeper,on,off,yellow,double yellow,red,value
