@@ -266,8 +266,6 @@ nav.tabs a.on{background:var(--ink);color:var(--paper)}
   font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums;
 }
 .pl .nm{flex:0 1 auto;min-width:0}
-.pl .pos{font-family:var(--font-display);font-size:10px;font-weight:700;letter-spacing:.08em;color:var(--muted);
-  background:rgba(20,28,36,.05);padding:2px 5px;border-radius:2px}
 .pl .val{margin-left:auto;padding-left:8px;font-family:var(--font-display);font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums;flex:none}
 .pl.dim{color:var(--muted)}
 .badge{position:relative;display:inline-flex;align-items:center;justify-content:center;flex:none}
@@ -452,7 +450,7 @@ function parseMatch(text,id){
     };
     else if(t==="player") m.players.push({
       side:r[1],role:(r[2]||"bench").toLowerCase(),number:val(r[3]),name:val(r[4])||"?",
-      kitName:val(r[5]),country:val(r[6]),pos:val(r[7]),captain:val(r[8]),goalkeeper:val(r[9]),
+      kitName:val(r[5]),country:val(r[6]),id:val(r[7]),captain:val(r[8]),goalkeeper:val(r[9]),
       on:val(r[10]),off:val(r[11]),yellow:val(r[12]),doubleYellow:val(r[13]),red:val(r[14]),value:numOr(r[15])
     });
     else if(t==="goal") m.goals.push({
@@ -545,7 +543,7 @@ function cardInfo(type){
   return {file:"yellow",bg:"var(--amber)",bucket:"yellow"};
 }
 function compLogo(matchId,size){
-  return `<span class="comp-logo" style="width:${size}px;height:${size}px"><img src="emblems/${esc(matchId)}c.png" alt="" loading="lazy" onerror="this.closest(\'.comp-logo\').style.display=\'none\'"></span>`;
+  return `<span class="comp-logo" style="width:${size}px;height:${size}px"><img src="emblems/${esc(matchId)}.png" alt="" loading="lazy" onerror="this.closest(\'.comp-logo\').style.display=\'none\'"></span>`;
 }
 const minNum=v=>parseInt(String(v).replace(/[^0-9].*$/,""),10)||0;
 
@@ -869,9 +867,27 @@ function renderStats(){
 
   const tally=arr=>{const c={};arr.filter(Boolean).forEach(k=>c[k]=(c[k]||0)+1);
     return Object.entries(c).sort((a,b)=>b[1]-a[1]||a[0].localeCompare(b[0]));};
+  /* Groups by name+id together, so two different real people who share a name
+     (an "id" written in to tell them apart) are counted separately, while an
+     id left blank still groups normally with every other blank-id instance
+     of that name. */
+  const tallyPeople=rows=>{
+    const counts={}, idsByName={};
+    rows.forEach(({name,id})=>{
+      if(!name) return;
+      const key=name+"\u0000"+(id||"");
+      counts[key]=(counts[key]||0)+1;
+      (idsByName[name]=idsByName[name]||new Set()).add(id||"");
+    });
+    return Object.entries(counts).map(([key,v])=>{
+      const i=key.indexOf("\u0000"), name=key.slice(0,i), id=key.slice(i+1);
+      const label=(idsByName[name].size>1&&id)?`${name} (${id})`:name;
+      return [label,v];
+    }).sort((a,b)=>b[1]-a[1]||a[0].localeCompare(b[0]));
+  };
   const appearances=m=>m.players.filter(p=>p.role==="start"||p.role==="sub");
   const teamsSeen=tally(MATCHES.flatMap(m=>[(m.teams.home||{}).name,(m.teams.away||{}).name]));
-  const playersSeen=tally(MATCHES.flatMap(appearances).map(p=>p.name));
+  const playersSeen=tallyPeople(MATCHES.flatMap(appearances).map(p=>({name:p.name,id:p.id})));
   const natSeen=tally(MATCHES.flatMap(appearances).map(p=>p.country));
   const coachesSeen=tally(MATCHES.flatMap(m=>[(m.teams.home||{}).coach,(m.teams.away||{}).coach]));
   const refsSeen=tally(MATCHES.map(m=>m.meta.referee));
