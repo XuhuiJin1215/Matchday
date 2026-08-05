@@ -70,21 +70,22 @@ goal,64,away,Cristiano Ronaldo,goal,Luka Modrić
 goal,90,away,Marco Asensio,goal,Marcelo
 
 
-# --- PENALTIES ----------------------------- pen,round,side,player,result
+# --- PENALTIES ----------------------------- pen,order,side,player,result
 # DEMO ONLY — this shootout did not happen. The real 2017 final was decided
 # 4-1 in normal time, no penalties. This block exists purely so you can see
 # the format and how it renders; delete it once you've had a look. Kicker
-# names below are generic placeholders, not the real players.
-pen,1,home,Home Kicker 1,scored
+# names below are generic placeholders, not the real players. Away kicks
+# first here, to show the order isn't assumed to always start with home.
 pen,1,away,Away Kicker 1,scored
-pen,2,home,Home Kicker 2,scored
-pen,2,away,Away Kicker 2,missed
-pen,3,home,Home Kicker 3,scored
-pen,3,away,Away Kicker 3,scored
-pen,4,home,Home Kicker 4,missed
-pen,4,away,Away Kicker 4,scored
-pen,5,home,Home Kicker 5,scored
-pen,5,away,Away Kicker 5,missed
+pen,2,home,Home Kicker 1,scored
+pen,3,away,Away Kicker 2,missed
+pen,4,home,Home Kicker 2,scored
+pen,5,away,Away Kicker 3,scored
+pen,6,home,Home Kicker 3,scored
+pen,7,away,Away Kicker 4,scored
+pen,8,home,Home Kicker 4,missed
+pen,9,away,Away Kicker 5,missed
+pen,10,home,Home Kicker 5,scored
 
 # --- MATCH STATS ----------------------------- stat,name,home,away
 stat,Possession,45,55
