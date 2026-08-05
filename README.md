@@ -6,7 +6,7 @@ No build step, no dependencies — drop it in a GitHub repo, turn on Pages, done
 ```
 index.html          the whole site
 data/               one CSV per match + index.csv (the manifest)
-emblems/            crests: M001a.png (home), M001b.png (away), M001c.png (competition)
+emblems/            crests: M001a.png (home), M001b.png (away), M001.png (competition)
 kit/                kit icons on the formation card: M001a.png, M001b.png
 flags/              FIFA 3-letter codes, reused across matches: HKG.png, ARG.png…
 icons/              gk, captain, sub-on, sub-off, yellow, second-yellow, red (.png)
@@ -22,7 +22,7 @@ photo just disappears.
 1. Copy an existing CSV in `data/` to the next number, e.g. `M042.csv`.
 2. Fill it in. Any field you leave blank is simply not displayed.
 3. Add `M042` as a new line in `data/index.csv`.
-4. Drop `M042a.png` / `M042b.png` into `emblems/` and `kit/`, plus `M042c.png` in `emblems/`
+4. Drop `M042a.png` / `M042b.png` into `emblems/` and `kit/`, plus `M042.png` in `emblems/`
    for the competition logo.
 
 **Matches you have tickets for but haven't been to yet:** name them `U001`, `U002`… and set
@@ -40,8 +40,9 @@ that will never exist; it's treated the same as blank.
 |---|---|
 | `meta` | `field,value` — id, status, competition, round, date (`YYYY-MM-DD`), kickoff, venue, city, country, neutral, attendance, score (`0-7`), aggregate, decision (`AET`, `Pens 4-3`), referee, referee_country |
 | `team` | `side,name,country,coach,coach_country,formation,squad_value,pitch_fill,pitch_number,gk_fill,stat_color` |
-| `player` | `side,role,number,name,kit_name,country,pos,captain,goalkeeper,on,off,yellow,double yellow,red,value` |
+| `player` | `side,role,number,name,kit_name,country,id,captain,goalkeeper,on,off,yellow,double yellow,red,value` |
 | `goal` | `minute,side,scorer,type,assist` — type is `goal`, `penalty` or `own goal`; `side` is the team the goal counted **for** |
+| `pen` | `round,side,player,result` — a penalty-shootout kick; result is `scored` or `missed` |
 | `stat` | `name,home,away` — any stat you like; add rows freely |
 | `weather` | `field,value` — condition, temp_c |
 | `personal` | `field,value` — ticket_price, ticket_currency, ticket_price_usd, section, row, seat, seating |
@@ -51,9 +52,15 @@ that will never exist; it's treated the same as blank.
 shape order — goalkeeper first, then each line as you'd read it across the pitch — because that
 order plus `formation` is what positions them on the diagram. `kit_name` is the name shown on the
 pitch; leave it blank and the last word of the full name is used, which is why *Lee Chi Ho* needs
-`Lee` written in but *Gonzalo Higuaín* doesn't. `pos` is no longer displayed — it's yours to keep
-as a note if useful. `value` is market value in € millions; if every player has one the squad
-total is computed, otherwise `squad_value` on the `team` row is used.
+`Lee` written in but *Gonzalo Higuaín* doesn't. `value` is market value in € millions; if every
+player has one the squad total is computed, otherwise `squad_value` on the `team` row is used.
+
+**`id`.** Leave this blank almost always — it has nothing to do with player identity across the
+whole site by default. It exists for one situation: two different real people who happen to share
+the exact same `name` (two players both called "Jorginho", say). Give each of them a distinct,
+arbitrary `id` and the statistics tab will count them as separate people instead of merging their
+appearances into one. A blank `id` matches every other blank `id` for that name, so this only
+needs filling in when a genuine name collision comes up.
 
 **Player markers.** `captain` and `goalkeeper` take `yes` (or anything non-blank); everything else
 takes a **minute**: `on` and `off` for entering and leaving the pitch, and `yellow`, `double
@@ -66,6 +73,12 @@ team's outfield dots on the formation diagram; `gk_fill` does the same for the g
 Leave any of them blank for the site's defaults (off-white dots, dark numbers, amber goalkeeper).
 `stat_color` sets this team's bar colour in Match stats; leave blank for the default (dark for
 home, red for away).
+
+**Penalties.** One row per kick, only if the match went to a shootout. `round` groups a home kick
+and an away kick onto the same line in the display — write `1`, `2`, `3`... in order. If the
+shootout finished mid-round (one side already couldn't catch up, so the last kick was never
+taken), just don't write that missing row; the site displays whichever side actually kicked. The
+running score shown next to the "Penalties" heading is worked out automatically from these rows.
 
 **Weather.** `condition` also picks the icon. It matches on keywords, so anything containing
 *clear/sunny*, *partly/fair*, *cloud/overcast*, *rain/shower/drizzle*, *thunder/storm*,

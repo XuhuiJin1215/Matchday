@@ -222,6 +222,7 @@ nav.tabs a.on{background:var(--ink);color:var(--paper)}
 .sec-h{display:flex;align-items:center;gap:12px;margin-bottom:16px}
 .sec-h h2{font-family:var(--font-display);font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin:0}
 .sec-h::after{content:"";flex:1;height:1px;background:var(--line)}
+.sec-tally{font-family:var(--font-display);font-weight:700;font-size:13px;color:var(--muted)}
 .panel{background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);overflow:hidden}
 .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 
@@ -239,6 +240,12 @@ nav.tabs a.on{background:var(--ink);color:var(--paper)}
 .tl-name{font-weight:600;white-space:normal;word-break:break-word}
 .tl-name .kind{font-size:11px;color:var(--muted);font-weight:400}
 .tl-assist{font-size:12px;color:var(--muted);white-space:normal;word-break:break-word}
+.pen-row{display:grid;grid-template-columns:1fr 44px 1fr;align-items:center;gap:10px;padding:8px 18px}
+.pen-row+.pen-row{border-top:1px solid var(--line-soft)}
+.pen-side{display:flex;align-items:center;gap:8px;min-width:0}
+.pen-side.home{justify-content:flex-end}
+.pen-side.away{justify-content:flex-start}
+.pen-name{font-size:14px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 
 /* pitch */
 .pitches{display:grid;grid-template-columns:1fr 1fr;gap:16px}
@@ -439,7 +446,7 @@ const numOr=v=>blank(v)?null:(isNaN(parseFloat(v))?null:parseFloat(v));
    2. Match model
    ===================================================================== */
 function parseMatch(text,id){
-  const m={id,meta:{},teams:{},players:[],goals:[],cards:[],stats:[],weather:{},personal:{},photos:[]};
+  const m={id,meta:{},teams:{},players:[],goals:[],cards:[],penalties:[],stats:[],weather:{},personal:{},photos:[]};
   for(const r of parseCSV(text)){
     const t=(r[0]||"").toLowerCase();
     if(t==="meta") m.meta[r[1]]=val(r[2]);
@@ -456,6 +463,9 @@ function parseMatch(text,id){
     else if(t==="goal") m.goals.push({
       minute:val(r[1]),side:r[2],scorer:val(r[3])||"?",
       type:(val(r[4])||"goal").toLowerCase(),assist:val(r[5])
+    });
+    else if(t==="pen") m.penalties.push({
+      round:val(r[1])||"",side:r[2],player:val(r[3])||"?",result:(val(r[4])||"scored").toLowerCase()
     });
     else if(t==="stat"){
       const h=val(r[2]),a=val(r[3]);
@@ -536,6 +546,11 @@ function iconBadge(file,fallback,w,h,title){
 const swatch=bg=>`<span class="fb" style="background:${bg};border-radius:2px"></span>`;
 const letterFb=(bg,fg,txt)=>`<span class="fb" style="background:${bg};color:${fg};border-radius:3px">${txt}</span>`;
 const arrowFb=(color,up)=>`<span class="fb"><svg viewBox="0 0 12 12" width="100%" height="100%" aria-hidden="true"><path d="${up?"M6 1.6 10.4 8.4H1.6Z":"M6 10.4 1.6 3.6h8.8Z"}" fill="${color}"/></svg></span>`;
+const penFb=(scored)=>`<span class="fb"><svg viewBox="0 0 14 14" width="100%" height="100%" aria-hidden="true">
+  <circle cx="7" cy="7" r="6.2" fill="${scored?"#1E9E5A":"#D93A25"}"/>
+  ${scored?'<path d="M4 7.3 6.1 9.4 10 5" stroke="#fff" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>'
+          :'<path d="M4.6 4.6 9.4 9.4M9.4 4.6 4.6 9.4" stroke="#fff" stroke-width="1.4" stroke-linecap="round"/>'}
+</svg></span>`;
 function cardInfo(type){
   const t=(type||"").toLowerCase();
   if(/second|2nd|double/.test(t)) return {file:"second-yellow",bg:"linear-gradient(135deg,var(--amber) 48%,var(--accent) 52%)",bucket:"red"};
@@ -751,6 +766,23 @@ function renderMatch(id){
       return `<div class="tl-row">${home}<span class="tl-min">${esc(g.minute)}'</span>${away}</div>`;
     }).join("")}</div></section>`:"";
 
+  const penRounds=new Map();
+  m.penalties.forEach(p=>{
+    if(!penRounds.has(p.round)) penRounds.set(p.round,{});
+    penRounds.get(p.round)[p.side]=p;
+  });
+  const penHome=m.penalties.filter(p=>p.side==="home"&&p.result==="scored").length;
+  const penAway=m.penalties.filter(p=>p.side==="away"&&p.result==="scored").length;
+  const penSide=p=>{
+    if(!p) return "<span></span>";
+    const icon=iconBadge(p.result==="scored"?"pen-scored":"pen-missed",penFb(p.result==="scored"),16,16,p.result);
+    return `<span class="pen-side ${p.side}">${p.side==="home"?`<span class="pen-name">${esc(p.player)}</span>${icon}`:`${icon}<span class="pen-name">${esc(p.player)}</span>`}</span>`;
+  };
+  const penalties=m.penalties.length?`<section class="sec"><div class="sec-h"><h2>Penalties</h2><span class="sec-tally num">${penHome} – ${penAway}</span></div>
+    <div class="panel tl">${[...penRounds.entries()].map(([round,sides])=>
+      `<div class="pen-row"><span>${penSide(sides.home)}</span><span class="tl-min">${esc(round)}</span><span>${penSide(sides.away)}</span></div>`
+    ).join("")}</div></section>`:"";
+
   const startersH=m.players.filter(x=>x.side==="home"&&x.role==="start");
   const startersA=m.players.filter(x=>x.side==="away"&&x.role==="start");
   const pitches=(startersH.length||startersA.length)?`<section class="sec"><div class="sec-h"><h2>Formation</h2></div>
@@ -845,6 +877,7 @@ function renderMatch(id){
       </div>
     </div>
     ${goals}
+    ${penalties}
     ${pitches}
     <section class="sec"><div class="sec-h"><h2>Team sheets</h2></div>
       <div class="grid-2">${lineupBlock(m,"home")}${lineupBlock(m,"away")}</div>
@@ -982,7 +1015,7 @@ function renderStats(){
 
     <section class="sec"><div class="sec-h"><h2>Records</h2></div>
       <div class="cards">
-        ${listCard("Biggest crowds",bigCrowd.map(m=>matchRow(m,nf(m.attendance))))}
+        ${listCard("Most Attendance",bigCrowd.map(m=>matchRow(m,nf(m.attendance))))}
         ${listCard("Most goals",goalfest.map(m=>matchRow(m,m.hg+m.ag)))}
         ${listCard("Biggest goal differences",goalDiff.map(m=>matchRow(m,Math.abs(m.hg-m.ag))))}
         ${listCard("Most yellow cards",yellowCounts.map(x=>matchRow(x.m,x.n)))}
