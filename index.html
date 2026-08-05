@@ -240,10 +240,7 @@ nav.tabs a.on{background:var(--ink);color:var(--paper)}
 .tl-name{font-weight:600;white-space:normal;word-break:break-word}
 .tl-name .kind{font-size:11px;color:var(--muted);font-weight:400}
 .tl-assist{font-size:12px;color:var(--muted);white-space:normal;word-break:break-word}
-.pen-kick{display:flex;align-items:center;gap:11px;padding:9px 18px}
-.pen-kick+.pen-kick{border-top:1px solid var(--line-soft)}
-.pen-num{width:20px;flex:none;text-align:center;font-family:var(--font-display);font-weight:700;font-size:12px;color:var(--muted)}
-.pen-kick-name{flex:1;min-width:0;font-size:14px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pen-icon{justify-self:center;display:flex}
 
 /* pitch */
 .pitches{display:grid;grid-template-columns:1fr 1fr;gap:16px}
@@ -768,15 +765,12 @@ function renderMatch(id){
   const penAway=m.penalties.filter(p=>p.side==="away"&&p.result==="scored").length;
   const penKicks=m.penalties.slice().sort((a,b)=>minNum(a.order)-minNum(b.order));
   const penalties=m.penalties.length?`<section class="sec"><div class="sec-h"><h2>Penalty shootout</h2><span class="sec-tally num">${penHome} – ${penAway}</span></div>
-    <div class="panel">${penKicks.map((p,i)=>{
-      const t=m.teams[p.side]||{};
-      const icon=iconBadge(p.result==="scored"?"pen-scored":"pen-missed",penFb(p.result==="scored"),16,16,p.result);
-      return `<div class="pen-kick">
-        <span class="pen-num num">${esc(p.order)||(i+1)}</span>
-        ${crest(m.id,p.side,t.name)}
-        <span class="pen-kick-name">${esc(p.player)}</span>
-        ${icon}
-      </div>`;
+    <div class="panel tl">${penKicks.map(p=>{
+      const icon=iconBadge(p.result==="scored"?"pen-scored":"pen-missed",penFb(p.result==="scored"),20,20,p.result);
+      const name=`<span class="tl-side ${p.side}"><span class="tl-name">${esc(p.player)}</span></span>`;
+      const home=p.side==="home"?name:"<span></span>";
+      const away=p.side==="away"?name:"<span></span>";
+      return `<div class="tl-row">${home}<span class="pen-icon">${icon}</span>${away}</div>`;
     }).join("")}</div></section>`:"";
 
   const startersH=m.players.filter(x=>x.side==="home"&&x.role==="start");
