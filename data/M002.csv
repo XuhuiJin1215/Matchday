@@ -21,7 +21,7 @@ meta,referee_country,CHN,,,,,,,,,,,,,
 team,home,Guangzhou R&F,CHN,Cosmin Contra,ROU,4-1-4-1,7.8,#3D64CC,#FFFFFF,,#3D64CC,,,,
 team,away,Guizhou Renhe,CHN,Zhu Jiong,CHN,4-4-2,5.3,#C0492B,#FFFFFF,,#C0492B,,,,
 ,,,,,,,,,,,,,,,
-# --- PLAYERS -- player,side,role,number,name,kit_name,country,pos,captain,goalkeeper,on,off,yellow,double yellow,red,value
+# --- PLAYERS -- player,side,role,number,name,kit_name,country,id,captain,goalkeeper,on,off,yellow,double yellow,red,value
 player,home,start,27,Liu Dianzuo,Liu,CHN,,,yes,,,,,,0.1
 player,home,start,11,Jiang Zhipeng,Jiang,CHN,,,,,78,,,,0.5
 player,home,start,4,Jin Yangyang,Jin,CHN,,,,,,,,,0.2
@@ -85,5 +85,5 @@ personal,seat,21,,,,,,,,,,,,,
 personal,seating,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,
 # --- PHOTOS --- photo,file,caption,,,,,,,,,,,,,
-photo,,,,,,,,,,,,,,,
+photo,M002_1.jpg,,,,,,,,,,,,,,
 photo,,,,,,,,,,,,,,,

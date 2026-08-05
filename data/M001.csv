@@ -21,18 +21,18 @@ meta,referee_country,JPN,,,,,,,,,,,,,
 team,home,Hong Kong,,Kim Pan-gon,KOR,4-4-2,2.0,#E05C6C,#FFFFFF,,#E05C6C,,,,
 team,away,Argentina,,Gerardo Martino,ARG,4-2-3-1,467,#1D4B87,#FFFFFF,,#1D4B87,,,,
 ,,,,,,,,,,,,,,,
-# --- PLAYERS -- player,side,role,number,name,kit_name,country,pos,captain,goalkeeper,on,off,yellow,double yellow,red,value
-player,home,start,1,Yapp Hung Fai,Yapp,HKG,GK,,yes,,,,,,0.2
-player,home,start,13,Cheung Kin Fung,Cheung,HKG,LB,,,,65,,,,0.1
-player,home,start,3,Wisdom Fofo Agbo,Agbo,HKG,CB,,,,,,,,0.1
-player,home,start,15,Chan Wai Ho,Chan,HKG,CB,yes,,,,,,,0.1
-player,home,start,2,Lee Chi Ho,Lee,HKG,RB,,,,46,,,,0.1
-player,home,start,5,Andy Nägelein,Nägelein,HKG,LM,,,,,55,,,0.1
-player,home,start,23,Ju Yingzhi,Ju,HKG,CM,,,,61,,,,0.1
-player,home,start,6,Huang Yang,Huang,HKG,CM,,,,81,,,,0.1
-player,home,start,8,Xu Deshuai,Xu,HKG,RM,,,,71,,,,0.1
-player,home,start,9,Lee Wai Lim,Lee,HKG,ST,,,,46,,,,0.1
-player,home,start,18,Godfred Karikari,Karikari,HKG,ST,,,,,,,,0.1
+# --- PLAYERS -- player,side,role,number,name,kit_name,country,id,captain,goalkeeper,on,off,yellow,double yellow,red,value
+player,home,start,1,Yapp Hung Fai,Yapp,HKG,,,yes,,,,,,0.2
+player,home,start,13,Cheung Kin Fung,Cheung,HKG,,,,,65,,,,0.1
+player,home,start,3,Wisdom Fofo Agbo,Agbo,HKG,,,,,,,,,0.1
+player,home,start,15,Chan Wai Ho,Chan,HKG,,yes,,,,,,,0.1
+player,home,start,2,Lee Chi Ho,Lee,HKG,,,,,46,,,,0.1
+player,home,start,5,Andy Nägelein,Nägelein,HKG,,,,,,55,,,0.1
+player,home,start,23,Ju Yingzhi,Ju,HKG,,,,,61,,,,0.1
+player,home,start,6,Huang Yang,Huang,HKG,,,,,81,,,,0.1
+player,home,start,8,Xu Deshuai,Xu,HKG,,,,,71,,,,0.1
+player,home,start,9,Lee Wai Lim,Lee,HKG,,,,,46,,,,0.1
+player,home,start,18,Godfred Karikari,Karikari,HKG,,,,,,,,,0.1
 player,home,sub,14,Jack Sealy,Sealy,HKG,,,,46,,,,,0.2
 player,home,sub,11,Christian Annan,Annan,HKG,,,,46,,,,,0.1
 player,home,sub,16,Leung Chun Pong,Leung,HKG,,,,61,,,,,0.1
@@ -45,17 +45,17 @@ player,home,bench,19,Wang Zhenpeng,Wang,HKG,,,yes,,,,,,0.1
 player,home,bench,20,Chan Man Fai,Chan,HKG,,,,,,,,,0.1
 player,home,bench,22,Lam Hok Hei,Lam,HKG,,,,,,,,,
 player,home,bench,24,Chan Siu Kwan,Chan,HKG,,,,,,,,,0.1
-player,away,start,21,Nahuel Guzmán,,ARG,GK,,yes,,46,,,,2
-player,away,start,3,Leonel Vangioni,,ARG,LB,,,,,,,,1.5
-player,away,start,6,Nicolás Otamendi,,ARG,CB,,,,,,,,12
-player,away,start,13,Facundo Roncaglia,,ARG,CB,,,,61,,,,4
-player,away,start,2,Santiago Vergini,,ARG,RB,,,,,,,,1
-player,away,start,19,Éver Banega,,ARG,DM,,,,,,,,8
-player,away,start,5,Fernando Gago,,ARG,DM,yes,,,73,,,,4
-player,away,start,20,Nicolás Gaitán,,ARG,LM,,,,73,,,,25
-player,away,start,22,Javier Pastore,,ARG,AM,,,,61,,,,18
-player,away,start,8,Enzo Pérez,,ARG,RM,,,,73,,,,23
-player,away,start,9,Gonzalo Higuaín,,ARG,ST,,,,,,,,40
+player,away,start,21,Nahuel Guzmán,,ARG,,,yes,,46,,,,2
+player,away,start,3,Leonel Vangioni,,ARG,,,,,,,,,1.5
+player,away,start,6,Nicolás Otamendi,,ARG,,,,,,,,,12
+player,away,start,13,Facundo Roncaglia,,ARG,,,,,61,,,,4
+player,away,start,2,Santiago Vergini,,ARG,,,,,,,,,1
+player,away,start,19,Éver Banega,,ARG,,,,,,,,,8
+player,away,start,5,Fernando Gago,,ARG,,yes,,,73,,,,4
+player,away,start,20,Nicolás Gaitán,,ARG,,,,,73,,,,25
+player,away,start,22,Javier Pastore,,ARG,,,,,61,,,,18
+player,away,start,8,Enzo Pérez,,ARG,,,,,73,,,,23
+player,away,start,9,Gonzalo Higuaín,,ARG,,,,,,,,,40
 player,away,sub,12,Agustín Marchesín,,ARG,,,yes,46,,,,,2.5
 player,away,sub,4,Pablo Zabaleta,,ARG,,,,61,,,,,19
 player,away,sub,10,Lionel Messi,,ARG,,,,61,,,,,120

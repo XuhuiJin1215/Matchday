@@ -1,0 +1,86 @@
+,,,,,,,,,,,,,,,
+# --- MATCH --- meta,field,value,,,,,,,,,,,,,
+meta,id,M005,,,,,,,,,,,,,
+meta,status,played,,,,,,,,,,,,,
+meta,competition,Chinese Super League,,,,,,,,,,,,,
+meta,round,Matchday 24,,,,,,,,,,,,,
+meta,date,2015-08-22,,,,,,,,,,,,,
+meta,kickoff,19:45,,,,,,,,,,,,,
+meta,venue,Hanghai Stadium,,,,,,,,,,,,,
+meta,city,Zhengzhou,,,,,,,,,,,,,
+meta,country,CHN,,,,,,,,,,,,,
+meta,neutral,no,,,,,,,,,,,,,
+meta,attendance,20123,,,,,,,,,,,,,
+meta,score,1-0,,,,,,,,,,,,,
+meta,aggregate,,,,,,,,,,,,,,
+meta,decision,,,,,,,,,,,,,,
+meta,referee,Zhang Lei,,,,,,,,,,,,,
+meta,referee_country,CHN,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- TEAMS --- team,side,name,country,coach,coach_country,formation,squad_value,pitch_fill,pitch_number,gk_fill,stat_color,,,,
+team,home,Henan Jianye,CHN,Jia Xiuquan,CHN,5-3-2,4.6,#D70F19,#FFFFFF,,#D70F19,,,,
+team,away,Shandong Luneng Taishan,CHN,Cuca,BRA,4-3-3,24.4,#DAD9DF,#E36842,,#DAD9DF,,,,
+,,,,,,,,,,,,,,,
+# --- PLAYERS -- player,side,role,number,name,kit_name,country,id,captain,goalkeeper,on,off,yellow,double yellow,red,value
+player,home,start,29,Han Feng,Han,CHN,,,yes,,,89,,,0.1
+player,home,start,16,Yang Kuo,Yang,CHN,,,,,,,,,0.1
+player,home,start,4,Edigeison Gomes,,CHN,,yes,,,,,,,0.6
+player,home,start,5,Gu Cao,Gu,CHN,,,,,71,,,,0.2
+player,home,start,33,Bi Jinhao,Bi,CHN,,,,,,,,,0.2
+player,home,start,2,Long Cheng,Long,CHN,,,,,,,,,0.1
+player,home,start,10,Ivo,,BRA,,,,,,,,,1
+player,home,start,15,Jung In-hwan,Jung,KOR,,,,,,,,,0.7
+player,home,start,14,Mirahmetjan Muzepper,Mirahmetjan,CHN,,,,,46,45+2,,,0.1
+player,home,start,9,Javier Patiño,,PHI,,,,,,,,,0.7
+player,home,start,7,Xiao Zhi,Xiao,CHN,,,,,60,,,,0.1
+player,home,sub,35,Liang Yu,,CHN,,,,46,,,,,0.1
+player,home,sub,18,Xu Yang,,CHN,,,,60,,,,,0.1
+player,home,sub,32,Lu Yao,,CHN,,,,71,,,,,0.1
+player,home,bench,1,Wu Yan,,CHN,,,yes,,,,,,0.1
+player,home,bench,13,Abduwali Ablet,,CHN,,,,,,,,,0.1
+player,home,bench,19,Zhang Ke,,CHN,,,,,,,,,0.1
+player,home,bench,20,Mateusz Zachara,,POL,,,,,,,,,0.5
+player,away,start,23,Wang Dalei,Wang,CHN,,,yes,,,37,,,0.8
+player,away,start,6,Zheng Zheng,Zheng,CHN,,,,,,,,,0.3
+player,away,start,16,Wang Qiang,Wang,CHN,,,,,,,,36,0.1
+player,away,start,14,Wang Tong,Wang,CHN,,,,,,24,,,0.2
+player,away,start,22,Hao Junmin,Hao,CHN,,yes,,,,90+1,,,0.6
+player,away,start,8,Wang Yongpo,Wang,CHN,,,,,64,,,,0.4
+player,away,start,5,Júnior Urso,,BRA,,,,,,,,,0.9
+player,away,start,4,Jucilei,,BRA,,,,,,59,,,7
+player,away,start,9,Diego Tardelli,,BRA,,,,,64,,,,5
+player,away,start,19,Yang Xu,Yang,CHN,,,,,71,,,,0.6
+player,away,start,21,Aloísio,,BRA,,,,,,90+3,,,3.6
+player,away,sub,12,Jin Jingdao,,CHN,,,,64,,,,,0.2
+player,away,sub,18,Han Peng,,CHN,,,,64,,,,,0.2
+player,away,sub,10,Walter Montillo,,ARG,,,,71,,,,,3.5
+player,away,bench,7,Zhang Wenzhao,,CHN,,,,,,,,,0.4
+player,away,bench,11,Liu Binbin,,CHN,,,,,,,,,0.5
+player,away,bench,20,Han Rongze,,CHN,,,yes,,,,,,0.1
+player,away,bench,27,Li Songyi,,CHN,,,,,,,,,0.1
+,,,,,,,,,,,,,,,
+# --- GOALS --- goal,minute,side,scorer,type,assist,,,,,,,,,,
+goal,3,home,Javier Patiño,goal,Ivo,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- MATCH STATS --- stat,name,home,away,,,,,,,,,,,,
+stat,Possession,40,60,,,,,,,,,,,,
+stat,Expected goals (xG),,,,,,,,,,,,,,
+stat,Shots,9,13,,,,,,,,,,,,
+stat,Shots on target,4,3,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- WEATHER --- weather,field,value,,,,,,,,,,,,,
+weather,condition,Overcast,,,,,,,,,,,,,
+weather,temp_c,21,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- MATCHDAY --- personal,field,value,,,,,,,,,,,,,
+personal,ticket_price,100,,,,,,,,,,,,,
+personal,ticket_currency,CNY,,,,,,,,,,,,,
+personal,ticket_price_usd,16,,,,,,,,,,,,,
+personal,section,Section D3,,,,,,,,,,,,,
+personal,row,,,,,,,,,,,,,,
+personal,seat,,,,,,,,,,,,,,
+personal,seating,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- PHOTOS --- photo,file,caption,,,,,,,,,,,,,
+photo,M005_1.jpg,,,,,,,,,,,,,,
+photo,,,,,,,,,,,,,,,

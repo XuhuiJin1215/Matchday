@@ -21,7 +21,7 @@ meta,referee_country,UZB,,,,,,,,,,,,,
 team,home,Guangzhou Evergrande,CHN,Fabio Cannavaro,ITA,4-3-3,17.7,#D00B18,#FFFFFF,,#D00B18,,,,
 team,away,Seongnam FC,KOR,Kim Hak-beom,KOR,4-2-3-1,7.4,#111111,#FFFFFF,,#111111,,,,
 ,,,,,,,,,,,,,,,
-# --- PLAYERS -- player,side,role,number,name,kit_name,country,pos,captain,goalkeeper,on,off,yellow,double yellow,red,value
+# --- PLAYERS -- player,side,role,number,name,kit_name,country,id,captain,goalkeeper,on,off,yellow,double yellow,red,value
 player,home,start,19,Zeng Cheng,Zeng,CHN,,,yes,,,,,,0.5
 player,home,start,25,Zou Zheng,Zou,CHN,,,,,75,,,,0.1
 player,home,start,3,Mei Fang,Mei,CHN,,,,,,33,,,0.4
@@ -49,7 +49,7 @@ player,away,start,14,Jung Seon-ho,Jung,KOR,,,,,,,,,0.1
 player,away,start,7,Kim Cheol-ho,Kim,KOR,,,,,,,,,0.7
 player,away,start,23,Nam Joon-jae,Nam,KOR,,,,,63,,,,0.5
 player,away,start,8,Kim Do-heon,Kim,KOR,,yes,,,,,,,0.6
-player,away,start,10,Jorge Xavier,Jorginho,BRA,,,,,69,,,,0.6
+player,away,start,10,Jorginho,Jorginho,BRA,19910105,,,,69,,,,0.6
 player,away,start,11,Ricardo Bueno,Ricardo,BRA,,,,,77,1,,,0.5
 player,away,sub,16,Hwang Ui-jo,,KOR,,,,63,,,,,0.3
 player,away,sub,18,Kim Sung-joon,,KOR,,,,69,,,,,0.6
@@ -83,5 +83,5 @@ personal,seat,15,,,,,,,,,,,,,
 personal,seating,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,
 # --- PHOTOS --- photo,file,caption,,,,,,,,,,,,,
-photo,,,,,,,,,,,,,,,
+photo,M004_1.jpg,,,,,,,,,,,,,,
 photo,,,,,,,,,,,,,,,

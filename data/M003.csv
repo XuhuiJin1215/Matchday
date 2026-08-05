@@ -21,7 +21,7 @@ meta,referee_country,CHN,,,,,,,,,,,,,
 team,home,Guangzhou Evergrande,CHN,Fabio Cannavaro,ITA,4-3-3,17.4,#D00B18,#FFFFFF,,#D00B18,,,,
 team,away,Guangzhou R&F,CHN,Cosmin Contra,ROU,4-4-1-1,7,#3D64CC,#FFFFFF,,#3D64CC,,,,
 ,,,,,,,,,,,,,,,
-# --- PLAYERS -- player,side,role,number,name,kit_name,country,pos,captain,goalkeeper,on,off,yellow,double yellow,red,value
+# --- PLAYERS -- player,side,role,number,name,kit_name,country,id,captain,goalkeeper,on,off,yellow,double yellow,red,value
 player,home,start,19,Zeng Cheng,Zeng,CHN,,,yes,,,,,,0.5
 player,home,start,25,Zou Zheng,Zou,CHN,,,,,52,,,,0.1
 player,home,start,35,Li Xuepeng,Li,CHN,,,,,,,,,0.5
