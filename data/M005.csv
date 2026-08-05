@@ -19,7 +19,7 @@ meta,referee_country,CHN,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,
 # --- TEAMS --- team,side,name,country,coach,coach_country,formation,squad_value,pitch_fill,pitch_number,gk_fill,stat_color,,,,
 team,home,Henan Jianye,CHN,Jia Xiuquan,CHN,5-3-2,4.6,#D70F19,#FFFFFF,,#D70F19,,,,
-team,away,Shandong Luneng Taishan,CHN,Cuca,BRA,4-3-3,24.4,#DAD9DF,#E36842,,#DAD9DF,,,,
+team,away,Shandong Luneng Taishan,CHN,Cuca,BRA,4-3-3,24.4,#FAFAFA,#E36842,,#E36842,,,,
 ,,,,,,,,,,,,,,,
 # --- PLAYERS -- player,side,role,number,name,kit_name,country,id,captain,goalkeeper,on,off,yellow,double yellow,red,value
 player,home,start,29,Han Feng,Han,CHN,,,yes,,,89,,,0.1
