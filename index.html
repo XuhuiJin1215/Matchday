@@ -352,6 +352,44 @@ nav.tabs a.on{background:var(--ink);color:var(--paper)}
 .rank-row .track i{display:block;height:100%;background:var(--ink);border-radius:999px}
 .empty{padding:22px 18px;color:var(--muted);font-size:14px}
 
+/* clickable stat cards + their "view all" footer */
+.stat-card h3 a{display:block}
+.stat-card h3 a:hover{color:var(--accent)}
+.card-more{
+  display:block;padding:11px 18px;border-top:1px solid var(--line-soft);
+  font-family:var(--font-display);font-size:11px;font-weight:700;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--muted);
+}
+.card-more:hover{color:var(--accent);background:rgba(20,28,36,.02)}
+.rank-row .nm a:hover{color:var(--accent)}
+
+/* stat detail page */
+.stat-head{padding:14px 0 6px}
+.stat-head h1{font-family:var(--font-display);font-weight:800;font-size:clamp(26px,4.4vw,40px);
+  line-height:1.04;letter-spacing:-.02em;margin:6px 0 0}
+.charts{margin:28px 0 0}
+.viz-note{margin:14px 0 0;font-size:12px;color:var(--muted)}
+.viz-svg{width:100%;height:auto;display:block;overflow:visible}
+
+/* horizontal ranking bars */
+.viz-bars{display:flex;flex-direction:column;gap:9px}
+.vb-row{display:flex;align-items:center;gap:10px;font-size:14px}
+.vb-rank{width:20px;flex:none;text-align:right;font-family:var(--font-display);font-weight:700;
+  font-size:12px;color:var(--muted)}
+.vb-label{flex:0 0 32%;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.vb-track{flex:1;min-width:0;height:9px;background:var(--line-soft);border-radius:999px;overflow:hidden}
+.vb-track i{display:block;height:100%;border-radius:999px;background:var(--ink);
+  transition:width .5s cubic-bezier(.2,.7,.3,1)}
+.vb-val{flex:none;font-family:var(--font-display);font-weight:700;font-size:13px;
+  font-variant-numeric:tabular-nums;min-width:52px;text-align:right}
+
+/* frequency histogram */
+.histo{display:flex;align-items:flex-end;gap:8px;height:132px}
+.hs{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:5px;height:100%}
+.hs-bar{width:100%;background:var(--ink);border-radius:2px 2px 0 0;min-height:3px}
+.hs-n{font-family:var(--font-display);font-weight:700;font-size:12px}
+.hs-l{font-size:10px;color:var(--muted);font-family:var(--font-display)}
+
 /* year bars */
 .years{display:flex;align-items:flex-end;gap:8px;height:150px;padding:8px 18px 0}
 .yr{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:6px;height:100%}
@@ -382,6 +420,8 @@ footer{border-top:1px solid var(--line);margin-top:50px;padding:22px 0 50px;colo
   .fx-team .nm{font-size:15px}
   .fx-score{font-size:20px;padding:2px 9px}
   .tl-row{grid-template-columns:1fr 62px 1fr;padding:9px 12px}
+  .vb-label{flex:0 0 42%}
+  .charts{margin-top:20px}
 }
 @media (prefers-reduced-motion:reduce){
   *{animation:none !important;transition:none !important}
@@ -880,7 +920,13 @@ function renderMatch(id){
 }
 
 /* ---------- statistics ---------- */
-function renderStats(){
+/* ---------------------------------------------------------------
+   Statistics: one shared data model powers both the summary cards
+   (top 5) and the per-stat detail pages (full list + charts).
+   --------------------------------------------------------------- */
+const SECTIONS=["Competitions and locations","Teams and players","Records","Conditions"];
+
+function computeStats(){
   const played=MATCHES.filter(m=>m.status==="played"&&m.hg!=null);
   const goals=played.reduce((s,m)=>s+m.hg+m.ag,0);
   const crowd=played.reduce((s,m)=>s+(m.attendance||0),0);
@@ -890,10 +936,6 @@ function renderStats(){
 
   const tally=arr=>{const c={};arr.filter(Boolean).forEach(k=>c[k]=(c[k]||0)+1);
     return Object.entries(c).sort((a,b)=>b[1]-a[1]||a[0].localeCompare(b[0]));};
-  /* Groups by name+id together, so two different real people who share a name
-     (an "id" written in to tell them apart) are counted separately, while an
-     id left blank still groups normally with every other blank-id instance
-     of that name. */
   const tallyPeople=rows=>{
     const counts={}, idsByName={};
     rows.forEach(({name,id})=>{
@@ -909,116 +951,255 @@ function renderStats(){
     }).sort((a,b)=>b[1]-a[1]||a[0].localeCompare(b[0]));
   };
   const appearances=m=>m.players.filter(p=>p.role==="start"||p.role==="sub");
-  const teamsSeen=tally(MATCHES.flatMap(m=>[(m.teams.home||{}).name,(m.teams.away||{}).name]));
-  const playersSeen=tallyPeople(MATCHES.flatMap(appearances).map(p=>({name:p.name,id:p.id})));
-  const natSeen=tally(MATCHES.flatMap(appearances).map(p=>p.country));
-  const coachesSeen=tally(MATCHES.flatMap(m=>[(m.teams.home||{}).coach,(m.teams.away||{}).coach]));
-  const refsSeen=tally(MATCHES.map(m=>m.meta.referee));
-  const venuesSeen=tally(MATCHES.map(m=>m.meta.venue));
-  const compsSeen=tally(MATCHES.map(m=>m.meta.competition));
-  const countrySeen=tally(MATCHES.map(m=>m.meta.country));
-  const weatherSeen=tally(MATCHES.map(m=>m.weather.condition));
-  const scorers=tally(MATCHES.flatMap(m=>m.goals.map(g=>g.scorer)));
+
+  const defs={};
+  /* count-based: a ranking of names by how many times they appear */
+  const addCount=(key,title,section,pairs,opts)=>{
+    defs[key]={key,title,section,kind:"count",unit:(opts&&opts.unit)||"",
+      isFlag:!!(opts&&opts.isFlag),noun:(opts&&opts.noun)||"entries",
+      fmt:v=>String(v),
+      rows:pairs.map(([label,value])=>({key:label,label,value,flagCode:(opts&&opts.isFlag)?label:null}))};
+  };
+  /* match-based: a per-match measurement, so it can be plotted over time */
+  const addMatch=(key,title,section,rows,fmt,noun)=>{
+    defs[key]={key,title,section,kind:"match",fmt,noun:noun||"matches",
+      rows:rows.map(r=>({key:r.m.id+"|"+r.value,label:`${(r.m.teams.home||{}).name} v ${(r.m.teams.away||{}).name}`,
+        value:r.value,id:r.m.id,date:r.m.date}))};
+  };
+  /* value-based: money figures attached to a team or player in one match */
+  const addValue=(key,title,section,rows,noun)=>{
+    defs[key]={key,title,section,kind:"value",fmt:v=>"€"+fmtVal(v)+"m",noun:noun||"entries",
+      rows:rows.map(r=>({key:r.id+"|"+r.name,label:r.name,value:r.v,id:r.id,date:r.date}))};
+  };
+
+  addCount("competitions","Competitions","Competitions and locations",tally(MATCHES.map(m=>m.meta.competition)),{noun:"competitions"});
+  addCount("countries","Countries","Competitions and locations",tally(MATCHES.map(m=>m.meta.country)),{isFlag:true,noun:"countries"});
+  addCount("stadiums","Stadiums","Competitions and locations",tally(MATCHES.map(m=>m.meta.venue)),{noun:"stadiums"});
+
+  addCount("teams-appearances","Teams by appearances","Teams and players",
+    tally(MATCHES.flatMap(m=>[(m.teams.home||{}).name,(m.teams.away||{}).name])),{noun:"teams"});
+  addValue("teams-value","Teams by market value","Teams and players",
+    MATCHES.flatMap(m=>["home","away"].map(sd=>{
+      const t=m.teams[sd]; if(!t) return null;
+      const v=squadValue(m,sd);
+      return v==null?null:{name:t.name,v,id:m.id,date:m.date};
+    })).filter(Boolean).sort((a,b)=>b.v-a.v),"squads");
+  addCount("clubs-country","Clubs by country","Teams and players",
+    tally(MATCHES.flatMap(m=>[(m.teams.home||{}).country,(m.teams.away||{}).country])),{isFlag:true,noun:"countries"});
+  addCount("players-appearances","Players by appearances","Teams and players",
+    tallyPeople(MATCHES.flatMap(appearances).map(p=>({name:p.name,id:p.id}))),{noun:"players"});
+  addValue("players-value","Players by market value","Teams and players",
+    MATCHES.flatMap(m=>appearances(m).filter(p=>p.value!=null)
+      .map(p=>({name:p.name,v:p.value,id:m.id,date:m.date}))).sort((a,b)=>b.v-a.v),"players");
+  addCount("players-nationality","Players by nationality","Teams and players",
+    tally(MATCHES.flatMap(appearances).map(p=>p.country)),{isFlag:true,noun:"nationalities"});
+  addCount("scorers","Scorers","Teams and players",tally(MATCHES.flatMap(m=>m.goals.map(g=>g.scorer))),{noun:"scorers"});
+  addCount("head-coach","Head coach","Teams and players",
+    tally(MATCHES.flatMap(m=>[(m.teams.home||{}).coach,(m.teams.away||{}).coach])),{noun:"coaches"});
+  addCount("referee","Referee","Teams and players",tally(MATCHES.map(m=>m.meta.referee)),{noun:"referees"});
+
+  const cardBucket=t=>cardInfo(t).bucket;
+  addMatch("attendance","Most Attendance","Records",
+    played.filter(m=>m.attendance).map(m=>({m,value:m.attendance})).sort((a,b)=>b.value-a.value),nf);
+  addMatch("goals","Most goals","Records",
+    played.map(m=>({m,value:m.hg+m.ag})).sort((a,b)=>b.value-a.value),v=>String(v));
+  addMatch("goal-difference","Biggest goal differences","Records",
+    played.map(m=>({m,value:Math.abs(m.hg-m.ag)})).sort((a,b)=>b.value-a.value),v=>String(v));
+  addMatch("yellow-cards","Most yellow cards","Records",
+    MATCHES.map(m=>({m,value:m.cards.filter(c=>cardBucket(c.type)==="yellow").length}))
+      .filter(x=>x.value>0).sort((a,b)=>b.value-a.value),v=>String(v));
+  addMatch("red-cards","Most red cards","Records",
+    MATCHES.map(m=>({m,value:m.cards.filter(c=>cardBucket(c.type)==="red").length}))
+      .filter(x=>x.value>0).sort((a,b)=>b.value-a.value),v=>String(v));
+  addMatch("ticket-price","Most expensive tickets","Records",
+    MATCHES.map(m=>({m,value:parseFloat(m.personal.ticket_price_usd)}))
+      .filter(x=>!isNaN(x.value)).sort((a,b)=>b.value-a.value),v=>"$"+Math.round(v));
+
+  addCount("weather","Weather","Conditions",tally(MATCHES.map(m=>m.weather.condition)),{noun:"conditions"});
+  addMatch("temperature","Temperature","Conditions",
+    MATCHES.map(m=>({m,value:parseFloat(m.weather.temp_c)}))
+      .filter(x=>!isNaN(x.value)).sort((a,b)=>b.value-a.value),v=>v+"°C");
 
   const years=played.map(m=>m.year).filter(Boolean);
   const spanFrom=years.length?Math.min(...years):null, spanTo=years.length?Math.max(...years):null;
   const yearCounts={};
   if(spanFrom) for(let y=spanFrom;y<=spanTo;y++) yearCounts[y]=0;
   years.forEach(y=>yearCounts[y]++);
-  const yMax=Math.max(1,...Object.values(yearCounts));
 
-  const bigCrowd=played.filter(m=>m.attendance).sort((a,b)=>b.attendance-a.attendance).slice(0,5);
-  const goalfest=played.slice().sort((a,b)=>(b.hg+b.ag)-(a.hg+a.ag)).slice(0,5);
-  const cardBucket=t=>cardInfo(t).bucket;
-  const yellowCounts=MATCHES.map(m=>({m,n:m.cards.filter(c=>cardBucket(c.type)==="yellow").length})).filter(x=>x.n>0).sort((a,b)=>b.n-a.n).slice(0,5);
-  const redCounts=MATCHES.map(m=>({m,n:m.cards.filter(c=>cardBucket(c.type)==="red").length})).filter(x=>x.n>0).sort((a,b)=>b.n-a.n).slice(0,5);
-  const temps=MATCHES.map(m=>({m,v:parseFloat(m.weather.temp_c)})).filter(x=>!isNaN(x.v));
-  const tempVals=temps.map(x=>x.v);
-  const tempTop=temps.slice().sort((a,b)=>b.v-a.v).slice(0,5);
-  const spendUSD=MATCHES.map(m=>parseFloat(m.personal.ticket_price_usd)).filter(n=>!isNaN(n));
-  const priciest=MATCHES.map(m=>({m,v:parseFloat(m.personal.ticket_price_usd)})).filter(x=>!isNaN(x.v)).sort((a,b)=>b.v-a.v).slice(0,5);
-  const values=MATCHES.flatMap(m=>["home","away"].map(s=>{
-    const t=m.teams[s]; if(!t) return null;
-    const v=squadValue(m,s);
-    return v==null?null:{name:t.name,v,id:m.id,date:m.date};
-  })).filter(Boolean).sort((a,b)=>b.v-a.v).slice(0,8);
-  const playerValues=MATCHES.flatMap(m=>appearances(m).filter(p=>p.value!=null)
-    .map(p=>({name:p.name,v:p.value,id:m.id,date:m.date})))
-    .sort((a,b)=>b.v-a.v).slice(0,8);
-  const clubCountry=tally(MATCHES.flatMap(m=>[(m.teams.home||{}).country,(m.teams.away||{}).country]));
-  const goalDiff=played.slice().sort((a,b)=>Math.abs(b.hg-b.ag)-Math.abs(a.hg-a.ag)).slice(0,5);
+  const tempVals=defs.temperature.rows.map(r=>r.value);
+  const spendUSD=defs["ticket-price"].rows.map(r=>r.value);
 
-  const rankCard=(title,rows,unit)=>{
-    const max=rows.length?rows[0][1]:1;
-    return `<div class="card"><h3>${title}</h3>${rows.length?`<div class="rank">${rows.slice(0,8).map(([k,v])=>`
-      <div class="rank-row"><span class="nm">${esc(k)}</span>
-      <span class="track"><i style="width:${Math.round(v/max*100)}%"></i></span>
-      <span class="n">${v}${unit||""}</span></div>`).join("")}</div>`:`<div class="empty">Nothing recorded yet.</div>`}</div>`;
-  };
-  const listCard=(title,rows)=>`<div class="card"><h3>${title}</h3>${rows.length?`<div class="rank">${rows.join("")}</div>`:`<div class="empty">Nothing recorded yet.</div>`}</div>`;
-  const matchRow=(m,right)=>`<div class="rank-row"><span class="nm"><a href="#/m/${esc(m.id)}">${esc((m.teams.home||{}).name)} v ${esc((m.teams.away||{}).name)}</a></span><span class="dt">${fmtDate(m.date)}</span><span class="n">${right}</span></div>`;
+  return {played,goals,crowd,venues,countries,comps,defs,yearCounts,
+    yMax:Math.max(1,...Object.values(yearCounts)),spanFrom,spanTo,tempVals,spendUSD};
+}
+
+/* ---------------- summary card (top 5) ---------------- */
+function statCard(def){
+  const rows=def.rows.slice(0,5);
+  const max=def.rows.length?def.rows[0].value:1;
+  const body=rows.length?`<div class="rank">${rows.map(r=>{
+    const label=r.id?`<a href="#/m/${esc(r.id)}">${esc(r.label)}</a>`:esc(r.label);
+    return `<div class="rank-row">
+      ${r.flagCode?flag(r.flagCode,"lg"):""}
+      <span class="nm">${label}</span>
+      ${r.date?`<span class="dt">${fmtDate(r.date)}</span>`:""}
+      ${def.kind==="count"?`<span class="track"><i style="width:${Math.round(r.value/max*100)}%"></i></span>`:""}
+      <span class="n">${def.fmt(r.value)}</span>
+    </div>`;}).join("")}</div>`:`<div class="empty">Nothing recorded yet.</div>`;
+  return `<div class="card stat-card">
+    <h3><a href="#/stat/${esc(def.key)}">${esc(def.title)}</a></h3>
+    ${body}
+    ${def.rows.length>5?`<a class="card-more" href="#/stat/${esc(def.key)}">View all ${def.rows.length} ${esc(def.noun)} →</a>`:""}
+  </div>`;
+}
+
+/* ---------------- charts ---------------- */
+function vizRankBars(def,limit){
+  const rows=def.rows.slice(0,limit||15);
+  const max=def.rows[0].value||1;
+  return `<div class="viz-bars">${rows.map((r,i)=>`
+    <div class="vb-row">
+      <span class="vb-rank num">${i+1}</span>
+      ${r.flagCode?flag(r.flagCode,"lg"):""}
+      <span class="vb-label">${esc(r.label)}</span>
+      <span class="vb-track"><i style="width:${Math.max(1.5,r.value/max*100)}%"></i></span>
+      <span class="vb-val num">${def.fmt(r.value)}</span>
+    </div>`).join("")}</div>`;
+}
+
+/* how many entries share each count — e.g. "18 players seen exactly once" */
+function vizHistogram(def){
+  const buckets={};
+  def.rows.forEach(r=>buckets[r.value]=(buckets[r.value]||0)+1);
+  const entries=Object.entries(buckets).map(([k,v])=>[Number(k),v]).sort((a,b)=>a[0]-b[0]);
+  if(entries.length<2) return "";
+  const max=Math.max(...entries.map(e=>e[1]));
+  return `<div class="card"><h3>Distribution</h3>
+    <div class="body">
+      <div class="histo">${entries.map(([count,n])=>`
+        <div class="hs" title="${n} ${esc(def.noun)} seen ${count}×">
+          <span class="hs-n num">${n}</span>
+          <span class="hs-bar" style="height:${Math.max(4,Math.round(n/max*100))}%"></span>
+          <span class="hs-l num">${count}×</span>
+        </div>`).join("")}</div>
+      <p class="viz-note">How many ${esc(def.noun)} appear at each frequency.</p>
+    </div></div>`;
+}
+
+/* every match on a time axis, with the top five picked out */
+function vizTimeline(def){
+  const rows=def.rows.slice().sort((a,b)=>(a.date||"").localeCompare(b.date||""));
+  if(rows.length<2) return "";
+  const top=new Set(def.rows.slice(0,5).map(r=>r.key));
+  const vals=rows.map(r=>r.value);
+  const hi=Math.max(...vals), lo=Math.min(...vals);
+  const avg=vals.reduce((a,b)=>a+b,0)/vals.length;
+  const base=Math.min(0,lo), span=(hi-base)||1;
+  const W=700,H=210,padL=8,padR=8,padT=16,padB=26;
+  const iw=W-padL-padR, ih=H-padT-padB;
+  const bw=iw/rows.length;
+  const y=v=>padT+ih-((v-base)/span)*ih;
+  const bars=rows.map((r,i)=>{
+    const x=padL+i*bw, top5=top.has(r.key);
+    const yy=y(r.value), h=Math.max(1.5,padT+ih-yy);
+    return `<g><title>${esc(r.label)} — ${def.fmt(r.value)} (${fmtDate(r.date)})</title>
+      <rect x="${(x+bw*0.14).toFixed(1)}" y="${yy.toFixed(1)}" width="${(bw*0.72).toFixed(1)}" height="${h.toFixed(1)}"
+        rx="1.5" fill="${top5?"var(--accent)":"rgba(20,28,36,.22)"}"/></g>`;
+  }).join("");
+  const ya=y(avg);
+  return `<div class="card"><h3>Across every match, in date order</h3>
+    <div class="body">
+      <svg class="viz-svg" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(def.title)} over time">
+        <line x1="${padL}" y1="${ya.toFixed(1)}" x2="${W-padR}" y2="${ya.toFixed(1)}"
+          stroke="var(--muted)" stroke-width="1" stroke-dasharray="4 4"/>
+        <text x="${W-padR}" y="${(ya-6).toFixed(1)}" text-anchor="end" font-family="Archivo, sans-serif"
+          font-size="11" font-weight="700" fill="var(--muted)">avg ${def.fmt(Math.round(avg*10)/10)}</text>
+        ${bars}
+        <text x="${padL}" y="${H-8}" font-family="Archivo, sans-serif" font-size="11" fill="var(--muted)">${fmtDate(rows[0].date)}</text>
+        <text x="${W-padR}" y="${H-8}" text-anchor="end" font-family="Archivo, sans-serif" font-size="11" fill="var(--muted)">${fmtDate(rows[rows.length-1].date)}</text>
+      </svg>
+      <p class="viz-note">Each bar is one match. The top five are picked out in red; the dashed line is the average.</p>
+    </div></div>`;
+}
+
+/* ---------------- statistics tab ---------------- */
+function renderStats(){
+  const S=computeStats();
+  const {played,goals,crowd,venues,countries,comps,defs}=S;
+  const compsSeen=defs.competitions.rows;
+  const section=name=>`<section class="sec"><div class="sec-h"><h2>${esc(name)}</h2></div>
+    <div class="cards">${Object.values(defs).filter(d=>d.section===name).map(statCard).join("")}</div></section>`;
 
   app.innerHTML=`<div class="wrap">
     <section class="big-claim">
       <div class="n num">${played.length}<span>.</span></div>
-      <p>matches watched in person${spanFrom?` between ${spanFrom} and ${spanTo}`:""} — ${goals} goals, ${venues.length} stadiums, ${countries.length} countries.</p>
+      <p>matches watched in person${S.spanFrom?` between ${S.spanFrom} and ${S.spanTo}`:""} — ${goals} goals, ${venues.length} stadiums, ${countries.length} countries.</p>
     </section>
     <div class="tiles">
       <div class="tile"><div class="k">Goals seen</div><div class="v num">${goals}</div><div class="s">${played.length?(goals/played.length).toFixed(2):"0"} per match</div></div>
       <div class="tile"><div class="k">Watched alongside</div><div class="v num">${nf(crowd)}</div><div class="s">people, in total</div></div>
-      <div class="tile"><div class="k">Competitions</div><div class="v num">${comps.length}</div><div class="s">${esc(compsSeen.length?compsSeen[0][0]:"—")} most often</div></div>
+      <div class="tile"><div class="k">Competitions</div><div class="v num">${comps.length}</div><div class="s">${esc(compsSeen.length?compsSeen[0].label:"—")} most often</div></div>
       <div class="tile"><div class="k">Stadiums</div><div class="v num">${venues.length}</div><div class="s">in ${countries.length} countries</div></div>
-      ${tempVals.length?`<div class="tile"><div class="k">Conditions</div><div class="v num">${(tempVals.reduce((a,b)=>a+b,0)/tempVals.length).toFixed(1)}°C</div><div class="s">avg · ${Math.min(...tempVals)}° to ${Math.max(...tempVals)}°</div></div>`:""}
-      ${spendUSD.length?`<div class="tile"><div class="k">Tickets</div><div class="v num">$${nf(Math.round(spendUSD.reduce((a,b)=>a+b,0)))}</div><div class="s">$${Math.round(spendUSD.reduce((a,b)=>a+b,0)/spendUSD.length)} average, ${spendUSD.length} logged</div></div>`:""}
+      ${S.tempVals.length?`<div class="tile"><div class="k">Conditions</div><div class="v num">${(S.tempVals.reduce((a,b)=>a+b,0)/S.tempVals.length).toFixed(1)}°C</div><div class="s">avg · ${Math.min(...S.tempVals)}° to ${Math.max(...S.tempVals)}°</div></div>`:""}
+      ${S.spendUSD.length?`<div class="tile"><div class="k">Tickets</div><div class="v num">$${nf(Math.round(S.spendUSD.reduce((a,b)=>a+b,0)))}</div><div class="s">$${Math.round(S.spendUSD.reduce((a,b)=>a+b,0)/S.spendUSD.length)} average, ${S.spendUSD.length} logged</div></div>`:""}
     </div>
 
     <section class="sec"><div class="sec-h"><h2>Matches per year</h2></div>
       <div class="card"><div class="years">
-        ${Object.entries(yearCounts).map(([y,c])=>`<div class="yr">
+        ${Object.entries(S.yearCounts).map(([y,c])=>`<div class="yr">
           <span class="n">${c||""}</span>
-          <span class="bar-v ${c?"":"zero"}" style="height:${c?Math.max(4,Math.round(c/yMax*78)):1}%"></span>
+          <span class="bar-v ${c?"":"zero"}" style="height:${c?Math.max(4,Math.round(c/S.yMax*78)):1}%"></span>
           <span class="lb">${y}</span></div>`).join("")}
       </div><div style="height:14px"></div></div>
     </section>
 
-    <section class="sec"><div class="sec-h"><h2>Competitions and locations</h2></div>
-      <div class="cards">
-        ${rankCard("Competitions",compsSeen)}
-        ${listCard("Countries",countrySeen.map(([c,v])=>`<div class="rank-row">${flag(c,"lg")}<span class="nm">${esc(c)}</span><span class="n">${v}</span></div>`))}
-        ${rankCard("Stadiums",venuesSeen)}
-      </div>
-    </section>
+    ${SECTIONS.map(section).join("")}
+  </div>`;
+  window.scrollTo(0,0);
+}
 
-    <section class="sec"><div class="sec-h"><h2>Teams and players</h2></div>
-      <div class="cards">
-        ${rankCard("Teams by appearances",teamsSeen)}
-        ${listCard("Teams by market value",values.map(v=>`<div class="rank-row"><span class="nm"><a href="#/m/${esc(v.id)}">${esc(v.name)}</a></span><span class="dt">${fmtDate(v.date)}</span><span class="n">€${fmtVal(v.v)}m</span></div>`))}
-        ${listCard("Clubs by country",clubCountry.map(([c,v])=>`<div class="rank-row">${flag(c,"lg")}<span class="nm">${esc(c)}</span><span class="n">${v}</span></div>`))}
-        ${rankCard("Players by appearances",playersSeen)}
-        ${listCard("Players by market value",playerValues.map(v=>`<div class="rank-row"><span class="nm"><a href="#/m/${esc(v.id)}">${esc(v.name)}</a></span><span class="dt">${fmtDate(v.date)}</span><span class="n">€${fmtVal(v.v)}m</span></div>`))}
-        ${listCard("Players by nationality",natSeen.map(([c,v])=>`<div class="rank-row">${flag(c,"lg")}<span class="nm">${esc(c)}</span><span class="n">${v}</span></div>`))}
-        ${rankCard("Scorers",scorers)}
-        ${rankCard("Head coach",coachesSeen)}
-        ${rankCard("Referee",refsSeen)}
-      </div>
-    </section>
+/* ---------------- one stat, in full ---------------- */
+function renderStatDetail(key){
+  const S=computeStats();
+  const def=S.defs[key];
+  if(!def){app.innerHTML=`<div class="wrap error"><b>Not found</b>No statistic called ${esc(key)}. <a href="#/stats" style="text-decoration:underline">Back to statistics</a></div>`;return;}
+  const rows=def.rows;
+  if(!rows.length){
+    app.innerHTML=`<div class="wrap"><a class="back" href="#/stats">← Statistics</a>
+      <section class="big-claim"><p>${esc(def.title)}</p></section>
+      <div class="card"><div class="empty">Nothing recorded yet.</div></div></div>`;
+    window.scrollTo(0,0);return;
+  }
+  const vals=rows.map(r=>r.value);
+  const total=vals.reduce((a,b)=>a+b,0);
+  const avg=total/vals.length;
+  const charts=def.kind==="count"
+    ? `<div class="card"><h3>Top ${Math.min(15,rows.length)}</h3><div class="body">${vizRankBars(def)}</div></div>${vizHistogram(def)}`
+    : `${vizTimeline(def)}<div class="card"><h3>Top ${Math.min(15,rows.length)}</h3><div class="body">${vizRankBars(def)}</div></div>`;
 
-    <section class="sec"><div class="sec-h"><h2>Records</h2></div>
-      <div class="cards">
-        ${listCard("Most Attendance",bigCrowd.map(m=>matchRow(m,nf(m.attendance))))}
-        ${listCard("Most goals",goalfest.map(m=>matchRow(m,m.hg+m.ag)))}
-        ${listCard("Biggest goal differences",goalDiff.map(m=>matchRow(m,Math.abs(m.hg-m.ag))))}
-        ${listCard("Most yellow cards",yellowCounts.map(x=>matchRow(x.m,x.n)))}
-        ${listCard("Most red cards",redCounts.map(x=>matchRow(x.m,x.n)))}
-        ${listCard("Most expensive tickets",priciest.map(x=>matchRow(x.m,"$"+Math.round(x.v))))}
-      </div>
+  app.innerHTML=`<div class="wrap">
+    <a class="back" href="#/stats">← Statistics</a>
+    <section class="stat-head">
+      <span class="eyebrow">${esc(def.section)}</span>
+      <h1>${esc(def.title)}</h1>
     </section>
-
-    <section class="sec"><div class="sec-h"><h2>Conditions</h2></div>
-      <div class="cards">
-        ${rankCard("Weather",weatherSeen)}
-        ${listCard("Temperature",tempTop.map(x=>matchRow(x.m,x.v+"°C")))}
-      </div>
+    <div class="tiles">
+      <div class="tile"><div class="k">${esc(def.kind==="count"?def.noun:"Matches")}</div><div class="v num">${rows.length}</div><div class="s">in the list</div></div>
+      <div class="tile"><div class="k">Highest</div><div class="v num">${def.fmt(Math.max(...vals))}</div><div class="s">${esc(rows[0].label)}</div></div>
+      <div class="tile"><div class="k">Average</div><div class="v num">${def.fmt(Math.round(avg*10)/10)}</div><div class="s">across the list</div></div>
+      ${def.kind==="count"?`<div class="tile"><div class="k">Total</div><div class="v num">${nf(total)}</div><div class="s">appearances counted</div></div>`:""}
+    </div>
+    <div class="cards charts">${charts}</div>
+    <section class="sec"><div class="sec-h"><h2>Full list</h2></div>
+      <div class="card"><div class="rank">${rows.map((r,i)=>{
+        const label=r.id?`<a href="#/m/${esc(r.id)}">${esc(r.label)}</a>`:esc(r.label);
+        return `<div class="rank-row">
+          <span class="vb-rank num">${i+1}</span>
+          ${r.flagCode?flag(r.flagCode,"lg"):""}
+          <span class="nm">${label}</span>
+          ${r.date?`<span class="dt">${fmtDate(r.date)}</span>`:""}
+          <span class="n">${def.fmt(r.value)}</span>
+        </div>`;}).join("")}</div></div>
     </section>
   </div>`;
   window.scrollTo(0,0);
@@ -1029,9 +1210,11 @@ function renderStats(){
    ===================================================================== */
 function route(){
   const hash=location.hash.replace(/^#/,"")||"/";
-  document.getElementById("tab-matches").classList.toggle("on",!hash.startsWith("/stats"));
-  document.getElementById("tab-stats").classList.toggle("on",hash.startsWith("/stats"));
-  if(hash.startsWith("/stats")) renderStats();
+  const onStats=hash.startsWith("/stats")||hash.startsWith("/stat/");
+  document.getElementById("tab-matches").classList.toggle("on",!onStats);
+  document.getElementById("tab-stats").classList.toggle("on",onStats);
+  if(hash.startsWith("/stat/")) renderStatDetail(decodeURIComponent(hash.slice(6)));
+  else if(hash.startsWith("/stats")) renderStats();
   else if(hash.startsWith("/m/")) renderMatch(decodeURIComponent(hash.slice(3)));
   else renderList();
 }
