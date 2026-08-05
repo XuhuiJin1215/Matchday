@@ -20,47 +20,47 @@ meta,referee_country,GER
 team,home,Juventus,ITA,Massimiliano Allegri,ITA,4-2-3-1,585,#FFFFFF,#141C24,#F2B705,#141C24
 team,away,Real Madrid,ESP,Zinedine Zidane,FRA,4-3-1-2,760,#F4F1E6,#141C24,#F2B705,#5B6FE0
 
-# --- PLAYERS -- player,side,role,number,name,kit_name,country,pos,captain,on,off,value
+# --- PLAYERS -- player,side,role,number,name,kit_name,country,id,captain,goalkeeper,on,off,yellow,double yellow,red,value
 # kit_name: name shown on the pitch diagram; blank uses the last word of the full name.
 # captain: write "yes" for the captain, otherwise leave blank.
 # on/off: the minute this player entered/left the pitch. Blank "on" = started the
 # match; blank "off" = still on at the final whistle.
-player,home,start,1,Gianluigi Buffon,,ITA,GK,yes,,,4
-player,home,start,15,Andrea Barzagli,,ITA,RB,,,,4
-player,home,start,19,Leonardo Bonucci,,ITA,CB,,,,40
-player,home,start,3,Giorgio Chiellini,,ITA,CB,,,,20
-player,home,start,12,Alex Sandro,,BRA,LB,,,,45
-player,home,start,6,Sami Khedira,,GER,DM,,,,25
-player,home,start,5,Miralem Pjanić,,BIH,DM,,,,55
-player,home,start,23,Dani Alves,,BRA,RM,,,,12
-player,home,start,21,Paulo Dybala,,ARG,AM,,,,90
-player,home,start,17,Mario Mandžukić,,CRO,LM,,,,28
-player,home,start,9,Gonzalo Higuaín,,ARG,ST,,,,75
-player,home,sub,7,Juan Cuadrado,,COL,,,,,30
-player,home,sub,8,Claudio Marchisio,,ITA,,,,,18
-player,home,sub,18,Mario Lemina,,GAB,,,,,14
-player,home,bench,4,Medhi Benatia,,MAR,,,,,20
-player,home,bench,22,Kwadwo Asamoah,,GHA,,,,,9
-player,home,bench,25,Neto,,BRA,,,,,7
-player,home,bench,26,Stephan Lichtsteiner,,SUI,,,,,6
-player,away,start,1,Keylor Navas,,CRC,GK,,,,14
-player,away,start,2,Dani Carvajal,,ESP,RB,,,,35
-player,away,start,4,Sergio Ramos,,ESP,CB,yes,,,35
-player,away,start,5,Raphaël Varane,,FRA,CB,,,,55
-player,away,start,12,Marcelo,,BRA,LB,,,,40
-player,away,start,14,Casemiro,,BRA,DM,,,,50
-player,away,start,8,Toni Kroos,,GER,CM,,,,70
-player,away,start,19,Luka Modrić,,CRO,CM,,,,50
-player,away,start,22,Isco,,ESP,AM,,,,70
-player,away,start,7,Cristiano Ronaldo,,POR,ST,,,,90
-player,away,start,9,Karim Benzema,,FRA,ST,,,,50
-player,away,sub,11,Gareth Bale,,WAL,,,,,80
-player,away,sub,20,Marco Asensio,,ESP,,,,,40
-player,away,sub,21,Álvaro Morata,,ESP,,,,,60
-player,away,bench,6,Nacho,,ESP,,,,,20
-player,away,bench,13,Kiko Casilla,,ESP,,,,,5
-player,away,bench,16,Mateo Kovačić,,CRO,,,,,30
-player,away,bench,23,Danilo,,BRA,,,,,20
+player,home,start,1,Gianluigi Buffon,,ITA,,yes,yes,,,,,,4
+player,home,start,15,Andrea Barzagli,,ITA,,,,,,,,,4
+player,home,start,19,Leonardo Bonucci,,ITA,,,,,,,,,40
+player,home,start,3,Giorgio Chiellini,,ITA,,,,,,,,,20
+player,home,start,12,Alex Sandro,,BRA,,,,,,,,,45
+player,home,start,6,Sami Khedira,,GER,,,,,,,,,25
+player,home,start,5,Miralem Pjanić,,BIH,,,,,,,,,55
+player,home,start,23,Dani Alves,,BRA,,,,,,,,,12
+player,home,start,21,Paulo Dybala,,ARG,,,,,,,,,90
+player,home,start,17,Mario Mandžukić,,CRO,,,,,,,,,28
+player,home,start,9,Gonzalo Higuaín,,ARG,,,,,,,,,75
+player,home,sub,7,Juan Cuadrado,,COL,,,,,,,,,30
+player,home,sub,8,Claudio Marchisio,,ITA,,,,,,,,,18
+player,home,sub,18,Mario Lemina,,GAB,,,,,,,,,14
+player,home,bench,4,Medhi Benatia,,MAR,,,,,,,,,20
+player,home,bench,22,Kwadwo Asamoah,,GHA,,,,,,,,,9
+player,home,bench,25,Neto,,BRA,,,yes,,,,,,7
+player,home,bench,26,Stephan Lichtsteiner,,SUI,,,,,,,,,6
+player,away,start,1,Keylor Navas,,CRC,,,yes,,,,,,14
+player,away,start,2,Dani Carvajal,,ESP,,,,,,,,,35
+player,away,start,4,Sergio Ramos,,ESP,,yes,,,,,,,35
+player,away,start,5,Raphaël Varane,,FRA,,,,,,,,,55
+player,away,start,12,Marcelo,,BRA,,,,,,,,,40
+player,away,start,14,Casemiro,,BRA,,,,,,,,,50
+player,away,start,8,Toni Kroos,,GER,,,,,,,,,70
+player,away,start,19,Luka Modrić,,CRO,,,,,,,,,50
+player,away,start,22,Isco,,ESP,,,,,,,,,70
+player,away,start,7,Cristiano Ronaldo,,POR,,,,,,,,,90
+player,away,start,9,Karim Benzema,,FRA,,,,,,,,,50
+player,away,sub,11,Gareth Bale,,WAL,,,,,,,,,80
+player,away,sub,20,Marco Asensio,,ESP,,,,,,,,,40
+player,away,sub,21,Álvaro Morata,,ESP,,,,,,,,,60
+player,away,bench,6,Nacho,,ESP,,,,,,,,,20
+player,away,bench,13,Kiko Casilla,,ESP,,,yes,,,,,,5
+player,away,bench,16,Mateo Kovačić,,CRO,,,,,,,,,30
+player,away,bench,23,Danilo,,BRA,,,,,,,,,20
 
 # --- GOALS ------------------------- goal,minute,side,scorer,type,assist
 goal,20,away,Cristiano Ronaldo,goal,Dani Carvajal
@@ -68,6 +68,23 @@ goal,27,home,Mario Mandžukić,goal,Gonzalo Higuaín
 goal,61,away,Casemiro,goal,
 goal,64,away,Cristiano Ronaldo,goal,Luka Modrić
 goal,90,away,Marco Asensio,goal,Marcelo
+
+
+# --- PENALTIES ----------------------------- pen,round,side,player,result
+# DEMO ONLY — this shootout did not happen. The real 2017 final was decided
+# 4-1 in normal time, no penalties. This block exists purely so you can see
+# the format and how it renders; delete it once you've had a look. Kicker
+# names below are generic placeholders, not the real players.
+pen,1,home,Home Kicker 1,scored
+pen,1,away,Away Kicker 1,scored
+pen,2,home,Home Kicker 2,scored
+pen,2,away,Away Kicker 2,missed
+pen,3,home,Home Kicker 3,scored
+pen,3,away,Away Kicker 3,scored
+pen,4,home,Home Kicker 4,missed
+pen,4,away,Away Kicker 4,scored
+pen,5,home,Home Kicker 5,scored
+pen,5,away,Away Kicker 5,missed
 
 # --- MATCH STATS ----------------------------- stat,name,home,away
 stat,Possession,45,55
@@ -79,9 +96,6 @@ stat,Shots on target,4,8
 # PLACEHOLDER — replace with the real reading.
 weather,condition,Partly cloudy
 weather,temp_c,15
-weather,feels_c,14
-weather,humidity,62
-weather,wind_kph,14
 
 # --- MATCHDAY (yours) ------------------------ personal,field,value
 # PLACEHOLDER — replace.
