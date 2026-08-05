@@ -19,7 +19,7 @@ meta,referee_country,AUS,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,
 # --- TEAMS --- team,side,name,country,coach,coach_country,formation,squad_value,pitch_fill,pitch_number,gk_fill,stat_color,,,,
 team,home,China PR,,Alan Perrin,FRA,4-2-3-1,12.8,#DC2C2F,#FFFFFF,,#DC2C2F,,,,
-team,away,Hong Kong,,Kim Pan-gon,KOR,4-2-3-1,3.7,#F2F2F2,#000000,,#F2F2F2,,,,
+team,away,Hong Kong,,Kim Pan-gon,KOR,4-2-3-1,3.7,#F2F2F2,#000000,,#000000,,,,
 ,,,,,,,,,,,,,,,
 # --- PLAYERS -- player,side,role,number,name,kit_name,country,id,captain,goalkeeper,on,off,yellow,double yellow,red,value
 player,home,start,23,Wang Dalei,Wang,CHN,,,yes,,,,,,0.8
@@ -29,7 +29,7 @@ player,home,start,2,Ren Hang,Ren,CHN,,,,,,,,,0.5
 player,home,start,5,Zhang Linpeng,Zhang,CHN,,,,,,,,,1
 player,home,start,15,Wu Xi,Wu,CHN,,,,,58,,,,0.9
 player,home,start,10,Zheng Zhi,Zheng,CHN,,yes,,,,,,,0.5
-player,home,start,20,Yu Hanchao,Sun,CHN,,,,,69,,,,0.6
+player,home,start,20,Yu Hanchao,Yu,CHN,,,,,69,,,,0.6
 player,home,start,7,Wu Lei,Wu,CHN,,,,,,,,,0.9
 player,home,start,19,Zheng Long,Zheng,CHN,,,,,62,,,,0.3
 player,home,start,22,Yu Dabao,Yu,CHN,,,,,,,,,0.7
