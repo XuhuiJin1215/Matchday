@@ -1,0 +1,89 @@
+,,,,,,,,,,,,,,,
+# --- MATCH --- meta,field,value,,,,,,,,,,,,,
+meta,id,M007,,,,,,,,,,,,,
+meta,status,played,,,,,,,,,,,,,
+meta,competition,AFC Cup,,,,,,,,,,,,,
+meta,round,Quarter-final - 2nd Leg,,,,,,,,,,,,,
+meta,date,2015-09-15,,,,,,,,,,,,,
+meta,kickoff,20:00,,,,,,,,,,,,,
+meta,venue,Mong Kok Stadium,,,,,,,,,,,,,
+meta,city,Hong Kong,,,,,,,,,,,,,
+meta,country,HKG,,,,,,,,,,,,,
+meta,neutral,no,,,,,,,,,,,,,
+meta,attendance,6412,,,,,,,,,,,,,
+meta,score,1-3,,,,,,,,,,,,,
+meta,aggregate,2-4,,,,,,,,,,,,,
+meta,decision,,,,,,,,,,,,,,
+meta,referee,Fahad Al-Marri,,,,,,,,,,,,,
+meta,referee_country,QAT,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- TEAMS --- team,side,name,country,coach,coach_country,formation,squad_value,pitch_fill,pitch_number,gk_fill,stat_color,,,,
+team,home,South China,HKG,Casemiro Mior,BRA,4-3-3,1.8,#F43841,#FFFFFF,,#F43841,,,,
+team,away,Johor Darul Ta'zim,MAS,Mario Gómez,ARG,4-2-2-2,1.2,#0E1416,#FFFFFF,,#0E1416,,,,
+,,,,,,,,,,,,,,,
+# --- PLAYERS -- player,side,role,number,name,kit_name,country,id,captain,goalkeeper,on,off,yellow,double yellow,red,value
+player,home,start,12,Cristian Mora,,ECU,,,yes,,,37,,,0.1
+player,home,start,5,Chak Ting Fung,Chak,HKG,,,,,,,,,0.1
+player,home,start,76,Cheung Chi Yung,Cheung,HKG,,,,,87,,,,0.1
+player,home,start,22,Bojan Mališić,,SRB,,yes,,,,37,,,0.3
+player,home,start,2,Jack Sealy,,HKG,,,,,,,,,0.2
+player,home,start,16,Chan Siu Kwan,Chan,HKG,,,,,,,,,0.1
+player,home,start,23,Che Runqiu,Che,HKG,,,,,46,40,,,0.1
+player,home,start,17,Leung Chun Pong,Leung,HKG,,,,,,,,,0.2
+player,home,start,7,Chan Siu Ki,Chan,HKG,,,,,,52,,,0.2
+player,home,start,45,Boima Karpeh,,LBR,,,,,,,,,0.1
+player,home,start,8,Mahama Awal,,CMR,,,,,57,,,,0.2
+player,home,sub,10,Lam Hok Hei,,HKG,,,,46,,,,,0.1
+player,home,sub,28,Liang Zicheng,,HKG,,,,57,,,,,0.1
+player,home,sub,21,Law Hiu Chung,,HKG,,,,87,,,,,0.1
+player,home,bench,20,Lau Cheuk Hin,,HKG,,,,,,,,,0.1
+player,home,bench,26,Moses Mensah,,GHA,,,,,,,,,0.1
+player,home,bench,27,Lai Yiu Cheong,,HKG,,,,,,,,,0.1
+player,home,bench,39,Leung Hing Kit,,HKG,,,yes,,,,,,0.1
+player,away,start,24,Izham Tarmizi,Izham,MAS,,,yes,,75,53,,,
+player,away,start,42,Fazly Mazlan,Fazly,MAS,,,,,,,,,
+player,away,start,6,Marcos Antônio,Marcos Antônio,MAS,,,,,,,,,0.4
+player,away,start,7,Aidil Zafuan,Aidil,MAS,,,,,,37,,,
+player,away,start,12,Subramaniam Kunanlan,Subramaniam,MAS,,,,,,,,,
+player,away,start,14,Hariss Harun,Hariss,SGP,,,,,,,,,
+player,away,start,8,Safiq Rahim,Safiq,MAS,,yes,,,79,59,,,
+player,away,start,19,Luciano Figueroa,,ARG,,,,,,,,36,0.5
+player,away,start,18,Mahali Jasuli,Mahali,MAS,,,,,70,,,,
+player,away,start,10,Safee Sali,Safee,MAS,,,,,,,,,
+player,away,start,9,Alhaji Kamara,,SLE,,,,,,,,,0.3
+player,away,sub,13,Gary Steven Robbat,,MAS,,,,70,,,,,
+player,away,sub,1,Farizal Marlias,,MAS,,,yes,75,,,,,
+player,away,sub,17,Amri Yahyah,,MAS,,,,79,,,,,
+player,away,bench,21,Jasazrin Jamaludin,,MAS,,,,,,,,,
+player,away,bench,23,Chanthuru Suppiah,,MAS,,,,,,,,,
+player,away,bench,25,Junior Eldstål,,MAS,,,,,,,,,
+player,away,bench,27,Fadhli Shas,,MAS,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- GOALS --- goal,minute,side,scorer,type,assist,,,,,,,,,,
+goal,26,away,Mahali Jasuli,goal,Alhaji Kamara,,,,,,,,,,
+goal,28,home,Mahama Awal,goal,Bojan Mališić,,,,,,,,,,
+goal,30,away,Safee Sali,goal,Luciano Figueroa,,,,,,,,,,
+goal,45+2,away,Safee Sali,goal,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- MATCH STATS --- stat,name,home,away,,,,,,,,,,,,
+stat,Possession,,,,,,,,,,,,,,
+stat,Expected goals (xG),,,,,,,,,,,,,,
+stat,Shots,,,,,,,,,,,,,,
+stat,Shots on target,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- WEATHER --- weather,field,value,,,,,,,,,,,,,
+weather,condition,Drizzle,,,,,,,,,,,,,
+weather,temp_c,25,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- MATCHDAY --- personal,field,value,,,,,,,,,,,,,
+personal,ticket_price,40,,,,,,,,,,,,,
+personal,ticket_currency,HKD,,,,,,,,,,,,,
+personal,ticket_price_usd,5,,,,,,,,,,,,,
+personal,section,Section 16,,,,,,,,,,,,,
+personal,row,,,,,,,,,,,,,,
+personal,seat,,,,,,,,,,,,,,
+personal,seating,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- PHOTOS --- photo,file,caption,,,,,,,,,,,,,
+photo,M007_1.jpg,,,,,,,,,,,,,,
+photo,,,,,,,,,,,,,,,
