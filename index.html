@@ -377,12 +377,26 @@ nav.tabs a.on{background:var(--ink);color:var(--paper)}
 
 /* donut chart + legend */
 .donut-body{display:flex;align-items:center;gap:28px;flex-wrap:wrap}
-.viz-donut{width:180px;height:180px;flex:none}
+.donut-wrap{position:relative;width:180px;height:180px;flex:none}
+.viz-donut{width:100%;height:100%;display:block}
+.donut-center{
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  text-align:center;pointer-events:none;
+}
+.dc-num{font-family:var(--font-display);font-weight:800;font-size:30px;color:var(--ink);line-height:1}
+.dc-noun{font-size:11px;color:var(--muted);margin-top:3px}
 .donut-legend{flex:1;min-width:180px;display:flex;flex-direction:column;gap:9px}
 .dl-row{display:flex;align-items:center;gap:9px;font-size:13px}
 .dl-dot{width:10px;height:10px;border-radius:2px;flex:none}
 .dl-label{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .dl-val{flex:none;font-family:var(--font-display);font-weight:700;font-size:13px;color:var(--muted)}
+
+/* timeline chart footer — fixed-size HTML text, not scaled with the SVG */
+.chart-foot{
+  display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:10px;
+  font-family:var(--font-display);font-size:12px;color:var(--muted);
+}
+.chart-foot .avg{font-weight:700;color:var(--ink)}
 
 /* frequency histogram */
 .histo{display:flex;align-items:flex-end;gap:8px;height:132px}
@@ -1084,11 +1098,15 @@ function vizDonut(def){
     </div>`).join("");
   return `<div class="card"><h3>Share of the total</h3>
     <div class="body donut-body">
-      <svg class="viz-donut" viewBox="0 0 200 200" role="img" aria-label="${esc(def.title)} breakdown">
-        ${arcs}
-        <text x="100" y="94" text-anchor="middle" font-family="Archivo, sans-serif" font-weight="800" font-size="30" fill="var(--ink)">${rows.length}</text>
-        <text x="100" y="116" text-anchor="middle" font-family="Archivo, sans-serif" font-size="11" fill="var(--muted)">${esc(def.noun)}</text>
-      </svg>
+      <div class="donut-wrap">
+        <svg class="viz-donut" viewBox="0 0 200 200" role="img" aria-label="${esc(def.title)} breakdown">
+          ${arcs}
+        </svg>
+        <div class="donut-center">
+          <div class="dc-num num">${rows.length}</div>
+          <div class="dc-noun">${esc(def.noun)}</div>
+        </div>
+      </div>
       <div class="donut-legend">${legend}</div>
     </div></div>`;
 }
@@ -1120,7 +1138,7 @@ function vizTimeline(def){
   const hi=Math.max(...vals), lo=Math.min(...vals);
   const avg=vals.reduce((a,b)=>a+b,0)/vals.length;
   const base=Math.min(0,lo), span=(hi-base)||1;
-  const W=700,H=210,padL=8,padR=8,padT=16,padB=26;
+  const W=700,H=180,padL=8,padR=8,padT=14,padB=10;
   const iw=W-padL-padR, ih=H-padT-padB;
   const bw=iw/rows.length;
   const y=v=>padT+ih-((v-base)/span)*ih;
@@ -1137,12 +1155,13 @@ function vizTimeline(def){
       <svg class="viz-svg" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(def.title)} over time">
         <line x1="${padL}" y1="${ya.toFixed(1)}" x2="${W-padR}" y2="${ya.toFixed(1)}"
           stroke="var(--muted)" stroke-width="1" stroke-dasharray="4 4"/>
-        <text x="${W-padR}" y="${(ya-6).toFixed(1)}" text-anchor="end" font-family="Archivo, sans-serif"
-          font-size="11" font-weight="700" fill="var(--muted)">avg ${def.fmt(Math.round(avg*10)/10)}</text>
         ${bars}
-        <text x="${padL}" y="${H-8}" font-family="Archivo, sans-serif" font-size="11" fill="var(--muted)">${fmtDate(rows[0].date)}</text>
-        <text x="${W-padR}" y="${H-8}" text-anchor="end" font-family="Archivo, sans-serif" font-size="11" fill="var(--muted)">${fmtDate(rows[rows.length-1].date)}</text>
       </svg>
+      <div class="chart-foot">
+        <span>${fmtDate(rows[0].date)}</span>
+        <span class="avg">avg ${def.fmt(Math.round(avg*10)/10)}</span>
+        <span>${fmtDate(rows[rows.length-1].date)}</span>
+      </div>
     </div></div>`;
 }
 
