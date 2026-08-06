@@ -1,0 +1,86 @@
+,,,,,,,,,,,,,,,
+# --- MATCH --- meta,field,value,,,,,,,,,,,,,
+meta,id,M009,,,,,,,,,,,,,
+meta,status,played,,,,,,,,,,,,,
+meta,competition,AFC Champions League,,,,,,,,,,,,,
+meta,round,Final - 2nd Leg,,,,,,,,,,,,,
+meta,date,2015-11-21,,,,,,,,,,,,,
+meta,kickoff,20:00,,,,,,,,,,,,,
+meta,venue,Tianhe Stadium,,,,,,,,,,,,,
+meta,city,Guangzhou,,,,,,,,,,,,,
+meta,country,CHN,,,,,,,,,,,,,
+meta,neutral,no,,,,,,,,,,,,,
+meta,attendance,42499,,,,,,,,,,,,,
+meta,score,1-0,,,,,,,,,,,,,
+meta,aggregate,1-0,,,,,,,,,,,,,
+meta,decision,,,,,,,,,,,,,,
+meta,referee,Ravshan Irmatov,,,,,,,,,,,,,
+meta,referee_country,UZB,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- TEAMS --- team,side,name,country,coach,coach_country,formation,squad_value,pitch_fill,pitch_number,gk_fill,stat_color,,,,
+team,home,Guangzhou Evergrande,CHN,Luiz Felipe Scolari,BRA,4-2-3-1,34.5,#D00B18,#FFFFFF,,#D00B18,,,,
+team,away,Al-Ahli,UAE,Cosmin Olăroiu,ROU,4-2-3-1,26.3,#1A181B,#FFFFFF,,#1A181B,,,,
+,,,,,,,,,,,,,,,
+# --- PLAYERS -- player,side,role,number,name,kit_name,country,id,captain,goalkeeper,on,off,yellow,double yellow,red,value
+player,home,start,19,Zeng Cheng,Zeng,CHN,,,yes,,38,,,,0.5
+player,home,start,25,Zou Zheng,Zou,CHN,,,,,,72,,,0.5
+player,home,start,28,Kim Young-gwon,Kim,KOR,,,,,,,,,1
+player,home,start,6,Feng Xiaoting,Feng,CHN,,,,,,,,,0.6
+player,home,start,5,Zhang Linpeng,Zhang,CHN,,,,,,,,,1.2
+player,home,start,8,Paulinho,,BRA,,,,,,,,,10
+player,home,start,10,Zheng Zhi,Zheng,CHN,,yes,,,,,,,0.3
+player,home,start,27,Zheng Long,Zheng,CHN,,,,,87,,,,0.6
+player,home,start,11,Ricardo Goulart,,BRA,,,,,90+1,,,,12
+player,home,start,16,Huang Bowen,Huang,CHN,,,,,,76,,,0.7
+player,home,start,9,Elkeson  ,,BRA,,,,,,,,,4.5
+player,home,sub,22,Li Shuai,,CHN,,,yes,38,,,,,0.1
+player,home,sub,17,Liu Jian,,CHN,,,,87,,,,,0.3
+player,home,sub,29,Gao Lin,,CHN,,,,90+1,,,,,0.7
+player,home,bench,3,Mei Fang,,CHN,,,,,,,,,0.5
+player,home,bench,20,Yu Hanchao,,CHN,,,,,,,,,0.6
+player,home,bench,33,Rong Hao,,CHN,,,,,,,,,0.2
+player,home,bench,35,Li Xuepeng,,CHN,,,,,,,,,0.4
+player,away,start,12,Ahmed Mahmoud,,UAE,,,yes,,,,,,0.1
+player,away,start,5,Walid Abbas,,UAE,,,,,,,,,0.3
+player,away,start,21,Kwon Kyung-won,Kwon,KOR,,,,,,,,,0.4
+player,away,start,2,Salmeen Khamis,,UAE,,,,,,,,67,0.1
+player,away,start,62,Abdelaziz Sanqour,,UAE,,,,,,,,,0.2
+player,away,start,88,Majed Hassan,,UAE,,,,,90+3,11,,,0.1
+player,away,start,4,Habib Al-Fardan,,UAE,,,,,65,,,,0.4
+player,away,start,7,Ismail Al-Hammadi,,UAE,,,,,,,,,0.3
+player,away,start,8,Éverton Ribeiro,,BRA,,,,,,,,,12
+player,away,start,9,Lima,,BRA,,,,,,,,,8
+player,away,start,11,Ahmed Khalil,,UAE,,yes,,,63,,,,0.5
+player,away,sub,14,Oussama Assaidi,,MAR,,,,63,,,,,3.5
+player,away,sub,80,Humaid Abdulla Abbas,,UAE,,,,65,,,,,0.1
+player,away,sub,57,Mohamed Sebil,,UAE,,,,90+3,,,,,0.1
+player,away,bench,6,Hassan Abdurahman,,UAE,,,,,,,,,
+player,away,bench,55,Majed Naser,,UAE,,,yes,,,,,,0.2
+player,away,bench,70,Waleed Hussain,,UAE,,,,,,,,,0.1
+player,away,bench,71,Nawaf Mubarak,,UAE,,,,,,,,,0.1
+,,,,,,,,,,,,,,,
+# --- GOALS --- goal,minute,side,scorer,type,assist,,,,,,,,,,
+goal,54,home,Elkeson,goal,Zheng Long,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- MATCH STATS --- stat,name,home,away,,,,,,,,,,,,
+stat,Possession,47,53,,,,,,,,,,,,
+stat,Expected goals (xG),,,,,,,,,,,,,,
+stat,Shots,6,7,,,,,,,,,,,,
+stat,Shots on target,4,3,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- WEATHER --- weather,field,value,,,,,,,,,,,,,
+weather,condition,Clear,,,,,,,,,,,,,
+weather,temp_c,20,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- MATCHDAY --- personal,field,value,,,,,,,,,,,,,
+personal,ticket_price,2500,,,,,,,,,,,,,
+personal,ticket_currency,CNY,,,,,,,,,,,,,
+personal,ticket_price_usd,392,,,,,,,,,,,,,
+personal,section,Section 15,,,,,,,,,,,,,
+personal,row,31,,,,,,,,,,,,,
+personal,seat,62,,,,,,,,,,,,,
+personal,seating,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- PHOTOS --- photo,file,caption,,,,,,,,,,,,,
+photo,M009_1.jpg,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
