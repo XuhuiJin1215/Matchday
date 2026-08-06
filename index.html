@@ -683,7 +683,20 @@ function pitchSVG(team,starters,matchId){
    ===================================================================== */
 const app=document.getElementById("app");
 let MATCHES=[];
-const F={q:"",comp:"",country:"",year:""};
+let COMP_TYPES={}, CONTINENTS={};
+const F={q:"",comp:"",type:"",country:"",year:""};
+
+/* Small two-column lookup CSV (competition_type.csv, continents.csv). Tolerates a
+   stray blank leading row (common from a spreadsheet export) and skips the header. */
+function parseLookup(text,headerKey){
+  const map={};
+  for(const r of parseCSV(text)){
+    const k=(r[0]||"").trim();
+    if(!k||k.toLowerCase()===headerKey.toLowerCase()) continue;
+    map[k]=(r[1]||"").trim();
+  }
+  return map;
+}
 
 function stubHTML(m){
   const played=m.status==="played"&&m.hg!=null;
@@ -721,6 +734,7 @@ function filtered(){
   const q=F.q.toLowerCase();
   return MATCHES.filter(m=>{
     if(F.comp&&m.meta.competition!==F.comp) return false;
+    if(F.type&&(COMP_TYPES[m.meta.competition]||"Uncategorised")!==F.type) return false;
     if(F.country&&m.meta.country!==F.country) return false;
     if(F.year&&String(m.year)!==F.year) return false;
     if(!q) return true;
@@ -736,23 +750,25 @@ function renderList(){
   const list=filtered();
   _order=list.map(m=>m.id);
   const comps=uniq(MATCHES.map(m=>m.meta.competition));
+  const types=uniq(MATCHES.map(m=>COMP_TYPES[m.meta.competition]||"Uncategorised"));
   const countries=uniq(MATCHES.map(m=>m.meta.country));
   const years=uniq(MATCHES.map(m=>m.year?String(m.year):null)).reverse();
   app.innerHTML=`<div class="wrap">
     <div class="filters">
       <input id="f-q" type="search" placeholder="Search team, player, venue, referee…" value="${esc(F.q)}" aria-label="Search matches">
       <select id="f-comp" aria-label="Competition"><option value="">All competitions</option>${comps.map(c=>`<option ${F.comp===c?"selected":""}>${esc(c)}</option>`).join("")}</select>
+      <select id="f-type" aria-label="Competition type"><option value="">All types</option>${types.map(t=>`<option ${F.type===t?"selected":""}>${esc(t)}</option>`).join("")}</select>
       <select id="f-country" aria-label="Country"><option value="">All countries</option>${countries.map(c=>`<option ${F.country===c?"selected":""}>${esc(c)}</option>`).join("")}</select>
       <select id="f-year" aria-label="Year"><option value="">All years</option>${years.map(y=>`<option ${F.year===y?"selected":""}>${esc(y)}</option>`).join("")}</select>
-      ${(F.q||F.comp||F.country||F.year)?`<button class="btn-ghost" id="f-reset">Clear</button>`:""}
+      ${(F.q||F.comp||F.type||F.country||F.year)?`<button class="btn-ghost" id="f-reset">Clear</button>`:""}
       <span class="count num">${list.length} of ${MATCHES.length}</span>
     </div>
     <div class="stubs">${list.length?list.map(stubHTML).join(""):`<div class="empty">No match fits those filters. Clear one and try again.</div>`}</div>
   </div>`;
   const bind=(id,key)=>{const el=document.getElementById(id); if(el) el.addEventListener(el.tagName==="INPUT"?"input":"change",e=>{F[key]=e.target.value;renderList();if(key==="q"){const n=document.getElementById(id);n.focus();n.setSelectionRange(n.value.length,n.value.length);}});};
-  bind("f-q","q");bind("f-comp","comp");bind("f-country","country");bind("f-year","year");
+  bind("f-q","q");bind("f-comp","comp");bind("f-type","type");bind("f-country","country");bind("f-year","year");
   const r=document.getElementById("f-reset");
-  if(r) r.addEventListener("click",()=>{F.q="";F.comp="";F.country="";F.year="";renderList();});
+  if(r) r.addEventListener("click",()=>{F.q="";F.comp="";F.type="";F.country="";F.year="";renderList();});
 }
 
 function squadValue(m,side){
@@ -970,10 +986,11 @@ function computeStats(){
   const defs={};
   /* count-based: a ranking of names by how many times they appear */
   const addCount=(key,title,section,pairs,opts)=>{
+    const flagFor=(opts&&opts.flagFor)?opts.flagFor:((opts&&opts.isFlag)?(l=>l):null);
     defs[key]={key,title,section,kind:"count",unit:(opts&&opts.unit)||"",
       isFlag:!!(opts&&opts.isFlag),donut:!!(opts&&opts.donut),noun:(opts&&opts.noun)||"entries",
       fmt:v=>String(v),
-      rows:pairs.map(([label,value])=>({key:label,label,value,flagCode:(opts&&opts.isFlag)?label:null}))};
+      rows:pairs.map(([label,value])=>({key:label,label,value,flagCode:flagFor?flagFor(label):null}))};
   };
   /* match-based: a per-match measurement, so it can be plotted over time */
   const addMatch=(key,title,section,rows,fmt,noun)=>{
@@ -988,7 +1005,15 @@ function computeStats(){
   };
 
   addCount("competitions","Competitions","Competitions and locations",tally(MATCHES.map(m=>m.meta.competition)),{noun:"competitions",donut:true});
+  addCount("competition-type","Competitions by type","Competitions and locations",
+    tally(MATCHES.map(m=>COMP_TYPES[m.meta.competition]||"Uncategorised")),{noun:"types",donut:true});
+  addCount("continents","Continents","Competitions and locations",
+    tally(MATCHES.map(m=>CONTINENTS[m.meta.country]||"Unknown")),{noun:"continents",donut:true});
   addCount("countries","Countries","Competitions and locations",tally(MATCHES.map(m=>m.meta.country)),{isFlag:true,noun:"countries",donut:true});
+  const cityCountry={};
+  MATCHES.forEach(m=>{ if(m.meta.city&&m.meta.country&&!cityCountry[m.meta.city]) cityCountry[m.meta.city]=m.meta.country; });
+  addCount("cities","Cities","Competitions and locations",tally(MATCHES.map(m=>m.meta.city)),
+    {noun:"cities",donut:true,flagFor:c=>cityCountry[c]});
   addCount("stadiums","Stadiums","Competitions and locations",tally(MATCHES.map(m=>m.meta.venue)),{noun:"stadiums",donut:true});
 
   addCount("teams-appearances","Teams by appearances","Teams and players",
@@ -1264,7 +1289,14 @@ window.addEventListener("hashchange",route);
 
 async function boot(){
   try{
-    const idxText=await fetch("data/index.csv",{cache:"no-store"}).then(r=>{if(!r.ok)throw new Error(r.status);return r.text()});
+    const fetchText=async p=>{ try{ const r=await fetch(p,{cache:"no-store"}); return r.ok?await r.text():""; }catch(e){ return ""; } };
+    const [idxText,compTypesText,continentsText]=await Promise.all([
+      fetch("data/index.csv",{cache:"no-store"}).then(r=>{if(!r.ok)throw new Error(r.status);return r.text()}),
+      fetchText("competition_type.csv"),
+      fetchText("continents.csv"),
+    ]);
+    COMP_TYPES=parseLookup(compTypesText,"competition");
+    CONTINENTS=parseLookup(continentsText,"country");
     const rows=parseCSV(idxText);
     const ids=rows.map(r=>r[0]).filter(v=>v&&v.toLowerCase()!=="id");
     const loaded=await Promise.all(ids.map(async id=>{

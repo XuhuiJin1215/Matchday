@@ -5,6 +5,10 @@ No build step, no dependencies — drop it in a GitHub repo, turn on Pages, done
 
 ```
 index.html          the whole site
+competition_type.csv  competition name -> type (used for the "Competitions by type" stat
+                    and the type filter on Matches)
+continents.csv      country code -> confederation (AFC, UEFA, CONCACAF...), used for
+                    the "Continents" stat
 data/               one CSV per match + index.csv (the manifest)
 emblems/            crests: M001a.png (home), M001b.png (away), M001.png (competition)
 kit/                kit icons on the formation card: M001a.png, M001b.png
@@ -42,7 +46,7 @@ that will never exist; it's treated the same as blank.
 | `team` | `side,name,country,coach,coach_country,formation,squad_value,pitch_fill,pitch_number,gk_fill,stat_color` |
 | `player` | `side,role,number,name,kit_name,country,id,captain,goalkeeper,on,off,yellow,double yellow,red,value` |
 | `goal` | `minute,side,scorer,type,assist` — type is `goal`, `penalty` or `own goal`; `side` is the team the goal counted **for** |
-| `pen` | `round,side,player,result` — a penalty-shootout kick; result is `scored` or `missed` |
+| `pen` | `order,side,player,result` — a penalty-shootout kick; result is `scored` or `missed` |
 | `stat` | `name,home,away` — any stat you like; add rows freely |
 | `weather` | `field,value` — condition, temp_c |
 | `personal` | `field,value` — ticket_price, ticket_currency, ticket_price_usd, section, row, seat, seating |
@@ -74,11 +78,11 @@ Leave any of them blank for the site's defaults (off-white dots, dark numbers, a
 `stat_color` sets this team's bar colour in Match stats; leave blank for the default (dark for
 home, red for away).
 
-**Penalties.** One row per kick, only if the match went to a shootout. `round` groups a home kick
-and an away kick onto the same line in the display — write `1`, `2`, `3`... in order. If the
-shootout finished mid-round (one side already couldn't catch up, so the last kick was never
-taken), just don't write that missing row; the site displays whichever side actually kicked. The
-running score shown next to the "Penalties" heading is worked out automatically from these rows.
+**Penalties.** One row per kick, only if the match went to a shootout. `order` is that kick's
+position in the whole shootout — `1`, `2`, `3`... in the order it was actually taken, regardless
+of side. It isn't shown as a number on the page — it just controls the order the rows are listed
+in, top to bottom, so whichever row comes first is whichever team actually kicked first. The
+running score next to the "Penalty shootout" heading is worked out automatically from these rows.
 
 **Weather.** `condition` also picks the icon. It matches on keywords, so anything containing
 *clear/sunny*, *partly/fair*, *cloud/overcast*, *rain/shower/drizzle*, *thunder/storm*,
@@ -102,6 +106,25 @@ Run a server instead:
 python3 -m http.server
 # then open http://localhost:8000
 ```
+
+## Lookup tables
+
+Two small CSVs sit in the project root, next to `index.html`, rather than in `data/` — they
+describe categories, not matches, and are shared across every match rather than being per-match
+files.
+
+**`competition_type.csv`** — `competition,type`. Maps each competition name (exactly as it
+appears in a match's `meta,competition`) to a type such as `Club - Domestic League` or
+`International - Major Tournament`. Powers the "Competitions by type" stat and the type filter on
+the Matches tab. A competition with no row here is grouped under "Uncategorised" rather than
+dropped — nothing silently disappears, but it's worth adding the row so it counts correctly.
+
+**`continents.csv`** — `country,continent`. Maps a FIFA country code to its confederation (`AFC`,
+`UEFA`, `CONCACAF`, `CONMEBOL`, `CAF`, `OFC`). Powers the "Continents" stat, keyed off each match's
+`meta,country`. A country with no row here is grouped under "Unknown".
+
+Both tolerate a stray blank leading line (common from a spreadsheet export) and skip whatever row
+matches the header text, so you can edit them in Excel/Sheets and re-export without fuss.
 
 ## Filling in weather automatically
 
