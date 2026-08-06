@@ -9,6 +9,7 @@ competition_type.csv  competition name -> type (used for the "Competitions by ty
                     and the type filter on Matches)
 continents.csv      country code -> confederation (AFC, UEFA, CONCACAF...), used for
                     the "Continents" stat
+continents/          confederation icons for the Continents stat: AFC.png, UEFA.png…
 data/               one CSV per match + index.csv (the manifest)
 emblems/            crests: M001a.png (home), M001b.png (away), M001.png (competition)
 kit/                kit icons on the formation card: M001a.png, M001b.png
@@ -125,6 +126,28 @@ dropped — nothing silently disappears, but it's worth adding the row so it cou
 
 Both tolerate a stray blank leading line (common from a spreadsheet export) and skip whatever row
 matches the header text, so you can edit them in Excel/Sheets and re-export without fuss.
+
+## Icons on the Statistics tab
+
+Most stats show a small badge next to each name — what it is depends on the stat, not something
+you configure per row:
+
+- **Countries, Clubs by country, Players by nationality, Cities, Stadiums** — a national flag
+  from `flags/`.
+- **Teams by appearances, Teams by market value** — a flag if the team has a `country` code;
+  otherwise its own crest from `emblems/`. Leave `country` blank on a `team` row (as you already
+  do for national sides) and its crest is used instead — no separate setting needed.
+- **Players, Scorers, Head coaches, Referees** (by appearances or market value) — the person's
+  own flag, from whichever match most recently recorded their country. If it differs across
+  matches (a player who changed allegiance, a typo that got corrected later), the newest one wins.
+- **Competitions** — that competition's logo from the `emblems/M001.png`-style files.
+- **Continents** — the confederation icon from `continents/`.
+- **Weather** — the same condition icon used on a match page.
+- **Records, and Conditions → Temperature** (anything measured per match — attendance, goals,
+  cards, ticket price…) — the competition logo for that specific match.
+
+Any of these fall back gracefully if the underlying image is missing: a flag or crest shows a
+small monogram, a competition or continent icon shows its code as text.
 
 ## Filling in weather automatically
 

@@ -278,6 +278,11 @@ nav.tabs a.on{background:var(--ink);color:var(--paper)}
 .lineup-top .sv{margin-left:auto;font-family:var(--font-display);font-weight:700;font-size:13px;color:var(--muted)}
 .comp-logo{position:relative;display:inline-flex;align-items:center;justify-content:center;flex:none}
 .comp-logo img{width:100%;height:100%;object-fit:contain}
+.cont-icon{position:relative;display:inline-flex;align-items:center;justify-content:center;flex:none;
+  border-radius:2px;overflow:hidden;background:rgba(20,28,36,.05)}
+.cont-icon .fb{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  font-family:var(--font-display);font-weight:800;font-size:8px;color:var(--muted)}
+.cont-icon img{position:relative;z-index:1;width:100%;height:100%;object-fit:contain}
 
 /* stat bars */
 .statrow{padding:13px 18px}
@@ -573,10 +578,16 @@ function flag(code,cls){
   const c=esc(code.toUpperCase());
   return `<span class="flag ${cls||""}" title="${c}"><span class="fb">${c}</span><img src="flags/${c}.png" alt="${c}" loading="lazy" onerror="this.style.display='none'"></span>`;
 }
-function crest(matchId,side,name){
+function crest(matchId,side,name,size){
   const letter=esc((name||"?").replace(/[^A-Za-z\u00C0-\u024F]/g," ").trim().split(/\s+/).map(w=>w[0]).slice(0,2).join("").toUpperCase());
   const f=`emblems/${esc(matchId)}${side==="home"?"a":"b"}.png`;
-  return `<span class="crest"><span class="fb">${letter}</span><img src="${f}" alt="" loading="lazy" onerror="this.style.display='none'" onload="this.previousElementSibling.style.display='none'"></span>`;
+  const style=size?` style="width:${size}px;height:${size}px"`:"";
+  return `<span class="crest"${style}><span class="fb">${letter}</span><img src="${f}" alt="" loading="lazy" onerror="this.style.display='none'" onload="this.previousElementSibling.style.display='none'"></span>`;
+}
+function continentIcon(code,size){
+  if(!code) return "";
+  const c=esc(code), s=size||20;
+  return `<span class="cont-icon" style="width:${s}px;height:${s}px" title="${c}"><span class="fb">${c}</span><img src="continents/${c}.png" alt="${c}" loading="lazy" onerror="this.style.display='none'" onload="this.previousElementSibling.style.display='none'"></span>`;
 }
 
 /* =====================================================================
@@ -1000,7 +1011,7 @@ function computeStats(){
      plain forward overwrite naturally leaves the latest value in each map —
      handles a player who changed allegiance, or a referee's country typo
      getting corrected in a later match. */
-  const playerCountry={}, scorerCountry={}, coachCountry={}, refCountry={}, teamCountry={};
+  const playerCountry={}, scorerCountry={}, coachCountry={}, refCountry={}, teamCountry={}, teamCrest={}, compMatch={};
   MATCHES.forEach(m=>{
     appearances(m).forEach(p=>{
       if(!p.name) return;
@@ -1008,38 +1019,53 @@ function computeStats(){
       scorerCountry[p.name]=p.country;
     });
     ["home","away"].forEach(sd=>{ const t=m.teams[sd]; if(t&&t.coach) coachCountry[t.coach]=t.coachCountry;
-      if(t&&t.name&&t.country) teamCountry[t.name]=t.country; });
+      if(t&&t.name&&t.country) teamCountry[t.name]=t.country;
+      if(t&&t.name&&!teamCrest[t.name]) teamCrest[t.name]={id:m.id,side:sd}; });
     if(m.meta.referee) refCountry[m.meta.referee]=m.meta.referee_country;
+    if(m.meta.competition&&!compMatch[m.meta.competition]) compMatch[m.meta.competition]=m.id;
   });
+  /* A team with a country code gets its flag (club sides); a team you've left
+     that blank for on purpose — national teams — falls back to its own crest. */
+  const teamIcon=name=>{
+    if(teamCountry[name]) return flag(teamCountry[name],"lg");
+    const tc=teamCrest[name];
+    return tc?crest(tc.id,tc.side,name,18):"";
+  };
 
   const defs={};
   /* count-based: a ranking of names by how many times they appear */
   const addCount=(key,title,section,pairs,opts)=>{
     const flagFor=(opts&&opts.flagFor)?opts.flagFor:((opts&&opts.isFlag)?(l=>l):null);
+    const iconFor=(opts&&opts.iconFor)||null;
     defs[key]={key,title,section,kind:"count",unit:(opts&&opts.unit)||"",
       isFlag:!!(opts&&opts.isFlag),donut:!!(opts&&opts.donut),noun:(opts&&opts.noun)||"entries",
       fmt:v=>String(v),
-      rows:pairs.map(([label,value,meta])=>({key:label,label,value,flagCode:flagFor?flagFor(label,meta):null}))};
+      rows:pairs.map(([label,value,meta])=>({key:label,label,value,
+        flagCode:flagFor?flagFor(label,meta):null,
+        icon:iconFor?(iconFor(label,meta)||null):null}))};
   };
-  /* match-based: a per-match measurement, so it can be plotted over time */
+  /* match-based: a per-match measurement, so it can be plotted over time.
+     Every match-based stat lives under Records or Conditions, so it always
+     gets that match's competition logo. */
   const addMatch=(key,title,section,rows,fmt,noun)=>{
     defs[key]={key,title,section,kind:"match",fmt,noun:noun||"matches",
       rows:rows.map(r=>({key:r.m.id+"|"+r.value,label:`${(r.m.teams.home||{}).name} v ${(r.m.teams.away||{}).name}`,
-        value:r.value,id:r.m.id,date:r.m.date}))};
+        value:r.value,id:r.m.id,date:r.m.date,icon:compMatch[r.m.meta.competition]?compLogo(r.m.id,20):null}))};
   };
   /* value-based: money figures attached to a team or player in one match */
   const addValue=(key,title,section,rows,noun,dedupNoun)=>{
     defs[key]={key,title,section,kind:"value",fmt:v=>"€"+fmtVal(v)+"m",noun:noun||"entries",
       dedupable:true,dedupNoun:dedupNoun||noun||"entries",
       rows:rows.map(r=>({key:r.id+"|"+r.name,label:r.name,value:r.v,id:r.id,date:r.date,
-        dkey:r.dkey||r.name,flagCode:r.flagCode||null}))};
+        dkey:r.dkey||r.name,flagCode:r.flagCode||null,icon:r.icon||null}))};
   };
 
-  addCount("competitions","Competitions","Competitions and locations",tally(MATCHES.map(m=>m.meta.competition)),{noun:"competitions",donut:true});
+  addCount("competitions","Competitions","Competitions and locations",tally(MATCHES.map(m=>m.meta.competition)),
+    {noun:"competitions",donut:true,iconFor:name=>compMatch[name]?compLogo(compMatch[name],20):""});
   addCount("competition-type","Competitions by type","Competitions and locations",
     tally(MATCHES.map(m=>COMP_TYPES[m.meta.competition]||"Uncategorised")),{noun:"types",donut:true});
   addCount("continents","Continents","Competitions and locations",
-    tally(MATCHES.map(m=>CONTINENTS[m.meta.country]||"Unknown")),{noun:"continents",donut:true});
+    tally(MATCHES.map(m=>CONTINENTS[m.meta.country]||"Unknown")),{noun:"continents",donut:true,iconFor:code=>continentIcon(code,20)});
   addCount("countries","Countries","Competitions and locations",tally(MATCHES.map(m=>m.meta.country)),{isFlag:true,noun:"countries",donut:true});
   const cityCountry={};
   MATCHES.forEach(m=>{ if(m.meta.city&&m.meta.country&&!cityCountry[m.meta.city]) cityCountry[m.meta.city]=m.meta.country; });
@@ -1051,12 +1077,13 @@ function computeStats(){
     {noun:"stadiums",donut:true,flagFor:v=>stadiumCountry[v]});
 
   addCount("teams-appearances","Teams by appearances","Teams and players",
-    tally(MATCHES.flatMap(m=>[(m.teams.home||{}).name,(m.teams.away||{}).name])),{noun:"teams",donut:true});
+    tally(MATCHES.flatMap(m=>[(m.teams.home||{}).name,(m.teams.away||{}).name])),
+    {noun:"teams",donut:true,iconFor:name=>teamIcon(name)});
   addValue("teams-value","Teams by market value","Teams and players",
     MATCHES.flatMap(m=>["home","away"].map(sd=>{
       const t=m.teams[sd]; if(!t) return null;
       const v=squadValue(m,sd);
-      return v==null?null:{name:t.name,v,id:m.id,date:m.date,flagCode:teamCountry[t.name]};
+      return v==null?null:{name:t.name,v,id:m.id,date:m.date,icon:teamIcon(t.name)};
     })).filter(Boolean).sort((a,b)=>b.v-a.v),"valuations","teams");
   addCount("clubs-country","Clubs by country","Teams and players",
     tally(MATCHES.flatMap(m=>[(m.teams.home||{}).country,(m.teams.away||{}).country])),{isFlag:true,noun:"countries",donut:true});
@@ -1097,7 +1124,8 @@ function computeStats(){
     MATCHES.map(m=>({m,value:parseFloat(m.personal.ticket_price_usd)}))
       .filter(x=>!isNaN(x.value)).sort((a,b)=>b.value-a.value),v=>"$"+Math.round(v));
 
-  addCount("weather","Weather","Conditions",tally(MATCHES.map(m=>m.weather.condition)),{noun:"conditions",donut:true});
+  addCount("weather","Weather","Conditions",tally(MATCHES.map(m=>m.weather.condition)),
+    {noun:"conditions",donut:true,iconFor:cond=>weatherIcon(cond)});
   addMatch("temperature","Temperature","Conditions",
     MATCHES.map(m=>({m,value:parseFloat(m.weather.temp_c)}))
       .filter(x=>!isNaN(x.value)).sort((a,b)=>b.value-a.value),v=>v+"°C");
@@ -1122,7 +1150,7 @@ function statCard(def){
   const body=rows.length?`<div class="rank">${rows.map(r=>{
     const label=r.id?`<a href="#/m/${esc(r.id)}">${esc(r.label)}</a>`:esc(r.label);
     return `<div class="rank-row">
-      ${r.flagCode?flag(r.flagCode,"lg"):""}
+      ${r.icon||(r.flagCode?flag(r.flagCode,"lg"):"")}
       <span class="nm">${label}</span>
       ${r.date?`<span class="dt">${fmtDate(r.date)}</span>`:""}
       ${def.kind==="count"?`<span class="track"><i style="width:${Math.round(r.value/max*100)}%"></i></span>`:""}
@@ -1155,12 +1183,16 @@ function vizDonut(def){
     offset+=len;
     return el;
   }).join("");
-  const legend=slices.map((sl,i)=>`<div class="dl-row">
+  const legend=slices.map((sl,i)=>{
+    const src=sl.other?null:def.rows.find(r=>r.label===sl.label);
+    const badge=src?(src.icon||(src.flagCode?flag(src.flagCode):"")):"";
+    return `<div class="dl-row">
       <span class="dl-dot" style="background:${sl.other?"var(--line)":DONUT_PALETTE[i%DONUT_PALETTE.length]}"></span>
-      ${(!sl.other&&def.rows.find(r=>r.label===sl.label)?.flagCode)?flag(def.rows.find(r=>r.label===sl.label).flagCode):""}
+      ${badge}
       <span class="dl-label">${esc(sl.label)}</span>
       <span class="dl-val num">${Math.round(sl.value/total*100)}%</span>
-    </div>`).join("");
+    </div>`;
+  }).join("");
   return `<div class="card"><h3>Share of the total</h3>
     <div class="body donut-body">
       <div class="donut-wrap">
@@ -1330,7 +1362,7 @@ function renderStatDetail(key){
         const label=r.id?`<a href="#/m/${esc(r.id)}">${esc(r.label)}</a>`:esc(r.label);
         return `<div class="rank-row">
           <span class="vb-rank num">${i+1}</span>
-          ${r.flagCode?flag(r.flagCode,"lg"):""}
+          ${r.icon||(r.flagCode?flag(r.flagCode,"lg"):"")}
           <span class="nm">${label}</span>
           ${r.date?`<span class="dt">${fmtDate(r.date)}</span>`:""}
           <span class="n">${def.fmt(r.value)}</span>
