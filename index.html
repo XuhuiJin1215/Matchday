@@ -991,10 +991,25 @@ function computeStats(){
     return Object.entries(counts).map(([key,v])=>{
       const i=key.indexOf("\u0000"), name=key.slice(0,i), id=key.slice(i+1);
       const label=(idsByName[name].size>1&&id)?`${name} (${id})`:name;
-      return [label,v];
+      return [label,v,{name,id}];
     }).sort((a,b)=>b[1]-a[1]||a[0].localeCompare(b[0]));
   };
   const appearances=m=>m.players.filter(p=>p.role==="start"||p.role==="sub");
+
+  /* "Most recent" nationality lookups. MATCHES is sorted oldest-first, so a
+     plain forward overwrite naturally leaves the latest value in each map —
+     handles a player who changed allegiance, or a referee's country typo
+     getting corrected in a later match. */
+  const playerCountry={}, scorerCountry={}, coachCountry={}, refCountry={};
+  MATCHES.forEach(m=>{
+    appearances(m).forEach(p=>{
+      if(!p.name) return;
+      playerCountry[p.name+"\u0000"+(p.id||"")]=p.country;
+      scorerCountry[p.name]=p.country;
+    });
+    ["home","away"].forEach(sd=>{ const t=m.teams[sd]; if(t&&t.coach) coachCountry[t.coach]=t.coachCountry; });
+    if(m.meta.referee) refCountry[m.meta.referee]=m.meta.referee_country;
+  });
 
   const defs={};
   /* count-based: a ranking of names by how many times they appear */
@@ -1003,7 +1018,7 @@ function computeStats(){
     defs[key]={key,title,section,kind:"count",unit:(opts&&opts.unit)||"",
       isFlag:!!(opts&&opts.isFlag),donut:!!(opts&&opts.donut),noun:(opts&&opts.noun)||"entries",
       fmt:v=>String(v),
-      rows:pairs.map(([label,value])=>({key:label,label,value,flagCode:flagFor?flagFor(label):null}))};
+      rows:pairs.map(([label,value,meta])=>({key:label,label,value,flagCode:flagFor?flagFor(label,meta):null}))};
   };
   /* match-based: a per-match measurement, so it can be plotted over time */
   const addMatch=(key,title,section,rows,fmt,noun)=>{
@@ -1029,7 +1044,10 @@ function computeStats(){
   MATCHES.forEach(m=>{ if(m.meta.city&&m.meta.country&&!cityCountry[m.meta.city]) cityCountry[m.meta.city]=m.meta.country; });
   addCount("cities","Cities","Competitions and locations",tally(MATCHES.map(m=>m.meta.city)),
     {noun:"cities",donut:true,flagFor:c=>cityCountry[c]});
-  addCount("stadiums","Stadiums","Competitions and locations",tally(MATCHES.map(m=>m.meta.venue)),{noun:"stadiums",donut:true});
+  const stadiumCountry={};
+  MATCHES.forEach(m=>{ if(m.meta.venue&&m.meta.country) stadiumCountry[m.meta.venue]=m.meta.country; });
+  addCount("stadiums","Stadiums","Competitions and locations",tally(MATCHES.map(m=>m.meta.venue)),
+    {noun:"stadiums",donut:true,flagFor:v=>stadiumCountry[v]});
 
   addCount("teams-appearances","Teams by appearances","Teams and players",
     tally(MATCHES.flatMap(m=>[(m.teams.home||{}).name,(m.teams.away||{}).name])),{noun:"teams",donut:true});
@@ -1042,17 +1060,21 @@ function computeStats(){
   addCount("clubs-country","Clubs by country","Teams and players",
     tally(MATCHES.flatMap(m=>[(m.teams.home||{}).country,(m.teams.away||{}).country])),{isFlag:true,noun:"countries",donut:true});
   addCount("players-appearances","Players by appearances","Teams and players",
-    tallyPeople(MATCHES.flatMap(appearances).map(p=>({name:p.name,id:p.id}))),{noun:"players"});
+    tallyPeople(MATCHES.flatMap(appearances).map(p=>({name:p.name,id:p.id}))),
+    {noun:"players",flagFor:(label,meta)=>meta&&playerCountry[meta.name+"\u0000"+(meta.id||"")]});
   addValue("players-value","Players by market value","Teams and players",
     MATCHES.flatMap(m=>appearances(m).filter(p=>p.value!=null)
       .map(p=>({name:p.name,v:p.value,id:m.id,date:m.date,dkey:p.name+"\u0000"+(p.id||"")})))
       .sort((a,b)=>b.v-a.v),"valuations","players");
   addCount("players-nationality","Players by nationality","Teams and players",
     tally(MATCHES.flatMap(appearances).map(p=>p.country)),{isFlag:true,noun:"nationalities",donut:true});
-  addCount("scorers","Scorers","Teams and players",tally(MATCHES.flatMap(m=>m.goals.map(g=>g.scorer))),{noun:"scorers"});
+  addCount("scorers","Scorers","Teams and players",tally(MATCHES.flatMap(m=>m.goals.map(g=>g.scorer))),
+    {noun:"scorers",flagFor:name=>scorerCountry[name]});
   addCount("head-coach","Head coaches","Teams and players",
-    tally(MATCHES.flatMap(m=>[(m.teams.home||{}).coach,(m.teams.away||{}).coach])),{noun:"coaches"});
-  addCount("referee","Referees","Teams and players",tally(MATCHES.map(m=>m.meta.referee)),{noun:"referees"});
+    tally(MATCHES.flatMap(m=>[(m.teams.home||{}).coach,(m.teams.away||{}).coach])),
+    {noun:"coaches",flagFor:name=>coachCountry[name]});
+  addCount("referee","Referees","Teams and players",tally(MATCHES.map(m=>m.meta.referee)),
+    {noun:"referees",flagFor:name=>refCountry[name]});
 
   const cardBucket=t=>cardInfo(t).bucket;
   addMatch("attendance","Most Attendance","Records",
