@@ -1,0 +1,88 @@
+,,,,,,,,,,,,,,,
+# --- MATCH --- meta,field,value,,,,,,,,,,,,,
+meta,id,M010,,,,,,,,,,,,,
+meta,status,played,,,,,,,,,,,,,
+meta,competition,Hong Kong Premier League,,,,,,,,,,,,,
+meta,round,Matchday 11,,,,,,,,,,,,,
+meta,date,2016-01-30,,,,,,,,,,,,,
+meta,kickoff,17:30,,,,,,,,,,,,,
+meta,venue,Tseung Kwan O Sports Ground,,,,,,,,,,,,,
+meta,city,Hong Kong,,,,,,,,,,,,,
+meta,country,HKG,,,,,,,,,,,,,
+meta,neutral,no,,,,,,,,,,,,,
+meta,attendance,2010,,,,,,,,,,,,,
+meta,score,0-3,,,,,,,,,,,,,
+meta,aggregate,,,,,,,,,,,,,,
+meta,decision,,,,,,,,,,,,,,
+meta,referee,Cheng Oi Cho,,,,,,,,,,,,,
+meta,referee_country,HKG,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- TEAMS --- team,side,name,country,coach,coach_country,formation,squad_value,pitch_fill,pitch_number,gk_fill,stat_color,,,,
+team,home,South China,HKG,Casemiro Mior,BRA,4-2-3-1,2.3,#F43841,#FFFFFF,,#F43841,,,,
+team,away,Kitchee,HKG,Abraham García,ESP,4-3-3,2.3,#44A6D0,#FFFFFF,,#44A6D0,,,,
+,,,,,,,,,,,,,,,
+# --- PLAYERS -- player,side,role,number,name,kit_name,country,id,captain,goalkeeper,on,off,yellow,double yellow,red,value
+player,home,start,12,Cristian Mora,,ECU,,,yes,,66,,,,0.1
+player,home,start,13,Cheung Kin Fung,Cheung,HKG,,,,,,,,,0.1
+player,home,start,15,Chan Wai Ho,Chan,HKG,,yes,,,,,,,0.1
+player,home,start,22,Bojan Mališić,,SRB,,,,,,,,54,0.3
+player,home,start,6,Andy Russell,,HKG,,,,,,,,,0.1
+player,home,start,17,Leung Chun Pong,Leung,HKG,,,,,46,,,,0.2
+player,home,start,4,Sean Tse,,HKG,,,,,,33,,,0.1
+player,home,start,7,Chan Siu Ki,Chan,HKG,,,,,,57,,,0.2
+player,home,start,30,Chu Siu Kei,Chu,HKG,,,,,66,,,,0.1
+player,home,start,8,Mahama Awal,,CMR,,,,,,,,,0.2
+player,home,start,33,Félix Borja,,ECU,,,,,,,,,0.2
+player,home,sub,28,Liang Zicheng,,HKG,,,,46,,,,,0.1
+player,home,sub,1,Leung Hing Kit  ,,HKG,,,yes,66,,,,,0.1
+player,home,sub,10,Luiz Carlos,,BRA,,,,66,,74,,,0.1
+player,home,bench,16,Chan Siu Kwan,,HKG,,,,,,,,,0.1
+player,home,bench,23,Che Runqiu,,HKG,,,,,,,,,0.1
+player,home,bench,38,Ryan Griffiths,,AUS,,,,,,,,,0.3
+player,home,bench,90,Lam Hok Hei,,HKG,,,,,,,,,0.1
+player,away,start,1,Wang Zhenpeng,Wang,HKG,,,yes,,,,,,0.2
+player,away,start,3,Dani Cancela,,ESP,,,,,,56,,,0.2
+player,away,start,13,Li Ngai Hoi,Li,HKG,,,,,,,,,0.1
+player,away,start,2,Fernando Recio,,ESP,,,,,,,,,0.3
+player,away,start,21,Tong Kin Man,Tong,HKG,,,,,52,,,,0.1
+player,away,start,16,Jared Lum,,AUS,,,,,,,,,
+player,away,start,19,Huang Yang,Huang,HKG,,yes,,,,56,,,0.2
+player,away,start,20,Matt Lam,,CAN,,,,,,49,,,0.2
+player,away,start,7,Fernando,,BRA,,,,,52,,,,0.3
+player,away,start,17,Rufino Segovia,,ESP,,,,,75,,,,0.2
+player,away,start,8,Alex Akande,,HKG,,,,,,,,,0.1
+player,away,sub,15,Christian Annan,,HKG,,,,52,,,,,0.1
+player,away,sub,44,Kim Tae-min,,KOR,,,,52,,,,,0.1
+player,away,sub,18,Jordi Tarrés,,ESP,,,,75,,,,,0.2
+player,away,bench,10,Lam Ka Wai,,HKG,,,,,,,,,0.2
+player,away,bench,23,Guo Jianqiao,,HKG,,,yes,,,,,,0.1
+player,away,bench,31,Law Tsz Chun,,HKG,,,,,,,,,0.1
+player,away,bench,38,Ngan Lok Fung,,HKG,,,,,,,,,0.1
+,,,,,,,,,,,,,,,
+# --- GOALS --- goal,minute,side,scorer,type,assist,,,,,,,,,,
+goal,17,away,Rufino Segovia,goal,Alex Akande,,,,,,,,,,
+goal,65,away,Rufino Segovia,goal,,,,,,,,,,,
+goal,79,away,Alex Akande,goal,Matt Lam,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- MATCH STATS --- stat,name,home,away,,,,,,,,,,,,
+stat,Possession,46,54,,,,,,,,,,,,
+stat,Expected goals (xG),,,,,,,,,,,,,,
+stat,Shots,9,15,,,,,,,,,,,,
+stat,Shots on target,4,4,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- WEATHER --- weather,field,value,,,,,,,,,,,,,
+weather,condition,Clear,,,,,,,,,,,,,
+weather,temp_c,16,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- MATCHDAY --- personal,field,value,,,,,,,,,,,,,
+personal,ticket_price,30,,,,,,,,,,,,,
+personal,ticket_currency,HKD,,,,,,,,,,,,,
+personal,ticket_price_usd,4,,,,,,,,,,,,,
+personal,section,,,,,,,,,,,,,,
+personal,row,,,,,,,,,,,,,,
+personal,seat,,,,,,,,,,,,,,
+personal,seating,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- PHOTOS --- photo,file,caption,,,,,,,,,,,,,
+photo,M010_1.jpg,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
