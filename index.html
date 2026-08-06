@@ -367,6 +367,19 @@ nav.tabs a.on{background:var(--ink);color:var(--paper)}
 .stat-head{padding:14px 0 6px}
 .stat-head h1{font-family:var(--font-display);font-weight:800;font-size:clamp(26px,4.4vw,40px);
   line-height:1.04;letter-spacing:-.02em;margin:6px 0 0}
+
+/* segmented toggle (full list vs. one row per team/player) */
+.seg{display:inline-flex;margin-top:16px;border:1px solid var(--line);border-radius:999px;
+  background:var(--card);padding:3px;box-shadow:var(--shadow);max-width:100%;flex-wrap:wrap}
+.seg button{
+  display:inline-flex;align-items:center;gap:7px;cursor:pointer;
+  border:none;background:none;border-radius:999px;padding:8px 15px;
+  font-family:var(--font-display);font-size:11px;font-weight:700;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--muted);transition:background .18s,color .18s;
+}
+.seg button:hover{color:var(--ink)}
+.seg button.on{background:var(--ink);color:var(--paper)}
+.seg .seg-n{font-size:11px;opacity:.65;font-variant-numeric:tabular-nums}
 .charts{margin:28px 0 0}
 .viz-note{margin:14px 0 0;font-size:12px;color:var(--muted)}
 .viz-svg{width:100%;height:auto;display:block;overflow:visible}
@@ -999,9 +1012,11 @@ function computeStats(){
         value:r.value,id:r.m.id,date:r.m.date}))};
   };
   /* value-based: money figures attached to a team or player in one match */
-  const addValue=(key,title,section,rows,noun)=>{
+  const addValue=(key,title,section,rows,noun,dedupNoun)=>{
     defs[key]={key,title,section,kind:"value",fmt:v=>"€"+fmtVal(v)+"m",noun:noun||"entries",
-      rows:rows.map(r=>({key:r.id+"|"+r.name,label:r.name,value:r.v,id:r.id,date:r.date}))};
+      dedupable:true,dedupNoun:dedupNoun||noun||"entries",
+      rows:rows.map(r=>({key:r.id+"|"+r.name,label:r.name,value:r.v,id:r.id,date:r.date,
+        dkey:r.dkey||r.name}))};
   };
 
   addCount("competitions","Competitions","Competitions and locations",tally(MATCHES.map(m=>m.meta.competition)),{noun:"competitions",donut:true});
@@ -1023,14 +1038,15 @@ function computeStats(){
       const t=m.teams[sd]; if(!t) return null;
       const v=squadValue(m,sd);
       return v==null?null:{name:t.name,v,id:m.id,date:m.date};
-    })).filter(Boolean).sort((a,b)=>b.v-a.v),"squads");
+    })).filter(Boolean).sort((a,b)=>b.v-a.v),"valuations","teams");
   addCount("clubs-country","Clubs by country","Teams and players",
     tally(MATCHES.flatMap(m=>[(m.teams.home||{}).country,(m.teams.away||{}).country])),{isFlag:true,noun:"countries",donut:true});
   addCount("players-appearances","Players by appearances","Teams and players",
     tallyPeople(MATCHES.flatMap(appearances).map(p=>({name:p.name,id:p.id}))),{noun:"players"});
   addValue("players-value","Players by market value","Teams and players",
     MATCHES.flatMap(m=>appearances(m).filter(p=>p.value!=null)
-      .map(p=>({name:p.name,v:p.value,id:m.id,date:m.date}))).sort((a,b)=>b.v-a.v),"players");
+      .map(p=>({name:p.name,v:p.value,id:m.id,date:m.date,dkey:p.name+"\u0000"+(p.id||"")})))
+      .sort((a,b)=>b.v-a.v),"valuations","players");
   addCount("players-nationality","Players by nationality","Teams and players",
     tally(MATCHES.flatMap(appearances).map(p=>p.country)),{isFlag:true,noun:"nationalities",donut:true});
   addCount("scorers","Scorers","Teams and players",tally(MATCHES.flatMap(m=>m.goals.map(g=>g.scorer))),{noun:"scorers"});
@@ -1227,37 +1243,65 @@ function renderStats(){
 }
 
 /* ---------------- one stat, in full ---------------- */
+/* Which view each toggleable stat is currently showing. Rows arrive sorted
+   high-to-low, so keeping the first occurrence of each dkey keeps the best. */
+const STAT_VIEW={};
+function dedupRows(rows){
+  const seen=new Set();
+  return rows.filter(r=>{
+    const k=r.dkey||r.label;
+    if(seen.has(k)) return false;
+    seen.add(k); return true;
+  });
+}
+function setStatView(key,mode){
+  STAT_VIEW[key]=mode;
+  renderStatDetail(key);
+}
+
 function renderStatDetail(key){
   const S=computeStats();
   const def=S.defs[key];
   if(!def){app.innerHTML=`<div class="wrap error"><b>Not found</b>No statistic called ${esc(key)}. <a href="#/stats" style="text-decoration:underline">Back to statistics</a></div>`;return;}
-  const rows=def.rows;
-  if(!rows.length){
+  const allRows=def.rows;
+  if(!allRows.length){
     app.innerHTML=`<div class="wrap"><a class="back" href="#/stats">← Statistics</a>
       <section class="big-claim"><p>${esc(def.title)}</p></section>
       <div class="card"><div class="empty">Nothing recorded yet.</div></div></div>`;
     window.scrollTo(0,0);return;
   }
+  const bestRows=def.dedupable?dedupRows(allRows):allRows;
+  const canToggle=def.dedupable&&bestRows.length<allRows.length;
+  const mode=canToggle&&STAT_VIEW[def.key]==="best"?"best":"all";
+  const rows=mode==="best"?bestRows:allRows;
+  const vdef={...def,rows};
   const vals=rows.map(r=>r.value);
   const total=vals.reduce((a,b)=>a+b,0);
   const avgDenom=def.avgDenominator||vals.length;
   const avg=total/avgDenom;
-  const charts=def.donut?vizDonut(def):(def.kind==="count"?vizHistogram(def):vizTimeline(def));
+  const charts=def.donut?vizDonut(vdef):(def.kind==="count"?vizHistogram(vdef):vizTimeline(vdef));
+  const toggle=canToggle?`<div class="seg" role="group" aria-label="List view">
+      <button class="${mode==="all"?"on":""}" onclick="setStatView('${esc(def.key)}','all')">
+        Every ${esc(def.noun)} <span class="seg-n num">${allRows.length}</span></button>
+      <button class="${mode==="best"?"on":""}" onclick="setStatView('${esc(def.key)}','best')">
+        Highest per ${esc((def.dedupNoun||"entry").replace(/s$/,""))} <span class="seg-n num">${bestRows.length}</span></button>
+    </div>`:"";
 
   app.innerHTML=`<div class="wrap">
     <a class="back" href="#/stats">← Statistics</a>
     <section class="stat-head">
       <span class="eyebrow">${esc(def.section)}</span>
       <h1>${esc(def.title)}</h1>
+      ${toggle}
     </section>
     <div class="tiles">
-      <div class="tile"><div class="k">${esc(def.kind==="count"?def.noun:"Matches")}</div><div class="v num">${rows.length}</div><div class="s">in the list</div></div>
+      <div class="tile"><div class="k">${esc(def.kind==="count"?def.noun:(mode==="best"?def.dedupNoun:(def.kind==="value"?def.noun:"Matches")))}</div><div class="v num">${rows.length}</div><div class="s">in the list</div></div>
       <div class="tile"><div class="k">Highest</div><div class="v num">${def.fmt(Math.max(...vals))}</div><div class="s">${esc(rows[0].label)}</div></div>
       <div class="tile"><div class="k">Average</div><div class="v num">${def.fmt(Math.round(avg*10)/10)}</div><div class="s">across the list</div></div>
       ${def.kind==="count"?`<div class="tile"><div class="k">Total</div><div class="v num">${nf(total)}</div><div class="s">appearances counted</div></div>`:""}
     </div>
     <div class="cards charts">${charts}</div>
-    <section class="sec"><div class="sec-h"><h2>Full list</h2></div>
+    <section class="sec"><div class="sec-h"><h2>Full list</h2>${canToggle?`<span class="sec-tally">${mode==="best"?`highest per ${esc((def.dedupNoun||"entry").replace(/s$/,""))}`:`every ${esc(def.noun)}`}</span>`:""}</div>
       <div class="card"><div class="rank">${rows.map((r,i)=>{
         const label=r.id?`<a href="#/m/${esc(r.id)}">${esc(r.label)}</a>`:esc(r.label);
         return `<div class="rank-row">
