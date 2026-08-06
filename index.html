@@ -1011,7 +1011,7 @@ function computeStats(){
      plain forward overwrite naturally leaves the latest value in each map —
      handles a player who changed allegiance, or a referee's country typo
      getting corrected in a later match. */
-  const playerCountry={}, scorerCountry={}, coachCountry={}, refCountry={}, teamCountry={}, teamCrest={}, compMatch={};
+  const playerCountry={}, scorerCountry={}, coachCountry={}, refCountry={}, teamCrest={}, compMatch={};
   MATCHES.forEach(m=>{
     appearances(m).forEach(p=>{
       if(!p.name) return;
@@ -1019,7 +1019,6 @@ function computeStats(){
       scorerCountry[p.name]=p.country;
     });
     ["home","away"].forEach(sd=>{ const t=m.teams[sd]; if(t&&t.coach) coachCountry[t.coach]=t.coachCountry;
-      if(t&&t.name&&t.country) teamCountry[t.name]=t.country;
       if(t&&t.name&&!teamCrest[t.name]) teamCrest[t.name]={id:m.id,side:sd}; });
     if(m.meta.referee) refCountry[m.meta.referee]=m.meta.referee_country;
     if(m.meta.competition&&!compMatch[m.meta.competition]) compMatch[m.meta.competition]=m.id;
@@ -1027,7 +1026,6 @@ function computeStats(){
   /* A team with a country code gets its flag (club sides); a team you've left
      that blank for on purpose — national teams — falls back to its own crest. */
   const teamIcon=name=>{
-    if(teamCountry[name]) return flag(teamCountry[name],"lg");
     const tc=teamCrest[name];
     return tc?crest(tc.id,tc.side,name,18):"";
   };
