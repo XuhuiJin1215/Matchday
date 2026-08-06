@@ -1,0 +1,87 @@
+,,,,,,,,,,,,,,,
+# --- MATCH --- meta,field,value,,,,,,,,,,,,,
+meta,id,M008,,,,,,,,,,,,,
+meta,status,played,,,,,,,,,,,,,
+meta,competition,Hong Kong Premier League,,,,,,,,,,,,,
+meta,round,Matchday 5,,,,,,,,,,,,,
+meta,date,2015-10-31,,,,,,,,,,,,,
+meta,kickoff,18:00,,,,,,,,,,,,,
+meta,venue,Mong Kok Stadium,,,,,,,,,,,,,
+meta,city,Hong Kong,,,,,,,,,,,,,
+meta,country,HKG,,,,,,,,,,,,,
+meta,neutral,no,,,,,,,,,,,,,
+meta,attendance,2378,,,,,,,,,,,,,
+meta,score,0-2,,,,,,,,,,,,,
+meta,aggregate,,,,,,,,,,,,,,
+meta,decision,,,,,,,,,,,,,,
+meta,referee,Ho Wai Sing,,,,,,,,,,,,,
+meta,referee_country,HKG,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- TEAMS --- team,side,name,country,coach,coach_country,formation,squad_value,pitch_fill,pitch_number,gk_fill,stat_color,,,,
+team,home,Hong Kong Pegasus,HKG,Lee Chi Kin,HKG,4-2-3-1,1.8,#9A262C,#FFFFFF,,#9A262C,,,,
+team,away,South China,HKG,Casemiro Mior,BRA,4-2-3-1,1.9,#103697,#FFFFFF,,#103697,,,,
+,,,,,,,,,,,,,,,
+# --- PLAYERS -- player,side,role,number,name,kit_name,country,id,captain,goalkeeper,on,off,yellow,double yellow,red,value
+player,home,start,1,Kristijan Naumovski,,MKD,,,yes,,,45,,,0.3
+player,home,start,18,Kwok Kin Pong,Kwok,HKG,,yes,,,,37,,,0.2
+player,home,start,3,Eduardo Praes,,BRA,,,,,,,,,0.1
+player,home,start,12,Leung Nok Hang,Leung,HKG,,,,,,,,,0.1
+player,home,start,13,Wong Chun Ho,Wong,HKG,,,,,,69,,,0.1
+player,home,start,16,Tan Chun Lok,Tan,HKG,,,,,,,,,0.1
+player,home,start,5,Leung Kwun Chung,Leung,HKG,,,,,59,,,,0.1
+player,home,start,8,Lee Ka Yiu,Lee,HKG,,,,,,,,,0.1
+player,home,start,11,João Emir,,BRA,,,,,,,,,0.1
+player,home,start,23,Jaimes McKee,,HKG,,,,,79,,,,0.1
+player,home,start,10,Admir Adrović,,MNE,,,,,,,,,0.3
+player,home,sub,9,Lo Kong Wai,,HKG,,,,59,,82,,,0.1
+player,home,sub,31,Michael Cheng Lai Hin,,HKG,,,,79,,,,,0.1
+player,home,bench,7,Wong Wai,,HKG,,,,,,,,,0.1
+player,home,bench,17,Chan Pak Hang,,HKG,,,,,,,,,0.1
+player,home,bench,26,Lee Ka Ho,,HKG,,,,,,,,,0.1
+player,home,bench,32,Dane Milovanović,,AUS,,,yes,,,,,,0.1
+player,home,bench,88,Yuen Ho Chun,,HKG,,,,,,,,,0.1
+player,away,start,12,Cristian Mora,,ECU,,,yes,,,,,,0.1
+player,away,start,13,Cheung Kin Fung,Cheung,HKG,,,,,,,,,0.1
+player,away,start,6,Andy Russell,,HKG,,,,,,,,,0.1
+player,away,start,22,Bojan Mališić,,SRB,,,,,,,,,0.3
+player,away,start,2,Jack Sealy,,HKG,,,,,,,,,0.2
+player,away,start,17,Leung Chun Pong,Leung,HKG,,,,,,,,,0.2
+player,away,start,11,Itaparica,,BRA,,,,,81,,,,0.1
+player,away,start,28,Liang Zicheng,Liang,HKG,,,,,69,,,,0.1
+player,away,start,10,Luiz Carlos,Luiz Carlos,BRA,,,,,90+3,54,,,0.1
+player,away,start,8,Mahama Awal,,CMR,,,,,,,,,0.2
+player,away,start,7,Chan Siu Ki,Chan,HKG,,yes,,,,,,,0.2
+player,away,sub,16,Chan Siu Kwan,,HKG,,,,69,,,,,0.1
+player,away,sub,90,Lam Hok Hei,,HKG,,,,81,,,,,0.1
+player,away,sub,9,Lucas Silva,,BRA,,,,90+3,,,,,0.1
+player,away,bench,1,Leung Hing Kit,,HKG,,,yes,,,,,,0.1
+player,away,bench,18,Murilo de Almeida,,TLS,,,,,,,,,
+player,away,bench,23,Che Runqiu,,HKG,,,,,,,,,0.1
+player,away,bench,76,Cheung Chi Yung,,HKG,,,,,,,,,0.1
+,,,,,,,,,,,,,,,
+# --- GOALS --- goal,minute,side,scorer,type,assist,,,,,,,,,,
+goal,11,away,Itaparica,goal,Mahama Awal,,,,,,,,,,
+goal,80,away,Luiz Carlos,goal,Itaparica,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- MATCH STATS --- stat,name,home,away,,,,,,,,,,,,
+stat,Possession,52,48,,,,,,,,,,,,
+stat,Expected goals (xG),,,,,,,,,,,,,,
+stat,Shots,11,7,,,,,,,,,,,,
+stat,Shots on target,2,5,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- WEATHER --- weather,field,value,,,,,,,,,,,,,
+weather,condition,Drizzle,,,,,,,,,,,,,
+weather,temp_c,25,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- MATCHDAY --- personal,field,value,,,,,,,,,,,,,
+personal,ticket_price,40,,,,,,,,,,,,,
+personal,ticket_currency,HKD,,,,,,,,,,,,,
+personal,ticket_price_usd,5,,,,,,,,,,,,,
+personal,section,Section 16,,,,,,,,,,,,,
+personal,row,,,,,,,,,,,,,,
+personal,seat,,,,,,,,,,,,,,
+personal,seating,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- PHOTOS --- photo,file,caption,,,,,,,,,,,,,
+photo,M007_1.jpg,,,,,,,,,,,,,,
+photo,,,,,,,,,,,,,,,
