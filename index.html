@@ -1000,14 +1000,15 @@ function computeStats(){
      plain forward overwrite naturally leaves the latest value in each map —
      handles a player who changed allegiance, or a referee's country typo
      getting corrected in a later match. */
-  const playerCountry={}, scorerCountry={}, coachCountry={}, refCountry={};
+  const playerCountry={}, scorerCountry={}, coachCountry={}, refCountry={}, teamCountry={};
   MATCHES.forEach(m=>{
     appearances(m).forEach(p=>{
       if(!p.name) return;
       playerCountry[p.name+"\u0000"+(p.id||"")]=p.country;
       scorerCountry[p.name]=p.country;
     });
-    ["home","away"].forEach(sd=>{ const t=m.teams[sd]; if(t&&t.coach) coachCountry[t.coach]=t.coachCountry; });
+    ["home","away"].forEach(sd=>{ const t=m.teams[sd]; if(t&&t.coach) coachCountry[t.coach]=t.coachCountry;
+      if(t&&t.name&&t.country) teamCountry[t.name]=t.country; });
     if(m.meta.referee) refCountry[m.meta.referee]=m.meta.referee_country;
   });
 
@@ -1031,7 +1032,7 @@ function computeStats(){
     defs[key]={key,title,section,kind:"value",fmt:v=>"€"+fmtVal(v)+"m",noun:noun||"entries",
       dedupable:true,dedupNoun:dedupNoun||noun||"entries",
       rows:rows.map(r=>({key:r.id+"|"+r.name,label:r.name,value:r.v,id:r.id,date:r.date,
-        dkey:r.dkey||r.name}))};
+        dkey:r.dkey||r.name,flagCode:r.flagCode||null}))};
   };
 
   addCount("competitions","Competitions","Competitions and locations",tally(MATCHES.map(m=>m.meta.competition)),{noun:"competitions",donut:true});
@@ -1055,7 +1056,7 @@ function computeStats(){
     MATCHES.flatMap(m=>["home","away"].map(sd=>{
       const t=m.teams[sd]; if(!t) return null;
       const v=squadValue(m,sd);
-      return v==null?null:{name:t.name,v,id:m.id,date:m.date};
+      return v==null?null:{name:t.name,v,id:m.id,date:m.date,flagCode:teamCountry[t.name]};
     })).filter(Boolean).sort((a,b)=>b.v-a.v),"valuations","teams");
   addCount("clubs-country","Clubs by country","Teams and players",
     tally(MATCHES.flatMap(m=>[(m.teams.home||{}).country,(m.teams.away||{}).country])),{isFlag:true,noun:"countries",donut:true});
@@ -1064,7 +1065,8 @@ function computeStats(){
     {noun:"players",flagFor:(label,meta)=>meta&&playerCountry[meta.name+"\u0000"+(meta.id||"")]});
   addValue("players-value","Players by market value","Teams and players",
     MATCHES.flatMap(m=>appearances(m).filter(p=>p.value!=null)
-      .map(p=>({name:p.name,v:p.value,id:m.id,date:m.date,dkey:p.name+"\u0000"+(p.id||"")})))
+      .map(p=>({name:p.name,v:p.value,id:m.id,date:m.date,dkey:p.name+"\u0000"+(p.id||""),
+        flagCode:playerCountry[p.name+"\u0000"+(p.id||"")]})))
       .sort((a,b)=>b.v-a.v),"valuations","players");
   addCount("players-nationality","Players by nationality","Teams and players",
     tally(MATCHES.flatMap(appearances).map(p=>p.country)),{isFlag:true,noun:"nationalities",donut:true});
