@@ -60,8 +60,8 @@ player,away,bench,8,Xavier Chen,,TPE,,,,,,,,,0.7
 player,away,bench,14,Yang Yihu,,CHN,,,,,,,,,0.1
 ,,,,,,,,,,,,,,,
 # --- GOALS --- goal,minute,side,scorer,type,assist,,,,,,,,,,
-goal,25,home,Jiang Ning,goal,,,,,,,,,,,
-goal,35,home,Jin Yangyang,goal,,,,,,,,,,,
+goal,25,home,Jiang Ning,goal,Tang Miao,,,,,,,,,,
+goal,35,home,Jin Yangyang,goal,Abderrazak Hamdallah,,,,,,,,,,
 goal,38,home,Abderrazak Hamdallah,goal,Lu Lin,,,,,,,,,,
 goal,82,home,Jin Yangyang,goal,,,,,,,,,,,
 ,,,,,,,,,,,,,,,
