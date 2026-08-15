@@ -1,0 +1,89 @@
+,,,,,,,,,,,,,,,
+# --- MATCH --- meta,field,value,,,,,,,,,,,,,
+meta,id,M016,,,,,,,,,,,,,
+meta,status,played,,,,,,,,,,,,,
+meta,competition,China League One,,,,,,,,,,,,,
+meta,round,Matchday 26,,,,,,,,,,,,,
+meta,date,2016-09-10,,,,,,,,,,,,,
+meta,kickoff,19:45,,,,,,,,,,,,,
+meta,venue,Shenzhen Stadium,,,,,,,,,,,,,
+meta,city,Shenzhen,,,,,,,,,,,,,
+meta,country,CHN,,,,,,,,,,,,,
+meta,neutral,no,,,,,,,,,,,,,
+meta,attendance,5081,,,,,,,,,,,,,
+meta,score,2-2,,,,,,,,,,,,,
+meta,aggregate,,,,,,,,,,,,,,
+meta,decision,,,,,,,,,,,,,,
+meta,referee,Xu Fuxin,,,,,,,,,,,,,
+meta,referee_country,CHN,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- TEAMS --- team,side,name,country,coach,coach_country,formation,squad_value,pitch_fill,pitch_number,gk_fill,stat_color,,,,
+team,home,Shenzhen FC,CHN,Clarence Seedorf,NED,4-2-3-1,2.9,#DE246D,#FFFFFF,,#DE246D,,,,
+team,away,Zhejiang Yiteng,CHN,Duan Xin,CHN,4-2-3-1,2.3,#1343B3,#FFFFFF,,#1343B3,,,,
+,,,,,,,,,,,,,,,
+# --- PLAYERS -- player,side,role,number,name,kit_name,country,id,captain,goalkeeper,on,off,yellow,double yellow,red,value
+player,home,start,16,Zhou Yajun,Zhou,CHN,,,yes,,,,,,0.1
+player,home,start,3,Lü Haidong,Lü,CHN,,,,,56,,,,0.1
+player,home,start,4,Qiao Wei,Qiao,CHN,,,,,,19,,,0.1
+player,home,start,29,Helton Dos Reis,Helton,FRA,,,,,,,,,0.5
+player,home,start,2,Geng Xiaoshun,Geng,CHN,,,,,,,,,0.1
+player,home,start,20,Xu Liang,Xu,CHN,,,,,,,,,0.1
+player,home,start,18,Fei Yu,Fei,CHN,,,,,,,,,0.1
+player,home,start,14,Aboubakar Oumarou,,CMR,,,,,,,,,0.9
+player,home,start,31,Li Fei,Li,CHN,,yes,,,,47,,,0.1
+player,home,start,19,Tan Binliang,Tan,CHN,,,,,64,,,,0.1
+player,home,start,9,Deshorn Brown,,JAM,,,,,,,,,0.6
+player,home,sub,7,Gao Tianyi,,CHN,,,,56,,90+2,,,0.1
+player,home,sub,21,Cai Jingyuan,,CHN,,,,64,,,,,0.1
+player,home,bench,1,Niu Ben,,CHN,,,yes,,,,,,0.1
+player,home,bench,5,Ren Peng,,CHN,,,,,,,,,0.1
+player,home,bench,6,Ling Sihao,,CHN,,,,,,,,,0.1
+player,home,bench,8,Du Longquan,,CHN,,,,,,,,,0.1
+player,home,bench,32,Zhang Hongnan,,CHN,,,,,,,,,0.1
+player,away,start,1,Bai Xiaolei,Bai,CHN,,,yes,,,,,,0.1
+player,away,start,25,Li Xudong,Li,CHN,,,,,70,,,,0.1
+player,away,start,3,Hao Qiang,Hao,CHN,,,,,86,,,,0.1
+player,away,start,16,Wang Dalong,Wang,CHN,,,,,,,,,0.1
+player,away,start,7,Li Jiahe,Li,CHN,,,,,82,,,,0.1
+player,away,start,31,Li Gen,Li,CHN,,,,,,21,,,0.1
+player,away,start,8,Adam Hughes,,AUS,,yes,,,,88,,,0.3
+player,away,start,18,Liu Yue,Liu,CHN,,,,,,,,,0.1
+player,away,start,33,Rodrigo Paulista,Rodrigo,BRA,,,,,,,,,0.7
+player,away,start,28,Piao Taoyu,Piao,CHN,,,,,,,,,0.1
+player,away,start,19,Ricardo Steer,,COL,,,,,,,,,0.3
+player,away,sub,5,Yu Tao,,CHN,,,,70,,,,,0.1
+player,away,sub,27,Li Jian,,CHN,,,,82,,,,,0.1
+player,away,sub,37,Zhang Song,,CHN,,,,86,,,,,0.1
+player,away,bench,9,Li Xin,,CHN,,,,,,,,,0.1
+player,away,bench,10,Ji Xiaoxuan,,CHN,,,,,,,,,0.1
+player,away,bench,17,Liu Xiaolong,,CHN,,,,,,,,,0.1
+player,away,bench,32,Lai Xiaoyu,,CHN,,,yes,,,,,,0.1
+,,,,,,,,,,,,,,,
+# --- GOALS --- goal,minute,side,scorer,type,assist,,,,,,,,,,
+goal,5,away,Rodrigo Paulista,goal,Piao Taoyu,,,,,,,,,,
+goal,22,home,Xu Liang,goal,Tan Binliang,,,,,,,,,,
+goal,27,away,Ricardo Steer,penalty,,,,,,,,,,,
+goal,86,home,Aboubakar Oumarou,goal,Geng Xiaoshun,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- MATCH STATS --- stat,name,home,away,,,,,,,,,,,,
+stat,Possession,,,,,,,,,,,,,,
+stat,Expected goals (xG),,,,,,,,,,,,,,
+stat,Shots,,,,,,,,,,,,,,
+stat,Shots on target,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- WEATHER --- weather,field,value,,,,,,,,,,,,,
+weather,condition,Overcast,,,,,,,,,,,,,
+weather,temp_c,27,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- MATCHDAY --- personal,field,value,,,,,,,,,,,,,
+personal,ticket_price,17,,,,,,,,,,,,,
+personal,ticket_currency,CNY,,,,,,,,,,,,,
+personal,ticket_price_usd,3,,,,,,,,,,,,,
+personal,section,Section 12,,,,,,,,,,,,,
+personal,row,,,,,,,,,,,,,,
+personal,seat,,,,,,,,,,,,,,
+personal,seating,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- PHOTOS --- photo,file,caption,,,,,,,,,,,,,
+photo,M016_1.jpg,,,,,,,,,,,,,,
+photo,,,,,,,,,,,,,,,
