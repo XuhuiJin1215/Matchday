@@ -1,0 +1,86 @@
+,,,,,,,,,,,,,,,
+# --- MATCH --- meta,field,value,,,,,,,,,,,,,
+meta,id,M017,,,,,,,,,,,,,
+meta,status,played,,,,,,,,,,,,,
+meta,competition,HKFA Senior Shield,,,,,,,,,,,,,
+meta,round,Quarter-final,,,,,,,,,,,,,
+meta,date,2016-10-29,,,,,,,,,,,,,
+meta,kickoff,14:30,,,,,,,,,,,,,
+meta,venue,Mong Kok Stadium,,,,,,,,,,,,,
+meta,city,Hong Kong,,,,,,,,,,,,,
+meta,country,HKG,,,,,,,,,,,,,
+meta,neutral,no,,,,,,,,,,,,,
+meta,attendance,1345,,,,,,,,,,,,,
+meta,score,0-1,,,,,,,,,,,,,
+meta,aggregate,,,,,,,,,,,,,,
+meta,decision,,,,,,,,,,,,,,
+meta,referee,Lau Fong Hei,,,,,,,,,,,,,
+meta,referee_country,HKG,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- TEAMS --- team,side,name,country,coach,coach_country,formation,squad_value,pitch_fill,pitch_number,gk_fill,stat_color,,,,
+team,home,South China,HKG,José Ricardo Rambo,BRA,4-2-3-1,2.2,#BC0A12,#FFFFFF,,#BC0A12,,,,
+team,away,Tai Po,HKG,Lee Chi Kin,HKG,5-3-2,1.2,#105B30,#FFFFFF,,#105B30,,,,
+,,,,,,,,,,,,,,,
+# --- PLAYERS -- player,side,role,number,name,kit_name,country,id,captain,goalkeeper,on,off,yellow,double yellow,red,value
+player,home,start,99,Tsang Man Fai,Tsang,HKG,,,yes,,,,,,0.1
+player,home,start,32,Leung Kwun Chung,Leung,HKG,,,,,,81,,,0.1
+player,home,start,15,Chan Wai Ho,Chan,HKG,,yes,,,,,,,0.1
+player,home,start,22,Bojan Mališić,,SRB,,,,,,,,,0.3
+player,home,start,6,Andy Russell,,HKG,,,,,,48,,,0.1
+player,home,start,4,Sean Tse,,HKG,,,,,72,,,,0.1
+player,home,start,10,Luiz Carlos,,BRA,,,,,76,,,,0.1
+player,home,start,24,Lo Kong Wai,Lo,HKG,,,,,67,,,,0.1
+player,home,start,7,Chan Siu Ki,Chan,HKG,,,,,,,,,0.2
+player,home,start,8,Mahama Awal,,CMR,,,,,,,,,0.5
+player,home,start,9,Nikola Komazec,,SRB,,,,,,,,,0.2
+player,home,sub,21,Law Hiu Chung,,HKG,,,,67,,,,,0.1
+player,home,sub,16,Chan Siu Kwan,,HKG,,,,72,,,,,0.1
+player,home,sub,38,Ryan Griffiths,,AUS,,,,76,,,,,0.1
+player,home,bench,1,Leung Hing Kit,,HKG,,,yes,,,,,,0.1
+player,home,bench,30,Chu Siu Kei,,HKG,,,,,,,,,0.1
+player,home,bench,33,Leung Nok Hang,,HKG,,,,,,,,,0.1
+player,home,bench,90,Lam Hok Hei,,HKG,,,,,,,,,0.1
+player,away,start,63,Li Hon Ho,Li,HKG,,,yes,,87,,,,0.1
+player,away,start,91,Chan Cham Hei,Chan,HKG,,,,,,,,,0.1
+player,away,start,9,Chen Liming,Chen,CHN,,,,,,,,,0.1
+player,away,start,21,Chan Yuk Chi,Chan,HKG,,yes,,,,,,,0.1
+player,away,start,3,Lima,,BRA,,,,,,9,,,0.1
+player,away,start,4,Lew Wai Yip,Lew,HKG,,,,,63,,,,0.1
+player,away,start,5,Dudu,,BRA,,,,,,,,,
+player,away,start,19,David Lazari,,BRA,,,,,,,,,0.3
+player,away,start,7,Wong Wai,Wong,HKG,,,,,,,,,0.1
+player,away,start,11,Lucas Silva,Lucas,BRA,,,,,87,,,,0.1
+player,away,start,8,Lee Ka Yiu,Lee,HKG,,,,,,,,,0.1
+player,away,sub,16,Tan Chun Lok,,HKG,,,,63,,,,,0.2
+player,away,sub,1,Paulo César,,HKG,,,yes,87,,,,,0.1
+player,away,sub,23,Ye Jia,,HKG,,,,87,,,,,0.1
+player,away,bench,17,Chan Hiu Fung,,HKG,,,,,,,,,
+player,away,bench,44,Yuto Nakamura,,JPN,,,,,,,,,0.1
+player,away,bench,90,Chiu Siu Wai,,HKG,,,,,,,,,
+player,away,bench,99,Wong Yiu Fu,,HKG,,,,,,,,,0.1
+,,,,,,,,,,,,,,,
+# --- GOALS --- goal,minute,side,scorer,type,assist,,,,,,,,,,
+goal,70,away,Wong Wai,goal,David Lazari,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- MATCH STATS --- stat,name,home,away,,,,,,,,,,,,
+stat,Possession,,,,,,,,,,,,,,
+stat,Expected goals (xG),,,,,,,,,,,,,,
+stat,Shots,,,,,,,,,,,,,,
+stat,Shots on target,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- WEATHER --- weather,field,value,,,,,,,,,,,,,
+weather,condition,Clear,,,,,,,,,,,,,
+weather,temp_c,27,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- MATCHDAY --- personal,field,value,,,,,,,,,,,,,
+personal,ticket_price,30,,,,,,,,,,,,,
+personal,ticket_currency,HKD,,,,,,,,,,,,,
+personal,ticket_price_usd,4,,,,,,,,,,,,,
+personal,section,Section 9,,,,,,,,,,,,,
+personal,row,,,,,,,,,,,,,,
+personal,seat,,,,,,,,,,,,,,
+personal,seating,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- PHOTOS --- photo,file,caption,,,,,,,,,,,,,
+photo,M017_1.jpg,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
