@@ -1,0 +1,89 @@
+,,,,,,,,,,,,,,,
+# --- MATCH --- meta,field,value,,,,,,,,,,,,,
+meta,id,M021,,,,,,,,,,,,,
+meta,status,played,,,,,,,,,,,,,
+meta,competition,EAFF E-1 Football Championship Qualification,,,,,,,,,,,,,
+meta,round,Second Round - Matchday 3,,,,,,,,,,,,,
+meta,date,2016-11-12,,,,,,,,,,,,,
+meta,kickoff,18:00,,,,,,,,,,,,,
+meta,venue,Mong Kok Stadium,,,,,,,,,,,,,
+meta,city,Hong Kong,,,,,,,,,,,,,
+meta,country,HKG,,,,,,,,,,,,,
+meta,neutral,no,,,,,,,,,,,,,
+meta,attendance,4838,,,,,,,,,,,,,
+meta,score,0-1,,,,,,,,,,,,,
+meta,aggregate,,,,,,,,,,,,,,
+meta,decision,,,,,,,,,,,,,,
+meta,referee,Pranjal Banerjee,,,,,,,,,,,,,
+meta,referee_country,IND,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- TEAMS --- team,side,name,country,coach,coach_country,formation,squad_value,pitch_fill,pitch_number,gk_fill,stat_color,,,,
+team,home,Hong Kong,,Kim Pan-gon,KOR,4-2-3-1,2.7,#E8384E,#FFFFFF,,#E8384E,,,,
+team,away,Korea DPR,,Jørn Andersen,NOR,3-4-2-1,1.7,#DDDFDC,#090C07,,#090C07,,,,
+,,,,,,,,,,,,,,,
+# --- PLAYERS -- player,side,role,number,name,kit_name,country,id,captain,goalkeeper,on,off,yellow,double yellow,red,value
+player,home,start,1,Yapp Hung Fai,Yapp,HKG,,yes,yes,,,,,,0.3
+player,home,start,15,Roberto Júnior,Roberto,HKG,,,,,,63,,,0.3
+player,home,start,3,Festus Baise,,HKG,,,,,,,,,0.1
+player,home,start,5,Hélio,,HKG,,,,,,,,,0.2
+player,home,start,14,Jack Sealy,,HKG,,,,,,,,,0.1
+player,home,start,16,Leung Chun Pong,Leung,HKG,,,,,80,,,,0.2
+player,home,start,6,Huang Yang,Huang,HKG,,,,,70,,,,0.1
+player,home,start,11,Godfred Karikari,,HKG,,,,,,,,,0.1
+player,home,start,9,Sandro,,HKG,,,,,,,,,0.3
+player,home,start,7,Chan Siu Ki,Chan,HKG,,,,,63,,,,0.2
+player,home,start,26,Alex Akande,,HKG,,,,,,,,,0.2
+player,home,sub,22,Jaimes McKee,,HKG,,,,63,,,,,0.1
+player,home,sub,17,Lee Hong Lim,,HKG,,,,70,,,,,0.1
+player,home,sub,10,Lam Ka Wai,,HKG,,,,80,,,,,0.2
+player,home,bench,2,Fong Pak Lun,,HKG,,,,,,,,,0.1
+player,home,bench,12,Lo Kwan Yee,,HKG,,,,,,,,,0.2
+player,home,bench,20,Cheng King Ho,,HKG,,,,,,,,,0.1
+player,home,bench,23,Andy Russell,,HKG,,,,,,,,,0.1
+player,home,bench,30,Tsang Man Fai,,HKG,,,yes,,,,,,0.1
+player,away,start,1,Ri Myong-guk,Ri,PRK,,yes,yes,,,,,,0.4
+player,away,start,18,Ri Yong-choi,Ri,PRK,,,,,,,,,
+player,away,start,3,Jang Kuk-chol,Jang,PRK,,,,,,,,,0.1
+player,away,start,6,Kang Kuk-chol,Kang,PRK,,,,,,,,,
+player,away,start,15,Kim Chol-bum,Kim,PRK,,,,,,,,,
+player,away,start,4,Pak Myong-song,Pak,PRK,,,,,,90,,,
+player,away,start,8,Kim Kuk-bom,Kim,PRK,,,,,90,,,,
+player,away,start,19,So Hyon-uk,So,PRK,,,,,80,,,,0.1
+player,away,start,9,Pak Song-chol,Pak,PRK,,,,,,,,,0.1
+player,away,start,11,Jong Il-gwan,Jong,PRK,,,,,76,59,,,0.1
+player,away,start,24,Pak Kwang-ryong,Pak,PRK,,,,,,,,,0.8
+player,away,sub,12,So Kyong-jin,,PRK,,,,76,,,,,
+player,away,sub,10,Ju Jong-chol,,PRK,,,,80,,90+6,,,
+player,away,sub,20,Song Kum-il,,PRK,,,,90,,,,,
+player,away,bench,2,Sim Hyon-jin,,PRK,,,,,,,,,0.1
+player,away,bench,17,Myong Cha-hyon,,PRK,,,,,,,,,
+player,away,bench,22,Ri Kwang-il,,PRK,,,yes,,,63,,,0.1
+player,away,bench,23,Kim Yu-song,,PRK,,,,,,,,,
+player,away,bench,26,Kim Ju-song,,PRK,,,,,,,,,
+player,away,bench,27,Choe Ju-song,,PRK,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- GOALS --- goal,minute,side,scorer,type,assist,,,,,,,,,,
+goal,22,away,Jong Il-gwan,goal,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- MATCH STATS --- stat,name,home,away,,,,,,,,,,,,
+stat,Possession,,,,,,,,,,,,,,
+stat,Expected goals (xG),,,,,,,,,,,,,,
+stat,Shots,6,8,,,,,,,,,,,,
+stat,Shots on target,2,1,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- WEATHER --- weather,field,value,,,,,,,,,,,,,
+weather,condition,Clear,,,,,,,,,,,,,
+weather,temp_c,23,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- MATCHDAY --- personal,field,value,,,,,,,,,,,,,
+personal,ticket_price,15,,,,,,,,,,,,,
+personal,ticket_currency,HKD,,,,,,,,,,,,,
+personal,ticket_price_usd,2,,,,,,,,,,,,,
+personal,section,Section 35,,,,,,,,,,,,,
+personal,row,,,,,,,,,,,,,,
+personal,seat,,,,,,,,,,,,,,
+personal,seating,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- PHOTOS --- photo,file,caption,,,,,,,,,,,,,
+photo,M021_1.jpg,,,,,,,,,,,,,,
+photo,,,,,,,,,,,,,,,
