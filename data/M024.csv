@@ -19,7 +19,7 @@ meta,referee_country,ENG,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,
 # --- TEAMS --- team,side,name,country,coach,coach_country,formation,squad_value,pitch_fill,pitch_number,gk_fill,stat_color,,,,
 team,home,Aston Villa,ENG,Steve Bruce,ENG,4-2-3-1,52.5,#5F0D30,#FFFFFF,,#5F0D30,,,,
-team,away,Preston North End,ENG,Simon Grayson,ENG,4-4-2,12.5,#FEBD1A,#000000,,#FEBD1A,,,,
+team,away,Preston North End,ENG,Simon Grayson,ENG,4-4-2,12.5,#FEBD1A,#000000,#2C9B72,#FEBD1A,,,,
 ,,,,,,,,,,,,,,,
 # --- PLAYERS -- player,side,role,number,name,kit_name,country,id,captain,goalkeeper,on,off,yellow,double yellow,red,value
 player,home,start,34,Sam Johnstone,,ENG,,,yes,,,,,,0.3
