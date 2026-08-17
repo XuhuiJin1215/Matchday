@@ -1,0 +1,89 @@
+,,,,,,,,,,,,,,,
+# --- MATCH --- meta,field,value,,,,,,,,,,,,,
+meta,id,M024,,,,,,,,,,,,,
+meta,status,played,,,,,,,,,,,,,
+meta,competition,EFL Championship,,,,,,,,,,,,,
+meta,round,Matchday 27,,,,,,,,,,,,,
+meta,date,2017-01-21,,,,,,,,,,,,,
+meta,kickoff,15:00,,,,,,,,,,,,,
+meta,venue,Villa Park,,,,,,,,,,,,,
+meta,city,Birmingham,,,,,,,,,,,,,
+meta,country,ENG,,,,,,,,,,,,,
+meta,neutral,no,,,,,,,,,,,,,
+meta,attendance,32415,,,,,,,,,,,,,
+meta,score,2-2,,,,,,,,,,,,,
+meta,aggregate,,,,,,,,,,,,,,
+meta,decision,,,,,,,,,,,,,,
+meta,referee,Andrew Madley,,,,,,,,,,,,,
+meta,referee_country,ENG,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- TEAMS --- team,side,name,country,coach,coach_country,formation,squad_value,pitch_fill,pitch_number,gk_fill,stat_color,,,,
+team,home,Aston Villa,ENG,Steve Bruce,ENG,4-2-3-1,52.5,#5F0D30,#FFFFFF,,#5F0D30,,,,
+team,away,Preston North End,ENG,Simon Grayson,ENG,4-4-2,12.5,#FEBD1A,#000000,,#FEBD1A,,,,
+,,,,,,,,,,,,,,,
+# --- PLAYERS -- player,side,role,number,name,kit_name,country,id,captain,goalkeeper,on,off,yellow,double yellow,red,value
+player,home,start,34,Sam Johnstone,,ENG,,,yes,,,,,,0.3
+player,home,start,23,Jordan Amavi,,FRA,,,,,88,67,,,10
+player,home,start,2,Nathan Baker,,ENG,,,,,,,,,2.5
+player,home,start,12,James Chester,,WAL,,yes,,,,,,,6
+player,home,start,21,Alan Hutton,,SCO,,,,,,,,,2
+player,home,start,15,Ashley Westwood,,ENG,,,,,,,,,4
+player,home,start,5,Henri Lansbury,,ENG,,,,,77,,,,2
+player,home,start,19,Andre Green,,ENG,,,,,,,,,0.5
+player,home,start,40,Jack Grealish,,ENG,,,,,90+3,,,,4.5
+player,home,start,37,Albert Adomah,,GHA,,,,,,41,,,2
+player,home,start,11,Gabriel Agbonlahor,,ENG,,,,,,,,,2.5
+player,home,sub,7,Leandro Bacuna,,CUW,,,,77,,,,,3
+player,home,sub,22,Gary Gardner,,ENG,,,,88,,,,,2
+player,home,sub,39,Keinan Davis,,ENG,,,,90+3,,,,,
+player,home,bench,4,Micah Richards,,ENG,,,,,,,,,4.5
+player,home,bench,6,Tommy Elphick,,ENG,,,,,,,,,3
+player,home,bench,8,Aaron Tshibola,,ENG,,,,,,,,,3
+player,home,bench,31,Mark Bunn,,ENG,,,yes,,,,,,0.8
+player,away,start,22,Chris Maxwell,,WAL,,,yes,,,,,,0.2
+player,away,start,17,Tommy Spurr,,ENG,,,,,,,,,0.7
+player,away,start,5,Tom Clarke,,ENG,,yes,,,,,,,0.4
+player,away,start,23,Paul Huntington,,ENG,,,,,,,,,0.4
+player,away,start,2,Marnick Vermijl,,BEL,,,,,,68,,,0.5
+player,away,start,14,Aiden McGeady,,IRL,,,,,,90+5,,,4
+player,away,start,8,Alan Browne,,IRL,,,,,,18,,,0.5
+player,away,start,11,Daniel Johnson,,JAM,,,,,,,,,0.5
+player,away,start,12,Paul Gallagher,,SCO,,,,,,,,,0.5
+player,away,start,37,Callum Robinson,,ENG,,,,,60,,,,0.5
+player,away,start,25,Jordan Hugill,,ENG,,,,,78,63,,,0.2
+player,away,sub,10,Jermaine Beckford,,JAM,,,,60,,,,,0.5
+player,away,sub,7,Daryl Horgan,,IRL,,,,78,,,,,0.1
+player,away,bench,1,Anders Lindegaard,,DEN,,,yes,,,,,,1.5
+player,away,bench,9,Simon Makienok,,DEN,,,,,,,,,1.5
+player,away,bench,16,Liam Grimshaw,,ENG,,,,,,,,,0.2
+player,away,bench,18,Ben Pringle,,ENG,,,,,,,,,0.4
+player,away,bench,24,Andy Boyle,,IRL,,,,,,,,,0.1
+,,,,,,,,,,,,,,,
+# --- GOALS --- goal,minute,side,scorer,type,assist,,,,,,,,,,
+goal,22,home,Albert Adomah,goal,Gabriel Agbonlahor,,,,,,,,,,
+goal,36,home,Albert Adomah,goal,,,,,,,,,,,
+goal,64,away,Jordan Hugill,goal,Daniel Johnson,,,,,,,,,,
+goal,76,away,Jordan Hugill,goal,Aiden McGeady,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- MATCH STATS --- stat,name,home,away,,,,,,,,,,,,
+stat,Possession,56,44,,,,,,,,,,,,
+stat,Expected goals (xG),,,,,,,,,,,,,,
+stat,Shots,15,8,,,,,,,,,,,,
+stat,Shots on target,5,2,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- WEATHER --- weather,field,value,,,,,,,,,,,,,
+weather,condition,Overcast,,,,,,,,,,,,,
+weather,temp_c,3,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- MATCHDAY --- personal,field,value,,,,,,,,,,,,,
+personal,ticket_price,33,,,,,,,,,,,,,
+personal,ticket_currency,GBP,,,,,,,,,,,,,
+personal,ticket_price_usd,41,,,,,,,,,,,,,
+personal,section,Block P5,,,,,,,,,,,,,
+personal,row,LL,,,,,,,,,,,,,
+personal,seat,158,,,,,,,,,,,,,
+personal,seating,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- PHOTOS --- photo,file,caption,,,,,,,,,,,,,
+photo,M024_1.jpg,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
