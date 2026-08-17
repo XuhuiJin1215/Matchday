@@ -1,0 +1,87 @@
+,,,,,,,,,,,,,,,
+# --- MATCH --- meta,field,value,,,,,,,,,,,,,
+meta,id,M023,,,,,,,,,,,,,
+meta,status,played,,,,,,,,,,,,,
+meta,competition,FA Cup,,,,,,,,,,,,,
+meta,round,Third Round,,,,,,,,,,,,,
+meta,date,2017-01-07,,,,,,,,,,,,,
+meta,kickoff,15:00,,,,,,,,,,,,,
+meta,venue,St Andrew's,,,,,,,,,,,,,
+meta,city,Birmingham,,,,,,,,,,,,,
+meta,country,ENG,,,,,,,,,,,,,
+meta,neutral,no,,,,,,,,,,,,,
+meta,attendance,13171,,,,,,,,,,,,,
+meta,score,1-1,,,,,,,,,,,,,
+meta,aggregate,,,,,,,,,,,,,,
+meta,decision,,,,,,,,,,,,,,
+meta,referee,Neil Swarbrick,,,,,,,,,,,,,
+meta,referee_country,ENG,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- TEAMS --- team,side,name,country,coach,coach_country,formation,squad_value,pitch_fill,pitch_number,gk_fill,stat_color,,,,
+team,home,Birmingham City,ENG,Gianfranco Zola,ITA,4-2-3-1,13.6,#1848BA,#FFFFFF,,#1848BA,,,,
+team,away,Newcastle United,ENG,Rafael Benítez,ESP,4-4-2,83,#000000,#FFFFFF,,#000000,,,,
+,,,,,,,,,,,,,,,
+# --- PLAYERS -- player,side,role,number,name,kit_name,country,id,captain,goalkeeper,on,off,yellow,double yellow,red,value
+player,home,start,1,Adam Legzdins,,ENG,,,yes,,,,,,0.3
+player,home,start,3,Jonathan Grounds,,ENG,,,,,,,,,0.5
+player,home,start,4,Paul Robinson,,ENG,,yes,,,,,,,0.3
+player,home,start,5,Ryan Shotton,,ENG,,,,,,,,,0.8
+player,home,start,23,Jonathan Spector,,USA,,,,,44,,,,1
+player,home,start,6,Maikel Kieftenbeld,,NED,,,,,,,,,2
+player,home,start,8,Stephen Gleeson,,IRL,,,,,,,,,0.5
+player,home,start,14,Ché Adams,,ENG,,,,,,,,,1.5
+player,home,start,10,Diego Fabbrini,,ITA,,,,,79,,,,1.5
+player,home,start,26,David Davis,,ENG,,,,,,,,,0.7
+player,home,start,15,Lukas Jutkiewicz,,ENG,,,,,,,,,1
+player,home,sub,25,Josh Dacres-Cogley,,ENG,,,,44,,,,,
+player,home,sub,20,Greg Stewart,,SCO,,,,79,,,,,0.6
+player,home,bench,7,Robert Tesche,,GER,,,,,,,,,0.8
+player,home,bench,11,David Cotterill,,WAL,,,,,,,,,0.8
+player,home,bench,18,Reece Brown,,ENG,,,,,,,,,0.2
+player,home,bench,28,Michael Morrison,,ENG,,,,,,,,,0.7
+player,home,bench,29,Tomasz Kuszczak,,POL,,,yes,,,,,,0.8
+player,away,start,28,Mats Sels,,BEL,,,yes,,,,,,6.5
+player,away,start,19,Massadio Haïdara,,FRA,,,,,69,,,,1.5
+player,away,start,5,Grant Hanley,,SCO,,,,,,,,,4.5
+player,away,start,6,Jamaal Lascelles,,ENG,,yes,,,,,,,4
+player,away,start,22,DeAndre Yedlin,,USA,,,,,,,,,4
+player,away,start,7,Achraf Lazaar,,MAR,,,,,,,,,3
+player,away,start,24,Cheick Tioté,,CIV,,,,,65,,,,5
+player,away,start,4,Jack Colback,,ENG,,,,,,,,,6.5
+player,away,start,8,Vurnon Anita,,NED,,,,,,,,,4
+player,away,start,45,Aleksandar Mitrović,,SRB,,,,,10,,,,12
+player,away,start,33,Daryl Murphy,,IRL,,,,,,,,,2
+player,away,sub,20,Yoan Gouffran,,FRA,,,,10,,,,,3
+player,away,sub,14,Isaac Hayden,,ENG,,,,65,,68,,,2
+player,away,sub,11,Matt Ritchie,,SCO,,,,69,,,,,8
+player,away,bench,2,Ciaran Clark,,IRL,,,,,,,,,5
+player,away,bench,3,Paul Dummett,,WAL,,,,,,,,,3.5
+player,away,bench,9,Dwight Gayle,,ENG,,,,,,,,,6
+player,away,bench,26,Karl Darlow,,ENG,,,yes,,,,,,2.5
+,,,,,,,,,,,,,,,
+# --- GOALS --- goal,minute,side,scorer,type,assist,,,,,,,,,,
+goal,5,away,Daryl Murphy,goal,,,,,,,,,,,
+goal,42,home,Lukas Jutkiewicz,goal,Jonathan Grounds,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- MATCH STATS --- stat,name,home,away,,,,,,,,,,,,
+stat,Possession,57,43,,,,,,,,,,,,
+stat,Expected goals (xG),,,,,,,,,,,,,,
+stat,Shots,10,5,,,,,,,,,,,,
+stat,Shots on target,4,2,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- WEATHER --- weather,field,value,,,,,,,,,,,,,
+weather,condition,Overcast,,,,,,,,,,,,,
+weather,temp_c,9,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- MATCHDAY --- personal,field,value,,,,,,,,,,,,,
+personal,ticket_price,15,,,,,,,,,,,,,
+personal,ticket_currency,GBP,,,,,,,,,,,,,
+personal,ticket_price_usd,19,,,,,,,,,,,,,
+personal,section,Block 28,,,,,,,,,,,,,
+personal,row,2,,,,,,,,,,,,,
+personal,seat,423,,,,,,,,,,,,,
+personal,seating,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- PHOTOS --- photo,file,caption,,,,,,,,,,,,,
+photo,M023_1.jpg,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
