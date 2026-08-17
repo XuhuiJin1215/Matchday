@@ -24,7 +24,7 @@ team,away,Shandong Luneng Taishan,CHN,Cuca,BRA,4-3-3,24.4,#FAFAFA,#E36842,,#E368
 # --- PLAYERS -- player,side,role,number,name,kit_name,country,id,captain,goalkeeper,on,off,yellow,double yellow,red,value
 player,home,start,29,Han Feng,Han,CHN,,,yes,,,89,,,0.1
 player,home,start,16,Yang Kuo,Yang,CHN,,,,,,,,,0.1
-player,home,start,4,Edigeison Gomes,,CHN,,yes,,,,,,,0.6
+player,home,start,4,Edigeison Gomes,,GNB,,yes,,,,,,,0.6
 player,home,start,5,Gu Cao,Gu,CHN,,,,,71,,,,0.2
 player,home,start,33,Bi Jinhao,Bi,CHN,,,,,,,,,0.2
 player,home,start,2,Long Cheng,Long,CHN,,,,,,,,,0.1
