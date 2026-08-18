@@ -1,0 +1,97 @@
+,,,,,,,,,,,,,,,
+# --- MATCH --- meta,field,value,,,,,,,,,,,,,
+meta,id,M027,,,,,,,,,,,,,
+meta,status,played,,,,,,,,,,,,,
+meta,competition,FIFA World Cup Qualification - UEFA,,,,,,,,,,,,,
+meta,round,Group F - Matchday 5,,,,,,,,,,,,,
+meta,date,2017-03-26,,,,,,,,,,,,,
+meta,kickoff,17:00,,,,,,,,,,,,,
+meta,venue,Wembley Stadium,,,,,,,,,,,,,
+meta,city,London,,,,,,,,,,,,,
+meta,country,ENG,,,,,,,,,,,,,
+meta,neutral,no,,,,,,,,,,,,,
+meta,attendance,77690,,,,,,,,,,,,,
+meta,score,2-0,,,,,,,,,,,,,
+meta,aggregate,,,,,,,,,,,,,,
+meta,decision,,,,,,,,,,,,,,
+meta,referee,Ruddy Buquet,,,,,,,,,,,,,
+meta,referee_country,FRA,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- TEAMS --- team,side,name,country,coach,coach_country,formation,squad_value,pitch_fill,pitch_number,gk_fill,stat_color,,,,
+team,home,England,,Gareth Southgate,ENG,4-1-4-1,405,#CED1D6,#01408F,,#01408F,,,,
+team,away,Lithuania,,Edgaras Jankauskas,LTU,4-2-3-1,7.3,#EEAF02,#000000,#58C46F,#EEAF02,,,,
+,,,,,,,,,,,,,,,
+# --- PLAYERS -- player,side,role,number,name,kit_name,country,id,captain,goalkeeper,on,off,yellow,double yellow,red,value
+player,home,start,1,Joe Hart,,ENG,,yes,yes,,,,,,15
+player,home,start,3,Ryan Bertrand,,ENG,,,,,,,,,15
+player,home,start,5,Michael Keane,,ENG,,,,,,,,,12
+player,home,start,6,John Stones,,ENG,,,,,,,,,35
+player,home,start,2,Kyle Walker,,ENG,,,,,,,,,20
+player,home,start,4,Eric Dier,,ENG,,,,,,,,,22
+player,home,start,7,Raheem Sterling,,ENG,,,,,60,,,,45
+player,home,start,10,Dele Alli,,ENG,,,,,,,,,40
+player,home,start,8,Alex Oxlade-Chamberlain,,ENG,,,,,,,,,20
+player,home,start,11,Adam Lallana,,ENG,,,,,,,,,22
+player,home,start,9,Jermain Defoe,,ENG,,,,,60,,,,6.5
+player,home,sub,19,Jamie Vardy,,ENG,,,,60,,,,,15
+player,home,sub,20,Marcus Rashford,,ENG,,,,60,,73,,,10
+player,home,bench,12,Nathaniel Clyne,,ENG,,,,,,,,,21
+player,home,bench,13,Fraser Forster,,ENG,,,yes,,,,,,15
+player,home,bench,14,Luke Shaw,,ENG,,,,,,,,,20
+player,home,bench,15,Ben Gibson,,ENG,,,,,,,,,6
+player,home,bench,16,Jake Livermore,,ENG,,,,,,,,,6
+player,home,bench,17,James Ward-Prowse,,ENG,,,,,,,,,13
+player,home,bench,18,Ross Barkley,,ENG,,,,,,,,,22
+player,home,bench,21,Jesse Lingard,,ENG,,,,,,,,,9
+player,home,bench,22,Nathan Redmond,,ENG,,,,,,,,,12
+player,home,bench,23,Tom Heaton,,ENG,,,yes,,,,,,3.5
+player,away,start,16,Ernestas Šetkus,,LTU,,,yes,,,46,,,0.7
+player,away,start,3,Vaidas Slavickas,,LTU,,,,,,,,,0.3
+player,away,start,2,Linas Klimavičius,,LTU,,,,,,,,,0.4
+player,away,start,4,Tadas Kijanskas,,LTU,,,,,,,,,0.3
+player,away,start,8,Egidijus Vaitkūnas,,LTU,,,,,,,,,0.4
+player,away,start,10,Artūras Žulpa,,LTU,,,,,,59,,,0.7
+player,away,start,17,Mantas Kuklys,,LTU,,,,,,,,,0.4
+player,away,start,11,Arvydas Novikovas,,LTU,,,,,54,,,,0.3
+player,away,start,14,Vykintas Slivka,,LTU,,,,,87,,,,0.2
+player,away,start,22,Fiodor Černych,,LTU,,yes,,,,,,,0.9
+player,away,start,19,Nerijus Valskis,,LTU,,,,,74,,,,0.2
+player,away,sub,6,Mindaugas Grigaravičius,,LTU,,,,54,,,,,0.1
+player,away,sub,9,Deivydas Matulevičius,,LTU,,,,74,,,,,0.4
+player,away,sub,13,Simonas Paulius,,LTU,,,,87,,,,,0.3
+player,away,bench,1,Emilijus Zubas,,LTU,,,yes,,,,,,0.4
+player,away,bench,5,Tomas Mikuckis,,LTU,,,,,,,,,0.1
+player,away,bench,7,Ovidijus Verbickas,,LTU,,,,,,,,,0.3
+player,away,bench,12,Edvinas Gertmonas,,LTU,,,yes,,,,,,0.3
+player,away,bench,15,Arūnas Klimavičius,,LTU,,,,,,,,,0.2
+player,away,bench,18,Tautvydas Eliošius,,LTU,,,,,,,,,0.1
+player,away,bench,20,Valdemar Borovskij,,LTU,,,,,,,,,0.1
+player,away,bench,21,Vytautas Lukša,,LTU,,,,,,,,,0.3
+player,away,bench,23,Rolandas Baravykas,,LTU,,,,,,,,,0.2
+,,,,,,,,,,,,,,,
+# --- GOALS --- goal,minute,side,scorer,type,assist,,,,,,,,,,
+goal,22,home,Jermain Defoe,goal,Raheem Sterling,,,,,,,,,,
+goal,66,home,Jamie Vardy,goal,Adam Lallana,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- MATCH STATS --- stat,name,home,away,,,,,,,,,,,,
+stat,Possession,72,28,,,,,,,,,,,,
+stat,Expected goals (xG),,,,,,,,,,,,,,
+stat,Shots,21,4,,,,,,,,,,,,
+stat,Shots on target,9,2,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- WEATHER --- weather,field,value,,,,,,,,,,,,,
+weather,condition,Overcast,,,,,,,,,,,,,
+weather,temp_c,11,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- MATCHDAY --- personal,field,value,,,,,,,,,,,,,
+personal,ticket_price,55,,,,,,,,,,,,,
+personal,ticket_currency,GBP,,,,,,,,,,,,,
+personal,ticket_price_usd,69,,,,,,,,,,,,,
+personal,section,Block 124,,,,,,,,,,,,,
+personal,row,11,,,,,,,,,,,,,
+personal,seat,38,,,,,,,,,,,,,
+personal,seating,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- PHOTOS --- photo,file,caption,,,,,,,,,,,,,
+photo,M027_1.jpg,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
