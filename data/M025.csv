@@ -1,0 +1,87 @@
+,,,,,,,,,,,,,,,
+# --- MATCH --- meta,field,value,,,,,,,,,,,,,
+meta,id,M025,,,,,,,,,,,,,
+meta,status,played,,,,,,,,,,,,,
+meta,competition,Premier League,,,,,,,,,,,,,
+meta,round,Matchday 27,,,,,,,,,,,,,
+meta,date,2017-02-11,,,,,,,,,,,,,
+meta,kickoff,17:30,,,,,,,,,,,,,
+meta,venue,Anfield,,,,,,,,,,,,,
+meta,city,Liverpool,,,,,,,,,,,,,
+meta,country,ENG,,,,,,,,,,,,,
+meta,neutral,no,,,,,,,,,,,,,
+meta,attendance,53159,,,,,,,,,,,,,
+meta,score,2-0,,,,,,,,,,,,,
+meta,aggregate,,,,,,,,,,,,,,
+meta,decision,,,,,,,,,,,,,,
+meta,referee,Anthony Taylor,,,,,,,,,,,,,
+meta,referee_country,ENG,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- TEAMS --- team,side,name,country,coach,coach_country,formation,squad_value,pitch_fill,pitch_number,gk_fill,stat_color,,,,
+team,home,Liverpool,ENG,Jürgen Klopp,GER,4-3-3,324,#E0202E,#FFFFFF,,#E0202E,,,,
+team,away,Tottenham Hotspur,ENG,Mauricio Pochettino,ARG,4-2-2-2,303,#E6E5E9,#131923,,#131923,,,,
+,,,,,,,,,,,,,,,
+# --- PLAYERS -- player,side,role,number,name,kit_name,country,id,captain,goalkeeper,on,off,yellow,double yellow,red,value
+player,home,start,22,Simon Mignolet,,BEL,,,yes,,,,,,12
+player,home,start,7,James Milner,,ENG,,,,,,68,,,15
+player,home,start,32,Joël Matip,,CMR,,,,,,56,,,18
+player,home,start,21,Lucas Leiva,Lucas,BRA,,,,,82,,,,10
+player,home,start,2,Nathaniel Clyne,,ENG,,,,,,,,,21
+player,home,start,5,Georginio Wijnaldum,,NED,,,,,,,,,22
+player,home,start,14,Jordan Henderson,,ENG,,yes,,,,54,,,28
+player,home,start,20,Adam Lallana,,ENG,,,,,,,,,19
+player,home,start,10,Philippe Coutinho,,BRA,,,,,77,,,,35
+player,home,start,11,Roberto Firmino,,BRA,,,,,,,,,35
+player,home,start,19,Sadio Mané,,SEN,,,,,90+2,,,,30
+player,home,sub,23,Emre Can,,GER,,,,77,,,,,18
+player,home,sub,17,Ragnar Klavan,,EST,,,,82,,,,,4
+player,home,sub,66,Trent Alexander-Arnold,,ENG,,,,90+2,,,,,
+player,home,bench,1,Loris Karius,,GER,,,yes,,,,,,9
+player,home,bench,15,Daniel Sturridge,,ENG,,,,,,,,,25
+player,home,bench,18,Alberto Moreno,,ESP,,,,,,,,,12
+player,home,bench,27,Divock Origi,,BEL,,,,,,,,,11
+player,away,start,1,Hugo Lloris,,FRA,,yes,yes,,,,,,24
+player,away,start,33,Ben Davies,,WAL,,,,,,,,,9
+player,away,start,15,Eric Dier,,ENG,,,,,,78,,,18
+player,away,start,4,Toby Alderweireld,,BEL,,,,,,83,,,27
+player,away,start,2,Kyle Walker,,ENG,,,,,,,,,15
+player,away,start,12,Victor Wanyama,,KEN,,,,,,,,,15
+player,away,start,19,Mousa Dembélé,,BEL,,,,,77,,,,18
+player,away,start,20,Dele Alli,,ENG,,,,,,,,,20
+player,away,start,23,Christian Eriksen,,DEN,,,,,68,,,,31
+player,away,start,10,Harry Kane,,ENG,,,,,,67,,,40
+player,away,start,7,Son Heung-min,Son,KOR,,,,,82,28,,,25
+player,away,sub,29,Harry Winks,,ENG,,,,68,,71,,,1
+player,away,sub,17,Moussa Sissoko,,FRA,,,,77,,,,,20
+player,away,sub,9,Vincent Janssen,,NED,,,,82,,,,,14
+player,away,bench,13,Michel Vorm,,NED,,,yes,,,,,,5
+player,away,bench,14,Georges-Kévin Nkoudou,,FRA,,,,,,,,,8
+player,away,bench,16,Kieran Trippier,,ENG,,,,,,,,,6
+player,away,bench,27,Kevin Wimmer,,AUT,,,,,,,,,7
+,,,,,,,,,,,,,,,
+# --- GOALS --- goal,minute,side,scorer,type,assist,,,,,,,,,,
+goal,16,home,Sadio Mané,goal,Georginio Wijnaldum,,,,,,,,,,
+goal,18,home,Sadio Mané,goal,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- MATCH STATS --- stat,name,home,away,,,,,,,,,,,,
+stat,Possession,51,49,,,,,,,,,,,,
+stat,Expected goals (xG),,,,,,,,,,,,,,
+stat,Shots,17,7,,,,,,,,,,,,
+stat,Shots on target,9,2,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- WEATHER --- weather,field,value,,,,,,,,,,,,,
+weather,condition,Drizzle,,,,,,,,,,,,,
+weather,temp_c,4,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- MATCHDAY --- personal,field,value,,,,,,,,,,,,,
+personal,ticket_price,249,,,,,,,,,,,,,
+personal,ticket_currency,EUR,,,,,,,,,,,,,
+personal,ticket_price_usd,265,,,,,,,,,,,,,
+personal,section,Block U9,,,,,,,,,,,,,
+personal,row,59,,,,,,,,,,,,,
+personal,seat,,,,,,,,,,,,,,
+personal,seating,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- PHOTOS --- photo,file,caption,,,,,,,,,,,,,
+photo,M025_1.jpg,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
