@@ -15,6 +15,7 @@ emblems/            crests: M001a.png (home), M001b.png (away), M001.png (compet
 kit/                kit icons on the formation card: M001a.png, M001b.png
 flags/              FIFA 3-letter codes, reused across matches: HKG.png, ARG.png…
 icons/              gk, captain, sub-on, sub-off, yellow, second-yellow, red (.png)
+trophies/           trophy photos for title deciders: M031.png, M009.png…
 photos/             M001_1.jpg, M001_2.jpg…
 ```
 
@@ -35,6 +36,14 @@ photo just disappears.
 statistics. Once you've been, rename the file and its index line to the next free `M###` and set
 the status to `played` — so buying tickets out of order never shuffles your numbering.
 
+**A match that didn't happen** — postponed, abandoned, called off — set `meta,status,postponed`
+(or whatever word you like; the site just displays it as a tag, it doesn't check for a specific
+value beyond `played`). It still gets its own page, with whatever line-ups, weather, or notes you
+recorded, so the visit itself isn't lost. But it's excluded from every statistic — teams seen,
+countries, stadiums, weather, all of it — the same as an upcoming match, since `status` only ever
+needs to be exactly `played` to count toward anything. This applies even if you were there in
+person and the game just never kicked off.
+
 ## CSV reference
 
 Column A is always the record type. Lines starting with `#` are ignored, so keep the commented
@@ -48,6 +57,7 @@ that will never exist; it's treated the same as blank.
 | `player` | `side,role,number,name,kit_name,country,id,captain,goalkeeper,on,off,yellow,double yellow,red,value` |
 | `goal` | `minute,side,scorer,type,assist` — type is `goal`, `penalty` or `own goal`; `side` is the team the goal counted **for** |
 | `pen` | `order,side,player,result` — a penalty-shootout kick; result is `scored` or `missed` |
+| `champion` | `field,value` — team, side, title, season, note; only for a title-deciding match |
 | `stat` | `name,home,away` — any stat you like; add rows freely |
 | `weather` | `field,value` — condition, temp_c |
 | `personal` | `field,value` — ticket_price, ticket_currency, ticket_price_usd, section, row, seat, seating |
@@ -84,6 +94,13 @@ position in the whole shootout — `1`, `2`, `3`... in the order it was actually
 of side. It isn't shown as a number on the page — it just controls the order the rows are listed
 in, top to bottom, so whichever row comes first is whichever team actually kicked first. The
 running score next to the "Penalty shootout" heading is worked out automatically from these rows.
+
+**Champions.** Add a `champion` block only to a match that decided a title — a cup final, or the
+league game that settled it. `team` is who won, `side` (`home`/`away`) lets the site show their
+crest, and `title`, `season` and `note` are optional (`title` falls back to the competition name).
+That match then gets a Champions block on its page, a gold trophy tag in the match list, and a
+card in the Champions tab. Put a trophy picture in `trophies/` named after the match
+(`trophies/M031.png`) — without one, a small drawn trophy outline is used instead.
 
 **Weather.** `condition` also picks the icon. It matches on keywords, so anything containing
 *clear/sunny*, *partly/fair*, *cloud/overcast*, *rain/shower/drizzle*, *thunder/storm*,
@@ -134,9 +151,9 @@ you configure per row:
 
 - **Countries, Clubs by country, Players by nationality, Cities, Stadiums** — a national flag
   from `flags/`.
-- **Teams by appearances, Teams by market value** — a flag if the team has a `country` code;
-  otherwise its own crest from `emblems/`. Leave `country` blank on a `team` row (as you already
-  do for national sides) and its crest is used instead — no separate setting needed.
+- **Teams by appearances, Teams by market value** — the team's own crest from `emblems/`, always
+  — the same one that shows on its matches, so club sides and national sides look consistent
+  side by side.
 - **Players, Scorers, Head coaches, Referees** (by appearances or market value) — the person's
   own flag, from whichever match most recently recorded their country. If it differs across
   matches (a player who changed allegiance, a typo that got corrected later), the newest one wins.

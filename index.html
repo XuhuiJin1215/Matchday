@@ -279,7 +279,7 @@ nav.tabs a.on{background:var(--ink);color:var(--paper)}
 .comp-logo{position:relative;display:inline-flex;align-items:center;justify-content:center;flex:none}
 .comp-logo img{width:100%;height:100%;object-fit:contain}
 .cont-icon{position:relative;display:inline-flex;align-items:center;justify-content:center;flex:none;
-  border-radius:2px;overflow:hidden;background:rgba(20,28,36,.05)}
+  border-radius:2px;overflow:hidden}
 .cont-icon .fb{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
   font-family:var(--font-display);font-weight:800;font-size:8px;color:var(--muted)}
 .cont-icon img{position:relative;z-index:1;width:100%;height:100%;object-fit:contain}
@@ -352,7 +352,8 @@ nav.tabs a.on{background:var(--ink);color:var(--paper)}
 .rank-row+.rank-row{border-top:1px solid var(--line-soft)}
 .rank-row .nm{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .rank-row .dt{font-size:12px;color:var(--muted);white-space:nowrap}
-.rank-row .n{font-family:var(--font-display);font-weight:700;font-variant-numeric:tabular-nums;font-size:14px}
+.rank-row .n{font-family:var(--font-display);font-weight:700;font-variant-numeric:tabular-nums;font-size:14px;
+  flex:none;min-width:46px;text-align:right}
 .rank-row .track{width:76px;height:6px;background:var(--line-soft);border-radius:999px;overflow:hidden;flex:none}
 .rank-row .track i{display:block;height:100%;background:var(--ink);border-radius:999px}
 .empty{padding:22px 18px;color:var(--muted);font-size:14px}
@@ -432,6 +433,56 @@ nav.tabs a.on{background:var(--ink);color:var(--paper)}
 .yr .lb{font-size:10px;color:var(--muted);font-family:var(--font-display);letter-spacing:0}
 
 .loading,.error{padding:60px 0;color:var(--muted)}
+
+/* ---------- champions ---------- */
+.trophy-mark{vertical-align:-1px}
+.tag-champ{
+  display:inline-flex;align-items:center;gap:5px;
+  background:linear-gradient(180deg,#F7CE45,#E0A81C);color:#3A2C00;
+  max-width:220px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+}
+
+/* champion block on a match page */
+.champ-panel{display:flex;align-items:center;gap:26px;padding:22px 24px}
+.champ-trophy{flex:none;width:96px;display:flex;align-items:center;justify-content:center}
+.trophy-img{max-width:96px;max-height:130px;object-fit:contain;display:block}
+.champ-body{min-width:0}
+.champ-label{
+  display:flex;align-items:center;gap:6px;color:#B98900;
+  font-family:var(--font-display);font-size:10px;font-weight:700;letter-spacing:.14em;
+  text-transform:uppercase;margin-bottom:9px;
+}
+.champ-team{display:flex;align-items:center;gap:11px;font-family:var(--font-display);
+  font-weight:800;font-size:26px;letter-spacing:-.01em;line-height:1.1}
+.champ-title{margin-top:5px;font-size:15px;color:var(--ink-2)}
+.champ-season{color:var(--muted)}
+.champ-note{margin-top:8px;font-size:13px;color:var(--muted);line-height:1.5}
+
+/* the trophy room */
+.trophies{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}
+.trophy-card{
+  display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);
+  border-radius:var(--r);box-shadow:var(--shadow);overflow:hidden;
+  transition:transform .18s cubic-bezier(.2,.7,.3,1),box-shadow .18s,border-color .18s;
+}
+.trophy-card:hover{transform:translateY(-2px);border-color:#BDC5C2;
+  box-shadow:0 2px 0 rgba(20,28,36,.05),0 16px 34px -18px rgba(20,28,36,.45)}
+.tc-plinth{
+  position:relative;height:150px;display:flex;align-items:center;justify-content:center;
+  background:radial-gradient(120% 90% at 50% 10%, #FFF9E8, #F1F2F0 70%);
+  border-bottom:1px solid var(--line-soft);
+}
+.tc-img{position:relative;z-index:1;max-width:74%;max-height:118px;object-fit:contain}
+.tc-fallback{position:absolute;color:#D6B24A}
+.tc-img+.tc-fallback{display:none}
+.tc-body{padding:13px 15px 15px}
+.tc-team{display:flex;align-items:center;gap:9px;font-family:var(--font-display);
+  font-weight:700;font-size:16px;line-height:1.2}
+.tc-team span{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.tc-title{margin-top:5px;font-size:13px;color:var(--ink-2)}
+.tc-meta{margin-top:3px;font-size:12px;color:var(--muted)}
+.tc-fixture{margin-top:9px;padding-top:9px;border-top:1px solid var(--line-soft);
+  font-size:12px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .error b{color:var(--accent);display:block;margin-bottom:6px;font-family:var(--font-display);letter-spacing:.1em;text-transform:uppercase;font-size:11px}
 .error code{background:rgba(20,28,36,.06);padding:2px 6px;border-radius:2px;font-size:13px}
 
@@ -453,6 +504,8 @@ footer{border-top:1px solid var(--line);margin-top:50px;padding:22px 0 50px;colo
   .fx-team .nm{font-size:15px}
   .fx-score{font-size:20px;padding:2px 9px}
   .tl-row{grid-template-columns:1fr 62px 1fr;padding:9px 12px}
+  .champ-panel{flex-direction:column;align-items:flex-start;gap:16px;padding:18px 16px}
+  .champ-team{font-size:21px}
   .charts{margin-top:20px}
   .donut-body{flex-direction:column;align-items:flex-start;gap:18px}
 }
@@ -471,6 +524,7 @@ footer{border-top:1px solid var(--line);margin-top:50px;padding:22px 0 50px;colo
     </a>
     <nav class="tabs">
       <a href="#/" id="tab-matches">Matches</a>
+      <a href="#/champions" id="tab-champions">Champions</a>
       <a href="#/stats" id="tab-stats">Statistics</a>
     </nav>
   </div>
@@ -514,7 +568,7 @@ const numOr=v=>blank(v)?null:(isNaN(parseFloat(v))?null:parseFloat(v));
    2. Match model
    ===================================================================== */
 function parseMatch(text,id){
-  const m={id,meta:{},teams:{},players:[],goals:[],cards:[],penalties:[],stats:[],weather:{},personal:{},photos:[]};
+  const m={id,meta:{},teams:{},players:[],goals:[],cards:[],penalties:[],stats:[],weather:{},personal:{},photos:[],champion:{}};
   for(const r of parseCSV(text)){
     const t=(r[0]||"").toLowerCase();
     if(t==="meta") m.meta[r[1]]=val(r[2]);
@@ -541,6 +595,7 @@ function parseMatch(text,id){
     }
     else if(t==="weather"){ if(val(r[2])!==null) m.weather[r[1]]=val(r[2]); }
     else if(t==="personal"){ if(val(r[2])!==null) m.personal[r[1]]=val(r[2]); }
+    else if(t==="champion"){ if(val(r[2])!==null) m.champion[r[1]]=val(r[2]); }
     else if(t==="photo") m.photos.push({file:val(r[1]),caption:val(r[2])});
   }
   m.players.forEach(p=>{
@@ -557,6 +612,7 @@ function parseMatch(text,id){
   m.date=m.meta.date||"";
   m.year=m.date?parseInt(m.date.slice(0,4),10):null;
   m.attendance=m.meta.attendance?parseInt(String(m.meta.attendance).replace(/[^0-9]/g,""),10):null;
+  m.isDecider=!!m.champion.team;
   return m;
 }
 
@@ -636,6 +692,12 @@ function compLogo(matchId,size){
 }
 const minNum=v=>parseInt(String(v).replace(/[^0-9].*$/,""),10)||0;
 
+/* Trophy photo for a decider, from trophies/M009.png. Hides itself if absent. */
+function trophyImg(matchId,cls){
+  return `<img class="${cls||"trophy-img"}" src="trophies/${esc(matchId)}.png" alt="" loading="lazy" onerror="this.style.display='none'">`;
+}
+const trophyMark=size=>`<svg class="trophy-mark" viewBox="0 0 24 24" width="${size||14}" height="${size||14}" aria-hidden="true" fill="currentColor"><path d="M6 3h12v2h3v3.2A4.8 4.8 0 0 1 16.2 13a5 5 0 0 1-3.2 2.85V18h3.3v3H7.7v-3H11v-2.15A5 5 0 0 1 7.8 13 4.8 4.8 0 0 1 3 8.2V5h3zM5 7v1.2A2.8 2.8 0 0 0 7 10.9V7zm14 0h-2v3.9A2.8 2.8 0 0 0 19 8.2z"/></svg>`;
+
 /* =====================================================================
    5. Pitch + formation
    ===================================================================== */
@@ -648,8 +710,9 @@ function trimName(n){return n.length>11?n.slice(0,10)+"…":n}
 
 /* Horizontal spread per line: a back four sits wider than a front two. */
 const SPREAD={1:0,2:24,3:26,4:23,5:20,6:16.5};
-function xFor(count,i){
-  const gap=SPREAD[count]!=null?SPREAD[count]:Math.min(20,80/count);
+const SPREAD_WIDE_PAIR=36;
+function xFor(count,i,gapOverride){
+  const gap=gapOverride!=null?gapOverride:(SPREAD[count]!=null?SPREAD[count]:Math.min(20,80/count));
   return 50+(i-(count-1)/2)*gap;
 }
 function layout(formation,starters){
@@ -668,9 +731,13 @@ function layout(formation,starters){
   let idx=0;
   lines.forEach((count,li)=>{
     const y=lines.length===1?45:BOTTOM-(BOTTOM-TOP)*(li/(lines.length-1));
+    /* A pair sitting immediately behind the forward line are attacking
+       midfielders (3-4-2-1, 4-2-2-2) — they play wider than a strike pair
+       or a holding pair, so give them a bigger spread. */
+    const wide=(count===2&&lines.length>=3&&li===lines.length-2)?SPREAD_WIDE_PAIR:null;
     for(let i=0;i<count;i++){
       const p=rest[idx++]; if(!p) return;
-      spots.push({p,x:xFor(count,i),y});
+      spots.push({p,x:xFor(count,i,wide),y});
     }
   });
   while(idx<rest.length){spots.push({p:rest[idx],x:50,y:9});idx++;}
@@ -708,7 +775,7 @@ function pitchSVG(team,starters,matchId){
 const app=document.getElementById("app");
 let MATCHES=[];
 let COMP_TYPES={}, CONTINENTS={};
-const F={q:"",comp:"",type:"",country:"",year:""};
+const F={q:"",comp:"",type:"",country:"",year:"",champ:""};
 
 /* Small two-column lookup CSV (competition_type.csv, continents.csv). Tolerates a
    stray blank leading row (common from a spreadsheet export) and skips the header. */
@@ -746,6 +813,7 @@ function stubHTML(m){
       <div class="stub-foot">
         ${flag(m.meta.country)}<span>${bits.join("")}</span>
         ${m.attendance?`<span class="dot">·</span><span>Attendance <span class="num">${nf(m.attendance)}</span></span>`:""}
+        ${m.isDecider?`<span class="tag tag-champ" title="${esc(m.champion.team||"")} crowned here">${trophyMark(11)} ${esc(m.champion.team||"Title decided")}</span>`:""}
         ${m.status!=="played"?`<span class="tag">${esc(m.status)}</span>`:""}
       </div>
     </div>
@@ -761,6 +829,7 @@ function filtered(){
     if(F.type&&(COMP_TYPES[m.meta.competition]||"Uncategorised")!==F.type) return false;
     if(F.country&&m.meta.country!==F.country) return false;
     if(F.year&&String(m.year)!==F.year) return false;
+    if(F.champ==="yes"&&!m.isDecider) return false;
     if(!q) return true;
     const hay=[m.id,m.meta.competition,m.meta.round,m.meta.venue,m.meta.city,m.meta.referee,
       (m.teams.home||{}).name,(m.teams.away||{}).name,
@@ -784,15 +853,16 @@ function renderList(){
       <select id="f-type" aria-label="Competition type"><option value="">All types</option>${types.map(t=>`<option ${F.type===t?"selected":""}>${esc(t)}</option>`).join("")}</select>
       <select id="f-country" aria-label="Country"><option value="">All countries</option>${countries.map(c=>`<option ${F.country===c?"selected":""}>${esc(c)}</option>`).join("")}</select>
       <select id="f-year" aria-label="Year"><option value="">All years</option>${years.map(y=>`<option ${F.year===y?"selected":""}>${esc(y)}</option>`).join("")}</select>
-      ${(F.q||F.comp||F.type||F.country||F.year)?`<button class="btn-ghost" id="f-reset">Clear</button>`:""}
+      <select id="f-champ" aria-label="Title deciders"><option value="">All matches</option><option value="yes" ${F.champ==="yes"?"selected":""}>Title deciders</option></select>
+      ${(F.q||F.comp||F.type||F.country||F.year||F.champ)?`<button class="btn-ghost" id="f-reset">Clear</button>`:""}
       <span class="count num">${list.length} of ${MATCHES.length}</span>
     </div>
     <div class="stubs">${list.length?list.map(stubHTML).join(""):`<div class="empty">No match fits those filters. Clear one and try again.</div>`}</div>
   </div>`;
   const bind=(id,key)=>{const el=document.getElementById(id); if(el) el.addEventListener(el.tagName==="INPUT"?"input":"change",e=>{F[key]=e.target.value;renderList();if(key==="q"){const n=document.getElementById(id);n.focus();n.setSelectionRange(n.value.length,n.value.length);}});};
-  bind("f-q","q");bind("f-comp","comp");bind("f-type","type");bind("f-country","country");bind("f-year","year");
+  bind("f-q","q");bind("f-comp","comp");bind("f-type","type");bind("f-country","country");bind("f-year","year");bind("f-champ","champ");
   const r=document.getElementById("f-reset");
-  if(r) r.addEventListener("click",()=>{F.q="";F.comp="";F.type="";F.country="";F.year="";renderList();});
+  if(r) r.addEventListener("click",()=>{F.q="";F.comp="";F.type="";F.country="";F.year="";F.champ="";renderList();});
 }
 
 function squadValue(m,side){
@@ -926,6 +996,19 @@ function renderMatch(id){
     </div>`:""}
   </div>`:"";
 
+  const ch=m.champion;
+  const chCrest=ch.side?crest(m.id,ch.side,ch.team):"";
+  const champion=ch.team?`<section class="sec"><div class="sec-h"><h2>Champions</h2></div>
+    <div class="panel champ-panel">
+      <div class="champ-trophy">${trophyImg(m.id)}</div>
+      <div class="champ-body">
+        <div class="champ-label">${trophyMark(13)} <span>Decided here</span></div>
+        <div class="champ-team">${chCrest}<span>${esc(ch.team)}</span></div>
+        <div class="champ-title">${esc(ch.title||m.meta.competition||"")}${ch.season?` <span class="champ-season">${esc(ch.season)}</span>`:""}</div>
+        ${ch.note?`<div class="champ-note">${esc(ch.note)}</div>`:""}
+      </div>
+    </div></section>`:"";
+
   const photos=m.photos.length?`<section class="sec" id="photo-sec"><div class="sec-h"><h2>Photos</h2></div>
     <div class="photos">${m.photos.map(ph=>`<figure class="photo"><img src="photos/${esc(ph.file)}" alt="${esc(ph.caption||"")}" loading="lazy" onerror="this.closest('.photo').remove(); if(!document.querySelectorAll('#photo-sec .photo').length) document.getElementById('photo-sec').remove()">${ph.caption?`<figcaption>${esc(ph.caption)}</figcaption>`:""}</figure>`).join("")}</div></section>`:"";
 
@@ -961,6 +1044,7 @@ function renderMatch(id){
         </div>
       </div>
     </div>
+    ${champion}
     ${goals}
     ${penalties}
     ${pitches}
@@ -970,6 +1054,52 @@ function renderMatch(id){
     ${stats}
     ${(weather||mine)?`<section class="sec"><div class="sec-h"><h2>Matchday experience</h2></div><div class="grid-2">${mine}${weather}</div></section>`:""}
     ${photos}
+  </div>`;
+  window.scrollTo(0,0);
+}
+
+/* ---------- champions: the trophy room ---------- */
+function championMatches(){
+  return MATCHES.filter(m=>m.status==="played"&&m.isDecider)
+    .sort((a,b)=>(b.date||"").localeCompare(a.date||""));
+}
+function renderChampions(){
+  const list=championMatches();
+  if(!list.length){
+    app.innerHTML=`<div class="wrap">
+      <section class="big-claim"><div class="n num">0<span>.</span></div>
+        <p>No title-deciding matches recorded yet. Add a <code>champion</code> block to a match's CSV and it will appear here.</p>
+      </section></div>`;
+    window.scrollTo(0,0);return;
+  }
+  const teams=uniq(list.map(m=>m.champion.team));
+  const comps=uniq(list.map(m=>m.champion.title||m.meta.competition));
+  const years=[...new Set(list.map(m=>m.year).filter(Boolean))].sort((a,b)=>b-a);
+
+  const cabinet=years.map(y=>{
+    const inYear=list.filter(m=>m.year===y);
+    return `<section class="sec"><div class="sec-h"><h2>${y}</h2><span class="sec-tally num">${inYear.length}</span></div>
+      <div class="trophies">${inYear.map(m=>{
+        const ch=m.champion;
+        return `<a class="trophy-card" href="#/m/${esc(m.id)}">
+          <div class="tc-plinth">${trophyImg(m.id,"tc-img")}<span class="tc-fallback">${trophyMark(30)}</span></div>
+          <div class="tc-body">
+            <div class="tc-team">${ch.side?crest(m.id,ch.side,ch.team,22):""}<span>${esc(ch.team)}</span></div>
+            <div class="tc-title">${esc(ch.title||m.meta.competition||"")}</div>
+            <div class="tc-meta">${ch.season?esc(ch.season)+" · ":""}${fmtDate(m.date)}</div>
+            <div class="tc-fixture">${esc((m.teams.home||{}).name)} ${m.hg}–${m.ag} ${esc((m.teams.away||{}).name)}</div>
+          </div>
+        </a>`;
+      }).join("")}</div>
+    </section>`;
+  }).join("");
+
+  app.innerHTML=`<div class="wrap">
+    <section class="big-claim">
+      <div class="n num">${list.length}<span>.</span></div>
+      <p>title${list.length===1?"":"s"} won in front of me — ${teams.length} ${teams.length===1?"team":"different teams"}, ${comps.length} ${comps.length===1?"competition":"competitions"}.</p>
+    </section>
+    ${cabinet}
   </div>`;
   window.scrollTo(0,0);
 }
@@ -985,9 +1115,9 @@ function computeStats(){
   const played=MATCHES.filter(m=>m.status==="played"&&m.hg!=null);
   const goals=played.reduce((s,m)=>s+m.hg+m.ag,0);
   const crowd=played.reduce((s,m)=>s+(m.attendance||0),0);
-  const venues=uniq(MATCHES.map(m=>m.meta.venue));
-  const countries=uniq(MATCHES.map(m=>m.meta.country));
-  const comps=uniq(MATCHES.map(m=>m.meta.competition));
+  const venues=uniq(played.map(m=>m.meta.venue));
+  const countries=uniq(played.map(m=>m.meta.country));
+  const comps=uniq(played.map(m=>m.meta.competition));
 
   const tally=arr=>{const c={};arr.filter(Boolean).forEach(k=>c[k]=(c[k]||0)+1);
     return Object.entries(c).sort((a,b)=>b[1]-a[1]||a[0].localeCompare(b[0]));};
@@ -1007,21 +1137,21 @@ function computeStats(){
   };
   const appearances=m=>m.players.filter(p=>p.role==="start"||p.role==="sub");
 
-  /* "Most recent" nationality lookups. MATCHES is sorted oldest-first, so a
+  /* "Most recent" nationality lookups. played is sorted oldest-first, so a
      plain forward overwrite naturally leaves the latest value in each map —
      handles a player who changed allegiance, or a referee's country typo
      getting corrected in a later match. */
   const playerCountry={}, scorerCountry={}, coachCountry={}, refCountry={}, teamCrest={}, compMatch={};
-  MATCHES.forEach(m=>{
+  played.forEach(m=>{
     appearances(m).forEach(p=>{
       if(!p.name) return;
       playerCountry[p.name+"\u0000"+(p.id||"")]=p.country;
       scorerCountry[p.name]=p.country;
     });
     ["home","away"].forEach(sd=>{ const t=m.teams[sd]; if(t&&t.coach) coachCountry[t.coach]=t.coachCountry;
-      if(t&&t.name&&!teamCrest[t.name]) teamCrest[t.name]={id:m.id,side:sd}; });
+      if(t&&t.name) teamCrest[t.name]={id:m.id,side:sd}; });
     if(m.meta.referee) refCountry[m.meta.referee]=m.meta.referee_country;
-    if(m.meta.competition&&!compMatch[m.meta.competition]) compMatch[m.meta.competition]=m.id;
+    if(m.meta.competition) compMatch[m.meta.competition]=m.id;
   });
   /* A team with a country code gets its flag (club sides); a team you've left
      that blank for on purpose — national teams — falls back to its own crest. */
@@ -1058,49 +1188,49 @@ function computeStats(){
         dkey:r.dkey||r.name,flagCode:r.flagCode||null,icon:r.icon||null}))};
   };
 
-  addCount("competitions","Competitions","Competitions and locations",tally(MATCHES.map(m=>m.meta.competition)),
+  addCount("competitions","Competitions","Competitions and locations",tally(played.map(m=>m.meta.competition)),
     {noun:"competitions",donut:true,iconFor:name=>compMatch[name]?compLogo(compMatch[name],20):""});
   addCount("competition-type","Competitions by type","Competitions and locations",
-    tally(MATCHES.map(m=>COMP_TYPES[m.meta.competition]||"Uncategorised")),{noun:"types",donut:true});
+    tally(played.map(m=>COMP_TYPES[m.meta.competition]||"Uncategorised")),{noun:"types",donut:true});
   addCount("continents","Continents","Competitions and locations",
-    tally(MATCHES.map(m=>CONTINENTS[m.meta.country]||"Unknown")),{noun:"continents",donut:true,iconFor:code=>continentIcon(code,20)});
-  addCount("countries","Countries","Competitions and locations",tally(MATCHES.map(m=>m.meta.country)),{isFlag:true,noun:"countries",donut:true});
+    tally(played.map(m=>CONTINENTS[m.meta.country]||"Unknown")),{noun:"continents",donut:true,iconFor:code=>continentIcon(code,20)});
+  addCount("countries","Countries","Competitions and locations",tally(played.map(m=>m.meta.country)),{isFlag:true,noun:"countries",donut:true});
   const cityCountry={};
-  MATCHES.forEach(m=>{ if(m.meta.city&&m.meta.country&&!cityCountry[m.meta.city]) cityCountry[m.meta.city]=m.meta.country; });
-  addCount("cities","Cities","Competitions and locations",tally(MATCHES.map(m=>m.meta.city)),
+  played.forEach(m=>{ if(m.meta.city&&m.meta.country) cityCountry[m.meta.city]=m.meta.country; });
+  addCount("cities","Cities","Competitions and locations",tally(played.map(m=>m.meta.city)),
     {noun:"cities",donut:true,flagFor:c=>cityCountry[c]});
   const stadiumCountry={};
-  MATCHES.forEach(m=>{ if(m.meta.venue&&m.meta.country) stadiumCountry[m.meta.venue]=m.meta.country; });
-  addCount("stadiums","Stadiums","Competitions and locations",tally(MATCHES.map(m=>m.meta.venue)),
+  played.forEach(m=>{ if(m.meta.venue&&m.meta.country) stadiumCountry[m.meta.venue]=m.meta.country; });
+  addCount("stadiums","Stadiums","Competitions and locations",tally(played.map(m=>m.meta.venue)),
     {noun:"stadiums",donut:true,flagFor:v=>stadiumCountry[v]});
 
   addCount("teams-appearances","Teams by appearances","Teams and players",
-    tally(MATCHES.flatMap(m=>[(m.teams.home||{}).name,(m.teams.away||{}).name])),
+    tally(played.flatMap(m=>[(m.teams.home||{}).name,(m.teams.away||{}).name])),
     {noun:"teams",donut:true,iconFor:name=>teamIcon(name)});
   addValue("teams-value","Teams by market value","Teams and players",
-    MATCHES.flatMap(m=>["home","away"].map(sd=>{
+    played.flatMap(m=>["home","away"].map(sd=>{
       const t=m.teams[sd]; if(!t) return null;
       const v=squadValue(m,sd);
       return v==null?null:{name:t.name,v,id:m.id,date:m.date,icon:teamIcon(t.name)};
     })).filter(Boolean).sort((a,b)=>b.v-a.v),"valuations","teams");
   addCount("clubs-country","Clubs by country","Teams and players",
-    tally(MATCHES.flatMap(m=>[(m.teams.home||{}).country,(m.teams.away||{}).country])),{isFlag:true,noun:"countries",donut:true});
+    tally(played.flatMap(m=>[(m.teams.home||{}).country,(m.teams.away||{}).country])),{isFlag:true,noun:"countries",donut:true});
   addCount("players-appearances","Players by appearances","Teams and players",
-    tallyPeople(MATCHES.flatMap(appearances).map(p=>({name:p.name,id:p.id}))),
+    tallyPeople(played.flatMap(appearances).map(p=>({name:p.name,id:p.id}))),
     {noun:"players",flagFor:(label,meta)=>meta&&playerCountry[meta.name+"\u0000"+(meta.id||"")]});
   addValue("players-value","Players by market value","Teams and players",
-    MATCHES.flatMap(m=>appearances(m).filter(p=>p.value!=null)
+    played.flatMap(m=>appearances(m).filter(p=>p.value!=null)
       .map(p=>({name:p.name,v:p.value,id:m.id,date:m.date,dkey:p.name+"\u0000"+(p.id||""),
         flagCode:playerCountry[p.name+"\u0000"+(p.id||"")]})))
       .sort((a,b)=>b.v-a.v),"valuations","players");
   addCount("players-nationality","Players by nationality","Teams and players",
-    tally(MATCHES.flatMap(appearances).map(p=>p.country)),{isFlag:true,noun:"nationalities",donut:true});
-  addCount("scorers","Scorers","Teams and players",tally(MATCHES.flatMap(m=>m.goals.map(g=>g.scorer))),
+    tally(played.flatMap(appearances).map(p=>p.country)),{isFlag:true,noun:"nationalities",donut:true});
+  addCount("scorers","Scorers","Teams and players",tally(played.flatMap(m=>m.goals.map(g=>g.scorer))),
     {noun:"scorers",flagFor:name=>scorerCountry[name]});
   addCount("head-coach","Head coaches","Teams and players",
-    tally(MATCHES.flatMap(m=>[(m.teams.home||{}).coach,(m.teams.away||{}).coach])),
+    tally(played.flatMap(m=>[(m.teams.home||{}).coach,(m.teams.away||{}).coach])),
     {noun:"coaches",flagFor:name=>coachCountry[name]});
-  addCount("referee","Referees","Teams and players",tally(MATCHES.map(m=>m.meta.referee)),
+  addCount("referee","Referees","Teams and players",tally(played.map(m=>m.meta.referee)),
     {noun:"referees",flagFor:name=>refCountry[name]});
 
   const cardBucket=t=>cardInfo(t).bucket;
@@ -1111,21 +1241,21 @@ function computeStats(){
   addMatch("goal-difference","Biggest goal differences","Records",
     played.map(m=>({m,value:Math.abs(m.hg-m.ag)})).sort((a,b)=>b.value-a.value),v=>String(v));
   addMatch("yellow-cards","Most yellow cards","Records",
-    MATCHES.map(m=>({m,value:m.cards.filter(c=>cardBucket(c.type)==="yellow").length}))
+    played.map(m=>({m,value:m.cards.filter(c=>cardBucket(c.type)==="yellow").length}))
       .filter(x=>x.value>0).sort((a,b)=>b.value-a.value),v=>String(v));
   defs["yellow-cards"].avgDenominator=played.length;
   addMatch("red-cards","Most red cards","Records",
-    MATCHES.map(m=>({m,value:m.cards.filter(c=>cardBucket(c.type)==="red").length}))
+    played.map(m=>({m,value:m.cards.filter(c=>cardBucket(c.type)==="red").length}))
       .filter(x=>x.value>0).sort((a,b)=>b.value-a.value),v=>String(v));
   defs["red-cards"].avgDenominator=played.length;
   addMatch("ticket-price","Most expensive tickets","Records",
-    MATCHES.map(m=>({m,value:parseFloat(m.personal.ticket_price_usd)}))
+    played.map(m=>({m,value:parseFloat(m.personal.ticket_price_usd)}))
       .filter(x=>!isNaN(x.value)).sort((a,b)=>b.value-a.value),v=>"$"+Math.round(v));
 
-  addCount("weather","Weather","Conditions",tally(MATCHES.map(m=>m.weather.condition)),
+  addCount("weather","Weather","Conditions",tally(played.map(m=>m.weather.condition)),
     {noun:"conditions",donut:true,iconFor:cond=>weatherIcon(cond)});
   addMatch("temperature","Temperature","Conditions",
-    MATCHES.map(m=>({m,value:parseFloat(m.weather.temp_c)}))
+    played.map(m=>({m,value:parseFloat(m.weather.temp_c)}))
       .filter(x=>!isNaN(x.value)).sort((a,b)=>b.value-a.value),v=>v+"°C");
 
   const years=played.map(m=>m.year).filter(Boolean);
@@ -1137,7 +1267,8 @@ function computeStats(){
   const tempVals=defs.temperature.rows.map(r=>r.value);
   const spendUSD=defs["ticket-price"].rows.map(r=>r.value);
 
-  return {played,goals,crowd,venues,countries,comps,defs,yearCounts,
+  const champions=played.filter(m=>m.isDecider);
+  return {played,goals,crowd,venues,countries,comps,champions,defs,yearCounts,
     yMax:Math.max(1,...Object.values(yearCounts)),spanFrom,spanTo,tempVals,spendUSD};
 }
 
@@ -1278,7 +1409,7 @@ function renderStats(){
       <div class="tile"><div class="k">Watched alongside</div><div class="v num">${nf(crowd)}</div><div class="s">people, in total</div></div>
       <div class="tile"><div class="k">Competitions</div><div class="v num">${comps.length}</div><div class="s">${esc(compsSeen.length?compsSeen[0].label:"—")} most often</div></div>
       <div class="tile"><div class="k">Stadiums</div><div class="v num">${venues.length}</div><div class="s">in ${countries.length} countries</div></div>
-      ${S.tempVals.length?`<div class="tile"><div class="k">Conditions</div><div class="v num">${(S.tempVals.reduce((a,b)=>a+b,0)/S.tempVals.length).toFixed(1)}°C</div><div class="s">avg · ${Math.min(...S.tempVals)}° to ${Math.max(...S.tempVals)}°</div></div>`:""}
+      <div class="tile"><div class="k">Champions</div><div class="v num">${S.champions.length}</div><div class="s">${S.champions.length?`witnessed · ${uniq(S.champions.map(m=>m.champion.team)).length} ${uniq(S.champions.map(m=>m.champion.team)).length===1?"team":"teams"}`:"witnessed"}</div></div>
       ${S.spendUSD.length?`<div class="tile"><div class="k">Tickets</div><div class="v num">$${nf(Math.round(S.spendUSD.reduce((a,b)=>a+b,0)))}</div><div class="s">$${Math.round(S.spendUSD.reduce((a,b)=>a+b,0)/S.spendUSD.length)} average, ${S.spendUSD.length} logged</div></div>`:""}
     </div>
 
@@ -1326,7 +1457,7 @@ function renderStatDetail(key){
   }
   const bestRows=def.dedupable?dedupRows(allRows):allRows;
   const canToggle=def.dedupable&&bestRows.length<allRows.length;
-  const mode=canToggle&&STAT_VIEW[def.key]==="best"?"best":"all";
+  const mode=canToggle?(STAT_VIEW[def.key]||"best"):"all";
   const rows=mode==="best"?bestRows:allRows;
   const vdef={...def,rows};
   const vals=rows.map(r=>r.value);
@@ -1376,10 +1507,13 @@ function renderStatDetail(key){
 function route(){
   const hash=location.hash.replace(/^#/,"")||"/";
   const onStats=hash.startsWith("/stats")||hash.startsWith("/stat/");
-  document.getElementById("tab-matches").classList.toggle("on",!onStats);
+  const onChampions=hash.startsWith("/champions");
+  document.getElementById("tab-matches").classList.toggle("on",!onStats&&!onChampions);
+  document.getElementById("tab-champions").classList.toggle("on",onChampions);
   document.getElementById("tab-stats").classList.toggle("on",onStats);
   if(hash.startsWith("/stat/")) renderStatDetail(decodeURIComponent(hash.slice(6)));
   else if(hash.startsWith("/stats")) renderStats();
+  else if(onChampions) renderChampions();
   else if(hash.startsWith("/m/")) renderMatch(decodeURIComponent(hash.slice(3)));
   else renderList();
 }
