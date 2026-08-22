@@ -340,7 +340,7 @@ nav.tabs a.on{background:var(--ink);color:var(--paper)}
 .tile .k{font-family:var(--font-display);font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
 .tile .v{font-family:var(--font-display);font-weight:800;font-size:31px;line-height:1.15;margin-top:6px;font-variant-numeric:tabular-nums}
 .tile .s{font-size:12px;color:var(--muted)}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:16px}
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);overflow:hidden}
 .card > h3{
   margin:0;padding:15px 18px 12px;border-bottom:1px solid var(--line-soft);
@@ -386,7 +386,7 @@ nav.tabs a.on{background:var(--ink);color:var(--paper)}
 .seg button:hover{color:var(--ink)}
 .seg button.on{background:var(--ink);color:var(--paper)}
 .seg .seg-n{font-size:11px;opacity:.65;font-variant-numeric:tabular-nums}
-.charts{margin:28px 0 0}
+.charts{margin:28px 0 0;display:block}
 .viz-note{margin:14px 0 0;font-size:12px;color:var(--muted)}
 .viz-svg{width:100%;height:auto;display:block;overflow:visible}
 
@@ -447,15 +447,10 @@ nav.tabs a.on{background:var(--ink);color:var(--paper)}
 .champ-trophy{flex:none;width:96px;display:flex;align-items:center;justify-content:center}
 .trophy-img{max-width:96px;max-height:130px;object-fit:contain;display:block}
 .champ-body{min-width:0}
-.champ-label{
-  display:flex;align-items:center;gap:6px;color:#B98900;
-  font-family:var(--font-display);font-size:10px;font-weight:700;letter-spacing:.14em;
-  text-transform:uppercase;margin-bottom:9px;
-}
 .champ-team{display:flex;align-items:center;gap:11px;font-family:var(--font-display);
   font-weight:800;font-size:26px;letter-spacing:-.01em;line-height:1.1}
 .champ-title{margin-top:5px;font-size:15px;color:var(--ink-2)}
-.champ-season{color:var(--muted)}
+.champ-season{margin-top:3px;font-size:13px;color:var(--muted)}
 .champ-note{margin-top:8px;font-size:13px;color:var(--muted);line-height:1.5}
 
 /* the trophy room */
@@ -483,6 +478,7 @@ nav.tabs a.on{background:var(--ink);color:var(--paper)}
 .tc-meta{margin-top:3px;font-size:12px;color:var(--muted)}
 .tc-fixture{margin-top:9px;padding-top:9px;border-top:1px solid var(--line-soft);
   font-size:12px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tc-date{margin-top:4px;font-size:11px;color:var(--muted)}
 .error b{color:var(--accent);display:block;margin-bottom:6px;font-family:var(--font-display);letter-spacing:.1em;text-transform:uppercase;font-size:11px}
 .error code{background:rgba(20,28,36,.06);padding:2px 6px;border-radius:2px;font-size:13px}
 
@@ -507,6 +503,7 @@ footer{border-top:1px solid var(--line);margin-top:50px;padding:22px 0 50px;colo
   .champ-panel{flex-direction:column;align-items:flex-start;gap:16px;padding:18px 16px}
   .champ-team{font-size:21px}
   .charts{margin-top:20px}
+  .cards{grid-template-columns:1fr}
   .donut-body{flex-direction:column;align-items:flex-start;gap:18px}
   .top-in{height:50px;gap:8px}
   .mark{gap:6px}
@@ -716,7 +713,7 @@ function trimName(n){return n.length>11?n.slice(0,10)+"…":n}
 
 /* Horizontal spread per line: a back four sits wider than a front two. */
 const SPREAD={1:0,2:24,3:26,4:23,5:20,6:16.5};
-const SPREAD_WIDE_PAIR=36;
+const SPREAD_WIDE_PAIR=46;
 function xFor(count,i,gapOverride){
   const gap=gapOverride!=null?gapOverride:(SPREAD[count]!=null?SPREAD[count]:Math.min(20,80/count));
   return 50+(i-(count-1)/2)*gap;
@@ -1008,9 +1005,9 @@ function renderMatch(id){
     <div class="panel champ-panel">
       <div class="champ-trophy">${trophyImg(m.id)}</div>
       <div class="champ-body">
-        <div class="champ-label">${trophyMark(13)} <span>Decided here</span></div>
         <div class="champ-team">${chCrest}<span>${esc(ch.team)}</span></div>
-        <div class="champ-title">${esc(ch.title||m.meta.competition||"")}${ch.season?` <span class="champ-season">${esc(ch.season)}</span>`:""}</div>
+        <div class="champ-title">${esc(ch.title||m.meta.competition||"")}</div>
+        ${ch.season?`<div class="champ-season">${esc(ch.season)}</div>`:""}
         ${ch.note?`<div class="champ-note">${esc(ch.note)}</div>`:""}
       </div>
     </div></section>`:"";
@@ -1092,8 +1089,9 @@ function renderChampions(){
           <div class="tc-body">
             <div class="tc-team">${ch.side?crest(m.id,ch.side,ch.team,22):""}<span>${esc(ch.team)}</span></div>
             <div class="tc-title">${esc(ch.title||m.meta.competition||"")}</div>
-            <div class="tc-meta">${ch.season?esc(ch.season)+" · ":""}${fmtDate(m.date)}</div>
+            ${ch.season?`<div class="tc-meta">${esc(ch.season)}</div>`:""}
             <div class="tc-fixture">${esc((m.teams.home||{}).name)} ${m.hg}–${m.ag} ${esc((m.teams.away||{}).name)}</div>
+            <div class="tc-date">${fmtDate(m.date)}</div>
           </div>
         </a>`;
       }).join("")}</div>
@@ -1115,7 +1113,7 @@ function renderChampions(){
    Statistics: one shared data model powers both the summary cards
    (top 5) and the per-stat detail pages (full list + charts).
    --------------------------------------------------------------- */
-const SECTIONS=["Competitions and locations","Teams and players","Records","Conditions"];
+const SECTIONS=["Competitions and locations","Teams and players","Match records","Conditions"];
 
 function computeStats(){
   const played=MATCHES.filter(m=>m.status==="played"&&m.hg!=null);
@@ -1219,6 +1217,9 @@ function computeStats(){
       const v=squadValue(m,sd);
       return v==null?null:{name:t.name,v,id:m.id,date:m.date,icon:teamIcon(t.name)};
     })).filter(Boolean).sort((a,b)=>b.v-a.v),"valuations","teams");
+  addCount("teams-titles","Teams by titles","Teams and players",
+    tally(played.filter(m=>m.isDecider).map(m=>m.champion.team)),
+    {noun:"titles",iconFor:name=>teamIcon(name)});
   addCount("clubs-country","Clubs by country","Teams and players",
     tally(played.flatMap(m=>[(m.teams.home||{}).country,(m.teams.away||{}).country])),{isFlag:true,noun:"countries",donut:true});
   addCount("players-appearances","Players by appearances","Teams and players",
@@ -1240,23 +1241,34 @@ function computeStats(){
     {noun:"referees",flagFor:name=>refCountry[name]});
 
   const cardBucket=t=>cardInfo(t).bucket;
-  addMatch("attendance","Most Attendance","Records",
+  addMatch("attendance","Most Attendance","Match records",
     played.filter(m=>m.attendance).map(m=>({m,value:m.attendance})).sort((a,b)=>b.value-a.value),nf);
-  addMatch("goals","Most goals","Records",
+  addMatch("goals","Most goals","Match records",
     played.map(m=>({m,value:m.hg+m.ag})).sort((a,b)=>b.value-a.value),v=>String(v));
-  addMatch("goal-difference","Biggest goal differences","Records",
+  addMatch("goal-difference","Biggest goal differences","Match records",
     played.map(m=>({m,value:Math.abs(m.hg-m.ag)})).sort((a,b)=>b.value-a.value),v=>String(v));
-  addMatch("yellow-cards","Most yellow cards","Records",
+  addMatch("yellow-cards","Most yellow cards","Match records",
     played.map(m=>({m,value:m.cards.filter(c=>cardBucket(c.type)==="yellow").length}))
       .filter(x=>x.value>0).sort((a,b)=>b.value-a.value),v=>String(v));
   defs["yellow-cards"].avgDenominator=played.length;
-  addMatch("red-cards","Most red cards","Records",
+  addMatch("red-cards","Most red cards","Match records",
     played.map(m=>({m,value:m.cards.filter(c=>cardBucket(c.type)==="red").length}))
       .filter(x=>x.value>0).sort((a,b)=>b.value-a.value),v=>String(v));
   defs["red-cards"].avgDenominator=played.length;
-  addMatch("ticket-price","Most expensive tickets","Records",
+  addMatch("squad-value","Highest market value","Match records",
+    played.map(m=>{
+      const hv=squadValue(m,"home"), av=squadValue(m,"away");
+      return (hv!=null&&av!=null)?{m,value:hv+av}:null;
+    }).filter(Boolean).sort((a,b)=>b.value-a.value),v=>"€"+fmtVal(v)+"m");
+  addMatch("ticket-price","Most expensive tickets","Match records",
     played.map(m=>({m,value:parseFloat(m.personal.ticket_price_usd)}))
       .filter(x=>!isNaN(x.value)).sort((a,b)=>b.value-a.value),v=>"$"+Math.round(v));
+  addMatch("value-per-ticket","Most valuable tickets","Match records",
+    played.map(m=>{
+      const hv=squadValue(m,"home"), av=squadValue(m,"away");
+      const tp=parseFloat(m.personal.ticket_price_usd);
+      return (hv!=null&&av!=null&&!isNaN(tp)&&tp>0)?{m,value:(hv+av)/tp}:null;
+    }).filter(Boolean).sort((a,b)=>b.value-a.value),v=>fmtVal(Math.round(v*10)/10)+" €m/$");
 
   addCount("weather","Weather","Conditions",tally(played.map(m=>m.weather.condition)),
     {noun:"conditions",donut:true,iconFor:cond=>weatherIcon(cond)});
@@ -1280,8 +1292,9 @@ function computeStats(){
 
 /* ---------------- summary card (top 5) ---------------- */
 function statCard(def){
-  const rows=def.rows.slice(0,5);
-  const max=def.rows.length?def.rows[0].value:1;
+  const source=def.dedupable?dedupRows(def.rows):def.rows;
+  const rows=source.slice(0,5);
+  const max=source.length?source[0].value:1;
   const body=rows.length?`<div class="rank">${rows.map(r=>{
     const label=r.id?`<a href="#/m/${esc(r.id)}">${esc(r.label)}</a>`:esc(r.label);
     return `<div class="rank-row">
@@ -1294,7 +1307,7 @@ function statCard(def){
   return `<div class="card stat-card">
     <h3><a href="#/stat/${esc(def.key)}">${esc(def.title)}</a></h3>
     ${body}
-    ${def.rows.length>5?`<a class="card-more" href="#/stat/${esc(def.key)}">View all ${def.rows.length} ${esc(def.noun)} →</a>`:""}
+    ${source.length>5?`<a class="card-more" href="#/stat/${esc(def.key)}">View all ${source.length} ${esc(def.dedupable?def.dedupNoun:def.noun)} →</a>`:""}
   </div>`;
 }
 

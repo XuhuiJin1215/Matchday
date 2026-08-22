@@ -160,8 +160,8 @@ you configure per row:
 - **Competitions** — that competition's logo from the `emblems/M001.png`-style files.
 - **Continents** — the confederation icon from `continents/`.
 - **Weather** — the same condition icon used on a match page.
-- **Records, and Conditions → Temperature** (anything measured per match — attendance, goals,
-  cards, ticket price…) — the competition logo for that specific match.
+- **Match records, and Conditions → Temperature** (anything measured per match — attendance,
+  goals, cards, ticket price, squad value…) — the competition logo for that specific match.
 
 Any of these fall back gracefully if the underlying image is missing: a flag or crest shows a
 small monogram, a competition or continent icon shows its code as text.
