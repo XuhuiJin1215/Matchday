@@ -1,0 +1,94 @@
+,,,,,,,,,,,,,,,
+# --- MATCH --- meta,field,value,,,,,,,,,,,,,
+meta,id,M028,,,,,,,,,,,,,
+meta,status,played,,,,,,,,,,,,,
+meta,competition,UEFA Europa League,,,,,,,,,,,,,
+meta,round,Quarter-final - 2nd Leg,,,,,,,,,,,,,
+meta,date,2017-04-20,,,,,,,,,,,,,
+meta,kickoff,20:05,,,,,,,,,,,,,
+meta,venue,Old Trafford,,,,,,,,,,,,,
+meta,city,Manchester,,,,,,,,,,,,,
+meta,country,ENG,,,,,,,,,,,,,
+meta,neutral,no,,,,,,,,,,,,,
+meta,attendance,71496,,,,,,,,,,,,,
+meta,score,2-1,,,,,,,,,,,,,
+meta,aggregate,3-2,,,,,,,,,,,,,
+meta,decision,AET,,,,,,,,,,,,,
+meta,referee,Alberto Undiano,,,,,,,,,,,,,
+meta,referee_country,ESP,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- TEAMS --- team,side,name,country,coach,coach_country,formation,squad_value,pitch_fill,pitch_number,gk_fill,stat_color,,,,
+team,home,Manchester United,ENG,José Mourinho,POR,4-2-3-1,386,#DC374B,#FFFFFF,,#DC374B,,,,
+team,away,Anderlecht,BEL,René Weiler,SUI,4-2-3-1,87.1,#2A1D55,#FFFFFF,,#2A1D55,,,,
+,,,,,,,,,,,,,,,
+# --- PLAYERS -- player,side,role,number,name,kit_name,country,id,captain,goalkeeper,on,off,yellow,double yellow,red,value
+player,home,start,20,Sergio Romero,,ARG,,,yes,,,,,,5
+player,home,start,23,Luke Shaw,,ENG,,,,,,,,,20
+player,home,start,5,Marcos Rojo,,ARG,,,,,23,,,,19
+player,home,start,3,Eric Bailly,,CIV,,,,,,,,,25
+player,home,start,25,Antonio Valencia,,ECU,,,,,,,,,8
+player,home,start,16,Michael Carrick,,ENG,,yes,,,,,,,2
+player,home,start,6,Paul Pogba,,FRA,,,,,,,,,80
+player,home,start,19,Marcus Rashford,,ENG,,,,,,,,,10
+player,home,start,8,Henrikh Mkhitaryan,,ARM,,,,,,,,,37
+player,home,start,14,Jesse Lingard,,ENG,,,,,60,,,,9
+player,home,start,9,Zlatan Ibrahimović,,SWE,,,,,91,,,,12
+player,home,sub,17,Daley Blind,,NED,,,,23,,,,,22
+player,home,sub,27,Marouane Fellaini,,BEL,,,,60,,,,,12
+player,home,sub,11,Anthony Martial,,FRA,,,,91,,,,,30
+player,home,bench,1,David de Gea,,ESP,,,yes,,,,,,40
+player,home,bench,10,Wayne Rooney,,ENG,,,,,,,,,20
+player,home,bench,18,Ashley Young,,ENG,,,,,,,,,7
+player,home,bench,21,Ander Herrera,,ESP,,,,,,,,,28
+player,away,start,30,Rubén Martínez,,ESP,,,yes,,,,,,1
+player,away,start,37,Ivan Obradović,,SRB,,,,,,,,,3
+player,away,start,4,Kara Mbodji,,SEN,,,,,,,,,7
+player,away,start,5,Uroš Spajić,,SRB,,,,,,,,,1.5
+player,away,start,12,Dennis Appiah,,FRA,,,,,,97,,,3
+player,away,start,32,Leandro Dendoncker,,BEL,,,,,,,,,12
+player,away,start,31,Youri Tielamans,,BEL,,,,,,11,,,20
+player,away,start,18,Frank Acheampong,,GHA,,,,,,,,,4.5
+player,away,start,94,Sofiane Hanni,,ALG,,yes,,,64,,,,6
+player,away,start,11,Alexandru Chipciu,,ROU,,,,,64,,,,2.5
+player,away,start,91,Łukasz Teodorczyk,,POL,,,,,79,,,,12.5
+player,away,sub,10,Massimo Bruno,,BEL,,,,64,,,,,2
+player,away,sub,73,Nicolae Stanciu,,ROU,,,,64,,,,,7
+player,away,sub,24,Isaac Kiese Thelin,,SWE,,,,79,,,,,1.5
+player,away,bench,3,Olivier Deschacht,,BEL,,,,,,,,,0.2
+player,away,bench,14,Bram Nuytinck,,NED,,,,,,,,,2
+player,away,bench,17,Diego Capel,,ESP,,,,,,,,,0.9
+player,away,bench,23,Frank Boeckx,,BEL,,,yes,,,,,,0.5
+,,,,,,,,,,,,,,,
+# --- GOALS --- goal,minute,side,scorer,type,assist,,,,,,,,,,
+goal,10,home,Henrikh Mkhitaryan,goal,Marcus Rashford,,,,,,,,,,
+goal,32,away,Sofiane Hanni,goal,Łukasz Teodorczyk,,,,,,,,,,
+goal,107,home,Marcus Rashford,goal,Marouane Fellaini,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- MATCH STATS --- stat,name,home,away,,,,,,,,,,,,
+stat,Possession,60,40,,,,,,,,,,,,
+stat,Expected goals (xG),,,,,,,,,,,,,,
+stat,Shots,22,18,,,,,,,,,,,,
+stat,Shots on target,10,6,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- WEATHER --- weather,field,value,,,,,,,,,,,,,
+weather,condition,Clear,,,,,,,,,,,,,
+weather,temp_c,11,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- MATCHDAY --- personal,field,value,,,,,,,,,,,,,
+personal,ticket_price,29,,,,,,,,,,,,,
+personal,ticket_currency,GBP,,,,,,,,,,,,,
+personal,ticket_price_usd,37,,,,,,,,,,,,,
+personal,section,Block N3404,,,,,,,,,,,,,
+personal,row,28,,,,,,,,,,,,,
+personal,seat,134,,,,,,,,,,,,,
+personal,seating,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- PHOTOS --- photo,file,caption,,,,,,,,,,,,,
+photo,M028_1.jpg,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- CHAMPIONS --- champion,field,value,,,,,,,,,,,,,
+champion,team,Manchester United,,,,,,,,,,,,,
+champion,side,home,,,,,,,,,,,,,
+champion,title,EFL Cup,,,,,,,,,,,,,
+champion,season,2016-17,,,,,,,,,,,,,
+champion,note,,,,,,,,,,,,,,
