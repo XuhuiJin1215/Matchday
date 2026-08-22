@@ -1,0 +1,92 @@
+,,,,,,,,,,,,,,,
+# --- MATCH --- meta,field,value,,,,,,,,,,,,,
+meta,id,M029,,,,,,,,,,,,,
+meta,status,played,,,,,,,,,,,,,
+meta,competition,Premier League,,,,,,,,,,,,,
+meta,round,Matchday 37,,,,,,,,,,,,,
+meta,date,2017-05-12,,,,,,,,,,,,,
+meta,kickoff,20:00,,,,,,,,,,,,,
+meta,venue,The Hawthorns,,,,,,,,,,,,,
+meta,city,West Bromwich,,,,,,,,,,,,,
+meta,country,ENG,,,,,,,,,,,,,
+meta,neutral,no,,,,,,,,,,,,,
+meta,attendance,25367,,,,,,,,,,,,,
+meta,score,0-1,,,,,,,,,,,,,
+meta,aggregate,,,,,,,,,,,,,,
+meta,decision,,,,,,,,,,,,,,
+meta,referee,Michael Oliver,,,,,,,,,,,,,
+meta,referee_country,ENG,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- TEAMS --- team,side,name,country,coach,coach_country,formation,squad_value,pitch_fill,pitch_number,gk_fill,stat_color,,,,
+team,home,West Bromwich Albion,ENG,Tony Pulis,WAL,4-1-4-1,86.5,#DDDEE2,#1B223D,,#1B223D,,,,
+team,away,Chelsea,ENG,Antonio Conte,ITA,3-4-2-1,489,#141011,#FFFFFF,,#141011,,,,
+,,,,,,,,,,,,,,,
+# --- PLAYERS -- player,side,role,number,name,kit_name,country,id,captain,goalkeeper,on,off,yellow,double yellow,red,value
+player,home,start,1,Ben Foster,,ENG,,,yes,,,,,,4
+player,home,start,2,Allan Nyom,,CMR,,,,,,,,,4.5
+player,home,start,6,Jonny Evans,,NIR,,,,,,,,,6
+player,home,start,23,Gareth McAuley,,NIR,,,,,64,,,,1
+player,home,start,25,Craig Dawson,,ENG,,,,,,,,,6
+player,home,start,24,Darren Fletcher,,SCO,,yes,,,,,,,2
+player,home,start,14,James McClean,,IRL,,,,,59,20,,,3
+player,home,start,8,Jake Livermore,,ENG,,,,,,,,,6
+player,home,start,47,Sam Field,,ENG,,,,,51,36,,,
+player,home,start,11,Chris Brunt,,NIR,,,,,,,,,4
+player,home,start,9,Salomón Rondón,,VEN,,,,,,,,,17
+player,home,sub,5,Claudio Yacob,,ARG,,,,51,,,,,4
+player,home,sub,22,Nacer Chadli,,BEL,,,,59,,,,,15
+player,home,sub,12,Marc Wilson,,IRL,,,,64,,71,,,2.5
+player,home,bench,4,Hal Robson-Kanu,,WAL,,,,,,,,,3
+player,home,bench,7,James Morrison,,SCO,,,,,,,,,5
+player,home,bench,13,Boaz Myhill,,WAL,,,yes,,,,,,2
+player,home,bench,45,Jonathan Leko,,ENG,,,,,,,,,1.5
+player,away,start,13,Thibaut Courtois,,BEL,,,yes,,,,,,40
+player,away,start,30,David Luiz,,BRA,David Luiz,yes,,,,,,,30
+player,away,start,24,Gary Cahill,,ENG,,,,,,,,,16
+player,away,start,28,César Azpilicueta,,ESP,,,,,,,,,25
+player,away,start,3,Marcos Alonso,,ESP,,,,,,,,,20
+player,away,start,4,Cesc Fàbregas,,ESP,,,,,,,,,35
+player,away,start,21,Nemanja Matić,,SRB,,,,,,,,,35
+player,away,start,15,Victor Moses,,NGA,,,,,86,,,,12
+player,away,start,10,Eden Hazard,,BEL,,,,,75,,,,70
+player,away,start,11,Pedro,,ESP,,,,,76,,,,25
+player,away,start,19,Diego Costa,,ESP,,,,,,,,,50
+player,away,sub,22,Willian,,BRA,,,,75,,,,,32
+player,away,sub,23,Michy Batshuayi,,BEL,,,,76,,,,,25
+player,away,sub,5,Kurt Zouma,,FRA,,,,86,,,,,17
+player,away,bench,1,Asmir Begović,,BIH,,,yes,,,,,,8
+player,away,bench,6,Nathan Aké,,NED,,,,,,,,,8
+player,away,bench,7,N'Golo Kanté,,FRA,,,,,,,,,40
+player,away,bench,26,John Terry,,ENG,,,,,,,,,1
+,,,,,,,,,,,,,,,
+# --- GOALS --- goal,minute,side,scorer,type,assist,,,,,,,,,,
+goal,82,away,Michy Batshuayi,goal,César Azpilicueta,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- MATCH STATS --- stat,name,home,away,,,,,,,,,,,,
+stat,Possession,32,68,,,,,,,,,,,,
+stat,Expected goals (xG),,,,,,,,,,,,,,
+stat,Shots,7,24,,,,,,,,,,,,
+stat,Shots on target,2,5,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- WEATHER --- weather,field,value,,,,,,,,,,,,,
+weather,condition,Drizzle,,,,,,,,,,,,,
+weather,temp_c,12,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- MATCHDAY --- personal,field,value,,,,,,,,,,,,,
+personal,ticket_price,128,,,,,,,,,,,,,
+personal,ticket_currency,EUR,,,,,,,,,,,,,
+personal,ticket_price_usd,139,,,,,,,,,,,,,
+personal,section,Block G8,,,,,,,,,,,,,
+personal,row,C,,,,,,,,,,,,,
+personal,seat,159,,,,,,,,,,,,,
+personal,seating,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- PHOTOS --- photo,file,caption,,,,,,,,,,,,,
+photo,M029_1.jpg,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- CHAMPIONS --- champion,field,value,,,,,,,,,,,,,
+champion,team,Chelsea,,,,,,,,,,,,,
+champion,side,away,,,,,,,,,,,,,
+champion,title,Premier League,,,,,,,,,,,,,
+champion,season,2016-17,,,,,,,,,,,,,
+champion,note,,,,,,,,,,,,,,
