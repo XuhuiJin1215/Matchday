@@ -109,6 +109,12 @@ card in the Champions tab. Put a trophy picture in `trophies/` named after the m
 **Seats.** Set `seating,unreserved` for terraces and general admission and leave `seat` blank —
 it renders as "Lower Tier West · unreserved" rather than pretending you had a seat number.
 
+**Ticket price.** Only fill in `ticket_price_usd` when `ticket_price` is in a different currency
+— leave it blank if `ticket_currency` is already `USD`, the site treats `ticket_price` itself as
+the USD figure in that case. Any ticket-based statistic (Most expensive tickets, Most valuable
+tickets, the average-spend tile) needs one of those two to resolve to a USD number, or that match
+is simply left out of them — the same way it's left out if you haven't recorded a price at all.
+
 ## Photos
 
 Resize before committing: **1600px on the long edge, JPEG quality 80** lands around 200–350 KB,
