@@ -18,7 +18,7 @@ meta,referee,Ma Ning,,,,,,,,,,,,,
 meta,referee_country,CHN,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,
 # --- TEAMS --- team,side,name,country,coach,coach_country,formation,squad_value,pitch_fill,pitch_number,gk_fill,stat_color,,,,
-team,home,Beijing Sinobo Guoan,CHN,Roger Schmidt,CHN,4-2-3-1,16.3,#10B46A,#FFFFFF,,#10B46A,,,,
+team,home,Beijing Sinobo Guoan,CHN,Roger Schmidt,GER,4-2-3-1,16.3,#10B46A,#FFFFFF,,#10B46A,,,,
 team,away,Guangzhou Evergrande,CHN,Luiz Felipe Scolari,BRA,4-2-3-1,41,#C00029,#FFFFFF,,#C00029,,,,
 ,,,,,,,,,,,,,,,
 # --- PLAYERS -- player,side,role,number,name,kit_name,country,id,captain,goalkeeper,on,off,yellow,double yellow,red,value
