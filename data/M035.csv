@@ -1,0 +1,92 @@
+,,,,,,,,,,,,,,,
+# --- MATCH --- meta,field,value,,,,,,,,,,,,,
+meta,id,M035,,,,,,,,,,,,,
+meta,status,played,,,,,,,,,,,,,
+meta,competition,AFC Champions League,,,,,,,,,,,,,
+meta,round,Group E - Matchday 5,,,,,,,,,,,,,
+meta,date,2018-04-04,,,,,,,,,,,,,
+meta,kickoff,20:00,,,,,,,,,,,,,
+meta,venue,Mong Kok Stadium,,,,,,,,,,,,,
+meta,city,Hong Kong,,,,,,,,,,,,,
+meta,country,HKG,,,,,,,,,,,,,
+meta,neutral,no,,,,,,,,,,,,,
+meta,attendance,6299,,,,,,,,,,,,,
+meta,score,0-1,,,,,,,,,,,,,
+meta,aggregate,,,,,,,,,,,,,,
+meta,decision,,,,,,,,,,,,,,
+meta,referee,Muhammad Taqi,,,,,,,,,,,,,
+meta,referee_country,SGP,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- TEAMS --- team,side,name,country,coach,coach_country,formation,squad_value,pitch_fill,pitch_number,gk_fill,stat_color,,,,
+team,home,Kitchee,HKG,Chu Chi Kwong,HKG,4-2-2-2,2.6,#0A65D7,#FFFFFF,,#0A65D7,,,,
+team,away,Tianjin Quanjian,CHN,Paulo Sousa,POR,3-4-2-1,47.8,#F7F4FF,#BC3241,,#BC3241,,,,
+,,,,,,,,,,,,,,,
+# --- PLAYERS -- player,side,role,number,name,kit_name,country,id,captain,goalkeeper,on,off,yellow,double yellow,red,value
+player,home,start,1,Wang Zhenpeng,Wang,HKG,,,yes,,,,,,0.2
+player,home,start,3,Dani Cancela,,HKG,,,,,,90+2,,,0.1
+player,home,start,13,Li Ngai Hoi,Li,HKG,,,,,,,,,0.1
+player,home,start,90,Kim Bong-jin,Kim,KOR,,,,,,,,,0.2
+player,home,start,21,Tong Kin Man,Tong,HKG,,,,,,,,,0.1
+player,home,start,19,Huang Yang,Huang,HKG,,,,,,,,,0.1
+player,home,start,32,Krisztián Vadócz,,HUN,,,,,,,,,0.4
+player,home,start,7,Fernando,,BRA,,,,,,,,,0.4
+player,home,start,12,Lo Kwan Yee,Lo,HKG,,yes,,,42,,,,0.1
+player,home,start,8,Alex Akande,,HKG,,,,,76,,,,0.3
+player,home,start,18,Diego Forlán,,URU,,,,,,,,,0.1
+player,home,sub,14,Jordi Tarrés,,HKG,,,,42,,,,,0.1
+player,home,sub,17,Paulinho,,HKG,19830116,,,76,,,,,0.1
+player,home,bench,10,Lam Ka Wai,,HKG,,,,,,,,,0.1
+player,home,bench,11,Sandro,,HKG,,,,,,,,,0.4
+player,home,bench,15,Christian Annan,,HKG,,,,,,,,,0.1
+player,home,bench,23,Guo Jianqiao,,HKG,,,yes,,,,,,0.1
+player,home,bench,28,Cheng Chin Lung,,HKG,,,,,,,,,0.1
+player,away,start,1,Zhang Lu,Zhang,CHN,,yes,yes,,,,,,0.3
+player,away,start,4,Liu Yiming,Liu,CHN,,,,,,,,,0.3
+player,away,start,21,Kwon Kyung-won,Kwon,KOR,,,,,,,,,0.7
+player,away,start,3,Wang Jie,Wang,CHN,,,,,66,,,,0.1
+player,away,start,25,Mi Haolun,Mi,CHN,,,,,,,,,0.2
+player,away,start,7,Zhao Xuri,Zhao,CHN,,,,,82,,,,0.3
+player,away,start,28,Axel Witsel,,BEL,,,,,,90+5,,,17
+player,away,start,18,Zhang Cheng,Zhang,CHN,,,,,,,,,0.2
+player,away,start,39,Wang Yongpo,Wang,CHN,,,,,66,52,,,0.4
+player,away,start,10,Alexandre Pato,,BRA,,,,,,36,,,7.5
+player,away,start,27,Anthony Modeste,,FRA,,,,,,,,,20
+player,away,sub,16,Zheng Dalun,,CHN,,,,66,,,,,0.2
+player,away,sub,19,Wang Xiaolong,,CHN,,,,66,,,,,0.1
+player,away,sub,6,Pei Shuai,,CHN,,,,82,,84,,,0.3
+player,away,bench,9,Yang Xu,,CHN,,,,,,,,,0.2
+player,away,bench,26,Liu Yi,,CHN,,,,,,,,,0.1
+player,away,bench,32,Sun Qibin,,CHN,,,yes,,,,,,0.1
+player,away,bench,33,Chu Jinzhao,,CHN,,,,,,,,,0.1
+,,,,,,,,,,,,,,,
+# --- GOALS --- goal,minute,side,scorer,type,assist,,,,,,,,,,
+goal,89,away,Anthony Modeste,goal,Kwon Kyung-won,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- MATCH STATS --- stat,name,home,away,,,,,,,,,,,,
+stat,Possession,44,56,,,,,,,,,,,,
+stat,Expected goals (xG),,,,,,,,,,,,,,
+stat,Shots,10,15,,,,,,,,,,,,
+stat,Shots on target,3,2,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- WEATHER --- weather,field,value,,,,,,,,,,,,,
+weather,condition,Clear,,,,,,,,,,,,,
+weather,temp_c,22,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- MATCHDAY --- personal,field,value,,,,,,,,,,,,,
+personal,ticket_price,300,,,,,,,,,,,,,
+personal,ticket_currency,HKD,,,,,,,,,,,,,
+personal,ticket_price_usd,38,,,,,,,,,,,,,
+personal,section,Section 3,,,,,,,,,,,,,
+personal,row,12,,,,,,,,,,,,,
+personal,seat,5,,,,,,,,,,,,,
+personal,seating,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- PHOTOS --- photo,file,caption,,,,,,,,,,,,,
+photo,M035_1.jpg,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- CHAMPIONS --- champion,field,value,,,,,,,,,,,,,
+champion,team,,,,,,,,,,,,,,
+champion,side,,,,,,,,,,,,,,
+champion,title,,,,,,,,,,,,,,
+champion,season,,,,,,,,,,,,,,
+champion,note,,,,,,,,,,,,,,
