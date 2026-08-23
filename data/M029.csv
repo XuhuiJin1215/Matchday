@@ -19,7 +19,7 @@ meta,referee_country,ENG,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,
 # --- TEAMS --- team,side,name,country,coach,coach_country,formation,squad_value,pitch_fill,pitch_number,gk_fill,stat_color,,,,
 team,home,West Bromwich Albion,ENG,Tony Pulis,WAL,4-1-4-1,86.5,#DDDEE2,#1B223D,,#1B223D,,,,
-team,away,Chelsea,ENG,Antonio Conte,ITA,3-4-2-1,489,#141011,#FFFFFF,,#141011,,,,
+team,away,Chelsea,ENG,Antonio Conte,ITA,3-4-2-1,489,#141011,#FFFFFF,,#33509C,,,,
 ,,,,,,,,,,,,,,,
 # --- PLAYERS -- player,side,role,number,name,kit_name,country,id,captain,goalkeeper,on,off,yellow,double yellow,red,value
 player,home,start,1,Ben Foster,,ENG,,,yes,,,,,,4

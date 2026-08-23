@@ -1,0 +1,96 @@
+,,,,,,,,,,,,,,,
+# --- MATCH --- meta,field,value,,,,,,,,,,,,,
+meta,id,M030,,,,,,,,,,,,,
+meta,status,played,,,,,,,,,,,,,
+meta,competition,UEFA Champions League,,,,,,,,,,,,,
+meta,round,Final,,,,,,,,,,,,,
+meta,date,2017-06-03,,,,,,,,,,,,,
+meta,kickoff,19:45,,,,,,,,,,,,,
+meta,venue,Principality Stadium,,,,,,,,,,,,,
+meta,city,Cardiff,,,,,,,,,,,,,
+meta,country,WAL,,,,,,,,,,,,,
+meta,neutral,no,,,,,,,,,,,,,
+meta,attendance,65842,,,,,,,,,,,,,
+meta,score,1-4,,,,,,,,,,,,,
+meta,aggregate,,,,,,,,,,,,,,
+meta,decision,,,,,,,,,,,,,,
+meta,referee,Felix Brych,,,,,,,,,,,,,
+meta,referee_country,GER,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- TEAMS --- team,side,name,country,coach,coach_country,formation,squad_value,pitch_fill,pitch_number,gk_fill,stat_color,,,,
+team,home,Juventus,ITA,Massimiliano Allegri,ITA,3-4-1-2,391,#EAEBEF,#1C1C1E,,#1C1C1E,,,,
+team,away,Real Madrid,ESP,Zinedine Zidane,FRA,4-3-3,682,#85459B,#FFFFFF,,#85459B,,,,
+,,,,,,,,,,,,,,,
+# --- PLAYERS -- player,side,role,number,name,kit_name,country,id,captain,goalkeeper,on,off,yellow,double yellow,red,value
+player,home,start,1,Gianluigi Buffon,,ITA,,yes,yes,,,,,,2
+player,home,start,3,Giorgio Chiellini,,ITA,,,,,,,,,10
+player,home,start,19,Leonardo Bonucci,,ITA,,,,,,,,,40
+player,home,start,15,Andrea Barzagli,,ITA,,,,,66,,,,2
+player,home,start,12,Alex Sandro,,BRA,,,,,,70,,,30
+player,home,start,6,Sami Khedira,,GER,,,,,,,,,23
+player,home,start,5,Miralem Pjanić,,BIH,,,,,71,66,,,38
+player,home,start,23,Dani Alves,,BRA,,,,,,,,,6
+player,home,start,21,Paulo Dybala,,ARG,,,,,78,12,,,50
+player,home,start,17,Mario Mandžukić,,CRO,,,,,,,,,18
+player,home,start,9,Gonzalo Higuaín,,ARG,,,,,,,,,75
+player,home,sub,7,Juan Cuadrado,,COL,,,,66,,72,84,,25
+player,home,sub,8,Claudio Marchisio,,ITA,,,,71,,,,,28
+player,home,sub,18,Mario Lemina,,GAB,,,,78,,,,,8
+player,home,bench,4,Medhi Benatia,,MAR,,,,,,,,,15
+player,home,bench,22,Kwadwo Asamoah,,GHA,,,,,,,,,11
+player,home,bench,25,Neto,,BRA,,,yes,,,,,,6
+player,home,bench,26,Stephan Lichtsteiner,,SUI,,,,,,,,,4
+player,away,start,1,Keylor Navas,,CRC,,,yes,,,,,,18
+player,away,start,12,Marcelo,,BRA,,,,,,,,,32
+player,away,start,4,Sergio Ramos,,ESP,,yes,,,,31,,,40
+player,away,start,5,Raphaël Varane,,FRA,,,,,,,,,35
+player,away,start,2,Dani Carvajal,,ESP,,,,,,42,,,30
+player,away,start,8,Toni Kroos,,GER,,,,,89,53,,,60
+player,away,start,14,Casemiro,,BRA,,,,,,,,,25
+player,away,start,19,Luka Modrić,,CRO,,,,,,,,,45
+player,away,start,7,Cristiano Ronaldo,,POR,,,,,,,,,100
+player,away,start,9,Karim Benzema,,FRA,,,,,77,,,,60
+player,away,start,22,Isco,,ESP,,,,,82,,,,35
+player,away,sub,11,Gareth Bale,,WAL,,,,77,,,,,90
+player,away,sub,20,Marco Asensio,,ESP,,,,82,,90+1,,,15
+player,away,sub,21,Álvaro Morata,,ESP,,,,89,,,,,40
+player,away,bench,6,Nacho,,ESP,,,,,,,,,10
+player,away,bench,13,Kiko Casilla,,ESP,,,yes,,,,,,6
+player,away,bench,16,Mateo Kovačić,,CRO,,,,,,,,,25
+player,away,bench,23,Danilo,,BRA,,,,,,,,,16
+,,,,,,,,,,,,,,,
+# --- GOALS --- goal,minute,side,scorer,type,assist,,,,,,,,,,
+goal,20,away,Cristiano Ronaldo,goal,Dani Carvajal,,,,,,,,,,
+goal,27,home,Mario Mandžukić,goal,Gonzalo Higuaín,,,,,,,,,,
+goal,61,away,Casemiro,goal,,,,,,,,,,,
+goal,64,away,Cristiano Ronaldo,goal,Luka Modrić,,,,,,,,,,
+goal,90,away,Marco Asensio,goal,Marcelo,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- MATCH STATS --- stat,name,home,away,,,,,,,,,,,,
+stat,Possession,44,56,,,,,,,,,,,,
+stat,Expected goals (xG),,,,,,,,,,,,,,
+stat,Shots,9,18,,,,,,,,,,,,
+stat,Shots on target,4,5,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- WEATHER --- weather,field,value,,,,,,,,,,,,,
+weather,condition,Clear,,,,,,,,,,,,,
+weather,temp_c,13,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- MATCHDAY --- personal,field,value,,,,,,,,,,,,,
+personal,ticket_price,2583,,,,,,,,,,,,,
+personal,ticket_currency,USD,,,,,,,,,,,,,
+personal,ticket_price_usd,,,,,,,,,,,,,,
+personal,section,Block U11,,,,,,,,,,,,,
+personal,row,8,,,,,,,,,,,,,
+personal,seat,19,,,,,,,,,,,,,
+personal,seating,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- PHOTOS --- photo,file,caption,,,,,,,,,,,,,
+photo,M030_1.jpg,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- CHAMPIONS --- champion,field,value,,,,,,,,,,,,,
+champion,team,Real Madrid,,,,,,,,,,,,,
+champion,side,away,,,,,,,,,,,,,
+champion,title,UEFA Champions League,,,,,,,,,,,,,
+champion,season,2016-17,,,,,,,,,,,,,
+champion,note,,,,,,,,,,,,,,
