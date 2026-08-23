@@ -1,0 +1,97 @@
+,,,,,,,,,,,,,,,
+# --- MATCH --- meta,field,value,,,,,,,,,,,,,
+meta,id,M034,,,,,,,,,,,,,
+meta,status,played,,,,,,,,,,,,,
+meta,competition,AFC Champions League Qualification,,,,,,,,,,,,,
+meta,round,Second Round,,,,,,,,,,,,,
+meta,date,2018-01-23,,,,,,,,,,,,,
+meta,kickoff,20:00,,,,,,,,,,,,,
+meta,venue,Mong Kok Stadium,,,,,,,,,,,,,
+meta,city,Hong Kong,,,,,,,,,,,,,
+meta,country,HKG,,,,,,,,,,,,,
+meta,neutral,no,,,,,,,,,,,,,
+meta,attendance,3305,,,,,,,,,,,,,
+meta,score,2-4,,,,,,,,,,,,,
+meta,aggregate,,,,,,,,,,,,,,
+meta,decision,,,,,,,,,,,,,,
+meta,referee,Kim Hee-gon,,,,,,,,,,,,,
+meta,referee_country,KOR,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- TEAMS --- team,side,name,country,coach,coach_country,formation,squad_value,pitch_fill,pitch_number,gk_fill,stat_color,,,,
+team,home,Eastern,HKG,Lee Kin Wo,HKG,3-4-3,2.1,#2A41B4,#FFFFFF,,#2A41B4,,,,
+team,away,Thanh Hóa,VIE,Marian Mihail,ROU,4-2-3-1,0.4,#FACE3D,#3869AD,#C5C1C8,#FACE3D,,,,
+,,,,,,,,,,,,,,,
+# --- PLAYERS -- player,side,role,number,name,kit_name,country,id,captain,goalkeeper,on,off,yellow,double yellow,red,value
+player,home,start,1,Yapp Hung Fai,Yapp,HKG,,yes,yes,,,,,,0.2
+player,home,start,41,Yusuke Igawa,,JPN,,,,,,30,,,0.1
+player,home,start,2,Lee Chi Ho,Lee,HKG,,,,,,,,,0.1
+player,home,start,18,Cheung Kin Fung,Cheung,HKG,,,,,,,,,0.1
+player,home,start,17,Lee Hong Lim,Lee,HKG,,,,,61,,,,0.1
+player,home,start,24,Ju Yingzhi,Ju,HKG,,,,,81,,,,0.1
+player,home,start,3,Diego Eli,,BRA,,,,,,,,,0.3
+player,home,start,21,Tsang Kam To,Tsang,HKG,,,,,,,,,0.1
+player,home,start,9,Manuel Bleda,,ESP,,,,,,,,,0.3
+player,home,start,11,Michel Lugo,,BRA,,,,,,,,,0.3
+player,home,start,23,Jaimes McKee,,HKG,,,,,77,,,,0.1
+player,home,sub,19,Lo Kong Wai,,HKG,,,,61,,,,,0.1
+player,home,sub,10,Lam Hok Hei,,HKG,,,,77,,,,,0.1
+player,home,sub,4,Bai He,,HKG,,,,81,,,,,0.1
+player,home,bench,14,Cheng King Ho,,HKG,,,,,,,,,0.1
+player,home,bench,16,Ho Kwok Chuen,,HKG,,,yes,,,,,,0.1
+player,home,bench,30,Wong Tsz Ho,,HKG,,,,,,,,,0.1
+player,home,bench,35,Ng Wai Chiu,,HKG,,,,,,,,,0.1
+player,away,start,68,Trần Bửu Ngọc,Trần,VIE,,,yes,,,79,,,
+player,away,start,17,Mai Tiến Thành,Mai,VIE,,,,,,,,,0.1
+player,away,start,91,Danny van Bakel,van Bakel,NED,,,,,,,,,
+player,away,start,5,Nguyễn Minh Tùng,Nguyễn,VIE,,,,,,42,,,
+player,away,start,3,Trần Đình Đồng,Trần,VIE,,,,,,,,,
+player,away,start,66,Nguyễn Thế Dương,Nguyễn,VIE,,,,,,,,,
+player,away,start,7,Ngô Hoàng Thịnh,Ngô,VIE,,,,,,,,,
+player,away,start,6,Vũ Minh Tuấn,Vũ,VIE,,,,,69,,,,
+player,away,start,20,Pape Omar Faye,,SEN,,yes,,,,,,,0.3
+player,away,start,10,Lê Văn Thắng,Lê,VIE,,,,,,62,,,
+player,away,start,8,Lê Thanh Bình,Lê,VIE,,,,,49,,,,
+player,away,sub,2,Hoàng Đình Tùng,,VIE,,,,49,,,,,
+player,away,sub,19,Lê Quốc Phương,,VIE,,,,69,,,,,
+player,away,bench,1,Nguyễn Thanh Thắng,,VIE,,,yes,,,,,,
+player,away,bench,4,Lục Xuân Hưng,,VIE,,,,,,,,,
+player,away,bench,12,Trịnh Đình Hùng,,VIE,,,,,,,,,
+player,away,bench,16,Nguyễn Xuân Thành,,VIE,,,,,,,,,0.1
+player,away,bench,22,Nguyễn Hữu Dũng,,VIE,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- GOALS --- goal,minute,side,scorer,type,assist,,,,,,,,,,
+goal,25,home,Michel Lugo,goal,Cheung Kin Fung,,,,,,,,,,
+goal,31,away,Pape Omar Faye,penalty,,,,,,,,,,,
+goal,58,away,Hoàng Đình Tùng,goal,Lê Văn Thắng,,,,,,,,,,
+goal,59,away,Hoàng Đình Tùng,goal,Lê Văn Thắng,,,,,,,,,,
+goal,63,home,Manuel Bleda,penalty,,,,,,,,,,,
+goal,90+5,away,Hoàng Đình Tùng,goal,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- MATCH STATS --- stat,name,home,away,,,,,,,,,,,,
+stat,Possession,,,,,,,,,,,,,,
+stat,Expected goals (xG),,,,,,,,,,,,,,
+stat,Shots,,,,,,,,,,,,,,
+stat,Shots on target,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- WEATHER --- weather,field,value,,,,,,,,,,,,,
+weather,condition,Clear,,,,,,,,,,,,,
+weather,temp_c,18,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- MATCHDAY --- personal,field,value,,,,,,,,,,,,,
+personal,ticket_price,30,,,,,,,,,,,,,
+personal,ticket_currency,HKD,,,,,,,,,,,,,
+personal,ticket_price_usd,4,,,,,,,,,,,,,
+personal,section,Section 1,,,,,,,,,,,,,
+personal,row,6,,,,,,,,,,,,,
+personal,seat,1,,,,,,,,,,,,,
+personal,seating,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- PHOTOS --- photo,file,caption,,,,,,,,,,,,,
+photo,M034_1.jpg,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- CHAMPIONS --- champion,field,value,,,,,,,,,,,,,
+champion,team,,,,,,,,,,,,,,
+champion,side,,,,,,,,,,,,,,
+champion,title,,,,,,,,,,,,,,
+champion,season,,,,,,,,,,,,,,
+champion,note,,,,,,,,,,,,,,
