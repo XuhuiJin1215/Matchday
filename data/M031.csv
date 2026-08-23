@@ -1,112 +1,93 @@
-# --- MATCH ---------------------------------------------------- meta,field,value
-meta,id,M031
-meta,status,played
-meta,competition,UEFA Champions League
-meta,round,Final
-meta,date,2017-06-03
-meta,kickoff,19:45
-meta,venue,Millennium Stadium
-meta,city,Cardiff
-meta,country,WAL
-meta,neutral,yes
-meta,attendance,65842
-meta,score,1-4
-meta,aggregate,
-meta,decision,
-meta,referee,Felix Brych
-meta,referee_country,GER
-
-# --- TEAMS --- team,side,name,country,coach,coach_country,formation,squad_value,pitch_fill,pitch_number,gk_fill,stat_color
-team,home,Juventus,ITA,Massimiliano Allegri,ITA,4-2-3-1,585,#FFFFFF,#141C24,#F2B705,#141C24
-team,away,Real Madrid,ESP,Zinedine Zidane,FRA,4-3-1-2,760,#F4F1E6,#141C24,#F2B705,#5B6FE0
-
+,,,,,,,,,,,,,,,
+# --- MATCH --- meta,field,value,,,,,,,,,,,,,
+meta,id,M031,,,,,,,,,,,,,
+meta,status,played,,,,,,,,,,,,,
+meta,competition,Chinese Super League,,,,,,,,,,,,,
+meta,round,Matchday 16,,,,,,,,,,,,,
+meta,date,2017-07-08,,,,,,,,,,,,,
+meta,kickoff,19:35,,,,,,,,,,,,,
+meta,venue,Workers' Stadium,,,,,,,,,,,,,
+meta,city,Beijing,,,,,,,,,,,,,
+meta,country,CHN,,,,,,,,,,,,,
+meta,neutral,no,,,,,,,,,,,,,
+meta,attendance,54018,,,,,,,,,,,,,
+meta,score,2-0,,,,,,,,,,,,,
+meta,aggregate,,,,,,,,,,,,,,
+meta,decision,,,,,,,,,,,,,,
+meta,referee,Ma Ning,,,,,,,,,,,,,
+meta,referee_country,CHN,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- TEAMS --- team,side,name,country,coach,coach_country,formation,squad_value,pitch_fill,pitch_number,gk_fill,stat_color,,,,
+team,home,Beijing Sinobo Guoan,CHN,Roger Schmidt,CHN,4-2-3-1,16.3,#10B46A,#FFFFFF,,#10B46A,,,,
+team,away,Guangzhou Evergrande,CHN,Luiz Felipe Scolari,BRA,4-2-3-1,41,#C00029,#FFFFFF,,#C00029,,,,
+,,,,,,,,,,,,,,,
 # --- PLAYERS -- player,side,role,number,name,kit_name,country,id,captain,goalkeeper,on,off,yellow,double yellow,red,value
-# kit_name: name shown on the pitch diagram; blank uses the last word of the full name.
-# captain: write "yes" for the captain, otherwise leave blank.
-# on/off: the minute this player entered/left the pitch. Blank "on" = started the
-# match; blank "off" = still on at the final whistle.
-player,home,start,1,Gianluigi Buffon,,ITA,,yes,yes,,,,,,4
-player,home,start,15,Andrea Barzagli,,ITA,,,,,,,,,4
-player,home,start,19,Leonardo Bonucci,,ITA,,,,,,,,,40
-player,home,start,3,Giorgio Chiellini,,ITA,,,,,,,,,20
-player,home,start,12,Alex Sandro,,BRA,,,,,,,,,45
-player,home,start,6,Sami Khedira,,GER,,,,,,,,,25
-player,home,start,5,Miralem Pjanić,,BIH,,,,,,,,,55
-player,home,start,23,Dani Alves,,BRA,,,,,,,,,12
-player,home,start,21,Paulo Dybala,,ARG,,,,,,,,,90
-player,home,start,17,Mario Mandžukić,,CRO,,,,,,,,,28
-player,home,start,9,Gonzalo Higuaín,,ARG,,,,,,,,,75
-player,home,sub,7,Juan Cuadrado,,COL,,,,,,,,,30
-player,home,sub,8,Claudio Marchisio,,ITA,,,,,,,,,18
-player,home,sub,18,Mario Lemina,,GAB,,,,,,,,,14
-player,home,bench,4,Medhi Benatia,,MAR,,,,,,,,,20
-player,home,bench,22,Kwadwo Asamoah,,GHA,,,,,,,,,9
-player,home,bench,25,Neto,,BRA,,,yes,,,,,,7
-player,home,bench,26,Stephan Lichtsteiner,,SUI,,,,,,,,,6
-player,away,start,1,Keylor Navas,,CRC,,,yes,,,,,,14
-player,away,start,2,Dani Carvajal,,ESP,,,,,,,,,35
-player,away,start,4,Sergio Ramos,,ESP,,yes,,,,,,,35
-player,away,start,5,Raphaël Varane,,FRA,,,,,,,,,55
-player,away,start,12,Marcelo,,BRA,,,,,,,,,40
-player,away,start,14,Casemiro,,BRA,,,,,,,,,50
-player,away,start,8,Toni Kroos,,GER,,,,,,,,,70
-player,away,start,19,Luka Modrić,,CRO,,,,,,,,,50
-player,away,start,22,Isco,,ESP,,,,,,,,,70
-player,away,start,7,Cristiano Ronaldo,,POR,,,,,,,,,90
-player,away,start,9,Karim Benzema,,FRA,,,,,,,,,50
-player,away,sub,11,Gareth Bale,,WAL,,,,,,,,,80
-player,away,sub,20,Marco Asensio,,ESP,,,,,,,,,40
-player,away,sub,21,Álvaro Morata,,ESP,,,,,,,,,60
-player,away,bench,6,Nacho,,ESP,,,,,,,,,20
-player,away,bench,13,Kiko Casilla,,ESP,,,yes,,,,,,5
-player,away,bench,16,Mateo Kovačić,,CRO,,,,,,,,,30
-player,away,bench,23,Danilo,,BRA,,,,,,,,,20
-
-# --- GOALS ------------------------- goal,minute,side,scorer,type,assist
-goal,20,away,Cristiano Ronaldo,goal,Dani Carvajal
-goal,27,home,Mario Mandžukić,goal,Gonzalo Higuaín
-goal,61,away,Casemiro,goal,
-goal,64,away,Cristiano Ronaldo,goal,Luka Modrić
-goal,90,away,Marco Asensio,goal,Marcelo
-
-
-# --- PENALTIES ----------------------------- pen,order,side,player,result
-# DEMO ONLY — this shootout did not happen. The real 2017 final was decided
-# 4-1 in normal time, no penalties. This block exists purely so you can see
-# the format and how it renders; delete it once you've had a look. Kicker
-# names below are generic placeholders, not the real players. Away kicks
-# first here, to show the order isn't assumed to always start with home.
-pen,1,away,Away Kicker 1,scored
-pen,2,home,Home Kicker 1,scored
-pen,3,away,Away Kicker 2,missed
-pen,4,home,Home Kicker 2,scored
-pen,5,away,Away Kicker 3,scored
-pen,6,home,Home Kicker 3,scored
-pen,7,away,Away Kicker 4,scored
-pen,8,home,Home Kicker 4,missed
-pen,9,away,Away Kicker 5,missed
-pen,10,home,Home Kicker 5,scored
-
-# --- MATCH STATS ----------------------------- stat,name,home,away
-stat,Possession,45,55
-stat,Expected goals (xG),1.1,2.6
-stat,Shots,10,18
-stat,Shots on target,4,8
-
-# --- WEATHER --------------------------------- weather,field,value
-# PLACEHOLDER — replace with the real reading.
-weather,condition,Partly cloudy
-weather,temp_c,15
-
-# --- MATCHDAY (yours) ------------------------ personal,field,value
-# PLACEHOLDER — replace.
-personal,ticket_price,160
-personal,ticket_currency,GBP
-personal,ticket_price_usd,206
-personal,section,Block 122
-personal,row,24
-personal,seat,17
-personal,seating,reserved
-
-# --- PHOTOS ---------------------------------- photo,file,caption
-photo,M031_1.jpg,Walking up to the stadium
+player,home,start,22,Yang Zhi,Yang,CHN,,yes,yes,,,,,,0.4
+player,home,start,4,Li Lei,Li,CHN,,,,,,,,,0.3
+player,home,start,30,Lei Tenglong,Lei,CHN,,,,,,7,,,0.2
+player,home,start,3,Yu Yang,Yu,CHN,,,,,,,,,0.2
+player,home,start,14,Jin Pengxiang,Jin,CHN,,,,,78,68,,,0.1
+player,home,start,5,Ralf,,BRA,,,,,,,,,1
+player,home,start,21,Renato Augusto,,BRA,,,,,,,,,7.5
+player,home,start,10,Zhang Xizhe,Zhang,CHN,,,,,,,,,0.8
+player,home,start,29,Ba Dun,Ba,CHN,,,,,80,72,,,0.1
+player,home,start,11,Song Boxuan,Song,CHN,,,,,59,,,,0.2
+player,home,start,9,Jonathan Soriano,,ESP,,,,,,,,,4.8
+player,home,sub,7,Zhang Chiming,,CHN,,,,59,,,,,0.2
+player,home,sub,31,Zhao Hejing,,CHN,,,,78,,,,,0.2
+player,home,sub,18,Jin Taiyan,,CHN,,,,80,,,,,0.2
+player,home,bench,1,Hou Sen,,CHN,,,yes,,,,,,0.1
+player,home,bench,15,Zhu Chaoqing,,CHN,,,,,,,,,0.1
+player,home,bench,26,Lü Peng,,CHN,,,,,,,,,0.1
+player,home,bench,28,Jiang Tao,,CHN,,,,,,,,,0.1
+player,away,start,19,Zeng Cheng,Zeng,CHN,,,yes,,,,,,0.6
+player,away,start,35,Li Xuepeng,Li,CHN,,,,,,,,,0.4
+player,away,start,6,Feng Xiaoting,Feng,CHN,,yes,,,,,,,0.7
+player,away,start,3,Mei Fang,Mei,CHN,,,,,,,,,0.5
+player,away,start,5,Zhang Linpeng,Zhang,CHN,,,,,,,,,1
+player,away,start,4,Xu Xin,Xu,CHN,,,,,37,,,,0.2
+player,away,start,8,Paulinho,,BRA,,,,,,,,,15
+player,away,start,20,Yu Hanchao,Yu,CHN,,,,,55,,,,0.6
+player,away,start,11,Ricardo Goulart,,BRA,,,,,,,,,13
+player,away,start,16,Huang Bowen,Huang,CHN,,,,,,,,,0.8
+player,away,start,29,Gao Lin,Gao,CHN,,,,,76,,,,0.7
+player,away,sub,27,Zheng Long,,CHN,,,,37,,,,,0.3
+player,away,sub,7,Alan,,BRA,,,,55,,,,,6.5
+player,away,sub,2,Liao Lisheng,,CHN,,,,76,,,,,0.2
+player,away,bench,12,Wang Shangyuan,,CHN,,,,,,,,,0.3
+player,away,bench,17,Liu Jian,,CHN,,,,,,,,,0.1
+player,away,bench,32,Liu Dianzuo,,CHN,,,yes,,,,,,0.2
+player,away,bench,37,Chen Zepeng,,CHN,,,,,,,,,0.1
+,,,,,,,,,,,,,,,
+# --- GOALS --- goal,minute,side,scorer,type,assist,,,,,,,,,,
+goal,1,home,Jonathan Soriano,goal,Li Lei,,,,,,,,,,
+goal,51,home,Jonathan Soriano,goal,Zhang Xizhe,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- MATCH STATS --- stat,name,home,away,,,,,,,,,,,,
+stat,Possession,42,58,,,,,,,,,,,,
+stat,Expected goals (xG),,,,,,,,,,,,,,
+stat,Shots,14,8,,,,,,,,,,,,
+stat,Shots on target,4,3,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- WEATHER --- weather,field,value,,,,,,,,,,,,,
+weather,condition,Clear,,,,,,,,,,,,,
+weather,temp_c,31,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- MATCHDAY --- personal,field,value,,,,,,,,,,,,,
+personal,ticket_price,180,,,,,,,,,,,,,
+personal,ticket_currency,CNY,,,,,,,,,,,,,
+personal,ticket_price_usd,26,,,,,,,,,,,,,
+personal,section,Section 9,,,,,,,,,,,,,
+personal,row,13,,,,,,,,,,,,,
+personal,seat,27,,,,,,,,,,,,,
+personal,seating,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- PHOTOS --- photo,file,caption,,,,,,,,,,,,,
+photo,M031_1.jpg,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- CHAMPIONS --- champion,field,value,,,,,,,,,,,,,
+champion,team,,,,,,,,,,,,,,
+champion,side,,,,,,,,,,,,,,
+champion,title,,,,,,,,,,,,,,
+champion,season,,,,,,,,,,,,,,
+champion,note,,,,,,,,,,,,,,
