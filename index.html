@@ -432,6 +432,8 @@ nav.tabs a.on{background:var(--ink);color:var(--paper)}
 .age-bins{gap:4px}
 .age-bins .lb{font-size:9px}
 .age-bins .n{font-size:10px}
+.age-val{white-space:nowrap}
+.age-val .age-d{font-size:.7em;vertical-align:.45em;margin-left:1px;color:var(--muted);font-weight:600}
 
 /* year bars */
 .years{display:flex;align-items:flex-end;gap:8px;height:150px;padding:8px 18px 0}
@@ -748,7 +750,9 @@ function ageExactOn(id,matchDate){
   const days=Math.round((on-lastBirthday)/86400000);
   return (isNaN(days)||days<0)?{years,days:0}:{years,days};
 }
-const fmtAge=a=>a==null?"":`${a.years}y ${a.days}d`;
+/* "36y 164d" repeats its units on every row; showing the days as a small raised
+   figure keeps both numbers without the noise — 36¹⁶⁴, hover for the full text. */
+const fmtAge=a=>a==null?"":`<span class="age-val" title="${a.years} years, ${a.days} days">${a.years}<span class="age-d">${a.days}</span></span>`;
 
 /* A ticket in USD needs no separate ticket_price_usd — the price itself already is one. */
 const ticketUSD=m=>{
