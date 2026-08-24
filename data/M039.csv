@@ -1,0 +1,93 @@
+,,,,,,,,,,,,,,,
+# --- MATCH --- meta,field,value,,,,,,,,,,,,,
+meta,id,M039,,,,,,,,,,,,,
+meta,status,played,,,,,,,,,,,,,
+meta,competition,Chinese Super League,,,,,,,,,,,,,
+meta,round,Matchday 21,,,,,,,,,,,,,
+meta,date,2018-09-02,,,,,,,,,,,,,
+meta,kickoff,19:35,,,,,,,,,,,,,
+meta,venue,Nanjing Olympic Sports Center Stadium,,,,,,,,,,,,,
+meta,city,Nanjing,,,,,,,,,,,,,
+meta,country,CHN,,,,,,,,,,,,,
+meta,neutral,no,,,,,,,,,,,,,
+meta,attendance,26981,,,,,,,,,,,,,
+meta,score,1-1,,,,,,,,,,,,,
+meta,aggregate,,,,,,,,,,,,,,
+meta,decision,,,,,,,,,,,,,,
+meta,referee,Zhao Zhizhi,,,,,,,,,,,,,
+meta,referee_country,CHN,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- TEAMS --- team,side,name,country,coach,coach_country,formation,squad_value,pitch_fill,pitch_number,gk_fill,stat_color,,,,
+team,home,Jiangsu Suning,CHN,Cosmin Olăroiu,ROU,4-4-2,29.8,#00399A,#FFFFFF,,#00399A,,,,
+team,away,Tianjin Quanjian,CHN,Paulo Sousa,POR,5-3-2,11.9,#EE4349,#FFFFFF,,#EE4349,,,,
+,,,,,,,,,,,,,,,
+# --- PLAYERS -- player,side,role,number,name,kit_name,country,id,captain,goalkeeper,on,off,yellow,double yellow,red,value
+player,home,start,1,Gu Chao,Gu,CHN,,,yes,,,,,,0.2
+player,home,start,28,Yang Xiaotian,Yang,CHN,,,,,,,,,0.2
+player,home,start,2,Li Ang,Li,CHN,,,,,,59,,,0.3
+player,home,start,29,Gabriel Paletta,,ITA,,,,,,,,,1.5
+player,home,start,5,Zhou Yun,Zhou,CHN,,,,,,,,,0.3
+player,home,start,16,Gao Tianyi,Gao,CHN,,,,,64,64,,,0.1
+player,home,start,12,Zhang Xiaobin,Zhang,CHN,,,,,,,,,0.2
+player,home,start,22,Wu Xi,Wu,CHN,,yes,,,57,,,,0.7
+player,home,start,11,Xie Pengfei,Xie,CHN,,,,,,,,,0.3
+player,home,start,9,Éder,,ITA,,,,,90,,,,7
+player,home,start,10,Alex Texeira,,BRA,,,,,,79,,,18
+player,home,sub,3,Tian Yinong,,CHN,,,,57,,,,,0.2
+player,home,sub,32,Huang Zichang,,CHN,,,,64,,,,,0.6
+player,home,sub,18,Zhang Lingfeng,,CHN,,,,90,,,,,0.1
+player,home,bench,23,Li Haitao,,CHN,,,yes,,,,,,0.1
+player,home,bench,27,Yang Jiawei,,CHN,,,,,,,,,0.1
+player,home,bench,33,Wang Song,,CHN,,,,,,,,,0.1
+player,home,bench,37,Liang Jinhu,,CHN,,,,,,,,,0.1
+player,away,start,1,Zhang Lu,Zhang,CHN,,yes,yes,,,,,,0.5
+player,away,start,19,Wang Xiaolong,Wang,CHN,,,,,,66,,,0.1
+player,away,start,3,Wang Jie,Wang,CHN,,,,,80,7,,,0.1
+player,away,start,4,Liu Yiming,Liu,CHN,,,,,,,,,0.4
+player,away,start,21,Kwon Kyung-won,Kwon,KOR,,,,,,,,,0.8
+player,away,start,16,Zheng Dalun,Zheng,CHN,,,,,,,,,0.1
+player,away,start,39,Wang Yongpo,Wang,CHN,,,,,87,83,,,0.3
+player,away,start,7,Zhao Xuri,Zhao,CHN,,,,,71,,,,0.3
+player,away,start,38,Sun Ke,Sun,CHN,,,,,,,,,0.3
+player,away,start,9,Yang Xu,Yang,CHN,,,,,,,,,0.1
+player,away,start,10,Alexandre Pato,,BRA,,,,,,,,,8
+player,away,sub,17,Su Yuanjie,,CHN,,,,71,,,,,0.1
+player,away,sub,6,Pei Shuai,,CHN,,,,80,,,,,0.3
+player,away,sub,2,Wu Wei,,CHN,,,,87,,,,,0.1
+player,away,bench,15,Liu Yue,,CHN,,,,,,,,,0.2
+player,away,bench,32,Sun Qibin,,CHN,,,yes,,,,,,0.1
+player,away,bench,33,Chu Jinzhao,,CHN,,,,,,,,,0.1
+player,away,bench,56,Qian Yumiao,,CHN,,,,,,,,,0.1
+,,,,,,,,,,,,,,,
+# --- GOALS --- goal,minute,side,scorer,type,assist,,,,,,,,,,
+goal,19,home,Alex Texeira,goal,Éder,,,,,,,,,,
+goal,81,away,Su Yuanjie,penalty,Sun Ke,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- MATCH STATS --- stat,name,home,away,,,,,,,,,,,,
+stat,Possession,47,53,,,,,,,,,,,,
+stat,Expected goals (xG),,,,,,,,,,,,,,
+stat,Shots,6,5,,,,,,,,,,,,
+stat,Shots on target,5,4,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- WEATHER --- weather,field,value,,,,,,,,,,,,,
+weather,condition,Overcast,,,,,,,,,,,,,
+weather,temp_c,28,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- MATCHDAY --- personal,field,value,,,,,,,,,,,,,
+personal,ticket_price,150,,,,,,,,,,,,,
+personal,ticket_currency,CNY,,,,,,,,,,,,,
+personal,ticket_price_usd,22,,,,,,,,,,,,,
+personal,section,Section 68,,,,,,,,,,,,,
+personal,row,7,,,,,,,,,,,,,
+personal,seat,11,,,,,,,,,,,,,
+personal,seating,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- PHOTOS --- photo,file,caption,,,,,,,,,,,,,
+photo,M039_1.jpg,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- CHAMPIONS --- champion,field,value,,,,,,,,,,,,,
+champion,team,,,,,,,,,,,,,,
+champion,side,,,,,,,,,,,,,,
+champion,title,,,,,,,,,,,,,,
+champion,season,,,,,,,,,,,,,,
+champion,note,,,,,,,,,,,,,,
