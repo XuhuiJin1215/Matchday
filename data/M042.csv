@@ -1,0 +1,92 @@
+,,,,,,,,,,,,,,,
+# --- MATCH --- meta,field,value,,,,,,,,,,,,,
+meta,id,M042,,,,,,,,,,,,,
+meta,status,played,,,,,,,,,,,,,
+meta,competition,Premier League,,,,,,,,,,,,,
+meta,round,Matchday 18,,,,,,,,,,,,,
+meta,date,2018-12-22,,,,,,,,,,,,,
+meta,kickoff,15:00,,,,,,,,,,,,,
+meta,venue,Stamford Bridge,,,,,,,,,,,,,
+meta,city,London,,,,,,,,,,,,,
+meta,country,ENG,,,,,,,,,,,,,
+meta,neutral,no,,,,,,,,,,,,,
+meta,attendance,40558,,,,,,,,,,,,,
+meta,score,0-1,,,,,,,,,,,,,
+meta,aggregate,,,,,,,,,,,,,,
+meta,decision,,,,,,,,,,,,,,
+meta,referee,Lee Probert,,,,,,,,,,,,,
+meta,referee_country,ENG,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- TEAMS --- team,side,name,country,coach,coach_country,formation,squad_value,pitch_fill,pitch_number,gk_fill,stat_color,,,,
+team,home,Chelsea,ENG,Maurizio Sarri,ITA,4-3-3,749,#1F347C,#FFFFFF,,#1F347C,,,,
+team,away,Leicester City,ENG,Claude Puel,FRA,4-3-3,283,#59647C,#FFFFFF,,#59647C,,,,
+,,,,,,,,,,,,,,,
+# --- PLAYERS -- player,side,role,number,name,kit_name,country,id,captain,goalkeeper,on,off,yellow,double yellow,red,value
+player,home,start,1,Kepa Arrizabalaga,Kepa,ESP,19941003,,yes,,,,,,55
+player,home,start,3,Marcos Alonso,,ESP,19901228,,,,,,,,45
+player,home,start,30,David Luiz,David Luiz,BRA,19870422,,,,,,,,25
+player,home,start,2,Antonio Rüdiger,,GER,19930303,,,,,,,,45
+player,home,start,28,César Azpilicueta,,ESP,19890828,yes,,,,,,,40
+player,home,start,17,Mateo Kovačić,,CRO,19940506,,,,61,,,,35
+player,home,start,5,Jorginho,,ITA,19911220,,,,75,,,,65
+player,home,start,7,N'Golo Kanté,,FRA,19910329,,,,,,,,100
+player,home,start,22,Willian,,BRA,19880809,,,,61,,,,50
+player,home,start,10,Eden Hazard,,BEL,19910107,,,,,,,,150
+player,home,start,11,Pedro,,ESP,19870728,,,,,,,,25
+player,home,sub,12,Ruben Loftus-Cheek,,ENG,19960123,,,61,,,,,20
+player,home,sub,18,Olivier Giroud,,FRA,19860930,,,61,,,,,15
+player,home,sub,4,Cesc Fàbregas,,ESP,19870504,,,75,,,,,25
+player,home,bench,8,Ross Barkley,,ENG,19931205,,,,,,,,25
+player,home,bench,13,Willy Caballero,,ARG,19810928,,yes,,,,,,1
+player,home,bench,21,Davide Zappacosta,,ITA,19920611,,,,,,,,18
+player,home,bench,24,Gary Cahill,,ENG,19851219,,,,,,,,10
+player,away,start,1,Kasper Schmeichel,,DEN,19861105,,yes,,,,,,12
+player,away,start,3,Ben Chilwell,,ENG,19961221,,,,,,,,25
+player,away,start,15,Harry Maguire,,ENG,19930305,,,,,,,,45
+player,away,start,5,Wes Morgan,,JAM,19840121,yes,,,,,,,2.5
+player,away,start,14,Ricardo Pereira,,POR,19931006,,,,,,,,20
+player,away,start,38,Hamza Choudhury,,ENG,19971001,,,,,,,,1
+player,away,start,25,Wilfred Ndidi,,NGA,19961216,,,,,31,,,35
+player,away,start,24,Nampalys Mendy,,FRA,19920623,,,,,81,,,8
+player,away,start,10,James Maddison,,ENG,19961123,,,,82,,,,30
+player,away,start,9,Jamie Vardy,,ENG,19870111,,,,84,,,,20
+player,away,start,11,Marc Albrighton,,ENG,19891118,,,,,,,,10
+player,away,sub,7,Demarai Gray,,ENG,19960628,,,82,,,,,20
+player,away,sub,8,Kelechi Iheanacho,,NGA,19961003,,,84,,,,,15
+player,away,bench,6,Jonny Evans,,NIR,19880103,,,,,,,,12
+player,away,bench,12,Danny Ward,,WAL,19930622,,yes,,,,,,10
+player,away,bench,20,Shinji Okazaki,,JPN,19860416,,,,,,,,5
+player,away,bench,21,Vicente Iborra,,ESP,19880116,,,,,,,,9
+player,away,bench,28,Christian Fuchs,,AUT,19860407,,,,,,,,3.5
+,,,,,,,,,,,,,,,
+# --- GOALS --- goal,minute,side,scorer,type,assist,,,,,,,,,,
+goal,51,away,Jamie Vardy,goal,James Maddison,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- MATCH STATS --- stat,name,home,away,,,,,,,,,,,,
+stat,Possession,72,28,,,,,,,,,,,,
+stat,Expected goals (xG),,,,,,,,,,,,,,
+stat,Shots,17,8,,,,,,,,,,,,
+stat,Shots on target,5,3,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- WEATHER --- weather,field,value,,,,,,,,,,,,,
+weather,condition,Clear,,,,,,,,,,,,,
+weather,temp_c,11,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- MATCHDAY --- personal,field,value,,,,,,,,,,,,,
+personal,ticket_price,132,,,,,,,,,,,,,
+personal,ticket_currency,GBP,,,,,,,,,,,,,
+personal,ticket_price_usd,167,,,,,,,,,,,,,
+personal,section,Block 7,,,,,,,,,,,,,
+personal,row,21,,,,,,,,,,,,,
+personal,seat,30,,,,,,,,,,,,,
+personal,seating,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- PHOTOS --- photo,file,caption,,,,,,,,,,,,,
+photo,M042_1.jpg,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- CHAMPIONS --- champion,field,value,,,,,,,,,,,,,
+champion,team,,,,,,,,,,,,,,
+champion,side,,,,,,,,,,,,,,
+champion,title,,,,,,,,,,,,,,
+champion,season,,,,,,,,,,,,,,
+champion,note,,,,,,,,,,,,,,
