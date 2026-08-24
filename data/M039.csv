@@ -61,7 +61,7 @@ player,away,bench,56,Qian Yumiao,,CHN,,,,,,,,,0.1
 ,,,,,,,,,,,,,,,
 # --- GOALS --- goal,minute,side,scorer,type,assist,,,,,,,,,,
 goal,19,home,Alex Texeira,goal,Éder,,,,,,,,,,
-goal,81,away,Su Yuanjie,penalty,Sun Ke,,,,,,,,,,
+goal,81,away,Su Yuanjie,goal,Sun Ke,,,,,,,,,,
 ,,,,,,,,,,,,,,,
 # --- MATCH STATS --- stat,name,home,away,,,,,,,,,,,,
 stat,Possession,47,53,,,,,,,,,,,,
