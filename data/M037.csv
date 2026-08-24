@@ -1,0 +1,95 @@
+,,,,,,,,,,,,,,,
+# --- MATCH --- meta,field,value,,,,,,,,,,,,,
+meta,id,M037,,,,,,,,,,,,,
+meta,status,played,,,,,,,,,,,,,
+meta,competition,Chinese Super League,,,,,,,,,,,,,
+meta,round,Matchday 14,,,,,,,,,,,,,
+meta,date,2018-07-28,,,,,,,,,,,,,
+meta,kickoff,20:00,,,,,,,,,,,,,
+meta,venue,Hongkou Football Stadium,,,,,,,,,,,,,
+meta,city,Shanghai,,,,,,,,,,,,,
+meta,country,CHN,,,,,,,,,,,,,
+meta,neutral,no,,,,,,,,,,,,,
+meta,attendance,23569,,,,,,,,,,,,,
+meta,score,2-2,,,,,,,,,,,,,
+meta,aggregate,,,,,,,,,,,,,,
+meta,decision,,,,,,,,,,,,,,
+meta,referee,Guo Baolong,,,,,,,,,,,,,
+meta,referee_country,CHN,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- TEAMS --- team,side,name,country,coach,coach_country,formation,squad_value,pitch_fill,pitch_number,gk_fill,stat_color,,,,
+team,home,Shanghai Greenland Shenhua,CHN,Wu Jingui,CHN,4-2-3-1,15.4,#1056B5,#FFFFFF,,#1056B5,,,,
+team,away,Beijing Sinobo Guoan,CHN,Roger Schmidt,GER,4-2-3-1,44.9,#019752,#FFFFFF,,#019752,,,,
+,,,,,,,,,,,,,,,
+# --- PLAYERS -- player,side,role,number,name,kit_name,country,id,captain,goalkeeper,on,off,yellow,double yellow,red,value
+player,home,start,27,Li Shuai,Li,CHN,,,yes,,,,,,0.2
+player,home,start,23,Bai Jiajun,Bai,CHN,,,,,,,,,0.2
+player,home,start,6,Li Peng,Li,CHN,,,,,62,,,,0.2
+player,home,start,32,Aidi Fulangxisi,Aidi,CHN,,,,,,45,,,0.2
+player,home,start,2,Xu Yougang,Xu,CHN,,,,,46,,,,0.2
+player,home,start,13,Fredy Guarín,,COL,,,,,,,,,4.5
+player,home,start,37,Sun Shilin,Sun,CHN,,,,,,,,,0.2
+player,home,start,28,Cao Yunding,Cao,CHN,,,,,,,,,0.5
+player,home,start,10,Giovanni Moreno,,COL,,yes,,,,,,,6.5
+player,home,start,24,Rong Hao,Rong,CHN,,,,,70,,,,0.2
+player,home,start,9,Demba Ba,,SEN,,,,,,,,,2
+player,home,sub,16,Li Yunqiu,,CHN,,,,46,,56,,,0.1
+player,home,sub,5,Zhu Chenjie,,CHN,,,,62,,90,,,
+player,home,sub,36,Liu Ruofan,,CHN,,,,70,,,,,0.3
+player,home,bench,8,Zhang Lu,,CHN,,,,,,,,,0.1
+player,home,bench,19,Li Xiaoming,,CHN,,,,,,,,,0.2
+player,home,bench,22,Qiu Shengjiong,,CHN,,,yes,,,,,,0.1
+player,home,bench,29,Zhou Junchen,,CHN,,,,,,,,,
+player,away,start,25,Guo Quanbo,Guo,CHN,,,yes,,,,,,0.1
+player,away,start,4,Li Lei,Li,CHN,,,,,90,,,,0.3
+player,away,start,30,Lei Tenglong,Lei,CHN,,,,,,,,,0.1
+player,away,start,24,Zhang Yu,Zhang,CHN,,,,,,,,,0.2
+player,away,start,28,Jiang Tao,Jiang,CHN,,,,,,,,,0.2
+player,away,start,6,Chi Zhongguo,Chi,CHN,,,,,,,,,0.4
+player,away,start,8,Piao Cheng,Piao,CHN,,,,,77,,,,0.5
+player,away,start,10,Zhang Xizhe,Zhang,CHN,,,,,,,,,0.6
+player,away,start,5,Renato Augusto,,BRA,,yes,,,,,,,11
+player,away,start,23,Jonathan Viera,,ESP,,,,,,,,,8
+player,away,start,17,Cédric Bakambu,,COD,,,,,90,56,,,22
+player,away,sub,19,Yu Dabao,,CHN,,,,77,,,,,0.5
+player,away,sub,7,Wei Shihao,,CHN,,,,90,,,,,0.3
+player,away,sub,20,Wang Ziming,,CHN,,,,90,,,,,0.1
+player,away,bench,1,Hou Sen,,CHN,,,yes,,,,,,0.1
+player,away,bench,3,Yu Yang,,CHN,,,,,,,,,0.5
+player,away,bench,18,Jin Taiyan,,CHN,,,,,,,,,0.2
+player,away,bench,29,Ba Dun,,CHN,,,,,,,,,0.1
+,,,,,,,,,,,,,,,
+# --- GOALS --- goal,minute,side,scorer,type,assist,,,,,,,,,,
+goal,45+2,away,Renato Augusto,goal,Li Lei,,,,,,,,,,
+goal,54,home,Aidi Fulangxisi,goal,Li Peng,,,,,,,,,,
+goal,64,away,Cédric Bakambu,goal,Zhang Xizhe,,,,,,,,,,
+goal,90+1,home,Wei Shihao,own goal,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- MATCH STATS --- stat,name,home,away,,,,,,,,,,,,
+stat,Possession,60,40,,,,,,,,,,,,
+stat,Expected goals (xG),,,,,,,,,,,,,,
+stat,Shots,11,4,,,,,,,,,,,,
+stat,Shots on target,4,3,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- WEATHER --- weather,field,value,,,,,,,,,,,,,
+weather,condition,Clear,,,,,,,,,,,,,
+weather,temp_c,29,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- MATCHDAY --- personal,field,value,,,,,,,,,,,,,
+personal,ticket_price,260,,,,,,,,,,,,,
+personal,ticket_currency,CNY,,,,,,,,,,,,,
+personal,ticket_price_usd,38,,,,,,,,,,,,,
+personal,section,Section 2,,,,,,,,,,,,,
+personal,row,43,,,,,,,,,,,,,
+personal,seat,12,,,,,,,,,,,,,
+personal,seating,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- PHOTOS --- photo,file,caption,,,,,,,,,,,,,
+photo,M037_1.jpg,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- CHAMPIONS --- champion,field,value,,,,,,,,,,,,,
+champion,team,,,,,,,,,,,,,,
+champion,side,,,,,,,,,,,,,,
+champion,title,,,,,,,,,,,,,,
+champion,season,,,,,,,,,,,,,,
+champion,note,,,,,,,,,,,,,,
