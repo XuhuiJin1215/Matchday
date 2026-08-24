@@ -1,102 +1,102 @@
-,,,,,,,,,,,,,,,
-# --- MATCH --- meta,field,value,,,,,,,,,,,,,
-meta,id,M001,,,,,,,,,,,,,
-meta,status,played,,,,,,,,,,,,,
-meta,competition,International Friendly,,,,,,,,,,,,,
-meta,round,,,,,,,,,,,,,,
-meta,date,2014-10-14,,,,,,,,,,,,,
-meta,kickoff,20:00,,,,,,,,,,,,,
-meta,venue,Hong Kong Stadium,,,,,,,,,,,,,
-meta,city,Hong Kong,,,,,,,,,,,,,
-meta,country,HKG,,,,,,,,,,,,,
-meta,neutral,no,,,,,,,,,,,,,
-meta,attendance,20230,,,,,,,,,,,,,
-meta,score,0-7,,,,,,,,,,,,,
-meta,aggregate,,,,,,,,,,,,,,
-meta,decision,,,,,,,,,,,,,,
-meta,referee,Yuichi Nishimura,,,,,,,,,,,,,
-meta,referee_country,JPN,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,
-# --- TEAMS --- team,side,name,country,coach,coach_country,formation,squad_value,pitch_fill,pitch_number,gk_fill,stat_color,,,,
-team,home,Hong Kong,,Kim Pan-gon,KOR,4-4-2,2.0,#E05C6C,#FFFFFF,,#E05C6C,,,,
-team,away,Argentina,,Gerardo Martino,ARG,4-2-3-1,467,#1D4B87,#FFFFFF,,#1D4B87,,,,
-,,,,,,,,,,,,,,,
+
+# --- MATCH --- meta,field,value
+meta,id,M001
+meta,status,played
+meta,competition,International Friendly
+meta,round
+meta,date,2014-10-14
+meta,kickoff,20:00
+meta,venue,Hong Kong Stadium
+meta,city,Hong Kong
+meta,country,HKG
+meta,neutral,no
+meta,attendance,20230
+meta,score,0-7
+meta,aggregate
+meta,decision
+meta,referee,Yuichi Nishimura
+meta,referee_country,JPN
+
+# --- TEAMS --- team,side,name,country,coach,coach_country,formation,squad_value,pitch_fill,pitch_number,gk_fill,stat_color
+team,home,Hong Kong,,Kim Pan-gon,KOR,4-4-2,2.0,#E05C6C,#FFFFFF,,#E05C6C
+team,away,Argentina,,Gerardo Martino,ARG,4-2-3-1,467,#1D4B87,#FFFFFF,,#1D4B87
+
 # --- PLAYERS -- player,side,role,number,name,kit_name,country,id,captain,goalkeeper,on,off,yellow,double yellow,red,value
-player,home,start,1,Yapp Hung Fai,Yapp,HKG,,,yes,,,,,,0.2
-player,home,start,13,Cheung Kin Fung,Cheung,HKG,,,,,65,,,,0.1
-player,home,start,3,Wisdom Fofo Agbo,Agbo,HKG,,,,,,,,,0.1
-player,home,start,15,Chan Wai Ho,Chan,HKG,,yes,,,,,,,0.1
-player,home,start,2,Lee Chi Ho,Lee,HKG,,,,,46,,,,0.1
-player,home,start,5,Andy Nägelein,Nägelein,HKG,,,,,,55,,,0.1
-player,home,start,23,Ju Yingzhi,Ju,HKG,,,,,61,,,,0.1
-player,home,start,6,Huang Yang,Huang,HKG,,,,,81,,,,0.1
-player,home,start,8,Xu Deshuai,Xu,HKG,,,,,71,,,,0.1
-player,home,start,9,Lee Wai Lim,Lee,HKG,,,,,46,,,,0.1
-player,home,start,18,Godfred Karikari,Karikari,HKG,,,,,,,,,0.1
-player,home,sub,14,Jack Sealy,Sealy,HKG,,,,46,,,,,0.2
-player,home,sub,11,Christian Annan,Annan,HKG,,,,46,,,,,0.1
-player,home,sub,16,Leung Chun Pong,Leung,HKG,,,,61,,,,,0.1
-player,home,sub,21,Kwok Kin Pong,Kwok,HKG,,,,65,,,,,0.2
-player,home,sub,10,Lam Ka Wai,Lam,HKG,,,,71,,,,,0.2
-player,home,sub,12,Lo Kwan Yee,Lo,HKG,,,,81,,,,,0.1
-player,home,bench,4,Leung Kwun Chung,Leung,HKG,,,,,,,,,
-player,home,bench,17,Wong Wai,Wong,HKG,,,,,,,,,
-player,home,bench,19,Wang Zhenpeng,Wang,HKG,,,yes,,,,,,0.1
-player,home,bench,20,Chan Man Fai,Chan,HKG,,,,,,,,,0.1
-player,home,bench,22,Lam Hok Hei,Lam,HKG,,,,,,,,,
-player,home,bench,24,Chan Siu Kwan,Chan,HKG,,,,,,,,,0.1
-player,away,start,21,Nahuel Guzmán,,ARG,,,yes,,46,,,,2
-player,away,start,3,Leonel Vangioni,,ARG,,,,,,,,,1.5
-player,away,start,6,Nicolás Otamendi,,ARG,,,,,,,,,12
-player,away,start,13,Facundo Roncaglia,,ARG,,,,,61,,,,4
-player,away,start,2,Santiago Vergini,,ARG,,,,,,,,,1
-player,away,start,19,Éver Banega,,ARG,,,,,,,,,8
-player,away,start,5,Fernando Gago,,ARG,,yes,,,73,,,,4
-player,away,start,20,Nicolás Gaitán,,ARG,,,,,73,,,,25
-player,away,start,22,Javier Pastore,,ARG,,,,,61,,,,18
-player,away,start,8,Enzo Pérez,,ARG,,,,,73,,,,23
-player,away,start,9,Gonzalo Higuaín,,ARG,,,,,,,,,40
-player,away,sub,12,Agustín Marchesín,,ARG,,,yes,46,,,,,2.5
-player,away,sub,4,Pablo Zabaleta,,ARG,,,,61,,,,,19
-player,away,sub,10,Lionel Messi,,ARG,,,,61,,,,,120
-player,away,sub,7,Ángel Di María,,ARG,,,,73,,,,,65
-player,away,sub,14,Javier Mascherano,,ARG,,,,73,,,,,15
-player,away,sub,23,Roberto Pereyra,,ARG,,,,73,,,,,10
-player,away,bench,1,Sergio Romero,,ARG,,,yes,,,,,,2
-player,away,bench,11,Sergio Agüero,,ARG,,,,,,,,,45
-player,away,bench,15,Martín Demichelis,,ARG,,,,,,,,,2
-player,away,bench,16,Marcos Rojo,,ARG,,,,,,,,,16
-player,away,bench,17,Federico Fernández,,ARG,,,,,,,,,8
-player,away,bench,18,Erik Lamela,,ARG,,,,,,,,,24
-,,,,,,,,,,,,,,,
-# --- GOALS --- goal,minute,side,scorer,type,assist,,,,,,,,,,
-goal,19,away,Éver Banega,goal,,,,,,,,,,,
-goal,42,away,Gonzalo Higuaín,goal,Leonel Vangioni,,,,,,,,,,
-goal,44,away,Nicolás Gaitán,goal,Éver Banega,,,,,,,,,,
-goal,54,away,Gonzalo Higuaín,goal,Nicolás Gaitán,,,,,,,,,,
-goal,66,away,Lionel Messi,goal,Javier Pastore,,,,,,,,,,
-goal,72,away,Nicolás Gaitán,goal,Lionel Messi,,,,,,,,,,
-goal,85,away,Lionel Messi,goal,Gonzalo Higuaín,,,,,,,,,,
-,,,,,,,,,,,,,,,
-# --- MATCH STATS --- stat,name,home,away,,,,,,,,,,,,
-stat,Possession,30,70,,,,,,,,,,,,
-stat,Expected goals (xG),n/a,n/a,,,,,,,,,,,,
-stat,Shots,0,15,,,,,,,,,,,,
-stat,Shots on target,0,11,,,,,,,,,,,,
-,,,,,,,,,,,,,,,
-# --- WEATHER --- weather,field,value,,,,,,,,,,,,,
-weather,condition,Clear,,,,,,,,,,,,,
-weather,temp_c,24,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,
-# --- MATCHDAY --- personal,field,value,,,,,,,,,,,,,
-personal,ticket_price,490,,,,,,,,,,,,,
-personal,ticket_currency,HKD,,,,,,,,,,,,,
-personal,ticket_price_usd,63,,,,,,,,,,,,,
-personal,section,Block 119,,,,,,,,,,,,,
-personal,row,22,,,,,,,,,,,,,
-personal,seat,7,,,,,,,,,,,,,
-personal,seating,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,
-# --- PHOTOS --- photo,file,caption,,,,,,,,,,,,,
-photo,M001_1.jpg,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,
+player,home,start,1,Yapp Hung Fai,Yapp,HKG,19900321,,yes,,,,,,0.2
+player,home,start,13,Cheung Kin Fung,Cheung,HKG,19840101,,,,65,,,,0.1
+player,home,start,3,Wisdom Fofo Agbo,Agbo,HKG,19790625,,,,,,,,0.1
+player,home,start,15,Chan Wai Ho,Chan,HKG,19820424,yes,,,,,,,0.1
+player,home,start,2,Lee Chi Ho,Lee,HKG,19821116,,,,46,,,,0.1
+player,home,start,5,Andy Nägelein,Nägelein,HKG,19811005,,,,,55,,,0.1
+player,home,start,23,Ju Yingzhi,Ju,HKG,19870724,,,,61,,,,0.1
+player,home,start,6,Huang Yang,Huang,HKG,19831030,,,,81,,,,0.1
+player,home,start,8,Xu Deshuai,Xu,HKG,19870713,,,,71,,,,0.1
+player,home,start,9,Lee Wai Lim,Lee,HKG,19810505,,,,46,,,,0.1
+player,home,start,18,Godfred Karikari,Karikari,HKG,19850311,,,,,,,,0.1
+player,home,sub,14,Jack Sealy,Sealy,HKG,19870504,,,46,,,,,0.2
+player,home,sub,11,Christian Annan,Annan,HKG,19780503,,,46,,,,,0.1
+player,home,sub,16,Leung Chun Pong,Leung,HKG,19861001,,,61,,,,,0.1
+player,home,sub,21,Kwok Kin Pong,Kwok,HKG,19870330,,,65,,,,,0.2
+player,home,sub,10,Lam Ka Wai,Lam,HKG,19850605,,,71,,,,,0.2
+player,home,sub,12,Lo Kwan Yee,Lo,HKG,19841009,,,81,,,,,0.1
+player,home,bench,4,Leung Kwun Chung,Leung,HKG,19920401,,,,,,,,
+player,home,bench,17,Wong Wai,Wong,HKG,19920917,,,,,,,,
+player,home,bench,19,Wang Zhenpeng,Wang,HKG,19840505,,yes,,,,,,0.1
+player,home,bench,20,Chan Man Fai,Chan,HKG,19880619,,,,,,,,0.1
+player,home,bench,22,Lam Hok Hei,Lam,HKG,19910918,,,,,,,,
+player,home,bench,24,Chan Siu Kwan,Chan,HKG,19920801,,,,,,,,0.1
+player,away,start,21,Nahuel Guzmán,,ARG,19860210,,yes,,46,,,,2
+player,away,start,3,Leonel Vangioni,,ARG,19870505,,,,,,,,1.5
+player,away,start,6,Nicolás Otamendi,,ARG,19880212,,,,,,,,12
+player,away,start,13,Facundo Roncaglia,,ARG,19870210,,,,61,,,,4
+player,away,start,2,Santiago Vergini,,ARG,19880803,,,,,,,,1
+player,away,start,19,Éver Banega,,ARG,19880629,,,,,,,,8
+player,away,start,5,Fernando Gago,,ARG,19860410,yes,,,73,,,,4
+player,away,start,20,Nicolás Gaitán,,ARG,19880223,,,,73,,,,25
+player,away,start,22,Javier Pastore,,ARG,19890620,,,,61,,,,18
+player,away,start,8,Enzo Pérez,,ARG,19860222,,,,73,,,,23
+player,away,start,9,Gonzalo Higuaín,,ARG,19871210,,,,,,,,40
+player,away,sub,12,Agustín Marchesín,,ARG,19880316,,yes,46,,,,,2.5
+player,away,sub,4,Pablo Zabaleta,,ARG,19850116,,,61,,,,,19
+player,away,sub,10,Lionel Messi,,ARG,19870624,,,61,,,,,120
+player,away,sub,7,Ángel Di María,,ARG,19880214,,,73,,,,,65
+player,away,sub,14,Javier Mascherano,,ARG,19840608,,,73,,,,,15
+player,away,sub,23,Roberto Pereyra,,ARG,19910107,,,73,,,,,10
+player,away,bench,1,Sergio Romero,,ARG,19870222,,yes,,,,,,2
+player,away,bench,11,Sergio Agüero,,ARG,19880602,,,,,,,,45
+player,away,bench,15,Martín Demichelis,,ARG,19801220,,,,,,,,2
+player,away,bench,16,Marcos Rojo,,ARG,19900320,,,,,,,,16
+player,away,bench,17,Federico Fernández,,ARG,19890221,,,,,,,,8
+player,away,bench,18,Erik Lamela,,ARG,19920304,,,,,,,,24
+
+# --- GOALS --- goal,minute,side,scorer,type,assist
+goal,19,away,Éver Banega,goal
+goal,42,away,Gonzalo Higuaín,goal,Leonel Vangioni
+goal,44,away,Nicolás Gaitán,goal,Éver Banega
+goal,54,away,Gonzalo Higuaín,goal,Nicolás Gaitán
+goal,66,away,Lionel Messi,goal,Javier Pastore
+goal,72,away,Nicolás Gaitán,goal,Lionel Messi
+goal,85,away,Lionel Messi,goal,Gonzalo Higuaín
+
+# --- MATCH STATS --- stat,name,home,away
+stat,Possession,30,70
+stat,Expected goals (xG),n/a,n/a
+stat,Shots,0,15
+stat,Shots on target,0,11
+
+# --- WEATHER --- weather,field,value
+weather,condition,Clear
+weather,temp_c,24
+
+# --- MATCHDAY --- personal,field,value
+personal,ticket_price,490
+personal,ticket_currency,HKD
+personal,ticket_price_usd,63
+personal,section,Block 119
+personal,row,22
+personal,seat,7
+personal,seating
+
+# --- PHOTOS --- photo,file,caption
+photo,M001_1.jpg
+
