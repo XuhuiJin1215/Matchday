@@ -260,7 +260,6 @@ nav.tabs a.on{background:var(--ink);color:var(--paper)}
   margin:0;padding:11px 16px 8px;
   font-family:var(--font-display);font-size:10px;font-weight:700;letter-spacing:.14em;
   text-transform:uppercase;color:var(--muted);
-  display:flex;align-items:baseline;justify-content:space-between;gap:10px;
 }
 .pl{display:flex;align-items:center;gap:7px;padding:7px 16px;font-size:14px;flex-wrap:wrap;row-gap:5px}
 .pl+.pl{border-top:1px solid var(--line-soft)}
@@ -273,7 +272,7 @@ nav.tabs a.on{background:var(--ink);color:var(--paper)}
 .pl.dim{color:var(--muted)}
 .pl .age{flex:none;font-family:var(--font-display);font-size:12px;font-weight:600;
   color:var(--muted);opacity:.75;font-variant-numeric:tabular-nums}
-.lineup h4 .avg-age{font-size:11px;letter-spacing:normal;text-transform:none;font-weight:700;color:var(--muted)}
+.pitch-id .avg-age{margin-left:auto;flex:none;font-family:var(--font-display);font-size:12px;font-weight:700;color:var(--muted)}
 .badge{position:relative;display:inline-flex;align-items:center;justify-content:center;flex:none}
 .badge .fb{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:800;font-size:8px}
 .badge img{position:relative;z-index:1;width:100%;height:100%;object-fit:contain}
@@ -977,9 +976,7 @@ function lineupBlock(m,side){
     ${t.coach?`<div class="coach"><span class="k">Head coach</span>${t.coachCountry?flag(t.coachCountry):""}<span>${esc(t.coach)}</span></div>`:""}
     ${(()=>{
       const starters=of("start");
-      const ages=starters.map(p=>ageOn(p.id,m.date)).filter(a=>a!=null);
-      const avgTag=ages.length?`<span class="avg-age num" title="Average age of the starting 11">Avg ${(ages.reduce((x,y)=>x+y,0)/ages.length).toFixed(1)}</span>`:"";
-      return starters.length?`<h4>Starting 11${avgTag}</h4>${starters.map(p=>row(p,false)).join("")}`:"";
+      return starters.length?`<h4>Starting 11</h4>${starters.map(p=>row(p,false)).join("")}`:"";
     })()}
     ${block("Substitutions",of("sub"),false)}
     ${block("Bench",of("bench"),true)}
@@ -1017,12 +1014,16 @@ function renderMatch(id){
 
   const startersH=m.players.filter(x=>x.side==="home"&&x.role==="start");
   const startersA=m.players.filter(x=>x.side==="away"&&x.role==="start");
+  const avgAgeTag=st=>{
+    const ages=st.map(p=>ageOn(p.id,m.date)).filter(a=>a!=null);
+    return ages.length?`<span class="avg-age num" title="Average age of the starting 11">Avg ${(ages.reduce((x,y)=>x+y,0)/ages.length).toFixed(1)}</span>`:"";
+  };
   const pitches=(startersH.length||startersA.length)?`<section class="sec"><div class="sec-h"><h2>Formation</h2></div>
     <div class="pitches">
       ${[["home",h,startersH],["away",a,startersA]].map(([side,t,st])=>st.length?`
         <div class="panel pitch-card">
           <div class="pitch-id">${kitIcon(m.id,side,34)}<div><h3>${esc(t.name)}</h3>
-          <div class="fm num">${esc(t.formation||"Shape not recorded")}</div></div></div>
+          <div class="fm num">${esc(t.formation||"Shape not recorded")}</div></div>${avgAgeTag(st)}</div>
           ${pitchSVG(t,st,m.id)}
         </div>`:"").join("")}
     </div></section>`:"";
