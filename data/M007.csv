@@ -22,42 +22,42 @@ team,home,South China,HKG,Casemiro Mior,BRA,4-3-3,1.8,#F43841,#FFFFFF,,#F43841,,
 team,away,Johor Darul Ta'zim,MAS,Mario Gómez,ARG,4-2-2-2,1.2,#0E1416,#FFFFFF,,#0E1416,,,,
 ,,,,,,,,,,,,,,,
 # --- PLAYERS -- player,side,role,number,name,kit_name,country,id,captain,goalkeeper,on,off,yellow,double yellow,red,value
-player,home,start,12,Cristian Mora,,ECU,,,yes,,,37,,,0.1
-player,home,start,5,Chak Ting Fung,Chak,HKG,,,,,,,,,0.1
-player,home,start,76,Cheung Chi Yung,Cheung,HKG,,,,,87,,,,0.1
-player,home,start,22,Bojan Mališić,,SRB,,yes,,,,37,,,0.3
-player,home,start,2,Jack Sealy,,HKG,,,,,,,,,0.2
-player,home,start,16,Chan Siu Kwan,Chan,HKG,,,,,,,,,0.1
-player,home,start,23,Che Runqiu,Che,HKG,,,,,46,40,,,0.1
-player,home,start,17,Leung Chun Pong,Leung,HKG,,,,,,,,,0.2
-player,home,start,7,Chan Siu Ki,Chan,HKG,,,,,,52,,,0.2
-player,home,start,45,Boima Karpeh,,LBR,,,,,,,,,0.1
-player,home,start,8,Mahama Awal,,CMR,,,,,57,,,,0.2
-player,home,sub,10,Lam Hok Hei,,HKG,,,,46,,,,,0.1
-player,home,sub,28,Liang Zicheng,,HKG,,,,57,,,,,0.1
-player,home,sub,21,Law Hiu Chung,,HKG,,,,87,,,,,0.1
-player,home,bench,20,Lau Cheuk Hin,,HKG,,,,,,,,,0.1
-player,home,bench,26,Moses Mensah,,GHA,,,,,,,,,0.1
-player,home,bench,27,Lai Yiu Cheong,,HKG,,,,,,,,,0.1
-player,home,bench,39,Leung Hing Kit,,HKG,,,yes,,,,,,0.1
-player,away,start,24,Izham Tarmizi,Izham,MAS,,,yes,,75,53,,,
-player,away,start,42,Fazly Mazlan,Fazly,MAS,,,,,,,,,
-player,away,start,6,Marcos Antônio,Marcos,MAS,,,,,,,,,0.4
-player,away,start,7,Aidil Zafuan,Aidil,MAS,,,,,,37,,,
-player,away,start,12,Subramaniam Kunanlan,Subramaniam,MAS,,,,,,,,,
-player,away,start,14,Hariss Harun,Hariss,SGP,,,,,,,,,
-player,away,start,8,Safiq Rahim,Safiq,MAS,,yes,,,79,59,,,
-player,away,start,19,Luciano Figueroa,,ARG,,,,,,,,36,0.5
-player,away,start,18,Mahali Jasuli,Mahali,MAS,,,,,70,,,,
-player,away,start,10,Safee Sali,Safee,MAS,,,,,,,,,
-player,away,start,9,Alhaji Kamara,,SLE,,,,,,,,,0.3
-player,away,sub,13,Gary Steven Robbat,,MAS,,,,70,,,,,
-player,away,sub,1,Farizal Marlias,,MAS,,,yes,75,,,,,
-player,away,sub,17,Amri Yahyah,,MAS,,,,79,,,,,
-player,away,bench,21,Jasazrin Jamaludin,,MAS,,,,,,,,,
-player,away,bench,23,Chanthuru Suppiah,,MAS,,,,,,,,,
-player,away,bench,25,Junior Eldstål,,MAS,,,,,,,,,
-player,away,bench,27,Fadhli Shas,,MAS,,,,,,,,,
+player,home,start,12,Cristian Mora,,ECU,19790826,,yes,,,37,,,0.1
+player,home,start,5,Chak Ting Fung,Chak,HKG,19891127,,,,,,,,0.1
+player,home,start,76,Cheung Chi Yung,Cheung,HKG,19890630,,,,87,,,,0.1
+player,home,start,22,Bojan Mališić,,SRB,19850114,yes,,,,37,,,0.3
+player,home,start,2,Jack Sealy,,HKG,19870504,,,,,,,,0.2
+player,home,start,16,Chan Siu Kwan,Chan,HKG,19920801,,,,,,,,0.1
+player,home,start,23,Che Runqiu,Che,HKG,19901025,,,,46,40,,,0.1
+player,home,start,17,Leung Chun Pong,Leung,HKG,19861001,,,,,,,,0.2
+player,home,start,7,Chan Siu Ki,Chan,HKG,19850714,,,,,52,,,0.2
+player,home,start,45,Boima Karpeh,,LBR,19840616,,,,,,,,0.1
+player,home,start,8,Mahama Awal,,CMR,19910610,,,,57,,,,0.2
+player,home,sub,10,Lam Hok Hei,,HKG,19910918,,,46,,,,,0.1
+player,home,sub,28,Liang Zicheng,,HKG,19820318,,,57,,,,,0.1
+player,home,sub,21,Law Hiu Chung,,HKG,19950610,,,87,,,,,0.1
+player,home,bench,20,Lau Cheuk Hin,,HKG,19920426,,,,,,,,0.1
+player,home,bench,26,Moses Mensah,,GHA,19780810,,,,,,,,0.1
+player,home,bench,27,Lai Yiu Cheong,,HKG,19880925,,,,,,,,0.1
+player,home,bench,39,Leung Hing Kit,,HKG,19891022,,yes,,,,,,0.1
+player,away,start,24,Izham Tarmizi,Izham,MAS,19910424,,yes,,75,53,,,
+player,away,start,42,Fazly Mazlan,Fazly,MAS,19931222,,,,,,,,
+player,away,start,6,Marcos Antônio,Marcos,MAS,19830525,,,,,,,,0.4
+player,away,start,7,Aidil Zafuan,Aidil,MAS,19870803,,,,,37,,,
+player,away,start,12,Subramaniam Kunanlan,Subramaniam,MAS,19860915,,,,,,,,
+player,away,start,14,Hariss Harun,Hariss,SGP,19901119,,,,,,,,
+player,away,start,8,Safiq Rahim,Safiq,MAS,19870705,yes,,,79,59,,,
+player,away,start,19,Luciano Figueroa,,ARG,19810519,,,,,,,36,0.5
+player,away,start,18,Mahali Jasuli,Mahali,MAS,19890402,,,,70,,,,
+player,away,start,10,Safee Sali,Safee,MAS,19840129,,,,,,,,
+player,away,start,9,Alhaji Kamara,,SLE,19940416,,,,,,,,0.3
+player,away,sub,13,Gary Steven Robbat,,MAS,19920903,,,70,,,,,
+player,away,sub,1,Farizal Marlias,,MAS,19860629,,yes,75,,,,,
+player,away,sub,17,Amri Yahyah,,MAS,19810121,,,79,,,,,
+player,away,bench,21,Jasazrin Jamaludin,,MAS,19860403,,,,,,,,
+player,away,bench,23,Chanthuru Suppiah,,MAS,19871214,,,,,,,,
+player,away,bench,25,Junior Eldstål,,MAS,19910916,,,,,,,,
+player,away,bench,27,Fadhli Shas,,MAS,19910121,,,,,,,,
 ,,,,,,,,,,,,,,,
 # --- GOALS --- goal,minute,side,scorer,type,assist,,,,,,,,,,
 goal,26,away,Mahali Jasuli,goal,Alhaji Kamara,,,,,,,,,,
