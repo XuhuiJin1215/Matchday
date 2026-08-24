@@ -270,6 +270,9 @@ nav.tabs a.on{background:var(--ink);color:var(--paper)}
 .pl .nm{flex:0 1 auto;min-width:0}
 .pl .val{margin-left:auto;padding-left:8px;font-family:var(--font-display);font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums;flex:none}
 .pl.dim{color:var(--muted)}
+.pl .age{flex:none;font-family:var(--font-display);font-size:11px;font-weight:700;color:var(--muted);
+  background:rgba(20,28,36,.05);padding:2px 6px;border-radius:999px;font-variant-numeric:tabular-nums}
+.coach .avg-age{margin-left:auto;font-family:var(--font-display);font-size:12px;font-weight:700;color:var(--muted)}
 .badge{position:relative;display:inline-flex;align-items:center;justify-content:center;flex:none}
 .badge .fb{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:800;font-size:8px}
 .badge img{position:relative;z-index:1;width:100%;height:100%;object-fit:contain}
@@ -712,6 +715,23 @@ function compLogo(matchId,size){
   return `<span class="comp-logo" style="width:${size}px;height:${size}px"><img src="emblems/${esc(matchId)}.png" alt="" loading="lazy" onerror="this.closest(\'.comp-logo\').style.display=\'none\'"></span>`;
 }
 const minNum=v=>parseInt(String(v).replace(/[^0-9].*$/,""),10)||0;
+
+/* A player's id doubles as their date of birth (YYYYMMDD), so an id plus the
+   match date gives their age on the day. Ids that aren't 8-digit dates are
+   still valid identifiers — they just yield no age. */
+function ageOn(id,matchDate){
+  if(!id||!matchDate) return null;
+  const s=String(id).trim();
+  if(!/^\d{8}$/.test(s)) return null;
+  const by=+s.slice(0,4), bm=+s.slice(4,6), bd=+s.slice(6,8);
+  if(bm<1||bm>12||bd<1||bd>31) return null;
+  const p=matchDate.split("-");
+  if(p.length<3) return null;
+  const my=+p[0], mm=+p[1], md=+p[2];
+  let age=my-by;
+  if(mm<bm||(mm===bm&&md<bd)) age--;
+  return (age>=0&&age<=60)?age:null;
+}
 /* A ticket in USD needs no separate ticket_price_usd — the price itself already is one. */
 const ticketUSD=m=>{
   const p=m.personal||{};
@@ -921,6 +941,7 @@ function lineupBlock(m,side){
       <span class="no">${esc(p.number||"")}</span>
       ${p.country?flag(p.country):""}
       <span class="nm">${esc(p.name)}</span>
+      ${(()=>{const a=ageOn(p.id,m.date);return a==null?"":`<span class="age num" title="Age on matchday">${a}</span>`;})()}
       ${status.join("")}
       ${events}
       ${p.value!=null?`<span class="val">€${p.value}m</span>`:""}
@@ -930,7 +951,10 @@ function lineupBlock(m,side){
   return `<div class="panel lineup">
     <div class="lineup-top">${crest(m.id,side,t.name)}<span>${esc(t.name||"")}</span>${t.country?flag(t.country):""}
       ${squadValue(m,side)!=null?`<span class="sv num">€${fmtVal(squadValue(m,side))}m</span>`:""}</div>
-    ${t.coach?`<div class="coach"><span class="k">Head coach</span>${t.coachCountry?flag(t.coachCountry):""}<span>${esc(t.coach)}</span></div>`:""}
+    ${t.coach?`<div class="coach"><span class="k">Head coach</span>${t.coachCountry?flag(t.coachCountry):""}<span>${esc(t.coach)}</span>
+      ${(()=>{const ages=of("start").map(p=>ageOn(p.id,m.date)).filter(a=>a!=null);
+        return ages.length?`<span class="avg-age num" title="Average age of the starting 11">Avg ${(ages.reduce((x,y)=>x+y,0)/ages.length).toFixed(1)}</span>`:"";})()}
+    </div>`:""}
     ${block("Starting 11",of("start"),false)}
     ${block("Substitutions",of("sub"),false)}
     ${block("Bench",of("bench"),true)}

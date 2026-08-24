@@ -70,12 +70,16 @@ pitch; leave it blank and the last word of the full name is used, which is why *
 `Lee` written in but *Gonzalo Higuaín* doesn't. `value` is market value in € millions; if every
 player has one the squad total is computed, otherwise `squad_value` on the `team` row is used.
 
-**`id`.** Leave this blank almost always — it has nothing to do with player identity across the
-whole site by default. It exists for one situation: two different real people who happen to share
-the exact same `name` (two players both called "Jorginho", say). Give each of them a distinct,
-arbitrary `id` and the statistics tab will count them as separate people instead of merging their
-appearances into one. A blank `id` matches every other blank `id` for that name, so this only
-needs filling in when a genuine name collision comes up.
+**`id`.** A player's date of birth as `YYYYMMDD` — e.g. `19870624`. It does two jobs at once:
+
+- **Identity.** Two people who share a name are told apart by their differing ids, so the
+  statistics tab counts them separately instead of merging their appearances. A blank id matches
+  every other blank id for that name.
+- **Age.** From the id and the match date, the site works out how old each player was *on that
+  day* and shows it beside their name, plus the average age of each starting 11.
+
+Any other value still works as a plain identifier — it just yields no age. So you can fill these
+in gradually: a player without a date of birth simply shows no age, and nothing else changes.
 
 **Player markers.** `captain` and `goalkeeper` take `yes` (or anything non-blank); everything else
 takes a **minute**: `on` and `off` for entering and leaving the pitch, and `yellow`, `double
