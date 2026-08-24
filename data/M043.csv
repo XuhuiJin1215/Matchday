@@ -1,0 +1,101 @@
+,,,,,,,,,,,,,,,
+# --- MATCH --- meta,field,value,,,,,,,,,,,,,
+meta,id,M043,,,,,,,,,,,,,
+meta,status,played,,,,,,,,,,,,,
+meta,competition,Serie A,,,,,,,,,,,,,
+meta,round,Matchday 28,,,,,,,,,,,,,
+meta,date,2019-03-17,,,,,,,,,,,,,
+meta,kickoff,20:30,,,,,,,,,,,,,
+meta,venue,Stadio Giuseppe Meazza,,,,,,,,,,,,,
+meta,city,Milan,,,,,,,,,,,,,
+meta,country,ITA,,,,,,,,,,,,,
+meta,neutral,no,,,,,,,,,,,,,
+meta,attendance,77749,,,,,,,,,,,,,
+meta,score,2-3,,,,,,,,,,,,,
+meta,aggregate,,,,,,,,,,,,,,
+meta,decision,,,,,,,,,,,,,,
+meta,referee,Marco Guida,,,,,,,,,,,,,
+meta,referee_country,ITA,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- TEAMS --- team,side,name,country,coach,coach_country,formation,squad_value,pitch_fill,pitch_number,gk_fill,stat_color,,,,
+team,home,Milan,ITA,Gennaro Gattuso,ITA,4-3-3,500,#FE333D,#FFFFFF,,#FE333D,,,,
+team,away,Internazionale,ITA,Luciano Spalletti,ITA,4-3-3,389.3,#3574DC,#FFFFFF,,#3574DC,,,,
+,,,,,,,,,,,,,,,
+# --- PLAYERS -- player,side,role,number,name,kit_name,country,id,captain,goalkeeper,on,off,yellow,double yellow,red,value
+player,home,start,99,Gianluigi Donnarumma,,ITA,19990225,,yes,,,,,,50
+player,home,start,68,Ricardo Rodriguez,,SUI,19920825,,,,58,32,,,17
+player,home,start,13,Alessio Romagnoli,,ITA,19950112,yes,,,,66,,,50
+player,home,start,22,Mateo Musacchio,,ARG,19900826,,,,,,,,15
+player,home,start,2,Davide Calabria,,ITA,19961206,,,,,,,,20
+player,home,start,39,Lucas Paquetá,,BRA,19970827,,,,46,,,,35
+player,home,start,14,Tiémoué Bakayoko,,FRA,19940817,,,,,,,,35
+player,home,start,79,Franck Kessié,,CIV,19961219,,,,69,,,,35
+player,home,start,10,Hakan Çalhanoğlu,,TUR,19940208,,,,,,,,22
+player,home,start,19,Krzysztof Piątek,,POL,19950701,,,,,,,,40
+player,home,start,8,Suso,,ESP,19931119,,,,,80,,,45
+player,home,sub,7,Samu Castillejo,,ESP,19950118,,,46,,,,,18
+player,home,sub,63,Patrick Cutrone,,ITA,19980103,,,58,,,,,30
+player,home,sub,12,Andrea Conti,,ITA,19940302,,,69,,89,,,18
+player,home,bench,11,Fabio Borini,,ITA,19910329,,,,,,,,7
+player,home,bench,16,Andrea Bertolacci,,ITA,19910111,,,,,,,,5
+player,home,bench,17,Cristián Zapata,,COL,19860930,,,,,,,,2.5
+player,home,bench,20,Ignazio Abate,,ITA,19861112,,,,,,,,3
+player,home,bench,21,Lucas Biglia,,ARG,19860130,,,,,,,,10
+player,home,bench,25,Pepe Reina,,ESP,19820831,,yes,,,,,,1
+player,home,bench,33,Mattia Caldara,,ITA,19940505,,,,,,,,25
+player,home,bench,90,Antonio Donnarumma,,ITA,19900707,,yes,,,,,,0.5
+player,home,bench,93,Diego Laxalt,,URU,19930207,,,,,,,,16
+player,away,start,1,Samir Handanović,,SVN,19840714,yes,yes,,,,,,6
+player,away,start,18,Kwadwo Asamoah,,GHA,19881209,,,,,,,,14
+player,away,start,37,Milan Škriniar,,SVK,19950211,,,,,,,,60
+player,away,start,6,Stefan de Vrij,,NED,19920205,,,,,,,,45
+player,away,start,33,Danilo D'Ambrosio,,ITA,19880909,,,,,,,,12
+player,away,start,8,Matías Vecino,,URU,19910824,,,,90+2,79,,,25
+player,away,start,77,Marcelo Brozović,,CRO,19921116,,,,73,14,,,45
+player,away,start,5,Roberto Gagliardini,,ITA,19940408,,,,,90+3,,,18
+player,away,start,44,Ivan Perišić,,CRO,19890202,,,,,,,,35
+player,away,start,10,Lautaro Martínez,,ARG,19970822,,,,,,,,25
+player,away,start,16,Matteo Politano,,ITA,19930803,,,,83,,,,30
+player,away,sub,20,Borja Valero,,ESP,19850112,,,73,,,,,4
+player,away,sub,87,Antonio Candreva,,ITA,19870228,,,83,,,,,11
+player,away,sub,13,Andrea Ranocchia,,ITA,19880216,,,90+2,,,,,3.5
+player,away,bench,11,Keita Baldé,,SEN,19950308,,,,,,,,28
+player,away,bench,21,Cédric Soares,,POR,19910831,,,,,,,,15
+player,away,bench,27,Daniele Padelli,,ITA,19851025,,yes,,,,,,0.8
+player,away,bench,29,Dalbert,,BRA,19930905,,,,,,,,12
+,,,,,,,,,,,,,,,
+# --- GOALS --- goal,minute,side,scorer,type,assist,,,,,,,,,,
+goal,3,away,Matías Vecino,goal,Lautaro Martínez,,,,,,,,,,
+goal,51,away,Stefan de Vrij,goal,Matteo Politano,,,,,,,,,,
+goal,57,home,Tiémoué Bakayoko,goal,Hakan Çalhanoğlu,,,,,,,,,,
+goal,67,away,Lautaro Martínez,goal,,,,,,,,,,,
+goal,71,home,Mateo Musacchio,goal,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- MATCH STATS --- stat,name,home,away,,,,,,,,,,,,
+stat,Possession,56,44,,,,,,,,,,,,
+stat,Expected goals (xG),,,,,,,,,,,,,,
+stat,Shots,11,14,,,,,,,,,,,,
+stat,Shots on target,5,5,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- WEATHER --- weather,field,value,,,,,,,,,,,,,
+weather,condition,Drizzle,,,,,,,,,,,,,
+weather,temp_c,11,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- MATCHDAY --- personal,field,value,,,,,,,,,,,,,
+personal,ticket_price,276,,,,,,,,,,,,,
+personal,ticket_currency,EUR,,,,,,,,,,,,,
+personal,ticket_price_usd,312,,,,,,,,,,,,,
+personal,section,Block 158,,,,,,,,,,,,,
+personal,row,1,,,,,,,,,,,,,
+personal,seat,6,,,,,,,,,,,,,
+personal,seating,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- PHOTOS --- photo,file,caption,,,,,,,,,,,,,
+photo,M043_1.jpg,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- CHAMPIONS --- champion,field,value,,,,,,,,,,,,,
+champion,team,,,,,,,,,,,,,,
+champion,side,,,,,,,,,,,,,,
+champion,title,,,,,,,,,,,,,,
+champion,season,,,,,,,,,,,,,,
+champion,note,,,,,,,,,,,,,,
