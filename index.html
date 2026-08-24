@@ -270,8 +270,8 @@ nav.tabs a.on{background:var(--ink);color:var(--paper)}
 .pl .nm{flex:0 1 auto;min-width:0}
 .pl .val{margin-left:auto;padding-left:8px;font-family:var(--font-display);font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums;flex:none}
 .pl.dim{color:var(--muted)}
-.pl .age{flex:none;font-family:var(--font-display);font-size:11px;font-weight:700;color:var(--muted);
-  background:rgba(20,28,36,.05);padding:2px 6px;border-radius:999px;font-variant-numeric:tabular-nums}
+.pl .age{flex:none;font-family:var(--font-display);font-size:12px;font-weight:600;
+  color:var(--muted);opacity:.75;font-variant-numeric:tabular-nums}
 .coach .avg-age{margin-left:auto;font-family:var(--font-display);font-size:12px;font-weight:700;color:var(--muted)}
 .badge{position:relative;display:inline-flex;align-items:center;justify-content:center;flex:none}
 .badge .fb{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:800;font-size:8px}
@@ -429,6 +429,9 @@ nav.tabs a.on{background:var(--ink);color:var(--paper)}
 .hs-bar{width:100%;background:var(--ink);border-radius:2px 2px 0 0;min-height:3px}
 .hs-n{font-family:var(--font-display);font-weight:700;font-size:12px}
 .hs-l{font-size:10px;color:var(--muted);font-family:var(--font-display)}
+.age-bins{gap:4px}
+.age-bins .lb{font-size:9px}
+.age-bins .n{font-size:10px}
 
 /* year bars */
 .years{display:flex;align-items:flex-end;gap:8px;height:150px;padding:8px 18px 0}
@@ -732,6 +735,21 @@ function ageOn(id,matchDate){
   if(mm<bm||(mm===bm&&md<bd)) age--;
   return (age>=0&&age<=60)?age:null;
 }
+/* Exact age as {years, days} on a given date — for the ranking list, where
+   "27 years 112 days" separates players who'd otherwise tie at 27. */
+function ageExactOn(id,matchDate){
+  const years=ageOn(id,matchDate);
+  if(years==null) return null;
+  const s=String(id).trim();
+  const by=+s.slice(0,4), bm=+s.slice(4,6), bd=+s.slice(6,8);
+  const p=matchDate.split("-");
+  const born=Date.UTC(by,bm-1,bd), on=Date.UTC(+p[0],+p[1]-1,+p[2]);
+  const lastBirthday=Date.UTC(by+years,bm-1,bd);
+  const days=Math.round((on-lastBirthday)/86400000);
+  return (isNaN(days)||days<0)?{years,days:0}:{years,days};
+}
+const fmtAge=a=>a==null?"":`${a.years}y ${a.days}d`;
+
 /* A ticket in USD needs no separate ticket_price_usd — the price itself already is one. */
 const ticketUSD=m=>{
   const p=m.personal||{};
@@ -1292,9 +1310,44 @@ function computeStats(){
       .sort((a,b)=>b.v-a.v),"valuations","players");
   addCount("players-nationality","Players by nationality","Teams and players",
     tally(played.flatMap(appearances).map(p=>p.country)),{isFlag:true,noun:"nationalities",donut:true,avgUnit:"appearances"});
+  /* Players by age: one row per appearance, ranked oldest first, with the exact
+     age on that matchday. The chart bins them into whole years. */
+  {
+    const rows=played.flatMap(m=>appearances(m).map(p=>{
+      const ex=ageExactOn(p.id,m.date);
+      return ex==null?null:{p,m,ex};
+    })).filter(Boolean)
+      .sort((a,b)=>(b.ex.years-a.ex.years)||(b.ex.days-a.ex.days));
+    defs["players-age"]={
+      key:"players-age",title:"Players by age",section:"Teams and players",
+      kind:"age",noun:"appearances",avgCaption:"years old, on average",
+      fmt:v=>String(v),
+      rows:rows.map(r=>({
+        key:r.m.id+"|"+r.p.name+"|"+(r.p.id||""),
+        label:r.p.name,
+        value:r.ex.years+r.ex.days/365.25,
+        display:fmtAge(r.ex),
+        years:r.ex.years,
+        id:r.m.id,date:r.m.date,
+        flagCode:playerCountry[r.p.name+"\u0000"+(r.p.id||"")]||r.p.country||null
+      }))
+    };
+    /* whole-year bins, every year from youngest to oldest, gaps included */
+    const ys=rows.map(r=>r.ex.years);
+    if(ys.length){
+      const bins={};
+      for(let y=Math.min(...ys);y<=Math.max(...ys);y++) bins[y]=0;
+      ys.forEach(y=>bins[y]++);
+      defs["players-age"].ageBins=bins;
+    }
+  }
   addCount("scorers","Scorers","Teams and players",tally(played.flatMap(m=>m.goals.map(g=>g.scorer))),
     {noun:"scorers",avgUnit:"goals",flagFor:name=>scorerCountry[name]});
   defs.scorers.avgCaption="goals per scorer";
+  addCount("assists","Assists","Teams and players",
+    tally(played.flatMap(m=>m.goals.map(g=>g.assist))),
+    {noun:"assisters",avgUnit:"assists",flagFor:name=>scorerCountry[name]});
+  defs.assists.avgCaption="assists per player";
   addCount("head-coach","Head coaches","Teams and players",
     tally(played.flatMap(m=>[(m.teams.home||{}).coach,(m.teams.away||{}).coach])),
     {noun:"coaches",avgUnit:"matches",flagFor:name=>coachCountry[name]});
@@ -1363,7 +1416,7 @@ function statCard(def){
       <span class="nm">${label}</span>
       ${r.date?`<span class="dt">${fmtDate(r.date)}</span>`:""}
       ${def.kind==="count"?`<span class="track"><i style="width:${Math.round(r.value/max*100)}%"></i></span>`:""}
-      <span class="n">${def.fmt(r.value)}</span>
+      <span class="n">${r.display||def.fmt(r.value)}</span>
     </div>`;}).join("")}</div>`:`<div class="empty">Nothing recorded yet.</div>`;
   return `<div class="card stat-card">
     <h3><a href="#/stat/${esc(def.key)}">${esc(def.title)}</a></h3>
@@ -1456,6 +1509,20 @@ function vizPerYear(def,title){
     <div class="years">${years.map(y=>`<div class="yr">
       <span class="n">${counts[y]||""}</span>
       <span class="bar-v ${counts[y]?"":"zero"}" style="height:${counts[y]?Math.max(4,Math.round(counts[y]/max*78)):1}%"></span>
+      <span class="lb">${y}</span></div>`).join("")}</div>
+    <div style="height:14px"></div></div>`;
+}
+
+/* age distribution: one column per whole year of age, gaps included */
+function vizAgeBins(def){
+  const bins=def.ageBins||{};
+  const years=Object.keys(bins);
+  if(years.length<2) return "";
+  const max=Math.max(1,...Object.values(bins));
+  return `<div class="card"><h3>Age distribution</h3>
+    <div class="years age-bins">${years.map(y=>`<div class="yr" title="${bins[y]} at ${y}">
+      <span class="n">${bins[y]||""}</span>
+      <span class="bar-v ${bins[y]?"":"zero"}" style="height:${bins[y]?Math.max(4,Math.round(bins[y]/max*78)):1}%"></span>
       <span class="lb">${y}</span></div>`).join("")}</div>
     <div style="height:14px"></div></div>`;
 }
@@ -1579,8 +1646,9 @@ function renderStatDetail(key){
   const total=vals.reduce((a,b)=>a+b,0);
   const avgDenom=def.avgDenominator||vals.length;
   const avg=total/avgDenom;
-  const charts=def.yearCounts?vizPerYear(def,def.yearChartTitle)
-    :(def.donut?vizDonut(vdef):(def.kind==="count"?vizHistogram(vdef):vizTimeline(vdef)));
+  const charts=def.ageBins?vizAgeBins(def)
+    :(def.yearCounts?vizPerYear(def,def.yearChartTitle)
+    :(def.donut?vizDonut(vdef):(def.kind==="count"?vizHistogram(vdef):vizTimeline(vdef))));
   const toggle=canToggle?`<div class="seg" role="group" aria-label="List view">
       <button class="${mode==="all"?"on":""}" onclick="setStatView('${esc(def.key)}','all')">
         Every ${esc(def.noun)} <span class="seg-n num">${allRows.length}</span></button>
@@ -1606,9 +1674,9 @@ function renderStatDetail(key){
     </section>
     <div class="tiles">
       <div class="tile"><div class="k">${esc(def.kind==="count"?def.noun:(mode==="best"?def.dedupNoun:(def.kind==="value"?def.noun:"Matches")))}</div><div class="v num">${rows.length}</div><div class="s">in the list</div></div>
-      <div class="tile"><div class="k">Highest</div><div class="v num">${def.fmt(Math.max(...vals))}</div><div class="s">${esc(rows[0].label)}</div></div>
-      ${def.showLows?`<div class="tile"><div class="k">Lowest</div><div class="v num">${def.fmt(Math.min(...vals))}</div><div class="s">${esc(rows[rows.length-1].label)}</div></div>`:""}
-      <div class="tile"><div class="k">Average</div><div class="v num">${def.fmt(Math.round(avg*10)/10)}</div><div class="s">${esc(avgCaption)}</div></div>
+      <div class="tile"><div class="k">${def.kind==="age"?"Oldest":"Highest"}</div><div class="v num">${rows[0].display||def.fmt(Math.max(...vals))}</div><div class="s">${esc(rows[0].label)}</div></div>
+      ${(def.showLows||def.kind==="age")?`<div class="tile"><div class="k">${def.kind==="age"?"Youngest":"Lowest"}</div><div class="v num">${rows[rows.length-1].display||def.fmt(Math.min(...vals))}</div><div class="s">${esc(rows[rows.length-1].label)}</div></div>`:""}
+      <div class="tile"><div class="k">Average</div><div class="v num">${def.kind==="age"?(Math.round(avg*10)/10):def.fmt(Math.round(avg*10)/10)}</div><div class="s">${esc(avgCaption)}</div></div>
       ${def.kind==="count"?`<div class="tile"><div class="k">Total</div><div class="v num">${nf(total)}</div><div class="s">${esc(def.avgUnit||"entries")} counted</div></div>`:""}
     </div>
     <div class="cards charts">${charts}</div>
@@ -1620,7 +1688,7 @@ function renderStatDetail(key){
           ${r.icon||(r.flagCode?flag(r.flagCode,"lg"):"")}
           <span class="nm">${label}</span>
           ${r.date?`<span class="dt">${fmtDate(r.date)}</span>`:""}
-          <span class="n">${def.fmt(r.value)}</span>
+          <span class="n">${r.display||def.fmt(r.value)}</span>
         </div>`;}).join("")}</div>
       ${def.listNote?`<p class="list-note">${esc(def.listNote)}</p>`:""}</div>
     </section>

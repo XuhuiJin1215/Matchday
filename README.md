@@ -80,6 +80,8 @@ player has one the squad total is computed, otherwise `squad_value` on the `team
 
 Any other value still works as a plain identifier — it just yields no age. So you can fill these
 in gradually: a player without a date of birth simply shows no age, and nothing else changes.
+`dob-prompt.md` in the project root is a ready-made prompt for filling these in via a separate
+chat.
 
 **Player markers.** `captain` and `goalkeeper` take `yes` (or anything non-blank); everything else
 takes a **minute**: `on` and `off` for entering and leaving the pitch, and `yellow`, `double
