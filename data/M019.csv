@@ -22,45 +22,45 @@ team,home,Hong Kong,,Kim Pan-gon,KOR,4-2-3-1,2.9,#E8384E,#FFFFFF,,#E8384E,,,,
 team,away,Guam,,Darren Sawatzky,USA,4-2-3-1,0.6,#DDE0E0,#221E37,,#221E37,,,,
 ,,,,,,,,,,,,,,,
 # --- PLAYERS -- player,side,role,number,name,kit_name,country,id,captain,goalkeeper,on,off,yellow,double yellow,red,value
-player,home,start,1,Yapp Hung Fai,Yapp,HKG,,yes,yes,,,,,,0.3
-player,home,start,20,Cheng King Ho,Cheng,HKG,,,,,,,,,0.1
-player,home,start,3,Festus Baise,,HKG,,,,,,,,,0.1
-player,home,start,23,Andy Russell,,HKG,,,,,,,,,0.1
-player,home,start,14,Jack Sealy,,HKG,,,,,,,,,0.1
-player,home,start,6,Huang Yang,Huang,HKG,,,,,,39,,,0.1
-player,home,start,10,Lam Ka Wai,Lam,HKG,,,,,65,,,,0.2
-player,home,start,11,Godfred Karikari,,HKG,,,,,65,,,,0.1
-player,home,start,9,Sandro,,HKG,,,,,,,,,0.3
-player,home,start,7,Chan Siu Ki,Chan,HKG,,,,,73,,,,0.2
-player,home,start,26,Alex Akande,,HKG,,,,,,,,,0.2
-player,home,sub,15,Roberto Júnior,,HKG,,,,65,,,,,0.3
-player,home,sub,22,Jaimes McKee,,HKG,,,,65,,,,,0.1
-player,home,sub,8,Xu Deshuai,,HKG,,,,73,,,,,0.2
-player,home,bench,2,Fong Pak Lun,,HKG,,,,,,,,,0.1
-player,home,bench,5,Hélio,,HKG,,,,,,,,,0.2
-player,home,bench,12,Lo Kwan Yee,,HKG,,,,,,,,,0.2
-player,home,bench,16,Leung Chun Pong,,HKG,,,,,,,,,0.2
-player,home,bench,17,Lee Hong Lim,,HKG,,,,,,,,,0.1
-player,home,bench,30,Tsang Man Fai,,HKG,,,yes,,,,,,0.1
-player,away,start,1,Doug Herrick,,GUM,,,yes,,,,,,
-player,away,start,3,Jonahan Romero,,GUM,,,,,,45,,,
-player,away,start,6,Mason Grimes,,GUM,,,,,,,,,
-player,away,start,14,Brandon McDonald,,GUM,,,,,,,,,0.3
-player,away,start,2,Alex Lee,,GUM,,,,,,66,,,0.1
-player,away,start,10,Jason Cunliffe,,GUM,,yes,,,,25,,,
-player,away,start,8,Justin Lee,,GUM,,,,,72,,,,
-player,away,start,23,Shane Malcolm,,GUM,,,,,,,,,
-player,away,start,13,Ryan Guy,,GUM,,,,,76,,,,0.2
-player,away,start,9,Eddie Na,,GUM,,,,,,,,,
-player,away,start,17,Ian Mariano,,GUM,,,,,46,,,,
-player,away,sub,16,Connor Cappelletti,,GUM,,,,46,,,,,
-player,away,sub,5,Micah Paulino,,GUM,,,,72,,,,,
-player,away,sub,12,Tye Perdido,,GUM,,,,76,,,,,
-player,away,bench,18,Sean Evans,,GUM,,,yes,,,,,,
-player,away,bench,21,Marcus Lopez,,GUM,,,,,,,,,
-player,away,bench,22,Dallas Jaye,,GUM,,,yes,,,,,,
-player,away,bench,25,Scott Guerrero,,GUM,,,,,,,,,
-player,away,bench,28,Rin Katsumata,,GUM,,,,,,,,,
+player,home,start,1,Yapp Hung Fai,Yapp,HKG,19900321,yes,yes,,,,,,0.3
+player,home,start,20,Cheng King Ho,Cheng,HKG,19891107,,,,,,,,0.1
+player,home,start,3,Festus Baise,,HKG,19800411,,,,,,,,0.1
+player,home,start,23,Andy Russell,,HKG,19871121,,,,,,,,0.1
+player,home,start,14,Jack Sealy,,HKG,19870504,,,,,,,,0.1
+player,home,start,6,Huang Yang,Huang,HKG,19831030,,,,,39,,,0.1
+player,home,start,10,Lam Ka Wai,Lam,HKG,19850605,,,,65,,,,0.2
+player,home,start,11,Godfred Karikari,,HKG,19850311,,,,65,,,,0.1
+player,home,start,9,Sandro,,HKG,19870310,,,,,,,,0.3
+player,home,start,7,Chan Siu Ki,Chan,HKG,19850714,,,,73,,,,0.2
+player,home,start,26,Alex Akande,,HKG,19890209,,,,,,,,0.2
+player,home,sub,15,Roberto Júnior,,HKG,19830528,,,65,,,,,0.3
+player,home,sub,22,Jaimes McKee,,HKG,19870414,,,65,,,,,0.1
+player,home,sub,8,Xu Deshuai,,HKG,19870713,,,73,,,,,0.2
+player,home,bench,2,Fong Pak Lun,,HKG,19930414,,,,,,,,0.1
+player,home,bench,5,Hélio,,HKG,19860131,,,,,,,,0.2
+player,home,bench,12,Lo Kwan Yee,,HKG,19841009,,,,,,,,0.2
+player,home,bench,16,Leung Chun Pong,,HKG,19861001,,,,,,,,0.2
+player,home,bench,17,Lee Hong Lim,,HKG,19830929,,,,,,,,0.1
+player,home,bench,30,Tsang Man Fai,,HKG,19910802,,yes,,,,,,0.1
+player,away,start,1,Doug Herrick,,GUM,19890602,,yes,,,,,,
+player,away,start,3,Jonahan Romero,,GUM,19880317,,,,,45,,,
+player,away,start,6,Mason Grimes,,GUM,19921021,,,,,,,,
+player,away,start,14,Brandon McDonald,,GUM,19860116,,,,,,,,0.3
+player,away,start,2,Alex Lee,,GUM,19900115,,,,,66,,,0.1
+player,away,start,10,Jason Cunliffe,,GUM,19831023,yes,,,,25,,,
+player,away,start,8,Justin Lee,,GUM,19900115,,,,72,,,,
+player,away,start,23,Shane Malcolm,,GUM,19911013,,,,,,,,
+player,away,start,13,Ryan Guy,,GUM,19850905,,,,76,,,,0.2
+player,away,start,9,Eddie Na,,GUM,19960212,,,,,,,,
+player,away,start,17,Ian Mariano,,GUM,19901007,,,,46,,,,
+player,away,sub,16,Connor Cappelletti,,GUM,19890117,,,46,,,,,
+player,away,sub,5,Micah Paulino,,GUM,19921116,,,72,,,,,
+player,away,sub,12,Tye Perdido,,GUM,19881128,,,76,,,,,
+player,away,bench,18,Sean Evans,,GUM,19990710,,yes,,,,,,
+player,away,bench,21,Marcus Lopez,,GUM,19920209,,,,,,,,
+player,away,bench,22,Dallas Jaye,,GUM,19930619,,yes,,,,,,
+player,away,bench,25,Scott Guerrero,,GUM,19900822,,,,,,,,
+player,away,bench,28,Rin Katsumata,,GUM,19970703,,,,,,,,
 ,,,,,,,,,,,,,,,
 # --- GOALS --- goal,minute,side,scorer,type,assist,,,,,,,,,,
 goal,19,home,Alex Akande,goal,Lam Ka Wai,,,,,,,,,,

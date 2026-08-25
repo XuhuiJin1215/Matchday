@@ -22,46 +22,46 @@ team,home,Chinese Taipei,,Kazuo Kuroda,JPN,4-2-3-1,0.3,#F4F4F4,#0A4098,,#0A4098,
 team,away,Guam,,Darren Sawatzky,USA,4-2-3-1,1.3,#ED384D,#FFFFFF,,#ED384D,,,,
 ,,,,,,,,,,,,,,,
 # --- PLAYERS -- player,side,role,number,name,kit_name,country,id,captain,goalkeeper,on,off,yellow,double yellow,red,value
-player,home,start,1,Pan Wen-chieh,Pan,TPE,,,yes,,46,,,,
-player,home,start,5,Hung Tzu-kuei,Hung,TPE,,,,,40,,,,
-player,home,start,3,Chen Ting-yang,Chen,TPE,,,,,,,,,
-player,home,start,16,Wang Ruei,Wang,TPE,,,,,,,,,
-player,home,start,15,Chen Yi-wei,Chen,TPE,,yes,,,,,,,
-player,home,start,12,Wen Chih-hao,Wen,TPE,,,,,,,,,0.1
-player,home,start,8,Lin Chien-hsun,Lin,TPE,,,,,,,,,
-player,home,start,14,Chen Chao-an,Chen,TPE,,,,,,,,,0.1
-player,home,start,17,Chen Po-liang,Chen,TPE,,,,,,,,,0.1
-player,home,start,9,Chen Hao-wei,Chen,TPE,,,,,90,20,,,0.1
-player,home,start,11,Wu Chun-ching,Wu,TPE,,,,,,,,,
-player,home,sub,4,Lee Jian-liang,,TPE,,,,40,,,,,
-player,home,sub,18,Chiu Yu-hung,,TPE,,,yes,46,,,,,
-player,home,sub,23,Liu Sheng-yi,,TPE,,,,90,,,,,
-player,home,bench,2,Huang Wei-min,,TPE,,,,,,,,,
-player,home,bench,6,Yen Ho-shen,,TPE,,,,,,,,,
-player,home,bench,7,Chen Chia-chun,,TPE,,,,,,,,,
-player,home,bench,13,Li Kai-jie,,TPE,,,,,,,,,
-player,home,bench,19,Lee Hsiang-wei,,TPE,,,,,,,,,
-player,home,bench,22,Tsai Shuo-che,,TPE,,,yes,,,,,,
-player,away,start,22,Dallas Jaye,,GUM,,,yes,,,,,,
-player,away,start,3,Jonahan Romero,,GUM,,,,,82,,,,
-player,away,start,6,Mason Grimes,,GUM,,,,,,,,,
-player,away,start,14,Brandon McDonald,,GUM,,,,,,67,,,0.3
-player,away,start,2,Alex Lee,,GUM,,,,,,,,,0.1
-player,away,start,10,Jason Cunliffe,,GUM,,yes,,,38,,,,
-player,away,start,8,Justin Lee,,GUM,,,,,,,,18,
-player,away,start,9,Eddie Na,,GUM,,,,,,,,,
-player,away,start,13,Ryan Guy,,GUM,,,,,,,,,0.2
-player,away,start,20,Adolph Joseph DeLaGarza,,GUM,,,,,,,,,0.8
-player,away,start,23,Shane Malcolm,,GUM,,,,,,,,,
-player,away,sub,16,Connor Cappelletti,,GUM,,,,38,,,,,
-player,away,sub,12,Tye Perdido,,GUM,,,,82,,,,,
-player,away,bench,1,Doug Herrick,,GUM,,,yes,,,,,,
-player,away,bench,5,Micah Paulino,,GUM,,,,,,,,,
-player,away,bench,17,Ian Mariano,,GUM,,,,,,,,,
-player,away,bench,18,Sean Evans,,GUM,,,yes,,,,,,
-player,away,bench,21,Marcus Lopez,,GUM,,,,,,,,,
-player,away,bench,25,Scott Guerrero,,GUM,,,,,,,,,
-player,away,bench,28,Rin Katsumata,,GUM,,,,,,,,,
+player,home,start,1,Pan Wen-chieh,Pan,TPE,19920629,,yes,,46,,,,
+player,home,start,5,Hung Tzu-kuei,Hung,TPE,19930601,,,,40,,,,
+player,home,start,3,Chen Ting-yang,Chen,TPE,19920928,,,,,,,,
+player,home,start,16,Wang Ruei,Wang,TPE,19930810,,,,,,,,
+player,home,start,15,Chen Yi-wei,Chen,TPE,19870327,yes,,,,,,,
+player,home,start,12,Wen Chih-hao,Wen,TPE,19930325,,,,,,,,0.1
+player,home,start,8,Lin Chien-hsun,Lin,TPE,19930110,,,,,,,,
+player,home,start,14,Chen Chao-an,Chen,TPE,19950622,,,,,,,,0.1
+player,home,start,17,Chen Po-liang,Chen,TPE,19880811,,,,,,,,0.1
+player,home,start,9,Chen Hao-wei,Chen,TPE,19920430,,,,90,20,,,0.1
+player,home,start,11,Wu Chun-ching,Wu,TPE,19881218,,,,,,,,
+player,home,sub,4,Lee Jian-liang,,TPE,19910810,,,40,,,,,
+player,home,sub,18,Chiu Yu-hung,,TPE,19940831,,yes,46,,,,,
+player,home,sub,23,Liu Sheng-yi,,TPE,19951121,,,90,,,,,
+player,home,bench,2,Huang Wei-min,,TPE,19880816,,,,,,,,
+player,home,bench,6,Yen Ho-shen,,TPE,19901231,,,,,,,,
+player,home,bench,7,Chen Chia-chun,,TPE,19911013,,,,,,,,
+player,home,bench,13,Li Kai-jie,,TPE,19960722,,,,,,,,
+player,home,bench,19,Lee Hsiang-wei,,TPE,19960415,,,,,,,,
+player,home,bench,22,Tsai Shuo-che,,TPE,19960114,,yes,,,,,,
+player,away,start,22,Dallas Jaye,,GUM,19930619,,yes,,,,,,
+player,away,start,3,Jonahan Romero,,GUM,19880317,,,,82,,,,
+player,away,start,6,Mason Grimes,,GUM,19921021,,,,,,,,
+player,away,start,14,Brandon McDonald,,GUM,19860116,,,,,67,,,0.3
+player,away,start,2,Alex Lee,,GUM,19900115,,,,,,,,0.1
+player,away,start,10,Jason Cunliffe,,GUM,19831023,yes,,,38,,,,
+player,away,start,8,Justin Lee,,GUM,19900115,,,,,,,18,
+player,away,start,9,Eddie Na,,GUM,19960212,,,,,,,,
+player,away,start,13,Ryan Guy,,GUM,19850905,,,,,,,,0.2
+player,away,start,20,Adolph Joseph DeLaGarza,,GUM,19871104,,,,,,,,0.8
+player,away,start,23,Shane Malcolm,,GUM,19911013,,,,,,,,
+player,away,sub,16,Connor Cappelletti,,GUM,19890117,,,38,,,,,
+player,away,sub,12,Tye Perdido,,GUM,19881128,,,82,,,,,
+player,away,bench,1,Doug Herrick,,GUM,19890602,,yes,,,,,,
+player,away,bench,5,Micah Paulino,,GUM,19921116,,,,,,,,
+player,away,bench,17,Ian Mariano,,GUM,19901007,,,,,,,,
+player,away,bench,18,Sean Evans,,GUM,19990710,,yes,,,,,,
+player,away,bench,21,Marcus Lopez,,GUM,19920209,,,,,,,,
+player,away,bench,25,Scott Guerrero,,GUM,19900822,,,,,,,,
+player,away,bench,28,Rin Katsumata,,GUM,19970703,,,,,,,,
 ,,,,,,,,,,,,,,,
 # --- GOALS --- goal,minute,side,scorer,type,assist,,,,,,,,,,
 goal,26,home,Wu Chun-ching,goal,Chen Po-liang,,,,,,,,,,

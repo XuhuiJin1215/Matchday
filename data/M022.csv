@@ -22,42 +22,42 @@ team,home,R&F,HKG,Li Zhihai,CHN,4-4-2,0.6,#00389D,#FFFFFF,,#00389D,,,,
 team,away,Kitchee,HKG,Chu Chi Kwong,HKG,4-3-3,2.7,#BA014B,#FFFFFF,,#BA014B,,,,
 ,,,,,,,,,,,,,,,
 # --- PLAYERS -- player,side,role,number,name,kit_name,country,id,captain,goalkeeper,on,off,yellow,double yellow,red,value
-player,home,start,1,Long Wenhao,Long,CHN,,,yes,,,,,,0.1
-player,home,start,26,Jing Teng,Jing,HKG,,,,,,54,,,0.1
-player,home,start,25,Lam Wan Kit,Lam,CHN,,,,,,,,,0.1
-player,home,start,4,Yang Ting,Yang,CHN,,yes,,,,,,,0.1
-player,home,start,45,Liang Zhanhao,Liang,CHN,,,,,62,,,,0.1
-player,home,start,8,Yang Ziyi,Yang,CHN,,,,,58,,,,0.1
-player,home,start,18,Xiang Jiachi,Xiang,CHN,,,,,,,,,0.1
-player,home,start,10,Min Junlin,Min,CHN,,,,,,,,,0.1
-player,home,start,19,Ma Weichao,Ma,CHN,,,,,,,,,0.1
-player,home,start,7,Chuck Yiu Kwok,Chuck,HKG,,,,,84,48,,,0.1
-player,home,start,17,Chen Jiaqi,Chen,CHN,,,,,,,,,0.1
-player,home,sub,37,Li Yuyang,,CHN,,,,58,,,,,0.1
-player,home,sub,14,Cheung Kwok Ming,,HKG,,,,62,,,,,0.1
-player,home,sub,27,Bi Guanghuan,,CHN,,,,84,,,,,0.1
-player,home,bench,5,Ye Ruiwen,,CHN,,,,,,,,,0.1
-player,home,bench,9,Tsang Kin Fong,,HKG,,,,,,,,,0.1
-player,home,bench,15,Lam Hin Ting,,HKG,,,,,,,,,0.1
-player,home,bench,33,Xing Yu,,CHN,,,yes,,,,,,0.1
-player,away,start,1,Wang Zhenpeng,Wang,HKG,,,yes,,,,,,0.2
-player,away,start,3,Dani Cancela,,ESP,,,,,,,,,0.1
-player,away,start,90,Kim Bong-jin,Kim,KOR,,,,,,,,,0.1
-player,away,start,5,Hélio,,HKG,,,,,,,,,0.2
-player,away,start,12,Lo Kwan Yee,Lo,HKG,,yes,,,,,,,0.2
-player,away,start,16,Jared Lum,,AUS,,,,,,,,,0.1
-player,away,start,19,Huang Yang,Huang,HKG,,,,,,,,,0.1
-player,away,start,20,Matt Lam,,CAN,,,,,,,,,0.3
-player,away,start,7,Fernando,,BRA,,,,,65,,,,0.4
-player,away,start,17,Sandro,,HKG,,,,,75,,,,0.3
-player,away,start,6,Zhi-Gin Lam,,GER,,,,,79,,,,0.3
-player,away,sub,17,Rufino Segovia,,ESP,,,,65,,,,,0.2
-player,away,sub,8,Alex Akande,,HKG,,,,75,,,,,0.2
-player,away,sub,33,Sham Kwok Keung,,HKG,,,,79,,,,,0.1
-player,away,bench,10,Lam Ka Wai,,HKG,,,,,,,,,0.2
-player,away,bench,13,Li Ngai Hoi,,HKG,,,,,,,,,0.1
-player,away,bench,21,Tong Kin Man,,HKG,,,,,,,,,0.1
-player,away,bench,23,Guo Jianqiao,,HKG,,,yes,,,,,,0.1
+player,home,start,1,Long Wenhao,Long,CHN,19970330,,yes,,,,,,0.1
+player,home,start,26,Jing Teng,Jing,HKG,19900520,,,,,54,,,0.1
+player,home,start,25,Lam Wan Kit,Lam,CHN,19871125,,,,,,,,0.1
+player,home,start,4,Yang Ting,Yang,CHN,19930604,yes,,,,,,,0.1
+player,home,start,45,Liang Zhanhao,Liang,CHN,19970522,,,,62,,,,0.1
+player,home,start,8,Yang Ziyi,Yang,CHN,19951214,,,,58,,,,0.1
+player,home,start,18,Xiang Jiachi,Xiang,CHN,19930110,,,,,,,,0.1
+player,home,start,10,Min Junlin,Min,CHN,19940119,,,,,,,,0.1
+player,home,start,19,Ma Weichao,Ma,CHN,19970112,,,,,,,,0.1
+player,home,start,7,Chuck Yiu Kwok,Chuck,HKG,19940529,,,,84,48,,,0.1
+player,home,start,17,Chen Jiaqi,Chen,CHN,19920904,,,,,,,,0.1
+player,home,sub,37,Li Yuyang,,CHN,19970924,,,58,,,,,0.1
+player,home,sub,14,Cheung Kwok Ming,,HKG,19901223,,,62,,,,,0.1
+player,home,sub,27,Bi Guanghuan,,CHN,19970817,,,84,,,,,0.1
+player,home,bench,5,Ye Ruiwen,,CHN,19980413,,,,,,,,0.1
+player,home,bench,9,Tsang Kin Fong,,HKG,19930102,,,,,,,,0.1
+player,home,bench,15,Lam Hin Ting,,HKG,19991209,,,,,,,,0.1
+player,home,bench,33,Xing Yu,,CHN,19960108,,yes,,,,,,0.1
+player,away,start,1,Wang Zhenpeng,Wang,HKG,19840505,,yes,,,,,,0.2
+player,away,start,3,Dani Cancela,,ESP,19810923,,,,,,,,0.1
+player,away,start,90,Kim Bong-jin,Kim,KOR,19900718,,,,,,,,0.1
+player,away,start,5,Hélio,,HKG,19860131,,,,,,,,0.2
+player,away,start,12,Lo Kwan Yee,Lo,HKG,19841009,yes,,,,,,,0.2
+player,away,start,16,Jared Lum,,AUS,19920719,,,,,,,,0.1
+player,away,start,19,Huang Yang,Huang,HKG,19831030,,,,,,,,0.1
+player,away,start,20,Matt Lam,,CAN,19890910,,,,,,,,0.3
+player,away,start,7,Fernando,,BRA,19861114,,,,65,,,,0.4
+player,away,start,17,Sandro,,HKG,19870310,,,,75,,,,0.3
+player,away,start,6,Zhi-Gin Lam,,GER,19910604,,,,79,,,,0.3
+player,away,sub,17,Rufino Segovia,,ESP,19850301,,,65,,,,,0.2
+player,away,sub,8,Alex Akande,,HKG,19890209,,,75,,,,,0.2
+player,away,sub,33,Sham Kwok Keung,,HKG,19850910,,,79,,,,,0.1
+player,away,bench,10,Lam Ka Wai,,HKG,19850605,,,,,,,,0.2
+player,away,bench,13,Li Ngai Hoi,,HKG,19941015,,,,,,,,0.1
+player,away,bench,21,Tong Kin Man,,HKG,19850110,,,,,,,,0.1
+player,away,bench,23,Guo Jianqiao,,HKG,19860720,,yes,,,,,,0.1
 ,,,,,,,,,,,,,,,
 # --- GOALS --- goal,minute,side,scorer,type,assist,,,,,,,,,,
 goal,34,away,Zhi-Gin Lam,goal,Fernando,,,,,,,,,,

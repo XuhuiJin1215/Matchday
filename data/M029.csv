@@ -22,42 +22,42 @@ team,home,West Bromwich Albion,ENG,Tony Pulis,WAL,4-1-4-1,86.5,#DDDEE2,#1B223D,,
 team,away,Chelsea,ENG,Antonio Conte,ITA,3-4-2-1,489,#141011,#FFFFFF,,#33509C,,,,
 ,,,,,,,,,,,,,,,
 # --- PLAYERS -- player,side,role,number,name,kit_name,country,id,captain,goalkeeper,on,off,yellow,double yellow,red,value
-player,home,start,1,Ben Foster,,ENG,,,yes,,,,,,4
-player,home,start,2,Allan Nyom,,CMR,,,,,,,,,4.5
-player,home,start,6,Jonny Evans,,NIR,,,,,,,,,6
-player,home,start,23,Gareth McAuley,,NIR,,,,,64,,,,1
-player,home,start,25,Craig Dawson,,ENG,,,,,,,,,6
-player,home,start,24,Darren Fletcher,,SCO,,yes,,,,,,,2
-player,home,start,14,James McClean,,IRL,,,,,59,20,,,3
-player,home,start,8,Jake Livermore,,ENG,,,,,,,,,6
-player,home,start,47,Sam Field,,ENG,,,,,51,36,,,
-player,home,start,11,Chris Brunt,,NIR,,,,,,,,,4
-player,home,start,9,Salomón Rondón,,VEN,,,,,,,,,17
-player,home,sub,5,Claudio Yacob,,ARG,,,,51,,,,,4
-player,home,sub,22,Nacer Chadli,,BEL,,,,59,,,,,15
-player,home,sub,12,Marc Wilson,,IRL,,,,64,,71,,,2.5
-player,home,bench,4,Hal Robson-Kanu,,WAL,,,,,,,,,3
-player,home,bench,7,James Morrison,,SCO,,,,,,,,,5
-player,home,bench,13,Boaz Myhill,,WAL,,,yes,,,,,,2
-player,home,bench,45,Jonathan Leko,,ENG,,,,,,,,,1.5
-player,away,start,13,Thibaut Courtois,,BEL,,,yes,,,,,,40
-player,away,start,30,David Luiz,,BRA,David Luiz,yes,,,,,,,30
-player,away,start,24,Gary Cahill,,ENG,,,,,,,,,16
-player,away,start,28,César Azpilicueta,,ESP,,,,,,,,,25
-player,away,start,3,Marcos Alonso,,ESP,,,,,,,,,20
-player,away,start,4,Cesc Fàbregas,,ESP,,,,,,,,,35
-player,away,start,21,Nemanja Matić,,SRB,,,,,,,,,35
-player,away,start,15,Victor Moses,,NGA,,,,,86,,,,12
-player,away,start,10,Eden Hazard,,BEL,,,,,75,,,,70
-player,away,start,11,Pedro,,ESP,,,,,76,,,,25
-player,away,start,19,Diego Costa,,ESP,,,,,,,,,50
-player,away,sub,22,Willian,,BRA,,,,75,,,,,32
-player,away,sub,23,Michy Batshuayi,,BEL,,,,76,,,,,25
-player,away,sub,5,Kurt Zouma,,FRA,,,,86,,,,,17
-player,away,bench,1,Asmir Begović,,BIH,,,yes,,,,,,8
-player,away,bench,6,Nathan Aké,,NED,,,,,,,,,8
-player,away,bench,7,N'Golo Kanté,,FRA,,,,,,,,,40
-player,away,bench,26,John Terry,,ENG,,,,,,,,,1
+player,home,start,1,Ben Foster,,ENG,19830403,,yes,,,,,,4
+player,home,start,2,Allan Nyom,,CMR,19880510,,,,,,,,4.5
+player,home,start,6,Jonny Evans,,NIR,19880103,,,,,,,,6
+player,home,start,23,Gareth McAuley,,NIR,19791205,,,,64,,,,1
+player,home,start,25,Craig Dawson,,ENG,19900506,,,,,,,,6
+player,home,start,24,Darren Fletcher,,SCO,19840201,yes,,,,,,,2
+player,home,start,14,James McClean,,IRL,19890422,,,,59,20,,,3
+player,home,start,8,Jake Livermore,,ENG,19891114,,,,,,,,6
+player,home,start,47,Sam Field,,ENG,19980508,,,,51,36,,,
+player,home,start,11,Chris Brunt,,NIR,19841214,,,,,,,,4
+player,home,start,9,Salomón Rondón,,VEN,19890916,,,,,,,,17
+player,home,sub,5,Claudio Yacob,,ARG,19870718,,,51,,,,,4
+player,home,sub,22,Nacer Chadli,,BEL,19890802,,,59,,,,,15
+player,home,sub,12,Marc Wilson,,IRL,19870817,,,64,,71,,,2.5
+player,home,bench,4,Hal Robson-Kanu,,WAL,19890521,,,,,,,,3
+player,home,bench,7,James Morrison,,SCO,19860525,,,,,,,,5
+player,home,bench,13,Boaz Myhill,,WAL,19821109,,yes,,,,,,2
+player,home,bench,45,Jonathan Leko,,ENG,19990424,,,,,,,,1.5
+player,away,start,13,Thibaut Courtois,,BEL,19920511,,yes,,,,,,40
+player,away,start,30,David Luiz,David Luiz,BRA,19870422,yes,,,,,,,30
+player,away,start,24,Gary Cahill,,ENG,19851219,,,,,,,,16
+player,away,start,28,César Azpilicueta,,ESP,19890828,,,,,,,,25
+player,away,start,3,Marcos Alonso,,ESP,19901228,,,,,,,,20
+player,away,start,4,Cesc Fàbregas,,ESP,19870504,,,,,,,,35
+player,away,start,21,Nemanja Matić,,SRB,19880801,,,,,,,,35
+player,away,start,15,Victor Moses,,NGA,19901212,,,,86,,,,12
+player,away,start,10,Eden Hazard,,BEL,19910107,,,,75,,,,70
+player,away,start,11,Pedro,,ESP,19870728,,,,76,,,,25
+player,away,start,19,Diego Costa,,ESP,19881007,,,,,,,,50
+player,away,sub,22,Willian,,BRA,19880809,,,75,,,,,32
+player,away,sub,23,Michy Batshuayi,,BEL,19931002,,,76,,,,,25
+player,away,sub,5,Kurt Zouma,,FRA,19941027,,,86,,,,,17
+player,away,bench,1,Asmir Begović,,BIH,19870620,,yes,,,,,,8
+player,away,bench,6,Nathan Aké,,NED,19950218,,,,,,,,8
+player,away,bench,7,N'Golo Kanté,,FRA,19910329,,,,,,,,40
+player,away,bench,26,John Terry,,ENG,19801207,,,,,,,,1
 ,,,,,,,,,,,,,,,
 # --- GOALS --- goal,minute,side,scorer,type,assist,,,,,,,,,,
 goal,82,away,Michy Batshuayi,goal,César Azpilicueta,,,,,,,,,,

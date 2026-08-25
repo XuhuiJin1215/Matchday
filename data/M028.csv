@@ -22,42 +22,42 @@ team,home,Manchester United,ENG,José Mourinho,POR,4-2-3-1,386,#DC374B,#FFFFFF,,
 team,away,Anderlecht,BEL,René Weiler,SUI,4-2-3-1,87.1,#2A1D55,#FFFFFF,,#2A1D55,,,,
 ,,,,,,,,,,,,,,,
 # --- PLAYERS -- player,side,role,number,name,kit_name,country,id,captain,goalkeeper,on,off,yellow,double yellow,red,value
-player,home,start,20,Sergio Romero,,ARG,,,yes,,,,,,5
-player,home,start,23,Luke Shaw,,ENG,,,,,,,,,20
-player,home,start,5,Marcos Rojo,,ARG,,,,,23,,,,19
-player,home,start,3,Eric Bailly,,CIV,,,,,,,,,25
-player,home,start,25,Antonio Valencia,,ECU,,,,,,,,,8
-player,home,start,16,Michael Carrick,,ENG,,yes,,,,,,,2
-player,home,start,6,Paul Pogba,,FRA,,,,,,,,,80
-player,home,start,19,Marcus Rashford,,ENG,,,,,,,,,10
-player,home,start,8,Henrikh Mkhitaryan,,ARM,,,,,,,,,37
-player,home,start,14,Jesse Lingard,,ENG,,,,,60,,,,9
-player,home,start,9,Zlatan Ibrahimović,,SWE,,,,,91,,,,12
-player,home,sub,17,Daley Blind,,NED,,,,23,,,,,22
-player,home,sub,27,Marouane Fellaini,,BEL,,,,60,,,,,12
-player,home,sub,11,Anthony Martial,,FRA,,,,91,,,,,30
-player,home,bench,1,David de Gea,,ESP,,,yes,,,,,,40
-player,home,bench,10,Wayne Rooney,,ENG,,,,,,,,,20
-player,home,bench,18,Ashley Young,,ENG,,,,,,,,,7
-player,home,bench,21,Ander Herrera,,ESP,,,,,,,,,28
-player,away,start,30,Rubén Martínez,,ESP,,,yes,,,,,,1
-player,away,start,37,Ivan Obradović,,SRB,,,,,,,,,3
-player,away,start,4,Kara Mbodji,,SEN,,,,,,,,,7
-player,away,start,5,Uroš Spajić,,SRB,,,,,,,,,1.5
-player,away,start,12,Dennis Appiah,,FRA,,,,,,97,,,3
-player,away,start,32,Leandro Dendoncker,,BEL,,,,,,,,,12
-player,away,start,31,Youri Tielamans,,BEL,,,,,,11,,,20
-player,away,start,18,Frank Acheampong,,GHA,,,,,,,,,4.5
-player,away,start,94,Sofiane Hanni,,ALG,,yes,,,64,,,,6
-player,away,start,11,Alexandru Chipciu,,ROU,,,,,64,,,,2.5
-player,away,start,91,Łukasz Teodorczyk,,POL,,,,,79,,,,12.5
-player,away,sub,10,Massimo Bruno,,BEL,,,,64,,,,,2
-player,away,sub,73,Nicolae Stanciu,,ROU,,,,64,,,,,7
-player,away,sub,24,Isaac Kiese Thelin,,SWE,,,,79,,,,,1.5
-player,away,bench,3,Olivier Deschacht,,BEL,,,,,,,,,0.2
-player,away,bench,14,Bram Nuytinck,,NED,,,,,,,,,2
-player,away,bench,17,Diego Capel,,ESP,,,,,,,,,0.9
-player,away,bench,23,Frank Boeckx,,BEL,,,yes,,,,,,0.5
+player,home,start,20,Sergio Romero,,ARG,19870222,,yes,,,,,,5
+player,home,start,23,Luke Shaw,,ENG,19950712,,,,,,,,20
+player,home,start,5,Marcos Rojo,,ARG,19900320,,,,23,,,,19
+player,home,start,3,Eric Bailly,,CIV,19940412,,,,,,,,25
+player,home,start,25,Antonio Valencia,,ECU,19850804,,,,,,,,8
+player,home,start,16,Michael Carrick,,ENG,19810728,yes,,,,,,,2
+player,home,start,6,Paul Pogba,,FRA,19930315,,,,,,,,80
+player,home,start,19,Marcus Rashford,,ENG,19971031,,,,,,,,10
+player,home,start,8,Henrikh Mkhitaryan,,ARM,19890121,,,,,,,,37
+player,home,start,14,Jesse Lingard,,ENG,19921215,,,,60,,,,9
+player,home,start,9,Zlatan Ibrahimović,,SWE,19811003,,,,91,,,,12
+player,home,sub,17,Daley Blind,,NED,19900309,,,23,,,,,22
+player,home,sub,27,Marouane Fellaini,,BEL,19871122,,,60,,,,,12
+player,home,sub,11,Anthony Martial,,FRA,19951205,,,91,,,,,30
+player,home,bench,1,David de Gea,,ESP,19901107,,yes,,,,,,40
+player,home,bench,10,Wayne Rooney,,ENG,19851024,,,,,,,,20
+player,home,bench,18,Ashley Young,,ENG,19850709,,,,,,,,7
+player,home,bench,21,Ander Herrera,,ESP,19890814,,,,,,,,28
+player,away,start,30,Rubén Martínez,,ESP,19840622,,yes,,,,,,1
+player,away,start,37,Ivan Obradović,,SRB,19880725,,,,,,,,3
+player,away,start,4,Kara Mbodji,,SEN,19891122,,,,,,,,7
+player,away,start,5,Uroš Spajić,,SRB,19930213,,,,,,,,1.5
+player,away,start,12,Dennis Appiah,,FRA,19920609,,,,,97,,,3
+player,away,start,32,Leander Dendoncker,,BEL,19950415,,,,,,,,12
+player,away,start,31,Youri Tielamans,,BEL,19970507,,,,,11,,,20
+player,away,start,18,Frank Acheampong,,GHA,19931016,,,,,,,,4.5
+player,away,start,94,Sofiane Hanni,,ALG,19901229,yes,,,64,,,,6
+player,away,start,11,Alexandru Chipciu,,ROU,19890518,,,,64,,,,2.5
+player,away,start,91,Łukasz Teodorczyk,,POL,19910603,,,,79,,,,12.5
+player,away,sub,10,Massimo Bruno,,BEL,19930917,,,64,,,,,2
+player,away,sub,73,Nicolae Stanciu,,ROU,19930507,,,64,,,,,7
+player,away,sub,24,Isaac Kiese Thelin,,SWE,19920624,,,79,,,,,1.5
+player,away,bench,3,Olivier Deschacht,,BEL,19810216,,,,,,,,0.2
+player,away,bench,14,Bram Nuytinck,,NED,19900504,,,,,,,,2
+player,away,bench,17,Diego Capel,,ESP,19880216,,,,,,,,0.9
+player,away,bench,23,Frank Boeckx,,BEL,19860927,,yes,,,,,,0.5
 ,,,,,,,,,,,,,,,
 # --- GOALS --- goal,minute,side,scorer,type,assist,,,,,,,,,,
 goal,10,home,Henrikh Mkhitaryan,goal,Marcus Rashford,,,,,,,,,,
