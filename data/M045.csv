@@ -1,0 +1,96 @@
+,,,,,,,,,,,,,,,
+# --- MATCH --- meta,field,value,,,,,,,,,,,,,
+meta,id,M045,,,,,,,,,,,,,
+meta,status,played,,,,,,,,,,,,,
+meta,competition,Chinese Super League,,,,,,,,,,,,,
+meta,round,Matchday 24,,,,,,,,,,,,,
+meta,date,2019-09-14,,,,,,,,,,,,,
+meta,kickoff,19:35,,,,,,,,,,,,,
+meta,venue,Hanghai Stadium,,,,,,,,,,,,,
+meta,city,Zhengzhou,,,,,,,,,,,,,
+meta,country,CHN,,,,,,,,,,,,,
+meta,neutral,no,,,,,,,,,,,,,
+meta,attendance,20189,,,,,,,,,,,,,
+meta,score,4-1,,,,,,,,,,,,,
+meta,aggregate,,,,,,,,,,,,,,
+meta,decision,,,,,,,,,,,,,,
+meta,referee,Wang Zhe,,,,,,,,,,,,,
+meta,referee_country,CHN,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- TEAMS --- team,side,name,country,coach,coach_country,formation,squad_value,pitch_fill,pitch_number,gk_fill,stat_color,,,,
+team,home,Henan Jianye,CHN,Wang Baoshan,CHN,5-3-2,7.3,#A22B2E,#FFFFFF,,#A22B2E,,,,
+team,away,Hebei China Fortune,CHN,Xie Feng,CHN,4-3-3,9.3,#F9F9F9,#1D1D1D,,#1D1D1D,,,,
+,,,,,,,,,,,,,,,
+# --- PLAYERS -- player,side,role,number,name,kit_name,country,id,captain,goalkeeper,on,off,yellow,double yellow,red,value
+player,home,start,17,Wu Yan,Wu,CHN,,,yes,,,,,,0.3
+player,home,start,2,Hu Ruibao,Hu,CHN,,,,,89,6,,,0.1
+player,home,start,5,Gu Cao,Gu,CHN,,,,,,,,,0.1
+player,home,start,26,Wang Shangyuan,Wang,CHN,,,,,62,,,,0.2
+player,home,start,25,Chen Hao,Chen,CHN,,,,,,,,,0.1
+player,home,start,27,Lu Yao,Lu,CHN,,,,,62,45+1,,,0.1
+player,home,start,29,Ivo,,BRA,,yes,,,,,,,0.8
+player,home,start,8,Tim Chow,,TPE,,,,,,,,,0.3
+player,home,start,6,Feng Zhuoyi,Feng,CHN,,,,,,,,,0.2
+player,home,start,37,Fernando Karanga,,BRA,,,,,,,,,1.7
+player,home,start,10,Christian Bassogog,,CMR,,,,,,,,,3
+player,home,sub,7,Du Changjie,,CHN,,,,62,,,,,0.1
+player,home,sub,21,Sui Donglu,,CHN,,,,62,,,,,0.1
+player,home,sub,13,Abduwal Ablet,,CHN,,,,89,,,,,0.1
+player,home,bench,3,Zhang Wentao,,CHN,,,,,,,,,0.1
+player,home,bench,19,Wang Guoming,,CHN,,,yes,,,,,,0.1
+player,home,bench,28,Ma Xingyu,,CHN,,,,,,,,,0.1
+player,home,bench,30,Zhong Jinbao,,CHN,,,,,,,,,0.1
+player,away,start,33,Chi Wenyi,Chi,CHN,,,yes,,65,,,,0.1
+player,away,start,26,Jiang Wenjun,Jiang,CHN,,,,,,60,,,0.1
+player,away,start,37,Pan Ximing,Pan,CHN,,,,,,,,,0.1
+player,away,start,28,Zhang Chengdong,Zhang,CHN,,yes,,,,,,,0.5
+player,away,start,51,Liu Jing,Liu,CHN,,,,,,,,,0.1
+player,away,start,11,Jiang Zhipeng,Jiang,CHN,,,,,,,,,0.3
+player,away,start,14,Javier Mascherano,,ARG,,,,,,,,,1.5
+player,away,start,15,Wang Qiuming,Wang,CHN,,,,,86,9,,,0.3
+player,away,start,22,Ezequiel Lavezzi,,BRA,,,,,46,,,,2
+player,away,start,9,Dong Xuesheng,Dong,CHN,,,,,,,,,0.2
+player,away,start,32,Fernandinho,,ARG,,,,,,,,,2.2
+player,away,sub,10,Marcão,,BRA,,,,46,,,,,0.8
+player,away,sub,1,Geng Xiaofeng,,CHN,,,yes,65,,,,,0.2
+player,away,sub,29,Tao Qianglong,,CHN,,,,86,,,,,0.5
+player,away,bench,2,Zhang Junzhe,,CHN,,,,,,,,,0.1
+player,away,bench,3,Zhao Yuhao,,CHN,,,,,,,,,0.2
+player,away,bench,5,Andy Russell,,HKG,,,,,,,,,0.1
+player,away,bench,18,Feng Gang,,CHN,,,,,,,,,0.1
+,,,,,,,,,,,,,,,
+# --- GOALS --- goal,minute,side,scorer,type,assist,,,,,,,,,,
+goal,11,home,Tim Chow,goal,Feng Zhuoyi,,,,,,,,,,
+goal,20,home,Wang Shangyuan,goal,,,,,,,,,,,
+goal,56,home,Feng Zhuoyi,goal,Tim Chow,,,,,,,,,,
+goal,58,home,Christian Bassogog,goal,Fernando Karanga,,,,,,,,,,
+goal,84,away,Jiang Zhipeng,goal,Liu Jing,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- MATCH STATS --- stat,name,home,away,,,,,,,,,,,,
+stat,Possession,39,61,,,,,,,,,,,,
+stat,Expected goals (xG),,,,,,,,,,,,,,
+stat,Shots,16,8,,,,,,,,,,,,
+stat,Shots on target,9,4,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- WEATHER --- weather,field,value,,,,,,,,,,,,,
+weather,condition,Overcast,,,,,,,,,,,,,
+weather,temp_c,21,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- MATCHDAY --- personal,field,value,,,,,,,,,,,,,
+personal,ticket_price,150,,,,,,,,,,,,,
+personal,ticket_currency,CNY,,,,,,,,,,,,,
+personal,ticket_price_usd,21,,,,,,,,,,,,,
+personal,section,Section A1,,,,,,,,,,,,,
+personal,row,,,,,,,,,,,,,,
+personal,seat,,,,,,,,,,,,,,
+personal,seating,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- PHOTOS --- photo,file,caption,,,,,,,,,,,,,
+photo,M045_1.jpg,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- CHAMPIONS --- champion,field,value,,,,,,,,,,,,,
+champion,team,,,,,,,,,,,,,,
+champion,side,,,,,,,,,,,,,,
+champion,title,,,,,,,,,,,,,,
+champion,season,,,,,,,,,,,,,,
+champion,note,,,,,,,,,,,,,,

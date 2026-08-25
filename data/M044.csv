@@ -1,0 +1,100 @@
+,,,,,,,,,,,,,,,
+# --- MATCH --- meta,field,value,,,,,,,,,,,,,
+meta,id,M044,,,,,,,,,,,,,
+meta,status,played,,,,,,,,,,,,,
+meta,competition,UEFA Nations League,,,,,,,,,,,,,
+meta,round,Final,,,,,,,,,,,,,
+meta,date,2019-06-09,,,,,,,,,,,,,
+meta,kickoff,19:45,,,,,,,,,,,,,
+meta,venue,Estádio do Dragão,,,,,,,,,,,,,
+meta,city,Porto,,,,,,,,,,,,,
+meta,country,POR,,,,,,,,,,,,,
+meta,neutral,no,,,,,,,,,,,,,
+meta,attendance,43199,,,,,,,,,,,,,
+meta,score,1-0,,,,,,,,,,,,,
+meta,aggregate,,,,,,,,,,,,,,
+meta,decision,,,,,,,,,,,,,,
+meta,referee,Alberto Undiano,,,,,,,,,,,,,
+meta,referee_country,ESP,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- TEAMS --- team,side,name,country,coach,coach_country,formation,squad_value,pitch_fill,pitch_number,gk_fill,stat_color,,,,
+team,home,Portugal,,Fernando Santos,POR,4-3-3,700.3,#AD2533,#FFFFFF,,#AD2533,,,,
+team,away,Netherlands,,Ronald Koeman,NED,4-3-3,619.5,#08BAD4,#23356E,,#08BAD4,,,,
+,,,,,,,,,,,,,,,
+# --- PLAYERS -- player,side,role,number,name,kit_name,country,id,captain,goalkeeper,on,off,yellow,double yellow,red,value
+player,home,start,1,Rui Patrício,,POR,19880215,,yes,,,,,,18
+player,home,start,5,Raphaël Guerreiro,,POR,19931222,,,,,,,,25
+player,home,start,4,Rúben Dias,,POR,19970514,,,,,,,,32
+player,home,start,6,José Fonte,,POR,19831222,,,,,,,,2
+player,home,start,20,Nélson Semedo,,POR,19931116,,,,,,,,40
+player,home,start,16,Bruno Fernandes,,POR,19940908,,,,81,,,,55
+player,home,start,13,Danilo Pereira,Danilo,POR,19910909,,,,,,,,30
+player,home,start,14,William Carvalho,,POR,19920407,,,,90+3,,,,25
+player,home,start,17,Gonçalo Guedes,,POR,,,,,75,,,,30
+player,home,start,7,Cristiano Ronaldo,,POR,,yes,,,,,,,90
+player,home,start,10,Bernardo Silva,,POR,,,,,,,,,80
+player,home,sub,15,Rafa Silva,,POR,,,,75,,,,,28
+player,home,sub,8,João Moutinho,,POR,,,,81,,,,,10
+player,home,sub,18,Rúben Neves,,POR,,,,90+3,,,,,40
+player,home,bench,2,João Cancelo,,POR,,,,,,,,,55
+player,home,bench,9,Dyego Sousa,,POR,,,,,,,,,12
+player,home,bench,11,Diogo Jota,,POR,,,,,,,,,18
+player,home,bench,12,José Sá,,POR,,,yes,,,,,,2.5
+player,home,bench,19,Mário Rui,,POR,,,,,,,,,12
+player,home,bench,21,Pizzi,,POR,,,,,,,,,25
+player,home,bench,22,Beto,,POR,,,yes,,,,,,0.8
+player,home,bench,23,João Félix,,POR,,,,,,,,,70
+player,away,start,1,Jasper Cillessen,,NED,,,yes,,,,,,18
+player,away,start,17,Daley Blind,,NED,,,,,,,,,18
+player,away,start,4,Virgil van Dijk,van Dijk,NED,,yes,,,,90+1,,,75
+player,away,start,3,Matthijs de Ligt,de Ligt,NED,,,,,,,,,70
+player,away,start,22,Denzel Dumfries,,NED,,,,,,88,,,12
+player,away,start,8,Georginio Wijnaldum,,NED,,,,,,,,,40
+player,away,start,21,Frenkie de Jong,de Jong,NED,,,,,,,,,75
+player,away,start,15,Marten de Roon,de Roon,NED,,,,,81,,,,24
+player,away,start,9,Ryan Babel,,NED,,,,,46,,,,5
+player,away,start,10,Memphis Depay,,NED,,,,,,,,,45
+player,away,start,7,Steven Bergwijn,,NED,,,,,60,,,,30
+player,away,sub,11,Quincy Promes,,NED,,,,46,,,,,18
+player,away,sub,20,Donny van de Beek,,NED,,,,60,,,,,25
+player,away,sub,19,Luuk de Jong,,NED,,,,81,,,,,10
+player,away,bench,2,Hans Hateboer,,NED,,,,,,,,,15
+player,away,bench,5,Nathan Aké,,NED,,,,,,,,,28
+player,away,bench,6,Davy Pröpper,,NED,,,,,,,,,15
+player,away,bench,12,Patrick van Aanholt,,NED,,,,,,,,,9
+player,away,bench,13,Kenneth Vermeer,,NED,,,yes,,,,,,2
+player,away,bench,14,Stefan de Vrij,,NED,,,,,,,,,50
+player,away,bench,16,Kevin Strootman,,NED,,,,,,,,,20
+player,away,bench,23,Marco Bizot,,NED,,,yes,,,,,,3.5
+,,,,,,,,,,,,,,,
+# --- GOALS --- goal,minute,side,scorer,type,assist,,,,,,,,,,
+goal,60,home,Gonçalo Guedes,goal,Bernardo Silva,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- MATCH STATS --- stat,name,home,away,,,,,,,,,,,,
+stat,Possession,43,57,,,,,,,,,,,,
+stat,Expected goals (xG),0.75,0.25,,,,,,,,,,,,
+stat,Shots,18,4,,,,,,,,,,,,
+stat,Shots on target,7,1,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- WEATHER --- weather,field,value,,,,,,,,,,,,,
+weather,condition,Clear,,,,,,,,,,,,,
+weather,temp_c,15,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- MATCHDAY --- personal,field,value,,,,,,,,,,,,,
+personal,ticket_price,90,,,,,,,,,,,,,
+personal,ticket_currency,EUR,,,,,,,,,,,,,
+personal,ticket_price_usd,101,,,,,,,,,,,,,
+personal,section,Block S20,,,,,,,,,,,,,
+personal,row,9,,,,,,,,,,,,,
+personal,seat,25,,,,,,,,,,,,,
+personal,seating,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- PHOTOS --- photo,file,caption,,,,,,,,,,,,,
+photo,M044_1.jpg,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- CHAMPIONS --- champion,field,value,,,,,,,,,,,,,
+champion,team,Portugal,,,,,,,,,,,,,
+champion,side,home,,,,,,,,,,,,,
+champion,title,UEFA Nations League,,,,,,,,,,,,,
+champion,season,2018-19,,,,,,,,,,,,,
+champion,note,,,,,,,,,,,,,,
