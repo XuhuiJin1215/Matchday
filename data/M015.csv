@@ -22,42 +22,42 @@ team,home,Henan Jianye,CHN,Jia Xiuquan,CHN,5-3-2,5.5,#B9242A,#FFFFFF,,#B9242A,,,
 team,away,Shanghai Greenland Shenhua,CHN,Gregorio Manzano,ESP,4-2-3-1,27.2,#01419F,#FFFFFF,,#01419F,,,,
 ,,,,,,,,,,,,,,,
 # --- PLAYERS -- player,side,role,number,name,kit_name,country,id,captain,goalkeeper,on,off,yellow,double yellow,red,value
-player,home,start,17,Wu Yan,Wu,CHN,,,yes,,,,,,0.1
-player,home,start,14,Mirahmetjan Muzepper,Mirahmetjan,CHN,,,,,69,15,,,0.1
-player,home,start,15,Ryan McGowan,,AUS,,,,,,,,,0.5
-player,home,start,5,Gu Cao,Gu,CHN,,,,,,,,,0.2
-player,home,start,4,Edigeison Gomes,,GNB,,yes,,,,33,,,0.8
-player,home,start,27,Lu Yao,Lu,CHN,,,,,,,,,0.1
-player,home,start,6,Feng Zhuoyi,Feng,CHN,,,,,,,,,0.1
-player,home,start,25,Chen Hao,Chen,CHN,,,,,,43,,,0.1
-player,home,start,8,Yin Hongbo,Yin,CHN,,,,,,,,,0.2
-player,home,start,9,Javier Patiño,,PHI,,,,,69,,,,1
-player,home,start,10,Ivo,,BRA,,,,,,,,,1.5
-player,home,sub,20,Osman Sow,,SWE,,,,69,,,,,0.6
-player,home,sub,30,Zhong Jinbao,,CHN,,,,69,,,,,0.1
-player,home,bench,12,Wang Guoming,,CHN,,,yes,,,,,,0.1
-player,home,bench,13,Abduwali Ablet,,CHN,,,,,,,,,0.1
-player,home,bench,18,Liang Yu,,CHN,,,,,,,,,0.1
-player,home,bench,19,Zhang Ke,,CHN,,,,,,,,,0.1
-player,home,bench,23,Wang Fei,,CHN,,,,,,,,,0.1
-player,away,start,27,Li Shuai,Li,CHN,,,yes,,,,,,0.1
-player,away,start,23,Bai Jiajun,Bai,CHN,,,,,86,,,,0.2
-player,away,start,3,Li Jianbin,Li,CHN,,,,,,,,,0.1
-player,away,start,4,Kim Kee-hee,Kim,KOR,,,,,,,,,0.7
-player,away,start,2,Xiong Fei,Xiong,CHN,,,,,,40,,,0.1
-player,away,start,26,Qin Sheng,Qin,CHN,,,,,67,,,,0.1
-player,away,start,13,Fredy Guarín,,COL,,,,,,26,,,7.8
-player,away,start,28,Cao Yunding,Cao,CHN,,,,,,,,,0.3
-player,away,start,10,Giovanni Moreno,,COL,,yes,,,,31,90+2,,4.3
-player,away,start,11,Lü Zheng,Lü,CHN,,,,,65,,,,0.2
-player,away,start,9,Demba Ba,,SEN,,,,,,,,,10
-player,away,sub,8,Zhang Lu,,CHN,,,,65,,,,,0.2
-player,away,sub,20,Wang Yun,,CHN,,,,67,,,,,0.2
-player,away,sub,6,Li Wenbo,,CHN,,,,86,,,,,0.1
-player,away,bench,5,Wang Shouting,,CHN,,,,,,,,,0.2
-player,away,bench,17,Obafemi Martins,,NGA,,,,,,,,,2.5
-player,away,bench,18,Gao Di,,CHN,,,,,,,,,0.2
-player,away,bench,22,Qiu Shengjiong,,CHN,,,yes,,,,,,0.1
+player,home,start,17,Wu Yan,Wu,CHN,19890107,,yes,,,,,,0.1
+player,home,start,14,Mirahmetjan Muzepper,Mirahmetjan,CHN,19910114,,,,69,15,,,0.1
+player,home,start,15,Ryan McGowan,,AUS,19890815,,,,,,,,0.5
+player,home,start,5,Gu Cao,Gu,CHN,19880531,,,,,,,,0.2
+player,home,start,4,Edigeison Gomes,,GNB,19881117,yes,,,,33,,,0.8
+player,home,start,27,Lu Yao,Lu,CHN,19930626,,,,,,,,0.1
+player,home,start,6,Feng Zhuoyi,Feng,CHN,19890618,,,,,,,,0.1
+player,home,start,25,Chen Hao,Chen,CHN,19930129,,,,,43,,,0.1
+player,home,start,8,Yin Hongbo,Yin,CHN,19891030,,,,,,,,0.2
+player,home,start,9,Javier Patiño,,PHI,19880214,,,,69,,,,1
+player,home,start,10,Ivo,,BRA,19861002,,,,,,,,1.5
+player,home,sub,20,Osman Sow,,SWE,19900422,,,69,,,,,0.6
+player,home,sub,30,Zhong Jinbao,,CHN,19941125,,,69,,,,,0.1
+player,home,bench,12,Wang Guoming,,CHN,19900202,,yes,,,,,,0.1
+player,home,bench,13,Abduwali Ablet,,CHN,19870417,,,,,,,,0.1
+player,home,bench,18,Liang Yu,,CHN,19940420,,,,,,,,0.1
+player,home,bench,19,Zhang Ke,,CHN,19850320,,,,,,,,0.1
+player,home,bench,23,Wang Fei,,CHN,19930108,,,,,,,,0.1
+player,away,start,27,Li Shuai,Li,CHN,19820818,,yes,,,,,,0.1
+player,away,start,23,Bai Jiajun,Bai,CHN,19910320,,,,86,,,,0.2
+player,away,start,3,Li Jianbin,Li,CHN,19890419,,,,,,,,0.1
+player,away,start,4,Kim Kee-hee,Kim,KOR,19890713,,,,,,,,0.7
+player,away,start,2,Xiong Fei,Xiong,CHN,19871021,,,,,40,,,0.1
+player,away,start,26,Qin Sheng,Qin,CHN,19861102,,,,67,,,,0.1
+player,away,start,13,Fredy Guarín,,COL,19860630,,,,,26,,,7.8
+player,away,start,28,Cao Yunding,Cao,CHN,19891122,,,,,,,,0.3
+player,away,start,10,Giovanni Moreno,,COL,19860701,yes,,,,31,90+2,,4.3
+player,away,start,11,Lü Zheng,Lü,CHN,19850225,,,,65,,,,0.2
+player,away,start,9,Demba Ba,,SEN,19850525,,,,,,,,10
+player,away,sub,8,Zhang Lu,,CHN,19870823,,,65,,,,,0.2
+player,away,sub,20,Wang Yun,,CHN,19830328,,,67,,,,,0.2
+player,away,sub,6,Li Wenbo,,CHN,19831209,,,86,,,,,0.1
+player,away,bench,5,Wang Shouting,,CHN,19850903,,,,,,,,0.2
+player,away,bench,17,Obafemi Martins,,NGA,19841028,,,,,,,,2.5
+player,away,bench,18,Gao Di,,CHN,19900106,,,,,,,,0.2
+player,away,bench,22,Qiu Shengjiong,,CHN,19850901,,yes,,,,,,0.1
 ,,,,,,,,,,,,,,,
 # --- GOALS --- goal,minute,side,scorer,type,assist,,,,,,,,,,
 goal,5,away,Demba Ba,goal,Qin Sheng,,,,,,,,,,

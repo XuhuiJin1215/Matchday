@@ -22,41 +22,41 @@ team,home,Dreams Metro Gallery,HKG,Leung Chi Wing,HKG,4-3-3,0.6,#0548A0,#D55A90,
 team,away,Hong Kong Rangers,HKG,Yan Lik Kin,HKG,4-4-2,1.0,#A1BF6E,#009B99,,#A1BF6E,,,,
 ,,,,,,,,,,,,,,,
 # --- PLAYERS -- player,side,role,number,name,kit_name,country,id,captain,goalkeeper,on,off,yellow,double yellow,red,value
-player,home,start,12,Li Yat Chun,Li,HKG,,,yes,,,,,,0.1
-player,home,start,19,Yiu Ho Ming,Yiu,HKG,,,,,,61,,,0.1
-player,home,start,28,Lau Hok Ming,Lau,HKG,,yes,,,,,,,0.1
-player,home,start,23,Leung Kwok Wai,Leung,HKG,,,,,,11,,,0.1
-player,home,start,22,Vas Nuñez,,MEX,,,,,58,43,,,0.1
-player,home,start,11,Siu Chun Ming,Siu,HKG,,,,,54,,,,0.1
-player,home,start,21,Lau Ho Lam,Lau,HKG,,,,,,,,,0.1
-player,home,start,8,Li Ka Chun,Li,HKG,,,,,84,,,,0.1
-player,home,start,30,Wong Tsz Ho,Wong,HKG,,,,,,,,,0.1
-player,home,start,20,Kenji Fukuda,,JPN,,,,,,,,,0.1
-player,home,start,95,Tse Long Hin,Tse,HKG,,,,,,,,,0.1
-player,home,sub,77,Leônidas,,BRA,,,,54,,,,,0.1
-player,home,sub,10,Lai Lok Yin,,HKG,,,,58,,,,,0.1
-player,home,sub,14,Lui Wai Chiu,,HKG,,,,84,,,,,0.1
-player,home,bench,1,Pang Tsz Kin,,HKG,,,yes,,,,,,0.1
-player,home,bench,3,Lo Tsz Hin,,HKG,,,,,,,,,0.1
-player,home,bench,13,Siu Pui Lam,,HKG,,,,,,,,,0.1
-player,home,bench,33,Chow Wing Hin,,HKG,,,,,,,,,0.1
-player,away,start,27,Yip Ka Yu,Yip,HKG,,,yes,,,,,,0.1
-player,away,start,10,Hui Wang Fung,Hui,HKG,,,,,46,,,,0.1
-player,away,start,20,Beto,,BRA,,yes,,,,73,,,0.2
-player,away,start,4,Gee Kyung-hun,Gee,KOR,,,,,,,,,0.1
-player,away,start,21,Tsui Wang Kit,Tsui,HKG,,,,,90+2,,,,0.1
-player,away,start,7,Chuck Yiu Kwok,Chuck,HKG,,,,,,,,,0.1
-player,away,start,9,Dieguito,,ESP,,,,,,,,,0.1
-player,away,start,22,Kwok Tsz Kaai,Kwok,HKG,,,,,,,,,0.1
-player,away,start,13,Hui Ka Lok,Hui,HKG,,,,,90+2,,,,0.1
-player,away,start,16,Ernesto Gómez,,ESP,,,,,,,,,0.1
-player,away,start,8,Quentin Lendresse,,FRA,,,,,,,,,0.1
-player,away,sub,12,Cheng Siu Kwan,,HKG,,,,46,,,,,0.1
-player,away,sub,3,Tse Wai Chun,,HKG,,,,90+2,,,,,0.1
-player,away,sub,14,Marco Wegener,,HKG,,,,90+2,,,,,0.1
-player,away,bench,1,Paulo César,,BRA,,,yes,,,,,,0.1
-player,away,bench,6,Chow Cheuk Fung,,HKG,,,,,,,,,0.1
-player,away,bench,26,Siu Leong,,HKG,,,yes,,,,,,0.1
+player,home,start,12,Li Yat Chun,Li,HKG,19951208,,yes,,,,,,0.1
+player,home,start,19,Yiu Ho Ming,Yiu,HKG,19950501,,,,,61,,,0.1
+player,home,start,28,Lau Hok Ming,Lau,HKG,19951019,yes,,,,,,,0.1
+player,home,start,23,Leung Kwok Wai,Leung,HKG,19860223,,,,,11,,,0.1
+player,home,start,22,Vas Nuñez,,MEX,19951122,,,,58,43,,,0.1
+player,home,start,11,Siu Chun Ming,Siu,HKG,19951227,,,,54,,,,0.1
+player,home,start,21,Lau Ho Lam,Lau,HKG,19930122,,,,,,,,0.1
+player,home,start,8,Li Ka Chun,Li,HKG,19930910,,,,84,,,,0.1
+player,home,start,30,Wong Tsz Ho,Wong,HKG,19940307,,,,,,,,0.1
+player,home,start,20,Kenji Fukuda,,JPN,19771021,,,,,,,,0.1
+player,home,start,95,Tse Long Hin,Tse,HKG,19950206,,,,,,,,0.1
+player,home,sub,77,Leônidas,,BRA,19951017,,,54,,,,,0.1
+player,home,sub,10,Lai Lok Yin,,HKG,19950720,,,58,,,,,0.1
+player,home,sub,14,Lui Wai Chiu,,HKG,19950922,,,84,,,,,0.1
+player,home,bench,1,Pang Tsz Kin,,HKG,19861216,,yes,,,,,,0.1
+player,home,bench,3,Lo Tsz Hin,,HKG,19961113,,,,,,,,0.1
+player,home,bench,13,Siu Pui Lam,,HKG,19961231,,,,,,,,0.1
+player,home,bench,33,Chow Wing Hin,,HKG,19960407,,,,,,,,0.1
+player,away,start,27,Yip Ka Yu,Yip,HKG,19961224,,yes,,,,,,0.1
+player,away,start,10,Hui Wang Fung,Hui,HKG,19940204,,,,46,,,,0.1
+player,away,start,20,Beto,,BRA,19840710,yes,,,,73,,,0.2
+player,away,start,4,Gee Kyung-hun,Gee,KOR,19900605,,,,,,,,0.1
+player,away,start,21,Tsui Wang Kit,Tsui,HKG,19970105,,,,90+2,,,,0.1
+player,away,start,7,Chuck Yiu Kwok,Chuck,HKG,19940529,,,,,,,,0.1
+player,away,start,9,Dieguito,,ESP,19830106,,,,,,,,0.1
+player,away,start,22,Kwok Tsz Kaai,Kwok,HKG,19961226,,,,,,,,0.1
+player,away,start,13,Hui Ka Lok,Hui,HKG,19940105,,,,90+2,,,,0.1
+player,away,start,16,Ernesto Gómez,,ESP,19820305,,,,,,,,0.1
+player,away,start,8,Quentin Lendresse,,FRA,19900306,,,,,,,,0.1
+player,away,sub,12,Cheng Siu Kwan,,HKG,19970113,,,46,,,,,0.1
+player,away,sub,3,Tse Wai Chun,,HKG,19970130,,,90+2,,,,,0.1
+player,away,sub,14,Marco Wegener,,HKG,19950815,,,90+2,,,,,0.1
+player,away,bench,1,Paulo César,,BRA,19860327,,yes,,,,,,0.1
+player,away,bench,6,Chow Cheuk Fung,,HKG,19890801,,,,,,,,0.1
+player,away,bench,26,Siu Leong,,HKG,19870122,,yes,,,,,,0.1
 ,,,,,,,,,,,,,,,
 # --- GOALS --- goal,minute,side,scorer,type,assist,,,,,,,,,,
 goal,21,home,Kenji Fukuda,goal,Wong Tsz Ho,,,,,,,,,,

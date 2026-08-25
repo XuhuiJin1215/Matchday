@@ -22,42 +22,42 @@ team,home,Eastern,HKG,Chan Yuen Ting,HKG,4-2-2-2,2.8,#2C3DA4,#FFFFFF,,#2C3DA4,,,
 team,away,South China,HKG,José Ricardo Rambo,BRA,4-2-3-1,2.2,#F43841,#FFFFFF,,#F43841,,,,
 ,,,,,,,,,,,,,,,
 # --- PLAYERS -- player,side,role,number,name,kit_name,country,id,captain,goalkeeper,on,off,yellow,double yellow,red,value
-player,home,start,16,Ho Kwok Chuen,Ho,HKG,,,yes,,,,,,0.1
-player,home,start,13,Tse Man Wing,Tse,HKG,,,,,,,,,0.1
-player,home,start,12,Tsang Chi Hau,Tsang,HKG,,,,,,74,,,0.1
-player,home,start,28,Wong Chi Chung,Wong,HKG,,,,,82,,,,0.1
-player,home,start,21,Tsang Kam To,Tsang,HKG,,,,,,,,,0.1
-player,home,start,4,Bai He,Bai,HKG,,,,,,,,,0.1
-player,home,start,9,James Meyer,,AUS,,,,,,,,,0.2
-player,home,start,17,Lee Hong Lim,Lee,HKG,,,,,76,,,,0.1
-player,home,start,7,Xu Deshuai,Xu,HKG,,,,,,,,,0.3
-player,home,start,11,Michel Lugo,,HKG,,,,,,,,,0.5
-player,home,start,12,Giovane,,BRA,,yes,,,65,,,,0.6
-player,home,sub,27,Andrew Barisic,,BRA,,,,65,,,,,0.2
-player,home,sub,19,Henry Cheng Siu Wai,,AUS,,,,76,,,,,0.1
-player,home,sub,4,Cheng King Ho,,HKG,,,,82,,,,,0.1
-player,home,bench,1,Yapp Hung Fai,,HKG,,,yes,,,,,,0.3
-player,home,bench,3,Diego Eli,,BRA,,,,,,,,,0.4
-player,home,bench,6,Wong Chin Hung,,HKG,,,,,,,,,0.1
-player,home,bench,32,Lo Chi Kwan,,HKG,,,,,,,,,0.1
-player,away,start,12,Cristian Mora,,ECU,,,yes,,,,,,0.1
-player,away,start,5,Chak Ting Fung,Chak,HKG,,,,,,,,,0.1
-player,away,start,6,Andy Russell,,HKG,,,,,,,,,0.1
-player,away,start,22,Bojan Mališić,,SRB,,,,,,,,,0.3
-player,away,start,17,Leung Chun Pong,Leung,HKG,,,,,,85,,,0.2
-player,away,start,36,Wisdom Fofo Agbo,,HKG,,,,,83,,,,0.1
-player,away,start,4,Sean Tse,,HKG,,,,,,,,,0.1
-player,away,start,28,Liang Zicheng,Liang,HKG,,,,,,86,,,0.1
-player,away,start,33,Félix Borja,,ECU,,,,,55,,,,0.2
-player,away,start,7,Chan Siu Ki,Chan,HKG,,yes,,,,,,,0.2
-player,away,start,38,Ryan Griffiths,,AUS,,,,,73,,,,0.3
-player,away,sub,8,Mahama Awal,,CMR,,,,55,,62,,,0.2
-player,away,sub,10,Luiz Carlos,,BRA,,,,73,,,,,0.1
-player,away,sub,19,Chan Man Fai,,HKG,,,,83,,,,,0.1
-player,away,bench,1,Leung Hing Kit,,HKG,,,yes,,,,,,0.1
-player,away,bench,16,Chan Siu Kwan,,HKG,,,,,,,,,0.1
-player,away,bench,21,Law Hiu Chung,,HKG,,,,,,,,,0.1
-player,away,bench,76,Cheung Chi Yung,,HKG,,,,,,,,,0.1
+player,home,start,16,Ho Kwok Chuen,Ho,HKG,19770220,,yes,,,,,,0.1
+player,home,start,13,Tse Man Wing,Tse,HKG,19830105,,,,,,,,0.1
+player,home,start,12,Tsang Chi Hau,Tsang,HKG,19900112,,,,,74,,,0.1
+player,home,start,28,Wong Chi Chung,Wong,HKG,19821011,,,,82,,,,0.1
+player,home,start,21,Tsang Kam To,Tsang,HKG,19890621,,,,,,,,0.1
+player,home,start,4,Bai He,Bai,HKG,19831119,,,,,,,,0.1
+player,home,start,9,James Meyer,,AUS,19860528,,,,,,,,0.2
+player,home,start,17,Lee Hong Lim,Lee,HKG,19830929,,,,76,,,,0.1
+player,home,start,7,Xu Deshuai,Xu,HKG,19870713,,,,,,,,0.3
+player,home,start,11,Michel Lugo,,BRA,19870609,,,,,,,,0.5
+player,home,start,12,Giovane,,BRA,19821125,yes,,,65,,,,0.6
+player,home,sub,27,Andrew Barisic,,AUS,19860322,,,65,,,,,0.2
+player,home,sub,19,Henry Cheng Siu Wai,,HKG,19811227,,,76,,,,,0.1
+player,home,sub,4,Cheng King Ho,,HKG,19891107,,,82,,,,,0.1
+player,home,bench,1,Yapp Hung Fai,,HKG,19900321,,yes,,,,,,0.3
+player,home,bench,3,Diego Eli,,BRA,19880904,,,,,,,,0.4
+player,home,bench,6,Wong Chin Hung,,HKG,19820302,,,,,,,,0.1
+player,home,bench,32,Lo Chi Kwan,,HKG,19810318,,,,,,,,0.1
+player,away,start,12,Cristian Mora,,ECU,19790826,,yes,,,,,,0.1
+player,away,start,5,Chak Ting Fung,Chak,HKG,19891127,,,,,,,,0.1
+player,away,start,6,Andy Russell,,HKG,19871121,,,,,,,,0.1
+player,away,start,22,Bojan Mališić,,SRB,19850114,,,,,,,,0.3
+player,away,start,17,Leung Chun Pong,Leung,HKG,19861001,,,,,85,,,0.2
+player,away,start,36,Wisdom Fofo Agbo,,HKG,19790625,,,,83,,,,0.1
+player,away,start,4,Sean Tse,,HKG,19920503,,,,,,,,0.1
+player,away,start,28,Liang Zicheng,Liang,HKG,19820318,,,,,86,,,0.1
+player,away,start,33,Félix Borja,,ECU,19830402,,,,55,,,,0.2
+player,away,start,7,Chan Siu Ki,Chan,HKG,19850714,yes,,,,,,,0.2
+player,away,start,38,Ryan Griffiths,,AUS,19810821,,,,73,,,,0.3
+player,away,sub,8,Mahama Awal,,CMR,19910610,,,55,,62,,,0.2
+player,away,sub,10,Luiz Carlos,,BRA,19820727,,,73,,,,,0.1
+player,away,sub,19,Chan Man Fai,,HKG,19880619,,,83,,,,,0.1
+player,away,bench,1,Leung Hing Kit,,HKG,19891022,,yes,,,,,,0.1
+player,away,bench,16,Chan Siu Kwan,,HKG,19920801,,,,,,,,0.1
+player,away,bench,21,Law Hiu Chung,,HKG,19950610,,,,,,,,0.1
+player,away,bench,76,Cheung Chi Yung,,HKG,19890630,,,,,,,,0.1
 ,,,,,,,,,,,,,,,
 # --- GOALS --- goal,minute,side,scorer,type,assist,,,,,,,,,,
 goal,19,away,Liang Zicheng,goal,,,,,,,,,,,

@@ -22,42 +22,42 @@ team,home,Shenzhen FC,CHN,Clarence Seedorf,NED,4-2-3-1,2.9,#DE246D,#FFFFFF,,#DE2
 team,away,Zhejiang Yiteng,CHN,Duan Xin,CHN,4-2-3-1,2.3,#1343B3,#FFFFFF,,#1343B3,,,,
 ,,,,,,,,,,,,,,,
 # --- PLAYERS -- player,side,role,number,name,kit_name,country,id,captain,goalkeeper,on,off,yellow,double yellow,red,value
-player,home,start,16,Zhou Yajun,Zhou,CHN,,,yes,,,,,,0.1
-player,home,start,3,Lü Haidong,Lü,CHN,,,,,56,,,,0.1
-player,home,start,4,Qiao Wei,Qiao,CHN,,,,,,19,,,0.1
-player,home,start,29,Helton Dos Reis,Helton,FRA,,,,,,,,,0.5
-player,home,start,2,Geng Xiaoshun,Geng,CHN,,,,,,,,,0.1
-player,home,start,20,Xu Liang,Xu,CHN,,,,,,,,,0.1
-player,home,start,18,Fei Yu,Fei,CHN,,,,,,,,,0.1
-player,home,start,14,Aboubakar Oumarou,,CMR,,,,,,,,,0.9
-player,home,start,31,Li Fei,Li,CHN,,yes,,,,47,,,0.1
-player,home,start,19,Tan Binliang,Tan,CHN,,,,,64,,,,0.1
-player,home,start,9,Deshorn Brown,,JAM,,,,,,,,,0.6
-player,home,sub,7,Gao Tianyi,,CHN,,,,56,,90+2,,,0.1
-player,home,sub,21,Cai Jingyuan,,CHN,,,,64,,,,,0.1
-player,home,bench,1,Niu Ben,,CHN,,,yes,,,,,,0.1
-player,home,bench,5,Ren Peng,,CHN,,,,,,,,,0.1
-player,home,bench,6,Ling Sihao,,CHN,,,,,,,,,0.1
-player,home,bench,8,Du Longquan,,CHN,,,,,,,,,0.1
-player,home,bench,32,Zhang Hongnan,,CHN,,,,,,,,,0.1
-player,away,start,1,Bai Xiaolei,Bai,CHN,,,yes,,,,,,0.1
-player,away,start,25,Li Xudong,Li,CHN,,,,,70,,,,0.1
-player,away,start,3,Hao Qiang,Hao,CHN,,,,,86,,,,0.1
-player,away,start,16,Wang Dalong,Wang,CHN,,,,,,,,,0.1
-player,away,start,7,Li Jiahe,Li,CHN,,,,,82,,,,0.1
-player,away,start,31,Li Gen,Li,CHN,,,,,,21,,,0.1
-player,away,start,8,Adam Hughes,,AUS,,yes,,,,88,,,0.3
-player,away,start,18,Liu Yue,Liu,CHN,,,,,,,,,0.1
-player,away,start,33,Rodrigo Paulista,Rodrigo,BRA,,,,,,,,,0.7
-player,away,start,28,Piao Taoyu,Piao,CHN,,,,,,,,,0.1
-player,away,start,19,Ricardo Steer,,COL,,,,,,,,,0.3
-player,away,sub,5,Yu Tao,,CHN,,,,70,,,,,0.1
-player,away,sub,27,Li Jian,,CHN,,,,82,,,,,0.1
-player,away,sub,37,Zhang Song,,CHN,,,,86,,,,,0.1
-player,away,bench,9,Li Xin,,CHN,,,,,,,,,0.1
-player,away,bench,10,Ji Xiaoxuan,,CHN,,,,,,,,,0.1
-player,away,bench,17,Liu Xiaolong,,CHN,,,,,,,,,0.1
-player,away,bench,32,Lai Xiaoyu,,CHN,,,yes,,,,,,0.1
+player,home,start,16,Zhou Yajun,Zhou,CHN,19841017,,yes,,,,,,0.1
+player,home,start,3,Lü Haidong,Lü,CHN,19920111,,,,56,,,,0.1
+player,home,start,4,Qiao Wei,Qiao,CHN,19870720,,,,,19,,,0.1
+player,home,start,29,Helton Dos Reis,Helton,FRA,19880501,,,,,,,,0.5
+player,home,start,2,Geng Xiaoshun,Geng,CHN,19900517,,,,,,,,0.1
+player,home,start,20,Xu Liang,Xu,CHN,19810812,,,,,,,,0.1
+player,home,start,18,Fei Yu,Fei,CHN,19910206,,,,,,,,0.1
+player,home,start,14,Aboubakar Oumarou,,CMR,19870104,,,,,,,,0.9
+player,home,start,31,Li Fei,Li,CHN,19830217,yes,,,,47,,,0.1
+player,home,start,19,Tan Binliang,Tan,CHN,19891104,,,,64,,,,0.1
+player,home,start,9,Deshorn Brown,,JAM,19901222,,,,,,,,0.6
+player,home,sub,7,Gao Tianyi,,CHN,19980701,,,56,,90+2,,,0.1
+player,home,sub,21,Cai Jingyuan,,CHN,19870101,,,64,,,,,0.1
+player,home,bench,1,Niu Ben,,CHN,19890311,,yes,,,,,,0.1
+player,home,bench,5,Ren Peng,,CHN,19870130,,,,,,,,0.1
+player,home,bench,6,Ling Sihao,,CHN,19910202,,,,,,,,0.1
+player,home,bench,8,Du Longquan,,CHN,19880529,,,,,,,,0.1
+player,home,bench,32,Zhang Hongnan,,CHN,19910117,,,,,,,,0.1
+player,away,start,1,Bai Xiaolei,Bai,CHN,19850904,,yes,,,,,,0.1
+player,away,start,25,Li Xudong,Li,CHN,19910209,,,,70,,,,0.1
+player,away,start,3,Hao Qiang,Hao,CHN,19860117,,,,86,,,,0.1
+player,away,start,16,Wang Dalong,Wang,CHN,19890311,,,,,,,,0.1
+player,away,start,7,Li Jiahe,Li,CHN,19890812,,,,82,,,,0.1
+player,away,start,31,Li Gen,Li,CHN,19850330,,,,,21,,,0.1
+player,away,start,8,Adam Hughes,,AUS,19820714,yes,,,,88,,,0.3
+player,away,start,18,Liu Yue,Liu,CHN,19970914,,,,,,,,0.1
+player,away,start,33,Rodrigo Paulista,Rodrigo,BRA,19850304,,,,,,,,0.7
+player,away,start,28,Piao Taoyu,Piao,CHN,19930518,,,,,,,,0.1
+player,away,start,19,Ricardo Steer,,COL,19820608,,,,,,,,0.3
+player,away,sub,5,Yu Tao,,CHN,19830703,,,70,,,,,0.1
+player,away,sub,27,Li Jian,,CHN,19850309,,,82,,,,,0.1
+player,away,sub,37,Zhang Song,,CHN,19890812,,,86,,,,,0.1
+player,away,bench,9,Li Xin,,CHN,19911105,,,,,,,,0.1
+player,away,bench,10,Ji Xiaoxuan,,CHN,19930319,,,,,,,,0.1
+player,away,bench,17,Liu Xiaolong,,CHN,19890216,,,,,,,,0.1
+player,away,bench,32,Lai Xiaoyu,,CHN,19941016,,yes,,,,,,0.1
 ,,,,,,,,,,,,,,,
 # --- GOALS --- goal,minute,side,scorer,type,assist,,,,,,,,,,
 goal,5,away,Rodrigo Paulista,goal,Piao Taoyu,,,,,,,,,,

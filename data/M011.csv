@@ -22,42 +22,42 @@ team,home,Wong Tai Sin,HKG,Chiu Chung Man,HKG,4-2-3-1,0.9,#FEE300,#000000,,#FEE3
 team,away,Dreams Metro Gallery,HKG,Leung Chi Wing,HKG,4-2-3-1,0.7,#0548A0,#D55A90,,#0548A0,,,,
 ,,,,,,,,,,,,,,,
 # --- PLAYERS -- player,side,role,number,name,kit_name,country,id,captain,goalkeeper,on,off,yellow,double yellow,red,value
-player,home,start,22,Cheung King Wah,Cheung,HKG,,,yes,,,,,,0.1
-player,home,start,27,Yu Pui Hong,Yu,HKG,,,,,,,,,0.1
-player,home,start,38,Chiu Chun Kit,Chiu,HKG,,,,,,,,,0.1
-player,home,start,13,Yeung Chi Lun,Yeung,HKG,,,,,,,,,0.1
-player,home,start,17,Lau Kwun Pong,Lau,HKG,,,,,,19,,,0.1
-player,home,start,5,Aender,,HKG,,,,,30,,,,0.1
-player,home,start,39,Zhang Jun,Zhang,CHN,,,,,,,,,0.1
-player,home,start,10,Yuto Nakamura,,JPN,,yes,,,,88,,,0.2
-player,home,start,77,Yoon Dong-hun,Yoon,KOR,,,,,17,,,,0.1
-player,home,start,11,Liu Pui Fung,Liu,HKG,,,,,83,,,,0.1
-player,home,start,80,Reinaldo Gaúcho,Reinaldo,BRA,,,,,,63,,,0.1
-player,home,sub,7,Mirko Teodorović,,SRB,,,,17,,38,,,0.1
-player,home,sub,26,Everton Camargo,,BRA,,,,30,,,,,
-player,home,sub,15,Wong Chun Hin,,HKG,,,,83,,,,,0.1
-player,home,bench,9,To Hon To,,HKG,,,,,,,,,0.1
-player,home,bench,21,Li Jian,,CHN,,,,,,,,,0.1
-player,home,bench,28,Fu Shu Sing,,HKG,,,,,,,,,0.1
-player,home,bench,98,Ng Tsz Hin,,HKG,,,yes,,,,,,0.1
-player,away,start,12,Li Yat Chun,Li,HKG,,,yes,,,,,,0.1
-player,away,start,30,Wong Tsz Ho,Wong,HKG,,,,,,23,,,0.1
-player,away,start,5,Pablo Gallardo,,ESP,,yes,,,,,,,0.1
-player,away,start,28,Lau Hok Ming,Lau,HKG,,,,,,,,,0.1
-player,away,start,95,Tse Long Hin,Tse,HKG,,,,,,,,,0.1
-player,away,start,22,Vas Nuñez,,MEX,,,,,,90+4,,,0.1
-player,away,start,23,Leung Kwok Wai,Leung,HKG,,,,,75,,,,0.1
-player,away,start,3,Lo Tsz Hin,Lo,HKG,,,,,18,,,,0.1
-player,away,start,77,Leônidas,,BRA,,,,,,,,,0.1
-player,away,start,9,Chung Wai Keung,Chung,HKG,,,,,60,,,,0.1
-player,away,start,20,Kenji Fukuda,,JPN,,,,,,63,,,0.1
-player,away,sub,19,Yiu Ho Ming,,HKG,,,,18,,86,,,0.1
-player,away,sub,10,Lai Lok Yin,,HKG,,,,60,,,,,0.1
-player,away,sub,8,Li Ka Chun,,HKG,,,,75,,,,,0.1
-player,away,bench,1,Pang Tsz Kin,,HKG,,,yes,,,,,,0.1
-player,away,bench,11,Siu Chun Ming,,HKG,,,,,,,,,0.1
-player,away,bench,21,Lau Ho Lam,,HKG,,,,,,,,,0.1
-player,away,bench,33,Chow Wing Hin,,HKG,,,,,,,,,0.1
+player,home,start,22,Cheung King Wah,Cheung,HKG,19860707,,yes,,,,,,0.1
+player,home,start,27,Yu Pui Hong,Yu,HKG,19950207,,,,,,,,0.1
+player,home,start,38,Chiu Chun Kit,Chiu,HKG,19831004,,,,,,,,0.1
+player,home,start,13,Yeung Chi Lun,Yeung,HKG,19891120,,,,,,,,0.1
+player,home,start,17,Lau Kwun Pong,Lau,HKG,19900707,,,,,19,,,0.1
+player,home,start,5,Aender,,HKG,19830212,,,,30,,,,0.1
+player,home,start,39,Zhang Jun,Zhang,CHN,19920701,,,,,,,,0.1
+player,home,start,10,Yuto Nakamura,,JPN,19870123,yes,,,,88,,,0.2
+player,home,start,77,Yoon Dong-hun,Yoon,KOR,19830502,,,,17,,,,0.1
+player,home,start,11,Liu Pui Fung,Liu,HKG,19910821,,,,83,,,,0.1
+player,home,start,80,Reinaldo Gaúcho,Reinaldo,BRA,19801022,,,,,63,,,0.1
+player,home,sub,7,Mirko Teodorović,,SRB,19780806,,,17,,38,,,0.1
+player,home,sub,26,Everton Camargo,,BRA,19910525,,,30,,,,,
+player,home,sub,15,Wong Chun Hin,,HKG,19950709,,,83,,,,,0.1
+player,home,bench,9,To Hon To,,HKG,19890404,,,,,,,,0.1
+player,home,bench,21,Li Jian,,CHN,19860205,,,,,,,,0.1
+player,home,bench,28,Fu Shu Sing,,HKG,19851112,,,,,,,,0.1
+player,home,bench,98,Ng Tsz Hin,,HKG,19950820,,yes,,,,,,0.1
+player,away,start,12,Li Yat Chun,Li,HKG,19951208,,yes,,,,,,0.1
+player,away,start,30,Wong Tsz Ho,Wong,HKG,19940307,,,,,23,,,0.1
+player,away,start,5,Pablo Gallardo,,ESP,19860219,yes,,,,,,,0.1
+player,away,start,28,Lau Hok Ming,Lau,HKG,19951019,,,,,,,,0.1
+player,away,start,95,Tse Long Hin,Tse,HKG,19950206,,,,,,,,0.1
+player,away,start,22,Vas Nuñez,,MEX,19951122,,,,,90+4,,,0.1
+player,away,start,23,Leung Kwok Wai,Leung,HKG,19860223,,,,75,,,,0.1
+player,away,start,3,Lo Tsz Hin,Lo,HKG,19961113,,,,18,,,,0.1
+player,away,start,77,Leônidas,,BRA,19951017,,,,,,,,0.1
+player,away,start,9,Chung Wai Keung,Chung,HKG,19951021,,,,60,,,,0.1
+player,away,start,20,Kenji Fukuda,,JPN,19771021,,,,,63,,,0.1
+player,away,sub,19,Yiu Ho Ming,,HKG,19950501,,,18,,86,,,0.1
+player,away,sub,10,Lai Lok Yin,,HKG,19950720,,,60,,,,,0.1
+player,away,sub,8,Li Ka Chun,,HKG,19930910,,,75,,,,,0.1
+player,away,bench,1,Pang Tsz Kin,,HKG,19861216,,yes,,,,,,0.1
+player,away,bench,11,Siu Chun Ming,,HKG,19951227,,,,,,,,0.1
+player,away,bench,21,Lau Ho Lam,,HKG,19930122,,,,,,,,0.1
+player,away,bench,33,Chow Wing Hin,,HKG,19960407,,,,,,,,0.1
 ,,,,,,,,,,,,,,,
 # --- GOALS --- goal,minute,side,scorer,type,assist,,,,,,,,,,
 goal,21,away,Vas Nuñez,goal,Leung Kwok Wai,,,,,,,,,,
