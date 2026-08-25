@@ -24,7 +24,7 @@ team,away,Kitchee,HKG,Chu Chi Kwong,HKG,4-3-3,2.7,#BA014B,#FFFFFF,,#BA014B,,,,
 # --- PLAYERS -- player,side,role,number,name,kit_name,country,id,captain,goalkeeper,on,off,yellow,double yellow,red,value
 player,home,start,1,Long Wenhao,Long,CHN,19970330,,yes,,,,,,0.1
 player,home,start,26,Jing Teng,Jing,HKG,19900520,,,,,54,,,0.1
-player,home,start,25,Lam Wan Kit,Lam,CHN,19871125,,,,,,,,0.1
+player,home,start,25,Lam Wan Kit,Lam,HKG,19871125,,,,,,,,0.1
 player,home,start,4,Yang Ting,Yang,CHN,19930604,yes,,,,,,,0.1
 player,home,start,45,Liang Zhanhao,Liang,CHN,19970522,,,,62,,,,0.1
 player,home,start,8,Yang Ziyi,Yang,CHN,19951214,,,,58,,,,0.1
