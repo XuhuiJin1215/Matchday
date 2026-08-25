@@ -268,11 +268,9 @@ nav.tabs a.on{background:var(--ink);color:var(--paper)}
   font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums;
 }
 .pl .nm{flex:0 1 auto;min-width:0}
-.pl .val{padding-left:8px;font-family:var(--font-display);font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums;flex:none}
+.pl .val{margin-left:auto;padding-left:8px;font-family:var(--font-display);font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums;flex:none}
 .pl.dim{color:var(--muted)}
-.pl .age{flex:none;font-family:var(--font-display);font-size:12px;font-weight:600;
-  color:var(--muted);opacity:.75;font-variant-numeric:tabular-nums}
-.pl .pl-stats{margin-left:auto;flex:none;display:flex;align-items:center;gap:6px}
+.pl .nm .age-tag{font-size:.78em;font-weight:400;color:var(--muted);opacity:.7;font-variant-numeric:tabular-nums}
 .pitch-id .avg-age{margin-left:auto;flex:none;font-family:var(--font-display);font-size:12px;font-weight:700;color:var(--muted)}
 .badge{position:relative;display:inline-flex;align-items:center;justify-content:center;flex:none}
 .badge .fb{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:800;font-size:8px}
@@ -359,7 +357,10 @@ nav.tabs a.on{background:var(--ink);color:var(--paper)}
   white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .rank-row .n{font-family:var(--font-display);font-weight:700;font-variant-numeric:tabular-nums;font-size:14px;
   flex:none;width:88px;text-align:right;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.rank-row .n.n-age{text-align:left}
+.rank-row .n.n-age{overflow:visible}
+.age-val{position:relative;display:inline-block;min-width:1.35em;text-align:right}
+.age-val .age-d{position:absolute;left:100%;bottom:-.18em;margin-left:1px;
+  font-size:.68em;color:var(--muted);font-weight:600;white-space:nowrap}
 .rank-row .track{width:76px;height:6px;background:var(--line-soft);border-radius:999px;overflow:hidden;flex:none}
 .rank-row .track i{display:block;height:100%;background:var(--ink);border-radius:999px}
 .empty{padding:22px 18px;color:var(--muted);font-size:14px}
@@ -971,13 +972,10 @@ function lineupBlock(m,side){
     return `<div class="pl ${dim?"dim":""}">
       <span class="no">${esc(p.number||"")}</span>
       ${p.country?flag(p.country):""}
-      <span class="nm">${esc(p.name)}</span>
+      <span class="nm">${esc(p.name)}${(()=>{const a=ageOn(p.id,m.date);return a==null?"":` <span class="age-tag" title="Age on matchday">(${a})</span>`;})()}</span>
       ${status.join("")}
       ${events}
-      <span class="pl-stats">
-        ${(()=>{const a=ageOn(p.id,m.date);return a==null?"":`<span class="age num" title="Age on matchday">(${a})</span>`;})()}
-        ${p.value!=null?`<span class="val">€${p.value}m</span>`:""}
-      </span>
+      ${p.value!=null?`<span class="val">€${p.value}m</span>`:""}
     </div>`;
   };
   const block=(title,arr,dim)=>arr.length?`<h4>${title}</h4>${arr.map(p=>row(p,dim)).join("")}`:"";
