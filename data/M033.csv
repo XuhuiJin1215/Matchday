@@ -22,50 +22,50 @@ team,home,Hong Kong,,Kim Pan-gon,KOR,3-4-3,3,#E8384E,#FFFFFF,,#E8384E,,,,
 team,away,Malaysia,,Nelo Vingada,POR,4-1-4-1,2.2,#17181B,#FFFFFF,,#17181B,,,,
 ,,,,,,,,,,,,,,,
 # --- PLAYERS -- player,side,role,number,name,kit_name,country,id,captain,goalkeeper,on,off,yellow,double yellow,red,value
-player,home,start,1,Yapp Hung Fai,Yapp,HKG,,yes,yes,,,,,,0.3
-player,home,start,5,Fernando Recio,,HKG,,,,,,,,,0.2
-player,home,start,4,Hélio,,HKG,,,,,,,,,0.2
-player,home,start,15,Roberto Júnior,Roberto,HKG,,,,,,,,,0.3
-player,home,start,3,Dani Cancela,,HKG,,,,,,,,,0.1
-player,home,start,6,Huang Yang,Huang,HKG,,,,,,24,,,0.1
-player,home,start,21,Wong Wai,Wong,HKG,,,,,61,,,,0.1
-player,home,start,8,Xu Deshuai,Xu,HKG,,,,,,,,,0.2
-player,home,start,22,Jaimes McKee,,HKG,,,,,,,,,0.1
-player,home,start,20,Jordi Tarrés,,HKG,,,,,70,,,,0.2
-player,home,start,11,Godfred Karikari,,HKG,,,,,78,,,,0.1
-player,home,sub,23,Ju Yingzhi,,HKG,,,,61,,,,,0.1
-player,home,sub,9,Sandro,,HKG,,,,70,,,,,0.3
-player,home,sub,16,Tan Chun Lok,,HKG,,,,78,,,,,0.2
-player,home,bench,2,Lee Chi Ho,,HKG,,,,,,,,,0.1
-player,home,bench,7,Alex Akande,,HKG,,,,,,,,,0.2
-player,home,bench,10,Itaparica,,HKG,,,,,,,,,0.1
-player,home,bench,12,Tsui Wang Kit,,HKG,,,,,,,,,0.1
-player,home,bench,13,Lo Kong Wai,,HKG,,,,,,,,,0.1
-player,home,bench,14,James Ha,,HKG,,,,,,,,,0.1
-player,home,bench,17,Wu Chun Ming,,HKG,,,,,,,,,0.1
-player,home,bench,18,Tse Tak Him,,HKG,,,yes,,,,,,0.1
-player,home,bench,19,Wang Zhenpeng,,HKG,,,yes,,,,,,0.2
-player,away,start,23,Hafizul Hakim,Hafizul,MAS,,,yes,,,,,,0.1
-player,away,start,21,Nazirul Naim,Nazirul,MAS,,,,,,,,,0.1
-player,away,start,5,Shahrom Kalam,Shahrom,MAS,,,,,,,,,0.1
-player,away,start,13,Khairul Helmi Johari,Khairul,MAS,,,,,,,,,0.1
-player,away,start,2,Matthew Davies,,MAS,,,,,,,,,0.1
-player,away,start,18,Kiko Insa,,MAS,,,,,,,,,0.1
-player,away,start,16,Syazwan Zainon,Syazwan,MAS,,,,,,,,,0.1
-player,away,start,17,Syamer Kutty Abba,Syamer,MAS,,,,,74,43,,,0.1
-player,away,start,7,Baddrol Bakhtiar,Baddrol,MAS,,,,,79,,,,0.3
-player,away,start,11,Safawi Rasid,Safawi,MAS,,,,,46,45,,,0.1
-player,away,start,8,Safiq Rahim,Safiq,MAS,,yes,,,,,,40,0.4
-player,away,sub,10,Darren Lok,,MAS,,,,46,,,,,0.1
-player,away,sub,12,Akram Mahinan,,MAS,,,,74,,90+2,,,0.1
-player,away,sub,19,Wan Zack Haikal,,MAS,,,,79,,,,,0.1
-player,away,bench,1,Khairulazhan Khalid,,MAS,,,yes,,,,,,0.1
-player,away,bench,3,Fitri Omar,,MAS,,,,,,,,,0.1
-player,away,bench,4,Adam Nor Azlin,,MAS,,,,,,,,,0.1
-player,away,bench,6,Amirul Hadi Zainal,,MAS,,,,,,,,,0.1
-player,away,bench,14,Nazmi Faiz,,MAS,,,,,,,,,0.1
-player,away,bench,15,Amirul Azhan Aznan,,MAS,,,,,,,,,0.1
-player,away,bench,22,Ifwat Akmal,,MAS,,,yes,,,,,,0.1
+player,home,start,1,Yapp Hung Fai,Yapp,HKG,19900321,yes,yes,,,,,,0.3
+player,home,start,5,Fernando Recio,,HKG,19821217,,,,,,,,0.2
+player,home,start,4,Hélio,,HKG,19860131,,,,,,,,0.2
+player,home,start,15,Roberto Júnior,Roberto,HKG,19830528,,,,,,,,0.3
+player,home,start,3,Dani Cancela,,HKG,19810923,,,,,,,,0.1
+player,home,start,6,Huang Yang,Huang,HKG,19831030,,,,,24,,,0.1
+player,home,start,21,Wong Wai,Wong,HKG,19920917,,,,61,,,,0.1
+player,home,start,8,Xu Deshuai,Xu,HKG,19870713,,,,,,,,0.2
+player,home,start,22,Jaimes McKee,,HKG,19870414,,,,,,,,0.1
+player,home,start,20,Jordi Tarrés,,HKG,19810316,,,,70,,,,0.2
+player,home,start,11,Godfred Karikari,,HKG,19850311,,,,78,,,,0.1
+player,home,sub,23,Ju Yingzhi,,HKG,19870724,,,61,,,,,0.1
+player,home,sub,9,Sandro,,HKG,19870310,,,70,,,,,0.3
+player,home,sub,16,Tan Chun Lok,,HKG,19960115,,,78,,,,,0.2
+player,home,bench,2,Lee Chi Ho,,HKG,19821116,,,,,,,,0.1
+player,home,bench,7,Alex Akande,,HKG,19890209,,,,,,,,0.2
+player,home,bench,10,Itaparica,,HKG,19800708,,,,,,,,0.1
+player,home,bench,12,Tsui Wang Kit,,HKG,19970105,,,,,,,,0.1
+player,home,bench,13,Lo Kong Wai,,HKG,19920619,,,,,,,,0.1
+player,home,bench,14,James Ha,,HKG,19921226,,,,,,,,0.1
+player,home,bench,17,Wu Chun Ming,,HKG,19971121,,,,,,,,0.1
+player,home,bench,18,Tse Tak Him,,HKG,19850210,,yes,,,,,,0.1
+player,home,bench,19,Wang Zhenpeng,,HKG,19840505,,yes,,,,,,0.2
+player,away,start,23,Hafizul Hakim,Hafizul,MAS,19930330,,yes,,,,,,0.1
+player,away,start,21,Nazirul Naim,Nazirul,MAS,19930406,,,,,,,,0.1
+player,away,start,5,Shahrom Kalam,Shahrom,MAS,19850915,,,,,,,,0.1
+player,away,start,13,Khairul Helmi Johari,Khairul,MAS,19880331,,,,,,,,0.1
+player,away,start,2,Matthew Davies,,MAS,19950207,,,,,,,,0.1
+player,away,start,18,Kiko Insa,,MAS,19880125,,,,,,,,0.1
+player,away,start,16,Syazwan Zainon,Syazwan,MAS,19891113,,,,,,,,0.1
+player,away,start,17,Syamer Kutty Abba,Syamer,MAS,19971001,,,,74,43,,,0.1
+player,away,start,7,Baddrol Bakhtiar,Baddrol,MAS,19880201,,,,79,,,,0.3
+player,away,start,11,Safawi Rasid,Safawi,MAS,19970305,,,,46,45,,,0.1
+player,away,start,8,Safiq Rahim,Safiq,MAS,19870705,yes,,,,,,40,0.4
+player,away,sub,10,Darren Lok,,MAS,19901214,,,46,,,,,0.1
+player,away,sub,12,Akram Mahinan,,MAS,19930119,,,74,,90+2,,,0.1
+player,away,sub,19,Wan Zack Haikal,,MAS,19910128,,,79,,,,,0.1
+player,away,bench,1,Khairulazhan Khalid,,MAS,19891107,,yes,,,,,,0.1
+player,away,bench,3,Fitri Omar,,MAS,19850625,,,,,,,,0.1
+player,away,bench,4,Adam Nor Azlin,,MAS,19960105,,,,,,,,0.1
+player,away,bench,6,Amirul Hadi Zainal,,MAS,19860527,,,,,,,,0.1
+player,away,bench,14,Nazmi Faiz,,MAS,19940816,,,,,,,,0.1
+player,away,bench,15,Amirul Azhan Aznan,,MAS,19930723,,,,,,,,0.1
+player,away,bench,22,Ifwat Akmal,,MAS,19960810,,yes,,,,,,0.1
 ,,,,,,,,,,,,,,,
 # --- GOALS --- goal,minute,side,scorer,type,assist,,,,,,,,,,
 goal,44,home,Jordi Tarrés,goal,Wong Wai,,,,,,,,,,
