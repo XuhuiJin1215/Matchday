@@ -1,0 +1,115 @@
+,,,,,,,,,,,,,,,
+# --- MATCH --- meta,field,value,,,,,,,,,,,,,
+meta,id,M047,,,,,,,,,,,,,
+meta,status,played,,,,,,,,,,,,,
+meta,competition,UEFA European Championship,,,,,,,,,,,,,
+meta,round,Semi-final,,,,,,,,,,,,,
+meta,date,2021-07-07,,,,,,,,,,,,,
+meta,kickoff,20:00,,,,,,,,,,,,,
+meta,venue,Wembley Stadium,,,,,,,,,,,,,
+meta,city,London,,,,,,,,,,,,,
+meta,country,ENG,,,,,,,,,,,,,
+meta,neutral,no,,,,,,,,,,,,,
+meta,attendance,64950,,,,,,,,,,,,,
+meta,score,2-1,,,,,,,,,,,,,
+meta,aggregate,,,,,,,,,,,,,,
+meta,decision,AET,,,,,,,,,,,,,
+meta,referee,Danny Makkelie,,,,,,,,,,,,,
+meta,referee_country,NED,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- TEAMS --- team,side,name,country,coach,coach_country,formation,squad_value,pitch_fill,pitch_number,gk_fill,stat_color,,,,
+team,home,England,,Gareth Southgate,ENG,4-2-3-1,1145,#ECEEF1,#D40E1F,,#332F43,,,,
+team,away,Denmark,,Kasper Hjulmand,DEN,3-4-3,267.5,#A10320,#FFFFFF,,#A10320,,,,
+,,,,,,,,,,,,,,,
+# --- PLAYERS -- player,side,role,number,name,kit_name,country,id,captain,goalkeeper,on,off,yellow,double yellow,red,value
+player,home,start,1,Jordan Pickford,,ENG,,,yes,,,,,,22
+player,home,start,3,Luke Shaw,,ENG,,,,,,,,,35
+player,home,start,6,Harry Maguire,,ENG,,,,,,49,,,45
+player,home,start,5,John Stones,,ENG,,,,,,,,,30
+player,home,start,2,Kyle Walker,,ENG,,,,,,,,,28
+player,home,start,4,Declan Rice,,ENG,,,,,95,,,,65
+player,home,start,14,Kalvin Phillips,,ENG,,,,,,,,,30
+player,home,start,10,Raheem Sterling,,ENG,,,,,,,,,90
+player,home,start,19,Mason Mount,,ENG,,,,,95,,,,75
+player,home,start,25,Bukayo Saka,,ENG,,,,,69,,,,65
+player,home,start,9,Harry Kane,,ENG,,yes,,,,,,,120
+player,home,sub,7,Jack Grealish,,ENG,,,,69,106,,,,65
+player,home,sub,8,Jordan Henderson,,ENG,,,,95,,,,,20
+player,home,sub,20,Phil Foden,,ENG,,,,95,,,,,80
+player,home,sub,12,Kieran Trippier,,ENG,,,,106,,,,,20
+player,home,bench,11,Marcus Rashford,,ENG,,,,,,,,,85
+player,home,bench,13,Aaron Ramsdale,,ENG,,,yes,,,,,,12
+player,home,bench,15,Tyrone Mings,,ENG,,,,,,,,,30
+player,home,bench,16,Conor Coady,,ENG,,,,,,,,,25
+player,home,bench,17,Jadon Sancho,,ENG,,,,,,,,,100
+player,home,bench,23,Sam Johnstone,,ENG,,,yes,,,,,,8
+player,home,bench,24,Reece James,,ENG,,,,,,,,,40
+player,home,bench,26,Jude Bellingham,,ENG,,,,,,,,,55
+player,away,start,1,Kasper Schmeichel,,DEN,,,yes,,,,,,6
+player,away,start,3,Jannik Vestergaard,,DEN,,,,,105,,,,18
+player,away,start,4,Simon Kjær,,DEN,,yes,,,,,,,10
+player,away,start,6,Andreas Christensen,,DEN,,,,,79,,,,30
+player,away,start,5,Joakim Mæhle,,DEN,,,,,,,,,13
+player,away,start,23,Pierre-Emile Højbjerg,,DEN,,,,,,,,,35
+player,away,start,8,Thomas Delaney,,DEN,,,,,88,,,,15
+player,away,start,17,Jens Stryger Larsen,,DEN,,,,,67,,,,4
+player,away,start,14,Mikkel Damsgaard,,DEN,,,,,67,,,,13
+player,away,start,12,Kasper Dolberg,,DEN,,,,,67,,,,20
+player,away,start,9,Martin Braithwaite,,DEN,,,,,,,,,9
+player,away,sub,15,Christian Nørgaard,,DEN,,,,67,,,,,3.5
+player,away,sub,18,Daniel Wass,,DEN,,,,67,,72,,,7
+player,away,sub,20,Yussuf Poulsen,,DEN,,,,67,,,,,21
+player,away,sub,2,Joachim Andersen,,DEN,,,,79,,,,,22
+player,away,sub,24,Mathias Jensen,,DEN,,,,88,,,,,8
+player,away,sub,19,Jonas Wind,,DEN,,,,105,,,,,5
+player,away,bench,7,Robert Skov,,DEN,,,,,,,,,10
+player,away,bench,11,Andreas Skov Olsen,,DEN,,,,,,,,,6.5
+player,away,bench,13,Mathias Jørgensen,,DEN,,,,,,,,,1.5
+player,away,bench,16,Jonas Lössl,,DEN,,,yes,,,,,,1.5
+player,away,bench,21,Andreas Cornelius,,DEN,,,,,,,,,6
+player,away,bench,22,Frederik Rønnow,,DEN,,,yes,,,,,,2.5
+,,,,,,,,,,,,,,,
+# --- GOALS --- goal,minute,side,scorer,type,assist,,,,,,,,,,
+goal,30,away,Mikkel Damsgaard,goal,,,,,,,,,,,
+goal,39,home,Simon Kjær,own goal,,,,,,,,,,,
+goal,104,home,Harry Kane,goal,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- MATCH STATS --- stat,name,home,away,,,,,,,,,,,,
+stat,Possession,58,42,,,,,,,,,,,,
+stat,Expected goals (xG),2.08,0.24,,,,,,,,,,,,
+stat,Shots,20,6,,,,,,,,,,,,
+stat,Shots on target,10,3,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- WEATHER --- weather,field,value,,,,,,,,,,,,,
+weather,condition,Clear,,,,,,,,,,,,,
+weather,temp_c,17,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- MATCHDAY --- personal,field,value,,,,,,,,,,,,,
+personal,ticket_price,595,,,,,,,,,,,,,
+personal,ticket_currency,EUR,,,,,,,,,,,,,
+personal,ticket_price_usd,704,,,,,,,,,,,,,
+personal,section,Block 141,,,,,,,,,,,,,
+personal,row,39,,,,,,,,,,,,,
+personal,seat,215,,,,,,,,,,,,,
+personal,seating,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- PHOTOS --- photo,file,caption,,,,,,,,,,,,,
+photo,M047_1.jpg,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- CHAMPIONS --- champion,field,value,,,,,,,,,,,,,
+champion,team,,,,,,,,,,,,,,
+champion,side,,,,,,,,,,,,,,
+champion,title,,,,,,,,,,,,,,
+champion,season,,,,,,,,,,,,,,
+champion,note,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- PENALTIES ----------------------------- pen,order,side,player,result,,,,,,,,,,,
+pen,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
