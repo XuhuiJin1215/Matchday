@@ -268,10 +268,11 @@ nav.tabs a.on{background:var(--ink);color:var(--paper)}
   font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums;
 }
 .pl .nm{flex:0 1 auto;min-width:0}
-.pl .val{margin-left:auto;padding-left:8px;font-family:var(--font-display);font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums;flex:none}
+.pl .val{padding-left:8px;font-family:var(--font-display);font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums;flex:none}
 .pl.dim{color:var(--muted)}
 .pl .age{flex:none;font-family:var(--font-display);font-size:12px;font-weight:600;
   color:var(--muted);opacity:.75;font-variant-numeric:tabular-nums}
+.pl .pl-stats{margin-left:auto;flex:none;display:flex;align-items:center;gap:6px}
 .pitch-id .avg-age{margin-left:auto;flex:none;font-family:var(--font-display);font-size:12px;font-weight:700;color:var(--muted)}
 .badge{position:relative;display:inline-flex;align-items:center;justify-content:center;flex:none}
 .badge .fb{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:800;font-size:8px}
@@ -358,6 +359,7 @@ nav.tabs a.on{background:var(--ink);color:var(--paper)}
   white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .rank-row .n{font-family:var(--font-display);font-weight:700;font-variant-numeric:tabular-nums;font-size:14px;
   flex:none;width:88px;text-align:right;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rank-row .n.n-age{text-align:left}
 .rank-row .track{width:76px;height:6px;background:var(--line-soft);border-radius:999px;overflow:hidden;flex:none}
 .rank-row .track i{display:block;height:100%;background:var(--ink);border-radius:999px}
 .empty{padding:22px 18px;color:var(--muted);font-size:14px}
@@ -642,6 +644,13 @@ function fmtDate(d,long){
 }
 const esc=s=>String(s==null?"":s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const nf=n=>n==null?"—":n.toLocaleString("en-GB");
+/* A highlight tile's number is set at 31px, but "1,367,420" doesn't fit at
+   that size in a 158px-wide tile the way "42" does. Shrink by digit count. */
+function tileVal(text){
+  const digits=String(text).replace(/<[^>]*>/g,"").replace(/[^0-9]/g,"").length;
+  const size=digits>=9?18:digits>=7?22:digits>=6?26:31;
+  return `<div class="v num" style="font-size:${size}px">${text}</div>`;
+}
 
 function flag(code,cls){
   if(!code) return "";
@@ -963,10 +972,12 @@ function lineupBlock(m,side){
       <span class="no">${esc(p.number||"")}</span>
       ${p.country?flag(p.country):""}
       <span class="nm">${esc(p.name)}</span>
-      ${(()=>{const a=ageOn(p.id,m.date);return a==null?"":`<span class="age num" title="Age on matchday">${a}</span>`;})()}
       ${status.join("")}
       ${events}
-      ${p.value!=null?`<span class="val">€${p.value}m</span>`:""}
+      <span class="pl-stats">
+        ${(()=>{const a=ageOn(p.id,m.date);return a==null?"":`<span class="age num" title="Age on matchday">(${a})</span>`;})()}
+        ${p.value!=null?`<span class="val">€${p.value}m</span>`:""}
+      </span>
     </div>`;
   };
   const block=(title,arr,dim)=>arr.length?`<h4>${title}</h4>${arr.map(p=>row(p,dim)).join("")}`:"";
@@ -1424,7 +1435,7 @@ function statCard(def){
       <span class="nm">${label}</span>
       ${r.date?`<span class="dt">${fmtDate(r.date)}</span>`:""}
       ${def.kind==="count"?`<span class="track"><i style="width:${Math.round(r.value/max*100)}%"></i></span>`:""}
-      <span class="n">${r.display||def.fmt(r.value)}</span>
+      <span class="n${r.display?" n-age":""}">${r.display||def.fmt(r.value)}</span>
     </div>`;}).join("")}</div>`:`<div class="empty">Nothing recorded yet.</div>`;
   return `<div class="card stat-card">
     <h3><a href="#/stat/${esc(def.key)}">${esc(def.title)}</a></h3>
@@ -1595,12 +1606,12 @@ function renderStats(){
       <p>matches watched in person${S.spanFrom?` between ${S.spanFrom} and ${S.spanTo}`:""} — ${goals} goals, ${venues.length} stadiums, ${countries.length} countries.</p>
     </section>
     <div class="tiles">
-      <div class="tile"><div class="k">Goals seen</div><div class="v num">${goals}</div><div class="s">${played.length?(goals/played.length).toFixed(2):"0"} per match</div></div>
-      <div class="tile"><div class="k">Watched alongside</div><div class="v num">${nf(crowd)}</div><div class="s">people, in total</div></div>
-      <div class="tile"><div class="k">Competitions</div><div class="v num">${comps.length}</div><div class="s">${esc(compsSeen.length?compsSeen[0].label:"—")} most often</div></div>
-      <div class="tile"><div class="k">Stadiums</div><div class="v num">${venues.length}</div><div class="s">in ${countries.length} countries</div></div>
-      <div class="tile"><div class="k">Champions</div><div class="v num">${S.champions.length}</div><div class="s">${S.champions.length?`witnessed · ${uniq(S.champions.map(m=>m.champion.team)).length} ${uniq(S.champions.map(m=>m.champion.team)).length===1?"team":"teams"}`:"witnessed"}</div></div>
-      ${S.spendUSD.length?`<div class="tile"><div class="k">Tickets</div><div class="v num">$${nf(Math.round(S.spendUSD.reduce((a,b)=>a+b,0)))}</div><div class="s">$${Math.round(S.spendUSD.reduce((a,b)=>a+b,0)/S.spendUSD.length)} average, ${S.spendUSD.length} logged</div></div>`:""}
+      <div class="tile"><div class="k">Goals seen</div>${tileVal(goals)}<div class="s">${played.length?(goals/played.length).toFixed(2):"0"} per match</div></div>
+      <div class="tile"><div class="k">Watched alongside</div>${tileVal(nf(crowd))}<div class="s">people, in total</div></div>
+      <div class="tile"><div class="k">Competitions</div>${tileVal(comps.length)}<div class="s">${esc(compsSeen.length?compsSeen[0].label:"—")} most often</div></div>
+      <div class="tile"><div class="k">Stadiums</div>${tileVal(venues.length)}<div class="s">in ${countries.length} countries</div></div>
+      <div class="tile"><div class="k">Champions</div>${tileVal(S.champions.length)}<div class="s">${S.champions.length?`witnessed · ${uniq(S.champions.map(m=>m.champion.team)).length} ${uniq(S.champions.map(m=>m.champion.team)).length===1?"team":"teams"}`:"witnessed"}</div></div>
+      ${S.spendUSD.length?`<div class="tile"><div class="k">Tickets</div>${tileVal("$"+nf(Math.round(S.spendUSD.reduce((a,b)=>a+b,0))))}<div class="s">$${Math.round(S.spendUSD.reduce((a,b)=>a+b,0)/S.spendUSD.length)} average, ${S.spendUSD.length} logged</div></div>`:""}
     </div>
 
     <section class="sec"><div class="sec-h"><h2>Matches per year</h2></div>
@@ -1681,11 +1692,11 @@ function renderStatDetail(key){
       ${toggle}
     </section>
     <div class="tiles">
-      <div class="tile"><div class="k">${esc(def.kind==="count"?def.noun:(mode==="best"?def.dedupNoun:(def.kind==="value"?def.noun:"Matches")))}</div><div class="v num">${rows.length}</div><div class="s">in the list</div></div>
-      <div class="tile"><div class="k">${def.kind==="age"?"Oldest":"Highest"}</div><div class="v num">${rows[0].display||def.fmt(Math.max(...vals))}</div><div class="s">${esc(rows[0].label)}</div></div>
-      ${(def.showLows||def.kind==="age")?`<div class="tile"><div class="k">${def.kind==="age"?"Youngest":"Lowest"}</div><div class="v num">${rows[rows.length-1].display||def.fmt(Math.min(...vals))}</div><div class="s">${esc(rows[rows.length-1].label)}</div></div>`:""}
-      <div class="tile"><div class="k">Average</div><div class="v num">${def.kind==="age"?(Math.round(avg*10)/10):def.fmt(Math.round(avg*10)/10)}</div><div class="s">${esc(avgCaption)}</div></div>
-      ${def.kind==="count"?`<div class="tile"><div class="k">Total</div><div class="v num">${nf(total)}</div><div class="s">${esc(def.avgUnit||"entries")} counted</div></div>`:""}
+      <div class="tile"><div class="k">${esc(def.kind==="count"?def.noun:(mode==="best"?def.dedupNoun:(def.kind==="value"?def.noun:"Matches")))}</div>${tileVal(rows.length)}<div class="s">in the list</div></div>
+      <div class="tile"><div class="k">${def.kind==="age"?"Oldest":"Highest"}</div>${tileVal(rows[0].display||def.fmt(Math.max(...vals)))}<div class="s">${esc(rows[0].label)}</div></div>
+      ${(def.showLows||def.kind==="age")?`<div class="tile"><div class="k">${def.kind==="age"?"Youngest":"Lowest"}</div>${tileVal(rows[rows.length-1].display||def.fmt(Math.min(...vals)))}<div class="s">${esc(rows[rows.length-1].label)}</div></div>`:""}
+      <div class="tile"><div class="k">Average</div>${tileVal(def.kind==="age"?(Math.round(avg*10)/10):def.fmt(Math.round(avg*10)/10))}<div class="s">${esc(avgCaption)}</div></div>
+      ${def.kind==="count"?`<div class="tile"><div class="k">Total</div>${tileVal(nf(total))}<div class="s">${esc(def.avgUnit||"entries")} counted</div></div>`:""}
     </div>
     <div class="cards charts">${charts}</div>
     <section class="sec"><div class="sec-h"><h2>Full list</h2>${canToggle?`<span class="sec-tally">${mode==="best"?`highest per ${esc((def.dedupNoun||"entry").replace(/s$/,""))}`:`every ${esc(def.noun)}`}</span>`:""}</div>
@@ -1696,7 +1707,7 @@ function renderStatDetail(key){
           ${r.icon||(r.flagCode?flag(r.flagCode,"lg"):"")}
           <span class="nm">${label}</span>
           ${r.date?`<span class="dt">${fmtDate(r.date)}</span>`:""}
-          <span class="n">${r.display||def.fmt(r.value)}</span>
+          <span class="n${r.display?" n-age":""}">${r.display||def.fmt(r.value)}</span>
         </div>`;}).join("")}</div>
       ${def.listNote?`<p class="list-note">${esc(def.listNote)}</p>`:""}</div>
     </section>
