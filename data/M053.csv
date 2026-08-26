@@ -1,0 +1,117 @@
+,,,,,,,,,,,,,,,
+# --- MATCH --- meta,field,value,,,,,,,,,,,,,
+meta,id,M053,,,,,,,,,,,,,
+meta,status,played,,,,,,,,,,,,,
+meta,competition,CONCACAF Champions Cup,,,,,,,,,,,,,
+meta,round,First Round - 2nd Leg,,,,,,,,,,,,,
+meta,date,2025-02-26,,,,,,,,,,,,,
+meta,kickoff,19:30,,,,,,,,,,,,,
+meta,venue,Lumen Field,,,,,,,,,,,,,
+meta,city,Seattle,,,,,,,,,,,,,
+meta,country,USA,,,,,,,,,,,,,
+meta,neutral,no,,,,,,,,,,,,,
+meta,attendance,24714,,,,,,,,,,,,,
+meta,score,3-1,,,,,,,,,,,,,
+meta,aggregate,6-2,,,,,,,,,,,,,
+meta,decision,,,,,,,,,,,,,,
+meta,referee,Selvin Brown,,,,,,,,,,,,,
+meta,referee_country,HON,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- TEAMS --- team,side,name,country,coach,coach_country,formation,squad_value,pitch_fill,pitch_number,gk_fill,stat_color,,,,
+team,home,Seattle Sounders,USA,Brian Schmetzer,USA,4-2-3-1,50,#3DB17D,#FFFFFF,,#3DB17D,,,,
+team,away,Antigua,GUA,Mauricio Tapia,ARG,3-4-3,3.8,#6B58AA,#FFFFFF,,#6B58AA,,,,
+,,,,,,,,,,,,,,,
+# --- PLAYERS -- player,side,role,number,name,kit_name,country,id,captain,goalkeeper,on,off,yellow,double yellow,red,value
+player,home,start,26,Andrew Thomas,,RUS,19980901,,yes,,,,,,0.2
+player,home,start,15,Jonathan Bell,,JAM,19970826,,,,,,,,0.3
+player,home,start,25,Jackson Ragen,,USA,19980924,,,,,,,,3
+player,home,start,28,Yeimar Gómez,,COL,19920630,,,,57,,,,2.5
+player,home,start,16,Alex Roldán,,SLV,19960728,,,,82,,,,4
+player,home,start,75,Danny Leyva,,USA,20030505,,,,,,,,1.2
+player,home,start,6,João Paulo,João Paulo,BRA,19910308,yes,,,,,,,1.2
+player,home,start,17,Paul Arriola,,USA,19950205,,,,57,,,,4
+player,home,start,9,Jesús Ferreira,,USA,20001224,,,,74,,,,5
+player,home,start,10,Pedro de la Vega,de la Vega,ARG,20010207,,,,,,,,6
+player,home,start,13,Jordan Morris,,USA,19941026,,,,46,,,,4.5
+player,home,sub,19,Danny Musovski,,USA,19951130,,,46,,,,,0.6
+player,home,sub,5,Nouhou Tolo,,CMR,19970623,,,57,,,,,4.5
+player,home,sub,14,Paul Rothrock,,USA,19990109,,,57,,,,,0.8
+player,home,sub,93,Georgi Minoungou,,CIV,20020725,,,74,,,,,0.4
+player,home,sub,85,Kalani Kossa-Rienzi,,USA,20020627,,,82,,,,,
+player,home,bench,3,Travian Sousa,,USA,20010919,,,,,,,,
+player,home,bench,7,Cristian Roldan,,USA,19950603,,,,,,,,4
+player,home,bench,11,Albert Rusnák,,SVK,19940707,,,,,,,,3.5
+player,home,bench,18,Obed Vargas,,MEX,20050805,,,,,,,,3.5
+player,home,bench,29,Jacob Castro,,USA,19991218,,yes,,,,,,0.1
+player,home,bench,33,Cody Baker,,USA,20040107,,,,,,,,0.6
+player,home,bench,39,Stuart Hawkins,,USA,20060918,,,,,,,,0.1
+player,away,start,31,Luis Morán,,GUA,19960531,,yes,,,58,,,0.3
+player,away,start,2,Kevin Grijalva,,GUA,19950109,,,,64,,,,0.2
+player,away,start,12,José Ardón,,GUA,20000120,yes,,,,,,,0.3
+player,away,start,21,Alexander Robinson,,CRC,19881121,,,,,,,,0.1
+player,away,start,15,Santiago Díaz,,ARG,19991018,,,,,,,,0.2
+player,away,start,8,Cristian Hernández,,ARG,19950824,,,,75,,,,0.2
+player,away,start,6,José Rosales,,GUA,19930624,,,,84,65,,,0.1
+player,away,start,5,José Gálvez,,GUA,19990524,,,,,,,,0.2
+player,away,start,99,Romario,,BRA,19900304,,,,46,,,,0.1
+player,away,start,9,Francisco Apaolaza ,,ARG,19970619,,,,46,,,,0.4
+player,away,start,18,Óscar Santis,,GUA,19990325,,,,,,,,0.1
+player,away,sub,13,Dewinder Bradley,,GUA,19940601,,,46,,66,,,0.2
+player,away,sub,77,Robinson Flores,,VEN,19980414,,,46,,,,,0.3
+player,away,sub,30,Brandon de León,,GUA,19930930,,,64,,,,,0.2
+player,away,sub,26,Diego Fernández,,GUA,20051107,,,75,,81,,,
+player,away,sub,17,Óscar Castellanos,,GUA,20000118,,,84,,,,,0.3
+player,away,bench,4,Guillermo Carbonell,,GUA,20010328,,,,,,,,0.1
+player,away,bench,7,José Franco ,,GUA,20011017,,,,,,,,0.3
+player,away,bench,14,Santiago Garzaro ,,GUA,20060304,,,,,,,,
+player,away,bench,16,Diego Santis,,GUA,20020713,,,,,,,,0.1
+player,away,bench,19,José Espinoza,,GUA,20030910,,,,,,,,0.2
+player,away,bench,54,Selvin Sagastume,,GUA,20071123,,,,,,,,0.1
+player,away,bench,98,Estuardo Sicán,,GUA,19950317,,yes,,,,,,0.1
+,,,,,,,,,,,,,,,
+# --- GOALS --- goal,minute,side,scorer,type,assist,,,,,,,,,,
+goal,24,home,Pedro de la Vega,goal,,,,,,,,,,,
+goal,45+1,away,José Gálvez,goal,Cristian Hernández,,,,,,,,,,
+goal,53,home,Paul Arriola,goal,Jesús Ferreira,,,,,,,,,,
+goal,88,home,Pedro de la Vega,goal,João Paulo,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- MATCH STATS --- stat,name,home,away,,,,,,,,,,,,
+stat,Possession,61,39,,,,,,,,,,,,
+stat,Expected goals (xG),,,,,,,,,,,,,,
+stat,Shots,17,17,,,,,,,,,,,,
+stat,Shots on target,6,4,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- WEATHER --- weather,field,value,,,,,,,,,,,,,
+weather,condition,Overcast,,,,,,,,,,,,,
+weather,temp_c,10,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- MATCHDAY --- personal,field,value,,,,,,,,,,,,,
+personal,ticket_price,20,,,,,,,,,,,,,
+personal,ticket_currency,USD,,,,,,,,,,,,,
+personal,ticket_price_usd,,,,,,,,,,,,,,
+personal,section,Section 125,,,,,,,,,,,,,
+personal,row,GG,,,,,,,,,,,,,
+personal,seat,4,,,,,,,,,,,,,
+personal,seating,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- PHOTOS --- photo,file,caption,,,,,,,,,,,,,
+photo,M053_1.jpg,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- CHAMPIONS --- champion,field,value,,,,,,,,,,,,,
+champion,team,,,,,,,,,,,,,,
+champion,side,,,,,,,,,,,,,,
+champion,title,,,,,,,,,,,,,,
+champion,season,,,,,,,,,,,,,,
+champion,note,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- PENALTIES --- pen,order,side,player,result,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
