@@ -1,0 +1,109 @@
+,,,,,,,,,,,,,,,
+# --- MATCH --- meta,field,value,,,,,,,,,,,,,
+meta,id,M050,,,,,,,,,,,,,
+meta,status,played,,,,,,,,,,,,,
+meta,competition,Major League Soccer,,,,,,,,,,,,,
+meta,round,Matchday 6,,,,,,,,,,,,,
+meta,date,2024-05-05,,,,,,,,,,,,,
+meta,kickoff,15:30,,,,,,,,,,,,,
+meta,venue,Lumen Field,,,,,,,,,,,,,
+meta,city,Seattle,,,,,,,,,,,,,
+meta,country,USA,,,,,,,,,,,,,
+meta,neutral,no,,,,,,,,,,,,,
+meta,attendance,31102,,,,,,,,,,,,,
+meta,score,0-0,,,,,,,,,,,,,
+meta,aggregate,,,,,,,,,,,,,,
+meta,decision,,,,,,,,,,,,,,
+meta,referee,Drew Fischer,,,,,,,,,,,,,
+meta,referee_country,CAN,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- TEAMS --- team,side,name,country,coach,coach_country,formation,squad_value,pitch_fill,pitch_number,gk_fill,stat_color,,,,
+team,home,Seattle Sounders,USA,Brian Schmetzer,USA,4-2-3-1,40.1,#3DB17D,#FFFFFF,,#3DB17D,,,,
+team,away,LA Galaxy,USA,Greg Vanney,USA,4-3-3,35.6,#F3F3F5,#021C3D,,#021C3D,,,,
+,,,,,,,,,,,,,,,
+# --- PLAYERS -- player,side,role,number,name,kit_name,country,id,captain,goalkeeper,on,off,yellow,double yellow,red,value
+player,home,start,24,Stefan Frei,,SUI,19860420,yes,yes,,,,,,0.3
+player,home,start,5,Nouhou Tolo,Nouhou,CMR,19970623,,,,,,,,4.5
+player,home,start,25,Jackson Ragen,,USA,19980924,,,,,,,,1.5
+player,home,start,28,Yeimar Gómez,,COL,19920630,,,,86,,,,3.5
+player,home,start,7,Cristian Roldan,,USA,19950603,,,,,,,,6
+player,home,start,8,Josh Atencio,,USA,20020131,,,,57,,,,1.5
+player,home,start,6,João Paulo,João Paulo,BRA,19910308,,,,74,,,,2
+player,home,start,13,Jordan Morris,,USA,19941026,,,,86,75,,,5.5
+player,home,start,11,Albert Rusnák,,SVK,19940707,,,,74,,,,2.5
+player,home,start,18,Obed Vargas,,USA,20050805,,,,,,,,3
+player,home,start,9,Raúl Ruidíaz,,PER,19900725,,,,,,,,2.5
+player,home,sub,17,Danny Musovski,,USA,19951130,,,57,,,,,1
+player,home,sub,23,Léo Chú,,BRA,20000406,,,74,,,,,4
+player,home,sub,33,Cody Baker,,USA,20040107,,,74,,,,,0.5
+player,home,sub,21,Reed Baker-Whiting,,USA,20050331,,,86,,,,,0.8
+player,home,sub,93,Georgi Minoungou,,CIV,20020725,,,86,,,,,
+player,home,bench,14,Paul Rothrock,,USA,19990109,,,,,,,,0.2
+player,home,bench,15,Jonathan Bell,,USA,19970826,,,,,,,,0.3
+player,home,bench,26,Andrew Thomas,,RUS,19980901,,yes,,,,,,0.2
+player,home,bench,99,Dylan Teves,,USA,20000514,,,,,,,,0.3
+player,away,start,77,John McCarthy,,USA,19920704,,yes,,,,,,0.5
+player,away,start,3,Julián Aude,,ARG,20030324,,,,90+5,,,,3.5
+player,away,start,24,Jalen Neal,,USA,20030824,,,,,,,,0.8
+player,away,start,4,Maya Yoshida,,JPN,19880824,yes,,,,,,,0.5
+player,away,start,2,Miki Yamane,,JPN,19931222,,,,,,,,1.6
+player,away,start,5,Gastón Brugman,,URU,19920907,,,,,,,,2
+player,away,start,20,Edwin Cerrillo,,USA,20001003,,,,86,83,,,2
+player,away,start,7,Diego Fagúndez,,URU,19950214,,,,82,,,,3.5
+player,away,start,11,Gabriel Pec,,BRA,20010211,,,,,,,,8
+player,away,start,27,Miguel Berry,,ESP,19970916,,,,90+5,,,,0.4
+player,away,start,28,Joseph Paintsil,,GHA,19980201,,,,,81,,,9.5
+player,away,sub,37,Daniel Aguirre,,USA,19990728,,,82,,,,,0.3
+player,away,sub,18,Jonathan Pérez,,MEX,20030118,,,86,,,,,0.2
+player,away,sub,14,John Nelson,,USA,19980711,,,90+5,,,,,0.8
+player,away,sub,15,Eriq Zavaleta,,SLV,19920802,,,90+5,,,,,0.2
+player,away,bench,19,Mauricio Cuevas,,USA,20030210,,,,,,,,0.3
+player,away,bench,21,Tucker Lepley,,USA,20020117,,,,,,,,
+player,away,bench,25,Carlos Emiro Garcés,,COL,20011011,,,,,,,,0.7
+player,away,bench,35,Novak Mićović,,SRB,20011025,,yes,,,,,,0.9
+,,,,,,,,,,,,,,,
+# --- GOALS --- goal,minute,side,scorer,type,assist,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- MATCH STATS --- stat,name,home,away,,,,,,,,,,,,
+stat,Possession,55,45,,,,,,,,,,,,
+stat,Expected goals (xG),1.51,0.43,,,,,,,,,,,,
+stat,Shots,19,12,,,,,,,,,,,,
+stat,Shots on target,4,3,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- WEATHER --- weather,field,value,,,,,,,,,,,,,
+weather,condition,Drizzle,,,,,,,,,,,,,
+weather,temp_c,12,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- MATCHDAY --- personal,field,value,,,,,,,,,,,,,
+personal,ticket_price,174,,,,,,,,,,,,,
+personal,ticket_currency,USD,,,,,,,,,,,,,
+personal,ticket_price_usd,,,,,,,,,,,,,,
+personal,section,Section 235,,,,,,,,,,,,,
+personal,row,M,,,,,,,,,,,,,
+personal,seat,3,,,,,,,,,,,,,
+personal,seating,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- PHOTOS --- photo,file,caption,,,,,,,,,,,,,
+photo,M050_1.jpg,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- CHAMPIONS --- champion,field,value,,,,,,,,,,,,,
+champion,team,,,,,,,,,,,,,,
+champion,side,,,,,,,,,,,,,,
+champion,title,,,,,,,,,,,,,,
+champion,season,,,,,,,,,,,,,,
+champion,note,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- PENALTIES --- pen,order,side,player,result,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
