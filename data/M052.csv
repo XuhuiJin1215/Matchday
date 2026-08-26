@@ -1,0 +1,115 @@
+,,,,,,,,,,,,,,,
+# --- MATCH --- meta,field,value,,,,,,,,,,,,,
+meta,id,M052,,,,,,,,,,,,,
+meta,status,played,,,,,,,,,,,,,
+meta,competition,Leagues Cup,,,,,,,,,,,,,
+meta,round,Group W6 - Matchday 3,,,,,,,,,,,,,
+meta,date,2024-08-04,,,,,,,,,,,,,
+meta,kickoff,19:30,,,,,,,,,,,,,
+meta,venue,Lumen Field,,,,,,,,,,,,,
+meta,city,Seattle,,,,,,,,,,,,,
+meta,country,USA,,,,,,,,,,,,,
+meta,neutral,no,,,,,,,,,,,,,
+meta,attendance,26513,,,,,,,,,,,,,
+meta,score,1-3,,,,,,,,,,,,,
+meta,aggregate,,,,,,,,,,,,,,
+meta,decision,,,,,,,,,,,,,,
+meta,referee,Oshane Nation,,,,,,,,,,,,,
+meta,referee_country,JAM,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- TEAMS --- team,side,name,country,coach,coach_country,formation,squad_value,pitch_fill,pitch_number,gk_fill,stat_color,,,,
+team,home,Seattle Sounders,USA,Brian Schmetzer,USA,4-2-3-1,45.5,#3DB17D,#FFFFFF,,#3DB17D,,,,
+team,away,Necaxa,MEX,Eduardo Fentanes,MEX,4-2-3-1,35.5,#EE4540,#FFFFFF,,#EE4540,,,,
+,,,,,,,,,,,,,,,
+# --- PLAYERS -- player,side,role,number,name,kit_name,country,id,captain,goalkeeper,on,off,yellow,double yellow,red,value
+player,home,start,26,Andrew Thomas,,RUS,19980901,,yes,,,,,,0.2
+player,home,start,21,Reed Baker-Whiting,,USA,20050331,,,,62,,,,0.8
+player,home,start,25,Jackson Ragen,,USA,19980924,,,,,,,,2
+player,home,start,28,Yeimar Gómez,,COL,19920630,,,,,,,,2.5
+player,home,start,16,Alex Roldán,,SLV,19960728,,,,62,,,,3.5
+player,home,start,18,Obed Vargas,,MEX,20050805,,,,,,,,3
+player,home,start,75,Danny Leyva,,USA,20030505,,,,46,,,,1.5
+player,home,start,10,Pedro de la Vega,de la Vega,ARG,20010207,,,,33,,,,6.5
+player,home,start,11,Albert Rusnák,,SVK,19940707,,,,,,,,2.5
+player,home,start,7,Cristian Roldan,,USA,19950603,yes,,,,,,,5
+player,home,start,17,Danny Musovski,,USA,19951130,,,,46,,,,0.8
+player,home,sub,14,Paul Rothrock,,USA,19990109,,,33,,,,,0.3
+player,home,sub,6,João Paulo,,BRA,19910308,,,46,,,,,1.8
+player,home,sub,13,Jordan Morris,,USA,19941026,,,46,,,,,4.5
+player,home,sub,5,Nouhou Tolo,,CMR,19970623,,,62,,,,,4.5
+player,home,sub,23,Léo Chú,,BRA,20000406,,,62,,,,,4
+player,home,bench,4,Nathan,,BRA,19950513,,,,,,,,1
+player,home,bench,15,Jonathan Bell,,USA,19970826,,,,,,,,0.3
+player,home,bench,24,Stefan Frei,,SUI,19860420,,yes,,,,,,0.3
+player,home,bench,29,Jacob Castro,,USA,19991218,,yes,,,,,,0.1
+player,home,bench,77,Sota Kitahara,,USA,20030111,,,,,,,,0.2
+player,home,bench,99,Dylan Teves,,USA,20000514,,,,,,,,0.3
+player,away,start,22,Ezequiel Unsain,,ARG,19950309,,yes,,,,,,3.5
+player,away,start,6,Jesús Alcántar,,MEX,20030730,,,,,,,,0.5
+player,away,start,23,Alán Montes,,MEX,20001026,,,,,,,,2.5
+player,away,start,18,Raúl Sandoval,,MEX,20000118,,,,60,,,,1.5
+player,away,start,3,Agustín Oliveros,,URU,19980817,,,,,,,,3.5
+player,away,start,8,Agustín Palavecino,,ARG,19961109,,,,89,63,,,1.8
+player,away,start,33,Fernando Arce Jr.,Arce,USA,19961127,yes,,,,,,,1.5
+player,away,start,15,Brayan Garnica,,MEX,19960527,,,,,70,,,1.5
+player,away,start,10,José Paradela,,ARG,19981215,,,,90,,,,4.5
+player,away,start,19,Diego Gómez,,MEX,20030910,,,,60,,,,1.5
+player,away,start,27,Diber Cambindo,,COL,19960217,,,,79,,,,4
+player,away,sub,2,Emilio Martínez,,MEX,20030202,,,60,,,,,1.8
+player,away,sub,5,Alejandro Mayorga,,MEX,19970529,,,60,,,,,1
+player,away,sub,9,Tomás Badaloni,,ARG,20000502,,,79,,,,,1.5
+player,away,sub,13,Alejandro Andrade,,MEX,20010816,,,89,,,,,1
+player,away,sub,7,Kevin Rosero,,COL,19981203,,,90,,,,,0.5
+player,away,bench,1,Raúl Gudiño,,MEX,19960422,,yes,,,,,,0.8
+player,away,bench,17,Rogelio Cortéz,,MEX,20040707,,,,,,,,0.6
+player,away,bench,30,Ricardo Monreal,,MEX,20010210,,,,,,,,2
+player,away,bench,181,Emiliano Pérez,,MEX,20030621,,yes,,,,,,
+player,away,bench,204,Santiago Márquez,,MEX,20030117,,,,,,,,
+player,away,bench,242,Juan Estrada ,,MEX,20050109,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- GOALS --- goal,minute,side,scorer,type,assist,,,,,,,,,,
+goal,8,home,Obed Vargas,goal,Cristian Roldan,,,,,,,,,,
+goal,24,away,Agustín Palavecino,goal,José Paradela,,,,,,,,,,
+goal,44,away,Diber Cambindo,goal,José Paradela,,,,,,,,,,
+goal,90+2,away,Kevin Rosero,goal,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- MATCH STATS --- stat,name,home,away,,,,,,,,,,,,
+stat,Possession,71,29,,,,,,,,,,,,
+stat,Expected goals (xG),,,,,,,,,,,,,,
+stat,Shots,8,12,,,,,,,,,,,,
+stat,Shots on target,2,4,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- WEATHER --- weather,field,value,,,,,,,,,,,,,
+weather,condition,Clear,,,,,,,,,,,,,
+weather,temp_c,27,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- MATCHDAY --- personal,field,value,,,,,,,,,,,,,
+personal,ticket_price,131,,,,,,,,,,,,,
+personal,ticket_currency,USD,,,,,,,,,,,,,
+personal,ticket_price_usd,,,,,,,,,,,,,,
+personal,section,Section 235,,,,,,,,,,,,,
+personal,row,C,,,,,,,,,,,,,
+personal,seat,3,,,,,,,,,,,,,
+personal,seating,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- PHOTOS --- photo,file,caption,,,,,,,,,,,,,
+photo,M052_1.jpg,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- CHAMPIONS --- champion,field,value,,,,,,,,,,,,,
+champion,team,,,,,,,,,,,,,,
+champion,side,,,,,,,,,,,,,,
+champion,title,,,,,,,,,,,,,,
+champion,season,,,,,,,,,,,,,,
+champion,note,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- PENALTIES --- pen,order,side,player,result,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
