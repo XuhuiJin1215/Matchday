@@ -22,52 +22,52 @@ team,home,Italy,,Roberto Mancini,ITA,4-3-3,690,#2660C1,#FFFFFF,,#2660C1,,,,
 team,away,Spain,,Luis Enrique,ESP,4-3-3,893,#EAE9ED,#CC2421,,#CC2421,,,,
 ,,,,,,,,,,,,,,,
 # --- PLAYERS -- player,side,role,number,name,kit_name,country,id,captain,goalkeeper,on,off,yellow,double yellow,red,value
-player,home,start,21,Gianluigi Donnarumma,,ITA,,,yes,,,,,,60
-player,home,start,13,Emerson Palmieri,Emerson,ITA,,,,,73,,,,12
-player,home,start,3,Giorgio Chiellini,,ITA,,yes,,,,,,,1.5
-player,home,start,19,Leonardo Bonucci,,ITA,,,,,,118,,,8
-player,home,start,2,Giovanni Di Lorenzo,,ITA,,,,,,,,,24
-player,home,start,6,Marco Verratti,,ITA,,,,,73,,,,55
-player,home,start,8,Jorginho,,ITA,,,,,,,,,40
-player,home,start,18,Nicolò Barella,,ITA,,,,,85,,,,65
-player,home,start,10,Lorenzo Insigne,,ITA,,,,,85,,,,48
-player,home,start,17,Ciro Immobile,,ITA,,,,,61,,,,38
-player,home,start,14,Federico Chiesa,,ITA,,,,,107,,,,60
-player,home,sub,11,Domenico Berardi,,ITA,,,,61,,,,,35
-player,home,sub,12,Matteo Pessina,,ITA,,,,73,,,,,20
-player,home,sub,25,Rafael Tolói,,ITA,,,,73,,97,,,15
-player,home,sub,5,Manuel Locatelli,,ITA,,,,85,,,,,35
-player,home,sub,9,Andrea Belotti,,ITA,,,,85,,,,,35
-player,home,sub,20,Federico Bernardeschi,,ITA,,,,107,,,,,15
-player,home,bench,1,Salvatore Sirigu,,ITA,,,yes,,,,,,2.5
-player,home,bench,15,Francesco Acerbi,,ITA,,,,,,,,,10
-player,home,bench,16,Bryan Cristante,,ITA,,,,,,,,,18
-player,home,bench,23,Alessandro Bastoni,,ITA,,,,,,,,,60
-player,home,bench,24,Alessandro Florenzi,,ITA,,,,,,,,,13
-player,home,bench,26,Alex Meret,,ITA,,,yes,,,,,,20
-player,away,start,23,Unai Simón,,ESP,,,yes,,,,,,20
-player,away,start,18,Jordi Alba,,ESP,,,,,,,,,20
-player,away,start,24,Aymeric Laporte,,ESP,,,,,,,,,45
-player,away,start,12,Eric García,,ESP,,,,,109,,,,20
-player,away,start,2,César Azpilicueta,,ESP,,,,,85,,,,13
-player,away,start,26,Pedri,,ESP,,,,,,,,,70
-player,away,start,5,Sergio Busquets,,ESP,,yes,,,106,51,,,9
-player,away,start,8,Koke,,ESP,,,,,70,,,,60
-player,away,start,11,Ferran Torres,Ferran,ESP,,,,,61,,,,50
-player,away,start,19,Dani Olmo,,ESP,,,,,,,,,45
-player,away,start,21,Mikel Oyarzabal,,ESP,,,,,70,,,,70
-player,away,sub,7,Álvaro Morata,,ESP,,,,61,,,,,45
-player,away,sub,9,Gerard Moreno,,ESP,,,,70,,,,,40
-player,away,sub,16,Rodri,,ESP,,,,70,,,,,70
-player,away,sub,6,Marcos Llorente,,ESP,,,,85,,,,,80
-player,away,sub,10,Thiago,,ESP,,,,106,,,,,30
-player,away,sub,4,Pau Torres,,ESP,,,,109,,,,,50
-player,away,bench,1,David de Gea,,ESP,,,yes,,,,,,18
-player,away,bench,3,Diego Llorente,,ESP,,,,,,,,,20
-player,away,bench,13,Robert Sánchez,,ESP,,,yes,,,,,,8
-player,away,bench,14,José Gayà,,ESP,,,,,,,,,35
-player,away,bench,17,Fabián Ruiz,,ESP,,,,,,,,,45
-player,away,bench,20,Adama Traoré,,ESP,,,,,,,,,30
+player,home,start,21,Gianluigi Donnarumma,,ITA,19990225,,yes,,,,,,60
+player,home,start,13,Emerson Palmieri,Emerson,ITA,19940803,,,,73,,,,12
+player,home,start,3,Giorgio Chiellini,,ITA,19840814,yes,,,,,,,1.5
+player,home,start,19,Leonardo Bonucci,,ITA,19870501,,,,,118,,,8
+player,home,start,2,Giovanni Di Lorenzo,,ITA,19930804,,,,,,,,24
+player,home,start,6,Marco Verratti,,ITA,19921105,,,,73,,,,55
+player,home,start,8,Jorginho,,ITA,19911220,,,,,,,,40
+player,home,start,18,Nicolò Barella,,ITA,19970207,,,,85,,,,65
+player,home,start,10,Lorenzo Insigne,,ITA,19910604,,,,85,,,,48
+player,home,start,17,Ciro Immobile,,ITA,19900220,,,,61,,,,38
+player,home,start,14,Federico Chiesa,,ITA,19971025,,,,107,,,,60
+player,home,sub,11,Domenico Berardi,,ITA,19940801,,,61,,,,,35
+player,home,sub,12,Matteo Pessina,,ITA,19970421,,,73,,,,,20
+player,home,sub,25,Rafael Tolói,,ITA,19901010,,,73,,97,,,15
+player,home,sub,5,Manuel Locatelli,,ITA,19980108,,,85,,,,,35
+player,home,sub,9,Andrea Belotti,,ITA,19931220,,,85,,,,,35
+player,home,sub,20,Federico Bernardeschi,,ITA,19940216,,,107,,,,,15
+player,home,bench,1,Salvatore Sirigu,,ITA,19870112,,yes,,,,,,2.5
+player,home,bench,15,Francesco Acerbi,,ITA,19880210,,,,,,,,10
+player,home,bench,16,Bryan Cristante,,ITA,19950303,,,,,,,,18
+player,home,bench,23,Alessandro Bastoni,,ITA,19990413,,,,,,,,60
+player,home,bench,24,Alessandro Florenzi,,ITA,19910311,,,,,,,,13
+player,home,bench,26,Alex Meret,,ITA,19970322,,yes,,,,,,20
+player,away,start,23,Unai Simón,,ESP,19970611,,yes,,,,,,20
+player,away,start,18,Jordi Alba,,ESP,19890321,,,,,,,,20
+player,away,start,24,Aymeric Laporte,,ESP,19940527,,,,,,,,45
+player,away,start,12,Eric García,,ESP,20010109,,,,109,,,,20
+player,away,start,2,César Azpilicueta,,ESP,19890828,,,,85,,,,13
+player,away,start,26,Pedri,,ESP,20021125,,,,,,,,70
+player,away,start,5,Sergio Busquets,,ESP,19880716,yes,,,106,51,,,9
+player,away,start,8,Koke,,ESP,19920108,,,,70,,,,60
+player,away,start,11,Ferran Torres,Ferran,ESP,20000229,,,,61,,,,50
+player,away,start,19,Dani Olmo,,ESP,19980507,,,,,,,,45
+player,away,start,21,Mikel Oyarzabal,,ESP,19970421,,,,70,,,,70
+player,away,sub,7,Álvaro Morata,,ESP,19921023,,,61,,,,,45
+player,away,sub,9,Gerard Moreno,,ESP,19920407,,,70,,,,,40
+player,away,sub,16,Rodri,,ESP,19960622,,,70,,,,,70
+player,away,sub,6,Marcos Llorente,,ESP,19950130,,,85,,,,,80
+player,away,sub,10,Thiago,,ESP,19910411,,,106,,,,,30
+player,away,sub,4,Pau Torres,,ESP,19970116,,,109,,,,,50
+player,away,bench,1,David de Gea,,ESP,19901107,,yes,,,,,,18
+player,away,bench,3,Diego Llorente,,ESP,19930816,,,,,,,,20
+player,away,bench,13,Robert Sánchez,,ESP,19971118,,yes,,,,,,8
+player,away,bench,14,José Gayà,,ESP,19950525,,,,,,,,35
+player,away,bench,17,Fabián Ruiz,,ESP,19960403,,,,,,,,45
+player,away,bench,20,Adama Traoré,,ESP,19960125,,,,,,,,30
 ,,,,,,,,,,,,,,,
 # --- GOALS --- goal,minute,side,scorer,type,assist,,,,,,,,,,
 goal,60,home,Federico Chiesa,goal,,,,,,,,,,,

@@ -30,43 +30,43 @@ player,home,start,20,Nélson Semedo,,POR,19931116,,,,,,,,40
 player,home,start,16,Bruno Fernandes,,POR,19940908,,,,81,,,,55
 player,home,start,13,Danilo Pereira,Danilo,POR,19910909,,,,,,,,30
 player,home,start,14,William Carvalho,,POR,19920407,,,,90+3,,,,25
-player,home,start,17,Gonçalo Guedes,,POR,,,,,75,,,,30
-player,home,start,7,Cristiano Ronaldo,,POR,,yes,,,,,,,90
-player,home,start,10,Bernardo Silva,,POR,,,,,,,,,80
-player,home,sub,15,Rafa Silva,,POR,,,,75,,,,,28
-player,home,sub,8,João Moutinho,,POR,,,,81,,,,,10
-player,home,sub,18,Rúben Neves,,POR,,,,90+3,,,,,40
-player,home,bench,2,João Cancelo,,POR,,,,,,,,,55
-player,home,bench,9,Dyego Sousa,,POR,,,,,,,,,12
-player,home,bench,11,Diogo Jota,,POR,,,,,,,,,18
-player,home,bench,12,José Sá,,POR,,,yes,,,,,,2.5
-player,home,bench,19,Mário Rui,,POR,,,,,,,,,12
-player,home,bench,21,Pizzi,,POR,,,,,,,,,25
-player,home,bench,22,Beto,,POR,,,yes,,,,,,0.8
-player,home,bench,23,João Félix,,POR,,,,,,,,,70
-player,away,start,1,Jasper Cillessen,,NED,,,yes,,,,,,18
-player,away,start,17,Daley Blind,,NED,,,,,,,,,18
-player,away,start,4,Virgil van Dijk,van Dijk,NED,,yes,,,,90+1,,,75
-player,away,start,3,Matthijs de Ligt,de Ligt,NED,,,,,,,,,70
-player,away,start,22,Denzel Dumfries,,NED,,,,,,88,,,12
-player,away,start,8,Georginio Wijnaldum,,NED,,,,,,,,,40
-player,away,start,21,Frenkie de Jong,de Jong,NED,,,,,,,,,75
-player,away,start,15,Marten de Roon,de Roon,NED,,,,,81,,,,24
-player,away,start,9,Ryan Babel,,NED,,,,,46,,,,5
-player,away,start,10,Memphis Depay,,NED,,,,,,,,,45
-player,away,start,7,Steven Bergwijn,,NED,,,,,60,,,,30
-player,away,sub,11,Quincy Promes,,NED,,,,46,,,,,18
-player,away,sub,20,Donny van de Beek,,NED,,,,60,,,,,25
-player,away,sub,19,Luuk de Jong,,NED,,,,81,,,,,10
-player,away,bench,2,Hans Hateboer,,NED,,,,,,,,,15
-player,away,bench,5,Nathan Aké,,NED,,,,,,,,,28
-player,away,bench,6,Davy Pröpper,,NED,,,,,,,,,15
-player,away,bench,12,Patrick van Aanholt,,NED,,,,,,,,,9
-player,away,bench,13,Kenneth Vermeer,,NED,,,yes,,,,,,2
-player,away,bench,14,Stefan de Vrij,,NED,,,,,,,,,50
-player,away,bench,16,Kevin Strootman,,NED,,,,,,,,,20
-player,away,bench,18,Tonny Vilhena,,NED,,,,,,,,,12
-player,away,bench,23,Marco Bizot,,NED,,,yes,,,,,,3.5
+player,home,start,17,Gonçalo Guedes,,POR,19961129,,,,75,,,,30
+player,home,start,7,Cristiano Ronaldo,,POR,19850205,yes,,,,,,,90
+player,home,start,10,Bernardo Silva,,POR,19940810,,,,,,,,80
+player,home,sub,15,Rafa Silva,,POR,19930517,,,75,,,,,28
+player,home,sub,8,João Moutinho,,POR,19860908,,,81,,,,,10
+player,home,sub,18,Rúben Neves,,POR,19970313,,,90+3,,,,,40
+player,home,bench,2,João Cancelo,,POR,19940527,,,,,,,,55
+player,home,bench,9,Dyego Sousa,,POR,19890914,,,,,,,,12
+player,home,bench,11,Diogo Jota,,POR,19961204,,,,,,,,18
+player,home,bench,12,José Sá,,POR,19930117,,yes,,,,,,2.5
+player,home,bench,19,Mário Rui,,POR,19910527,,,,,,,,12
+player,home,bench,21,Pizzi,,POR,19891006,,,,,,,,25
+player,home,bench,22,Beto,,POR,19820501,,yes,,,,,,0.8
+player,home,bench,23,João Félix,,POR,19991110,,,,,,,,70
+player,away,start,1,Jasper Cillessen,,NED,19890422,,yes,,,,,,18
+player,away,start,17,Daley Blind,,NED,19900309,,,,,,,,18
+player,away,start,4,Virgil van Dijk,van Dijk,NED,19910708,yes,,,,90+1,,,75
+player,away,start,3,Matthijs de Ligt,de Ligt,NED,19990812,,,,,,,,70
+player,away,start,22,Denzel Dumfries,,NED,19960418,,,,,88,,,12
+player,away,start,8,Georginio Wijnaldum,,NED,19901111,,,,,,,,40
+player,away,start,21,Frenkie de Jong,de Jong,NED,19970512,,,,,,,,75
+player,away,start,15,Marten de Roon,de Roon,NED,19910329,,,,81,,,,24
+player,away,start,9,Ryan Babel,,NED,19861219,,,,46,,,,5
+player,away,start,10,Memphis Depay,,NED,19940213,,,,,,,,45
+player,away,start,7,Steven Bergwijn,,NED,19971008,,,,60,,,,30
+player,away,sub,11,Quincy Promes,,NED,19920104,,,46,,,,,18
+player,away,sub,20,Donny van de Beek,,NED,19970418,,,60,,,,,25
+player,away,sub,19,Luuk de Jong,,NED,19900827,,,81,,,,,10
+player,away,bench,2,Hans Hateboer,,NED,19940109,,,,,,,,15
+player,away,bench,5,Nathan Aké,,NED,19950218,,,,,,,,28
+player,away,bench,6,Davy Pröpper,,NED,19910902,,,,,,,,15
+player,away,bench,12,Patrick van Aanholt,,NED,19900829,,,,,,,,9
+player,away,bench,13,Kenneth Vermeer,,NED,19860110,,yes,,,,,,2
+player,away,bench,14,Stefan de Vrij,,NED,19920205,,,,,,,,50
+player,away,bench,16,Kevin Strootman,,NED,19900213,,,,,,,,20
+player,away,bench,18,Tonny Vilhena,,NED,19950103,,,,,,,,12
+player,away,bench,23,Marco Bizot,,NED,19910310,,yes,,,,,,3.5
 ,,,,,,,,,,,,,,,
 # --- GOALS --- goal,minute,side,scorer,type,assist,,,,,,,,,,
 goal,60,home,Gonçalo Guedes,goal,Bernardo Silva,,,,,,,,,,

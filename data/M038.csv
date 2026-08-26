@@ -22,42 +22,42 @@ team,home,Shanghai SIPG,CHN,Vítor Pereira,POR,4-3-3,56,#B5031F,#FFFFFF,,#B5031F
 team,away,Shanghai Greenland Shenhua,CHN,Wu Jingui,CHN,4-2-3-1,14.7,#1056B5,#FFFFFF,,#1056B5,,,,
 ,,,,,,,,,,,,,,,
 # --- PLAYERS -- player,side,role,number,name,kit_name,country,id,captain,goalkeeper,on,off,yellow,double yellow,red,value
-player,home,start,1,Yan Junling,Yan,CHN,,,yes,,,,,,0.8
-player,home,start,21,Yu Hai,Yu,CHN,,,,,,,,,0.4
-player,home,start,28,He Guan,He,CHN,,,,,80,34,,,0.5
-player,home,start,5,Shi Ke,Shi,CHN,,,,,,,,,0.6
-player,home,start,4,Wang Shenchao,Wang,CHN,,,,,,,,,0.6
-player,home,start,8,Oscar,,BRA,,,,,,,,,24
-player,home,start,6,Cai Huikang,Cai,CHN,,,,,85,81,,,0.6
-player,home,start,10,Hulk,,BRA,,yes,,,,,,,21
-player,home,start,24,Lei Wenjie,Lei,CHN,,,,,32,,,,0.1
-player,home,start,9,Elkeson,,BRA,,,,,,,,,4.5
-player,home,start,7,Wu Lei,Wu,CHN,,,,,,,,,2
-player,home,sub,11,Lü Wenjun,,CHN,,,,32,,,,,0.4
-player,home,sub,23,Fu Huan,,CHN,,,,80,,,,,0.3
-player,home,sub,14,Lin Chuangyi,,CHN,,,,85,,,,,0.1
-player,home,bench,2,Zhang Wei,,CHN,,,,,,,,,0.1
-player,home,bench,14,Li Shenglong,,CHN,,,,,,,,,0.1
-player,home,bench,18,Zhang Yi,,CHN,,,,,,,,,0.1
-player,home,bench,22,Sun Le,,CHN,,,yes,,,,,,0.1
-player,away,start,27,Li Shuai,Li,CHN,,,yes,,,,,,0.2
-player,away,start,23,Bai Jiajun,Bai,CHN,,,,,,,,,0.2
-player,away,start,5,Zhu Chenjie,Zhu,CHN,,,,,,,,,
-player,away,start,32,Aidi Fulangxisi,Aidi,CHN,,,,,,76,,,0.2
-player,away,start,24,Rong Hao,Rong,CHN,,,,,,,,,0.2
-player,away,start,6,Li Peng,Li,CHN,,,,,60,1,,,0.2
-player,away,start,10,Giovanni Moreno,,COL,,yes,,,77,48,,,6.5
-player,away,start,28,Cao Yunding,Cao,CHN,,,,,,,,,0.5
-player,away,start,11,Óscar Romero,,PAR,,,,,,,,,4
-player,away,start,36,Liu Ruofan,Liu,CHN,,,,,37,,,,0.3
-player,away,start,9,Demba Ba,,SEN,,,,,,,,,2
-player,away,sub,3,Li Jianbin,,CHN,,,,37,,45,,,0.1
-player,away,sub,8,Zhang Lu,,CHN,,,,60,,,,,0.1
-player,away,sub,29,Zhou Junchen,,CHN,,,,77,,,,,
-player,away,bench,15,Zhu Jianrong,,CHN,,,,,,,,,0.1
-player,away,bench,16,Li Yunqiu,,CHN,,,,,,,,,0.1
-player,away,bench,19,Li Xiaoming,,CHN,,,,,,,,,0.2
-player,away,bench,22,Qiu Shengjiong,,CHN,,,yes,,,,,,0.1
+player,home,start,1,Yan Junling,Yan,CHN,19910128,,yes,,,,,,0.8
+player,home,start,21,Yu Hai,Yu,CHN,19870604,,,,,,,,0.4
+player,home,start,28,He Guan,He,CHN,19930125,,,,80,34,,,0.5
+player,home,start,5,Shi Ke,Shi,CHN,19930108,,,,,,,,0.6
+player,home,start,4,Wang Shenchao,Wang,CHN,19890208,,,,,,,,0.6
+player,home,start,8,Oscar,,BRA,19910909,,,,,,,,24
+player,home,start,6,Cai Huikang,Cai,CHN,19891010,,,,85,81,,,0.6
+player,home,start,10,Hulk,,BRA,19860725,yes,,,,,,,21
+player,home,start,24,Lei Wenjie,Lei,CHN,19970102,,,,32,,,,0.1
+player,home,start,9,Elkeson,,BRA,19890713,,,,,,,,4.5
+player,home,start,7,Wu Lei,Wu,CHN,19911119,,,,,,,,2
+player,home,sub,11,Lü Wenjun,,CHN,19890311,,,32,,,,,0.4
+player,home,sub,23,Fu Huan,,CHN,19930712,,,80,,,,,0.3
+player,home,sub,14,Lin Chuangyi,,CHN,19930128,,,85,,,,,0.1
+player,home,bench,2,Zhang Wei,,CHN,19930328,,,,,,,,0.1
+player,home,bench,14,Li Shenglong,,CHN,19920730,,,,,,,,0.1
+player,home,bench,18,Zhang Yi,,CHN,19930817,,,,,,,,0.1
+player,home,bench,22,Sun Le,,CHN,19890917,,yes,,,,,,0.1
+player,away,start,27,Li Shuai,Li,CHN,19820818,,yes,,,,,,0.2
+player,away,start,23,Bai Jiajun,Bai,CHN,19910320,,,,,,,,0.2
+player,away,start,5,Zhu Chenjie,Zhu,CHN,20000823,,,,,,,,
+player,away,start,32,Aidi Fulangxisi,Aidi,CHN,19901217,,,,,76,,,0.2
+player,away,start,24,Rong Hao,Rong,CHN,19870407,,,,,,,,0.2
+player,away,start,6,Li Peng,Li,CHN,19900829,,,,60,1,,,0.2
+player,away,start,10,Giovanni Moreno,,COL,19860701,yes,,,77,48,,,6.5
+player,away,start,28,Cao Yunding,Cao,CHN,19891122,,,,,,,,0.5
+player,away,start,11,Óscar Romero,,PAR,19920704,,,,,,,,4
+player,away,start,36,Liu Ruofan,Liu,CHN,19990128,,,,37,,,,0.3
+player,away,start,9,Demba Ba,,SEN,19850525,,,,,,,,2
+player,away,sub,3,Li Jianbin,,CHN,19890419,,,37,,45,,,0.1
+player,away,sub,8,Zhang Lu,,CHN,19870823,,,60,,,,,0.1
+player,away,sub,29,Zhou Junchen,,CHN,20000323,,,77,,,,,
+player,away,bench,15,Zhu Jianrong,,CHN,19910712,,,,,,,,0.1
+player,away,bench,16,Li Yunqiu,,CHN,19901003,,,,,,,,0.1
+player,away,bench,19,Li Xiaoming,,CHN,19960119,,,,,,,,0.2
+player,away,bench,22,Qiu Shengjiong,,CHN,19850901,,yes,,,,,,0.1
 ,,,,,,,,,,,,,,,
 # --- GOALS --- goal,minute,side,scorer,type,assist,,,,,,,,,,
 goal,52,home,Wu Lei,goal,Oscar,,,,,,,,,,

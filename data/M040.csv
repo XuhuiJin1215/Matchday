@@ -22,42 +22,42 @@ team,home,Manchester City,ENG,Pep Guardiola,ESP,4-3-3,940.5,#96BAE3,#151B4F,,#96
 team,away,Burnley,ENG,Sean Dyche,ENG,4-2-3-1,143,#14151A,#CFD0D7,,#14151A,,,,
 ,,,,,,,,,,,,,,,
 # --- PLAYERS -- player,side,role,number,name,kit_name,country,id,captain,goalkeeper,on,off,yellow,double yellow,red,value
-player,home,start,31,Ederson,,BRA,,,yes,,,,,,60
-player,home,start,22,Benjamin Mendy,,FRA,,,,,,,,,45
-player,home,start,14,Aymeric Laporte,,ESP,,,,,,,,,50
-player,home,start,4,Vincent Kompany,,BEL,,yes,,,,1,,,10
-player,home,start,5,John Stones,,ENG,,,,,,,,,55
-player,home,start,20,Bernardo Silva,,POR,,,,,58,,,,60
-player,home,start,25,Fernandinho,,BRA,,,,,,,,,15
-player,home,start,21,David Silva,,ESP,,,,,75,,,,30
-player,home,start,19,Leroy Sané,,GER,,,,,,81,,,90
-player,home,start,10,Sergio Agüero,,ARG,,,,,66,,,,80
-player,home,start,26,Riyad Mahrez,,ALG,,,,,,,,,60
-player,home,sub,17,Kevin De Bruyne,,BEL,,,,58,,,,,150
-player,home,sub,33,Gabriel Jesus,,BRA,,,,66,,,,,80
-player,home,sub,47,Phil Foden,,ENG,,,,75,,,,,15
-player,home,bench,7,Raheem Sterling,,ENG,,,,,,,,,90
-player,home,bench,30,Nicolás Otamendi,,ARG,,,,,,,,,35
-player,home,bench,35,Oleksandr Zinchenko,,UKR,,,,,,,,,15
-player,home,bench,49,Arijanet Muric,,MNE,,,yes,,,,,,0.5
-player,away,start,20,Joe Hart,,ENG,,,yes,,,,,,7
-player,away,start,3,Charlie Taylor,,ENG,,,,,,,,,5
-player,away,start,6,Ben Mee,,ENG,,yes,,,,,,,10
-player,away,start,5,James Tarkowski,,ENG,,,,,,,,,15
-player,away,start,2,Matthew Lowton,,ENG,,,,,,,,,5
-player,away,start,4,Jack Cork,,ENG,,,,,,11,,,15
-player,away,start,16,Steven Defour,,BEL,,,,,75,,,,7
-player,away,start,25,Aaron Lennon,,ENG,,,,,69,,,,5
-player,away,start,13,Jeff Hendrick,,IRL,,,,,,32,,,10
-player,away,start,7,Jóhann Berg Guðmundsson,,ISL,,,,,,,,,10
-player,away,start,9,Sam Vokes,,WAL,,,,,69,,,,6
-player,away,sub,11,Chris Wood,,NZL,,,,69,,,,,18
-player,away,sub,18,Ashley Westwood,,ENG,,,,69,,,,,4
-player,away,sub,10,Ashley Barnes,,ENG,,,,75,,,,,8
-player,away,bench,1,Tom Heaton,,ENG,,,yes,,,,,,4
-player,away,bench,26,Phil Bardsley,,SCO,,,,,,,,,1.5
-player,away,bench,27,Matěj Vydra,,CZE,,,,,,,,,10
-player,away,bench,28,Kevin Long,,IRL,,,,,,,,,2.5
+player,home,start,31,Ederson,,BRA,19930817,,yes,,,,,,60
+player,home,start,22,Benjamin Mendy,,FRA,19940717,,,,,,,,45
+player,home,start,14,Aymeric Laporte,,ESP,19940527,,,,,,,,50
+player,home,start,4,Vincent Kompany,,BEL,19860410,yes,,,,1,,,10
+player,home,start,5,John Stones,,ENG,19940528,,,,,,,,55
+player,home,start,20,Bernardo Silva,,POR,19940810,,,,58,,,,60
+player,home,start,25,Fernandinho,,BRA,19850504,,,,,,,,15
+player,home,start,21,David Silva,,ESP,19860108,,,,75,,,,30
+player,home,start,19,Leroy Sané,,GER,19960111,,,,,81,,,90
+player,home,start,10,Sergio Agüero,,ARG,19880602,,,,66,,,,80
+player,home,start,26,Riyad Mahrez,,ALG,19910221,,,,,,,,60
+player,home,sub,17,Kevin De Bruyne,,BEL,19910628,,,58,,,,,150
+player,home,sub,33,Gabriel Jesus,,BRA,19970403,,,66,,,,,80
+player,home,sub,47,Phil Foden,,ENG,20000528,,,75,,,,,15
+player,home,bench,7,Raheem Sterling,,ENG,19941208,,,,,,,,90
+player,home,bench,30,Nicolás Otamendi,,ARG,19880212,,,,,,,,35
+player,home,bench,35,Oleksandr Zinchenko,,UKR,19961215,,,,,,,,15
+player,home,bench,49,Arijanet Muric,,MNE,19981107,,yes,,,,,,0.5
+player,away,start,20,Joe Hart,,ENG,19870419,,yes,,,,,,7
+player,away,start,3,Charlie Taylor,,ENG,19930918,,,,,,,,5
+player,away,start,6,Ben Mee,,ENG,19890921,yes,,,,,,,10
+player,away,start,5,James Tarkowski,,ENG,19921119,,,,,,,,15
+player,away,start,2,Matthew Lowton,,ENG,19890609,,,,,,,,5
+player,away,start,4,Jack Cork,,ENG,19890625,,,,,11,,,15
+player,away,start,16,Steven Defour,,BEL,19880415,,,,75,,,,7
+player,away,start,25,Aaron Lennon,,ENG,19870416,,,,69,,,,5
+player,away,start,13,Jeff Hendrick,,IRL,19920131,,,,,32,,,10
+player,away,start,7,Jóhann Berg Guðmundsson,,ISL,19901027,,,,,,,,10
+player,away,start,9,Sam Vokes,,WAL,19891021,,,,69,,,,6
+player,away,sub,11,Chris Wood,,NZL,19911207,,,69,,,,,18
+player,away,sub,18,Ashley Westwood,,ENG,19900401,,,69,,,,,4
+player,away,sub,10,Ashley Barnes,,ENG,19891030,,,75,,,,,8
+player,away,bench,1,Tom Heaton,,ENG,19860415,,yes,,,,,,4
+player,away,bench,26,Phil Bardsley,,SCO,19850628,,,,,,,,1.5
+player,away,bench,27,Matěj Vydra,,CZE,19920501,,,,,,,,10
+player,away,bench,28,Kevin Long,,IRL,19900818,,,,,,,,2.5
 ,,,,,,,,,,,,,,,
 # --- GOALS --- goal,minute,side,scorer,type,assist,,,,,,,,,,
 goal,17,home,Sergio Agüero,goal,David Silva,,,,,,,,,,

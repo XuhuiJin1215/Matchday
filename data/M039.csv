@@ -22,42 +22,42 @@ team,home,Jiangsu Suning,CHN,Cosmin Olăroiu,ROU,4-4-2,29.8,#00399A,#FFFFFF,,#00
 team,away,Tianjin Quanjian,CHN,Paulo Sousa,POR,5-3-2,11.9,#EE4349,#FFFFFF,,#EE4349,,,,
 ,,,,,,,,,,,,,,,
 # --- PLAYERS -- player,side,role,number,name,kit_name,country,id,captain,goalkeeper,on,off,yellow,double yellow,red,value
-player,home,start,1,Gu Chao,Gu,CHN,,,yes,,,,,,0.2
-player,home,start,28,Yang Xiaotian,Yang,CHN,,,,,,,,,0.2
-player,home,start,2,Li Ang,Li,CHN,,,,,,59,,,0.3
-player,home,start,29,Gabriel Paletta,,ITA,,,,,,,,,1.5
-player,home,start,5,Zhou Yun,Zhou,CHN,,,,,,,,,0.3
-player,home,start,16,Gao Tianyi,Gao,CHN,,,,,64,64,,,0.1
-player,home,start,12,Zhang Xiaobin,Zhang,CHN,,,,,,,,,0.2
-player,home,start,22,Wu Xi,Wu,CHN,,yes,,,57,,,,0.7
-player,home,start,11,Xie Pengfei,Xie,CHN,,,,,,,,,0.3
-player,home,start,9,Éder,,ITA,,,,,90,,,,7
-player,home,start,10,Alex Texeira,,BRA,,,,,,79,,,18
-player,home,sub,3,Tian Yinong,,CHN,,,,57,,,,,0.2
-player,home,sub,32,Huang Zichang,,CHN,,,,64,,,,,0.6
-player,home,sub,18,Zhang Lingfeng,,CHN,,,,90,,,,,0.1
-player,home,bench,23,Li Haitao,,CHN,,,yes,,,,,,0.1
-player,home,bench,27,Yang Jiawei,,CHN,,,,,,,,,0.1
-player,home,bench,33,Wang Song,,CHN,,,,,,,,,0.1
-player,home,bench,37,Liang Jinhu,,CHN,,,,,,,,,0.1
-player,away,start,1,Zhang Lu,Zhang,CHN,,yes,yes,,,,,,0.5
-player,away,start,19,Wang Xiaolong,Wang,CHN,,,,,,66,,,0.1
-player,away,start,3,Wang Jie,Wang,CHN,,,,,80,7,,,0.1
-player,away,start,4,Liu Yiming,Liu,CHN,,,,,,,,,0.4
-player,away,start,21,Kwon Kyung-won,Kwon,KOR,,,,,,,,,0.8
-player,away,start,16,Zheng Dalun,Zheng,CHN,,,,,,,,,0.1
-player,away,start,39,Wang Yongpo,Wang,CHN,,,,,87,83,,,0.3
-player,away,start,7,Zhao Xuri,Zhao,CHN,,,,,71,,,,0.3
-player,away,start,38,Sun Ke,Sun,CHN,,,,,,,,,0.3
-player,away,start,9,Yang Xu,Yang,CHN,,,,,,,,,0.1
-player,away,start,10,Alexandre Pato,,BRA,,,,,,,,,8
-player,away,sub,17,Su Yuanjie,,CHN,,,,71,,,,,0.1
-player,away,sub,6,Pei Shuai,,CHN,,,,80,,,,,0.3
-player,away,sub,2,Wu Wei,,CHN,,,,87,,,,,0.1
-player,away,bench,15,Liu Yue,,CHN,,,,,,,,,0.2
-player,away,bench,32,Sun Qibin,,CHN,,,yes,,,,,,0.1
-player,away,bench,33,Chu Jinzhao,,CHN,,,,,,,,,0.1
-player,away,bench,56,Qian Yumiao,,CHN,,,,,,,,,0.1
+player,home,start,1,Gu Chao,Gu,CHN,19890820,,yes,,,,,,0.2
+player,home,start,28,Yang Xiaotian,Yang,CHN,19900326,,,,,,,,0.2
+player,home,start,2,Li Ang,Li,CHN,19930915,,,,,59,,,0.3
+player,home,start,29,Gabriel Paletta,,ITA,19860215,,,,,,,,1.5
+player,home,start,5,Zhou Yun,Zhou,CHN,19901231,,,,,,,,0.3
+player,home,start,16,Gao Tianyi,Gao,CHN,19980701,,,,64,64,,,0.1
+player,home,start,12,Zhang Xiaobin,Zhang,CHN,19931023,,,,,,,,0.2
+player,home,start,22,Wu Xi,Wu,CHN,19890219,yes,,,57,,,,0.7
+player,home,start,11,Xie Pengfei,Xie,CHN,19930629,,,,,,,,0.3
+player,home,start,9,Éder,,ITA,19861115,,,,90,,,,7
+player,home,start,10,Alex Texeira,,BRA,19900106,,,,,79,,,18
+player,home,sub,3,Tian Yinong,,CHN,19910218,,,57,,,,,0.2
+player,home,sub,32,Huang Zichang,,CHN,19970404,,,64,,,,,0.6
+player,home,sub,18,Zhang Lingfeng,,CHN,19970228,,,90,,,,,0.1
+player,home,bench,23,Li Haitao,,CHN,19951129,,yes,,,,,,0.1
+player,home,bench,27,Yang Jiawei,,CHN,19920104,,,,,,,,0.1
+player,home,bench,33,Wang Song,,CHN,19831012,,,,,,,,0.1
+player,home,bench,37,Liang Jinhu,,CHN,19970118,,,,,,,,0.1
+player,away,start,1,Zhang Lu,Zhang,CHN,19870906,yes,yes,,,,,,0.5
+player,away,start,19,Wang Xiaolong,Wang,CHN,19860311,,,,,66,,,0.1
+player,away,start,3,Wang Jie,Wang,CHN,19890114,,,,80,7,,,0.1
+player,away,start,4,Liu Yiming,Liu,CHN,19950228,,,,,,,,0.4
+player,away,start,21,Kwon Kyung-won,Kwon,KOR,19920131,,,,,,,,0.8
+player,away,start,16,Zheng Dalun,Zheng,CHN,19940211,,,,,,,,0.1
+player,away,start,39,Wang Yongpo,Wang,CHN,19870119,,,,87,83,,,0.3
+player,away,start,7,Zhao Xuri,Zhao,CHN,19851203,,,,71,,,,0.3
+player,away,start,38,Sun Ke,Sun,CHN,19890826,,,,,,,,0.3
+player,away,start,9,Yang Xu,Yang,CHN,19880212,,,,,,,,0.1
+player,away,start,10,Alexandre Pato,,BRA,19890902,,,,,,,,8
+player,away,sub,17,Su Yuanjie,,CHN,19950414,,,71,,,,,0.1
+player,away,sub,6,Pei Shuai,,CHN,19930114,,,80,,,,,0.3
+player,away,sub,2,Wu Wei,,CHN,19970205,,,87,,,,,0.1
+player,away,bench,15,Liu Yue,,CHN,19970914,,,,,,,,0.2
+player,away,bench,32,Sun Qibin,,CHN,19910205,,yes,,,,,,0.1
+player,away,bench,33,Chu Jinzhao,,CHN,19930111,,,,,,,,0.1
+player,away,bench,56,Qian Yumiao,,CHN,19980207,,,,,,,,0.1
 ,,,,,,,,,,,,,,,
 # --- GOALS --- goal,minute,side,scorer,type,assist,,,,,,,,,,
 goal,19,home,Alex Texeira,goal,Éder,,,,,,,,,,

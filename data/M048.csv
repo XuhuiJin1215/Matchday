@@ -22,52 +22,52 @@ team,home,Italy,,Roberto Mancini,ITA,4-3-3,690,#2660C1,#FFFFFF,,#2660C1,,,,
 team,away,England,,Gareth Southgate,ENG,3-4-2-1,1110,#ECEEF1,#D40E1F,,#D40E1F,,,,
 ,,,,,,,,,,,,,,,
 # --- PLAYERS -- player,side,role,number,name,kit_name,country,id,captain,goalkeeper,on,off,yellow,double yellow,red,value
-player,home,start,21,Gianluigi Donnarumma,,ITA,,,yes,,,,,,60
-player,home,start,13,Emerson Palmieri,Emerson,ITA,,,,,118,,,,12
-player,home,start,3,Giorgio Chiellini,,ITA,,yes,,,,90+6,,,1.5
-player,home,start,19,Leonardo Bonucci,,ITA,,,,,,55,,,8
-player,home,start,2,Giovanni Di Lorenzo,,ITA,,,,,,,,,24
-player,home,start,6,Marco Verratti,,ITA,,,,,96,,,,55
-player,home,start,8,Jorginho,,ITA,,,,,,114,,,40
-player,home,start,18,Nicolò Barella,,ITA,,,,,54,47,,,65
-player,home,start,10,Lorenzo Insigne,,ITA,,,,,91,84,,,48
-player,home,start,17,Ciro Immobile,,ITA,,,,,54,,,,38
-player,home,start,14,Federico Chiesa,,ITA,,,,,86,,,,60
-player,home,sub,11,Domenico Berardi,,ITA,,,,54,,,,,35
-player,home,sub,16,Bryan Cristante,,ITA,,,,54,,,,,18
-player,home,sub,20,Federico Bernardeschi,,ITA,,,,86,,,,,15
-player,home,sub,9,Andrea Belotti,,ITA,,,,91,,,,,35
-player,home,sub,5,Manuel Locatelli,,ITA,,,,96,,,,,35
-player,home,sub,24,Alessandro Florenzi,,ITA,,,,118,,,,,13
-player,home,bench,1,Salvatore Sirigu,,ITA,,,yes,,,,,,2.5
-player,home,bench,12,Matteo Pessina,,ITA,,,,,,,,,20
-player,home,bench,15,Francesco Acerbi,,ITA,,,,,,,,,10
-player,home,bench,23,Alessandro Bastoni,,ITA,,,,,,,,,60
-player,home,bench,25,Rafael Tolói,,ITA,,,,,,,,,15
-player,home,bench,26,Alex Meret,,ITA,,,yes,,,,,,20
-player,away,start,1,Jordan Pickford,,ENG,,,yes,,,,,,22
-player,away,start,6,Harry Maguire,,ENG,,,,,,106,,,45
-player,away,start,5,John Stones,,ENG,,,,,,,,,30
-player,away,start,2,Kyle Walker,,ENG,,,,,120,,,,28
-player,away,start,3,Luke Shaw,,ENG,,,,,,,,,35
-player,away,start,4,Declan Rice,,ENG,,,,,74,,,,65
-player,away,start,14,Kalvin Phillips,,ENG,,,,,,,,,30
-player,away,start,12,Kieran Trippier,,ENG,,,,,70,,,,20
-player,away,start,19,Mason Mount,,ENG,,,,,99,,,,75
-player,away,start,10,Raheem Sterling,,ENG,,,,,,,,,90
-player,away,start,9,Harry Kane,,ENG,,yes,,,,,,,120
-player,away,sub,25,Bukayo Saka,,ENG,,,,70,,,,,65
-player,away,sub,8,Jordan Henderson,,ENG,,,,74,120,,,,20
-player,away,sub,7,Jack Grealish,,ENG,,,,99,,,,,65
-player,away,sub,11,Marcus Rashford,,ENG,,,,120,,,,,85
-player,away,sub,17,Jadon Sancho,,ENG,,,,120,,,,,100
-player,away,bench,13,Aaron Ramsdale,,ENG,,,yes,,,,,,12
-player,away,bench,15,Tyrone Mings,,ENG,,,,,,,,,30
-player,away,bench,16,Conor Coady,,ENG,,,,,,,,,25
-player,away,bench,18,Dominic Calvert-Lewin,,ENG,,,,,,,,,45
-player,away,bench,23,Sam Johnstone,,ENG,,,yes,,,,,,8
-player,away,bench,24,Reece James,,ENG,,,,,,,,,40
-player,away,bench,26,Jude Bellingham,,ENG,,,,,,,,,55
+player,home,start,21,Gianluigi Donnarumma,,ITA,19990225,,yes,,,,,,60
+player,home,start,13,Emerson Palmieri,Emerson,ITA,19940803,,,,118,,,,12
+player,home,start,3,Giorgio Chiellini,,ITA,19840814,yes,,,,90+6,,,1.5
+player,home,start,19,Leonardo Bonucci,,ITA,19870501,,,,,55,,,8
+player,home,start,2,Giovanni Di Lorenzo,,ITA,19930804,,,,,,,,24
+player,home,start,6,Marco Verratti,,ITA,19921105,,,,96,,,,55
+player,home,start,8,Jorginho,,ITA,19911220,,,,,114,,,40
+player,home,start,18,Nicolò Barella,,ITA,19970207,,,,54,47,,,65
+player,home,start,10,Lorenzo Insigne,,ITA,19910604,,,,91,84,,,48
+player,home,start,17,Ciro Immobile,,ITA,19900220,,,,54,,,,38
+player,home,start,14,Federico Chiesa,,ITA,19971025,,,,86,,,,60
+player,home,sub,11,Domenico Berardi,,ITA,19940801,,,54,,,,,35
+player,home,sub,16,Bryan Cristante,,ITA,19950303,,,54,,,,,18
+player,home,sub,20,Federico Bernardeschi,,ITA,19940216,,,86,,,,,15
+player,home,sub,9,Andrea Belotti,,ITA,19931220,,,91,,,,,35
+player,home,sub,5,Manuel Locatelli,,ITA,19980108,,,96,,,,,35
+player,home,sub,24,Alessandro Florenzi,,ITA,19910311,,,118,,,,,13
+player,home,bench,1,Salvatore Sirigu,,ITA,19870112,,yes,,,,,,2.5
+player,home,bench,12,Matteo Pessina,,ITA,19970421,,,,,,,,20
+player,home,bench,15,Francesco Acerbi,,ITA,19880210,,,,,,,,10
+player,home,bench,23,Alessandro Bastoni,,ITA,19990413,,,,,,,,60
+player,home,bench,25,Rafael Tolói,,ITA,19901010,,,,,,,,15
+player,home,bench,26,Alex Meret,,ITA,19970322,,yes,,,,,,20
+player,away,start,1,Jordan Pickford,,ENG,19940307,,yes,,,,,,22
+player,away,start,6,Harry Maguire,,ENG,19930305,,,,,106,,,45
+player,away,start,5,John Stones,,ENG,19940528,,,,,,,,30
+player,away,start,2,Kyle Walker,,ENG,19900528,,,,120,,,,28
+player,away,start,3,Luke Shaw,,ENG,19950712,,,,,,,,35
+player,away,start,4,Declan Rice,,ENG,19990114,,,,74,,,,65
+player,away,start,14,Kalvin Phillips,,ENG,19951202,,,,,,,,30
+player,away,start,12,Kieran Trippier,,ENG,19900919,,,,70,,,,20
+player,away,start,19,Mason Mount,,ENG,19990110,,,,99,,,,75
+player,away,start,10,Raheem Sterling,,ENG,19941208,,,,,,,,90
+player,away,start,9,Harry Kane,,ENG,19930728,yes,,,,,,,120
+player,away,sub,25,Bukayo Saka,,ENG,20010905,,,70,,,,,65
+player,away,sub,8,Jordan Henderson,,ENG,19900617,,,74,120,,,,20
+player,away,sub,7,Jack Grealish,,ENG,19950910,,,99,,,,,65
+player,away,sub,11,Marcus Rashford,,ENG,19971031,,,120,,,,,85
+player,away,sub,17,Jadon Sancho,,ENG,20000325,,,120,,,,,100
+player,away,bench,13,Aaron Ramsdale,,ENG,19980514,,yes,,,,,,12
+player,away,bench,15,Tyrone Mings,,ENG,19930313,,,,,,,,30
+player,away,bench,16,Conor Coady,,ENG,19930225,,,,,,,,25
+player,away,bench,18,Dominic Calvert-Lewin,,ENG,19970316,,,,,,,,45
+player,away,bench,23,Sam Johnstone,,ENG,19930325,,yes,,,,,,8
+player,away,bench,24,Reece James,,ENG,19991208,,,,,,,,40
+player,away,bench,26,Jude Bellingham,,ENG,20030629,,,,,,,,55
 ,,,,,,,,,,,,,,,
 # --- GOALS --- goal,minute,side,scorer,type,assist,,,,,,,,,,
 goal,2,away,Luke Shaw,goal,Kieran Trippier,,,,,,,,,,

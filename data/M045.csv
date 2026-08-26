@@ -22,42 +22,42 @@ team,home,Henan Jianye,CHN,Wang Baoshan,CHN,5-3-2,7.3,#A22B2E,#FFFFFF,,#A22B2E,,
 team,away,Hebei China Fortune,CHN,Xie Feng,CHN,4-3-3,9.3,#F9F9F9,#1D1D1D,,#1D1D1D,,,,
 ,,,,,,,,,,,,,,,
 # --- PLAYERS -- player,side,role,number,name,kit_name,country,id,captain,goalkeeper,on,off,yellow,double yellow,red,value
-player,home,start,17,Wu Yan,Wu,CHN,,,yes,,,,,,0.3
-player,home,start,2,Hu Ruibao,Hu,CHN,,,,,89,6,,,0.1
-player,home,start,5,Gu Cao,Gu,CHN,,,,,,,,,0.1
-player,home,start,26,Wang Shangyuan,Wang,CHN,,,,,62,,,,0.2
-player,home,start,25,Chen Hao,Chen,CHN,,,,,,,,,0.1
-player,home,start,27,Lu Yao,Lu,CHN,,,,,62,45+1,,,0.1
-player,home,start,29,Ivo,,BRA,,yes,,,,,,,0.8
-player,home,start,8,Tim Chow,,TPE,,,,,,,,,0.3
-player,home,start,6,Feng Zhuoyi,Feng,CHN,,,,,,,,,0.2
-player,home,start,37,Fernando Karanga,,BRA,,,,,,,,,1.7
-player,home,start,10,Christian Bassogog,,CMR,,,,,,,,,3
-player,home,sub,7,Du Changjie,,CHN,,,,62,,,,,0.1
-player,home,sub,21,Sui Donglu,,CHN,,,,62,,,,,0.1
-player,home,sub,13,Abduwal Ablet,,CHN,,,,89,,,,,0.1
-player,home,bench,3,Zhang Wentao,,CHN,,,,,,,,,0.1
-player,home,bench,19,Wang Guoming,,CHN,,,yes,,,,,,0.1
-player,home,bench,28,Ma Xingyu,,CHN,,,,,,,,,0.1
-player,home,bench,30,Zhong Jinbao,,CHN,,,,,,,,,0.1
-player,away,start,33,Chi Wenyi,Chi,CHN,,,yes,,65,,,,0.1
-player,away,start,26,Jiang Wenjun,Jiang,CHN,,,,,,60,,,0.1
-player,away,start,37,Pan Ximing,Pan,CHN,,,,,,,,,0.1
-player,away,start,28,Zhang Chengdong,Zhang,CHN,,yes,,,,,,,0.5
-player,away,start,51,Liu Jing,Liu,CHN,,,,,,,,,0.1
-player,away,start,11,Jiang Zhipeng,Jiang,CHN,,,,,,,,,0.3
-player,away,start,14,Javier Mascherano,,ARG,,,,,,,,,1.5
-player,away,start,15,Wang Qiuming,Wang,CHN,,,,,86,9,,,0.3
-player,away,start,22,Ezequiel Lavezzi,,BRA,,,,,46,,,,2
-player,away,start,9,Dong Xuesheng,Dong,CHN,,,,,,,,,0.2
-player,away,start,32,Fernandinho,,ARG,,,,,,,,,2.2
-player,away,sub,10,Marcão,,BRA,,,,46,,,,,0.8
-player,away,sub,1,Geng Xiaofeng,,CHN,,,yes,65,,,,,0.2
-player,away,sub,29,Tao Qianglong,,CHN,,,,86,,,,,0.5
-player,away,bench,2,Zhang Junzhe,,CHN,,,,,,,,,0.1
-player,away,bench,3,Zhao Yuhao,,CHN,,,,,,,,,0.2
-player,away,bench,5,Andy Russell,,HKG,,,,,,,,,0.1
-player,away,bench,18,Feng Gang,,CHN,,,,,,,,,0.1
+player,home,start,17,Wu Yan,Wu,CHN,19890107,,yes,,,,,,0.3
+player,home,start,2,Hu Ruibao,Hu,CHN,19961017,,,,89,6,,,0.1
+player,home,start,5,Gu Cao,Gu,CHN,19880531,,,,,,,,0.1
+player,home,start,26,Wang Shangyuan,Wang,CHN,19930602,,,,62,,,,0.2
+player,home,start,25,Chen Hao,Chen,CHN,19930128,,,,,,,,0.1
+player,home,start,27,Lu Yao,Lu,CHN,19930626,,,,62,45+1,,,0.1
+player,home,start,29,Ivo,,BRA,19861002,yes,,,,,,,0.8
+player,home,start,8,Tim Chow,,TPE,19940118,,,,,,,,0.3
+player,home,start,6,Feng Zhuoyi,Feng,CHN,19890618,,,,,,,,0.2
+player,home,start,37,Fernando Karanga,,BRA,19910414,,,,,,,,1.7
+player,home,start,10,Christian Bassogog,,CMR,19951018,,,,,,,,3
+player,home,sub,7,Du Changjie,,CHN,19971220,,,62,,,,,0.1
+player,home,sub,21,Sui Donglu,,CHN,19830621,,,62,,,,,0.1
+player,home,sub,13,Abduwal Ablet,,CHN,19870414,,,89,,,,,0.1
+player,home,bench,3,Zhang Wentao,,CHN,19930414,,,,,,,,0.1
+player,home,bench,19,Wang Guoming,,CHN,19900202,,yes,,,,,,0.1
+player,home,bench,28,Ma Xingyu,,CHN,19891104,,,,,,,,0.1
+player,home,bench,30,Zhong Jinbao,,CHN,19941125,,,,,,,,0.1
+player,away,start,33,Chi Wenyi,Chi,CHN,19880218,,yes,,65,,,,0.1
+player,away,start,26,Jiang Wenjun,Jiang,CHN,19900130,,,,,60,,,0.1
+player,away,start,37,Pan Ximing,Pan,CHN,19930111,,,,,,,,0.1
+player,away,start,28,Zhang Chengdong,Zhang,CHN,19890209,yes,,,,,,,0.5
+player,away,start,51,Liu Jing,Liu,CHN,19970117,,,,,,,,0.1
+player,away,start,11,Jiang Zhipeng,Jiang,CHN,19890306,,,,,,,,0.3
+player,away,start,14,Javier Mascherano,,ARG,19840608,,,,,,,,1.5
+player,away,start,15,Wang Qiuming,Wang,CHN,19930109,,,,86,9,,,0.3
+player,away,start,22,Ezequiel Lavezzi,,ARG,19850503,,,,46,,,,2
+player,away,start,9,Dong Xuesheng,Dong,CHN,19890522,,,,,,,,0.2
+player,away,start,32,Fernandinho,,BRA,19930316,,,,,,,,2.2
+player,away,sub,10,Marcão,,BRA,19940617,,,46,,,,,0.8
+player,away,sub,1,Geng Xiaofeng,,CHN,19871015,,yes,65,,,,,0.2
+player,away,sub,29,Tao Qianglong,,CHN,20011120,,,86,,,,,0.5
+player,away,bench,2,Zhang Junzhe,,CHN,19910220,,,,,,,,0.1
+player,away,bench,3,Zhao Yuhao,,CHN,19930407,,,,,,,,0.2
+player,away,bench,5,Andy Russell,,HKG,19871121,,,,,,,,0.1
+player,away,bench,18,Feng Gang,,CHN,19930306,,,,,,,,0.1
 ,,,,,,,,,,,,,,,
 # --- GOALS --- goal,minute,side,scorer,type,assist,,,,,,,,,,
 goal,11,home,Tim Chow,goal,Feng Zhuoyi,,,,,,,,,,
