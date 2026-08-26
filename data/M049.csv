@@ -1,0 +1,106 @@
+,,,,,,,,,,,,,,,
+# --- MATCH --- meta,field,value,,,,,,,,,,,,,
+meta,id,M049,,,,,,,,,,,,,
+meta,status,played,,,,,,,,,,,,,
+meta,competition,EFL League One,,,,,,,,,,,,,
+meta,round,Matchday 46,,,,,,,,,,,,,
+meta,date,2023-05-07,,,,,,,,,,,,,
+meta,kickoff,12:00,,,,,,,,,,,,,
+meta,venue,Kassam Stadium,,,,,,,,,,,,,
+meta,city,Oxford,,,,,,,,,,,,,
+meta,country,ENG,,,,,,,,,,,,,
+meta,neutral,no,,,,,,,,,,,,,
+meta,attendance,10499,,,,,,,,,,,,,
+meta,score,1-2,,,,,,,,,,,,,
+meta,aggregate,,,,,,,,,,,,,,
+meta,decision,,,,,,,,,,,,,,
+meta,referee,Sam Allison,,,,,,,,,,,,,
+meta,referee_country,ENG,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- TEAMS --- team,side,name,country,coach,coach_country,formation,squad_value,pitch_fill,pitch_number,gk_fill,stat_color,,,,
+team,home,Oxford United,ENG,Liam Manning,ENG,4-2-3-1,6.1,#F4F027,#111437,#7F55B2,#F4F027,,,,
+team,away,Accrington Stanley,ENG,John Coleman,ENG,3-4-1-2,3.3,#EEEEEE,#1F1D1E,#7F55B2,#1F1D1E,,,,
+,,,,,,,,,,,,,,,
+# --- PLAYERS -- player,side,role,number,name,kit_name,country,id,captain,goalkeeper,on,off,yellow,double yellow,red,value
+player,home,start,13,Simon Eastwood,,ENG,,,yes,,,,,,0.2
+player,home,start,16,Ciaron Brown,,NIR,,,,,63,,,,0.4
+player,home,start,4,Stuart Findlay,,SCO,,,,,,,,,0.5
+player,home,start,5,Elliott Moore,,ENG,,yes,,,,,,,0.5
+player,home,start,2,Sam Long,,ENG,,,,,,,,,0.3
+player,home,start,8,Cameron Brannagan,,ENG,,,,,,,,,0.5
+player,home,start,18,Marcus McGuane,,ENG,,,,,,,,,0.3
+player,home,start,11,Marcus Browne,,ENG,,,,,61,,,,0.3
+player,home,start,7,Billy Bodin,,WAL,,,,,61,,,,0.3
+player,home,start,27,Tyler Goodrham,,ENG,,,,,,,,,0.2
+player,home,start,22,Kyle Joseph,,SCO,,,,,,79,,,0.4
+player,home,sub,23,Josh Murphy,,ENG,,,,61,,,,,0.9
+player,home,sub,39,Gatlin O'Donkor,,ENG,,,,61,,,,,0.2
+player,home,sub,3,Brandon Fleming,,ENG,,,,63,,,,,0.4
+player,home,bench,21,Edward McGinty,,IRL,,,yes,,,,,,0.2
+player,home,bench,25,Oisin Smyth,,NIR,,,,,,,,,0.2
+player,home,bench,30,Yanic Wildschut,,SUR,,,,,,,,,0.3
+player,home,bench,33,Djavan Anderson,,NED,,,,,,,,,0.4
+player,away,start,1,Lukas Jensen,,DEN,,,yes,,,,,,0.3
+player,away,start,12,Michael Nottingham,,SKN,,,,,28,,,,0.2
+player,away,start,34,Doug Tharme,,WAL,,,,,21,,,,0.2
+player,away,start,16,Harvey Rodgers,,ENG,,,,,,,,,0.3
+player,away,start,11,Sean McConville,,ENG,,yes,,,62,,,,0.2
+player,away,start,4,Ethan Hamilton,,SCO,,,,,,90,,,0.4
+player,away,start,6,Liam Coyle,,NIR,,,,,,57,,,0.4
+player,away,start,38,Connor O'Brien,,ENG,,,,,,,,,
+player,away,start,23,Anthony Gomez Mancini,,FRA,,,,,62,,,,0.2
+player,away,start,18,Nathan Butler-Oyedeji,,ENG,,,,,62,,,,0.1
+player,away,start,20,Aaron Pressley,,SCO,,,,,,,,,0.2
+player,away,sub,14,Rosaire Longelo,,ENG,,,,21,,,,,0.3
+player,away,sub,25,Sebastian Quirk,,ENG,,,,28,,,,,0.2
+player,away,sub,7,Shaun Whalley,,ENG,,,,62,,,,,0.1
+player,away,sub,17,Jack Nolan,,ENG,,,,62,,,,,0.1
+player,away,sub,19,Korede Adedoyin,,NGA,,,,62,,,,,0.2
+player,away,bench,33,Oliver Patrick,,ENG,,,,,,,,,
+player,away,bench,40,Toby Savin,,ENG,,,yes,,,,,,0.3
+,,,,,,,,,,,,,,,
+# --- GOALS --- goal,minute,side,scorer,type,assist,,,,,,,,,,
+goal,8,home,Billy Bodin,goal,Tyler Goodrham,,,,,,,,,,
+goal,64,away,Korede Adedoyin,goal,Rosaire Longelo,,,,,,,,,,
+goal,85,away,Aaron Pressley,goal,Shaun Whalley,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- MATCH STATS --- stat,name,home,away,,,,,,,,,,,,
+stat,Possession,66,34,,,,,,,,,,,,
+stat,Expected goals (xG),2.86,1.13,,,,,,,,,,,,
+stat,Shots,25,9,,,,,,,,,,,,
+stat,Shots on target,6,4,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- WEATHER --- weather,field,value,,,,,,,,,,,,,
+weather,condition,Overcast,,,,,,,,,,,,,
+weather,temp_c,17,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- MATCHDAY --- personal,field,value,,,,,,,,,,,,,
+personal,ticket_price,30,,,,,,,,,,,,,
+personal,ticket_currency,GBP,,,,,,,,,,,,,
+personal,ticket_price_usd,38,,,,,,,,,,,,,
+personal,section,Block 11,,,,,,,,,,,,,
+personal,row,HH,,,,,,,,,,,,,
+personal,seat,89,,,,,,,,,,,,,
+personal,seating,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- PHOTOS --- photo,file,caption,,,,,,,,,,,,,
+photo,M049_1.jpg,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- CHAMPIONS --- champion,field,value,,,,,,,,,,,,,
+champion,team,,,,,,,,,,,,,,
+champion,side,,,,,,,,,,,,,,
+champion,title,,,,,,,,,,,,,,
+champion,season,,,,,,,,,,,,,,
+champion,note,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- PENALTIES --- pen,order,side,player,result,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
