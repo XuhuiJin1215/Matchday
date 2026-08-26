@@ -1,0 +1,121 @@
+,,,,,,,,,,,,,,,
+# --- MATCH --- meta,field,value,,,,,,,,,,,,,
+meta,id,M051,,,,,,,,,,,,,
+meta,status,played,,,,,,,,,,,,,
+meta,competition,CONMEBOL Copa América,,,,,,,,,,,,,
+meta,round,Quarter-final,,,,,,,,,,,,,
+meta,date,2024-07-06,,,,,,,,,,,,,
+meta,kickoff,18:00,,,,,,,,,,,,,
+meta,venue,Allegiant Stadium,,,,,,,,,,,,,
+meta,city,Las Vegas,,,,,,,,,,,,,
+meta,country,USA,,,,,,,,,,,,,
+meta,neutral,no,,,,,,,,,,,,,
+meta,attendance,55770,,,,,,,,,,,,,
+meta,score,0-0,,,,,,,,,,,,,
+meta,aggregate,,,,,,,,,,,,,,
+meta,decision,pen. 4-2,,,,,,,,,,,,,
+meta,referee,Darío Herrera,,,,,,,,,,,,,
+meta,referee_country,ARG,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- TEAMS --- team,side,name,country,coach,coach_country,formation,squad_value,pitch_fill,pitch_number,gk_fill,stat_color,,,,
+team,home,Uruguay,,Marcelo Bielsa,ARG,4-2-3-1,480.1,#5EC0F4,#162228,#9DA3EB,#5EC0F4,,,,
+team,away,Brazil,,Dorival Júnior,BRA,4-2-3-1,1087.8,#F0E787,#00D35B,#9DA3EB,#F0E787,,,,
+,,,,,,,,,,,,,,,
+# --- PLAYERS -- player,side,role,number,name,kit_name,country,id,captain,goalkeeper,on,off,yellow,double yellow,red,value
+player,home,start,1,Sergio Rochet,,URU,19930323,,yes,,,,,,3.5
+player,home,start,17,Matías Viña,,URU,19971109,,,,46,,,,8
+player,home,start,16,Mathías Olivera,,URU,19971031,,,,,,,,15
+player,home,start,4,Ronald Araújo,,URU,19990307,,,,33,,,,70
+player,home,start,8,Nahitan Nández,,URU,19951228,,,,,,,74,5
+player,home,start,5,Manuel Ugarte,,URU,20010411,,,,,51,,,45
+player,home,start,15,Federico Valverde,,URU,19980722,yes,,,,,,,120
+player,home,start,20,Maximiliano Araújo,,URU,20000215,,,,,,,,5.5
+player,home,start,7,Nicolás de la Cruz,de la Cruz,URU,19970601,,,,67,60,,,16
+player,home,start,11,Facundo Pellistri,,URU,20011220,,,,78,,,,8
+player,home,start,19,Darwin Núñez,,URU,19990624,,,,78,,,,70
+player,home,sub,2,José María Giménez,,URU,19950120,,,33,,,,,22
+player,home,sub,3,Sebastián Cáceres,,URU,19990818,,,46,,,,,7
+player,home,sub,6,Rodrigo Bentancur,,URU,19970625,,,67,,,,,35
+player,home,sub,10,Giorgian de Arrascaeta,,URU,19940601,,,78,,,,,15
+player,home,sub,13,Guillermo Varela,,URU,19930324,,,78,,,,,1.7
+player,home,bench,9,Luis Suárez,,URU,19870124,,,,,,,,3
+player,home,bench,12,Franco Israel,,URU,20000422,,yes,,,,,,3.5
+player,home,bench,14,Agustín Canobbio,,URU,19981001,,,,,,,,5
+player,home,bench,18,Brian Rodríguez,,URU,20000520,,,,,,,,4
+player,home,bench,21,Emiliano Martínez,,URU,19990817,,,,,,,,4
+player,home,bench,22,Nicolás Marichal,,URU,20010317,,,,,,,,3.5
+player,home,bench,23,Santiago Mele,,URU,19970906,,yes,,,,,,2.5
+player,home,bench,24,Lucas Olaza,,URU,19940721,,,,,,,,3
+player,home,bench,25,Cristian Olivera,,URU,20020417,,,,,,,,4
+player,home,bench,26,Brian Ocampo,,URU,19990625,,,,,,,,0.9
+player,away,start,1,Alisson,,BRA,19921002,,yes,,,,,,28
+player,away,start,16,Guilherme Arana,,BRA,19970414,,,,,,,,12
+player,away,start,4,Marquinhos,,BRA,19940514,,,,,,,,50
+player,away,start,3,Éder Militão,,BRA,19980118,,,,,,,,60
+player,away,start,2,Danilo,,BRA,19910715,yes,,,,,,,10
+player,away,start,15,João Gomes,João Gomes,BRA,20010212,,,,81,64,,,35
+player,away,start,5,Bruno Guimarães,,BRA,19971116,,,,87,,,,85
+player,away,start,10,Rodrygo,,BRA,20010109,,,,87,,,,110
+player,away,start,8,Lucas Paquetá,,BRA,19970827,,,,81,39,,,65
+player,away,start,11,Raphinha,,BRA,19961214,,,,82,,,,50
+player,away,start,9,Endrick,,BRA,20060721,,,,,,,,60
+player,away,sub,18,Douglas Luiz,,BRA,19980509,,,81,,,,,70
+player,away,sub,19,Andreas Pereira,,BRA,19960101,,,81,,,,,20
+player,away,sub,20,Savinho,,BRA,20040410,,,82,,,,,50
+player,away,sub,21,Evanilson,,BRA,19991006,,,87,,,,,35
+player,away,sub,22,Gabriel Martinelli,,BRA,20010618,,,87,,,,,70
+player,away,bench,6,Wendell,,BRA,19930720,,,,,,,,7
+player,away,bench,12,Bento,,BRA,19990610,,yes,,,,,,15
+player,away,bench,13,Yan Couto,,BRA,20020603,,,,,,,,25
+player,away,bench,14,Gabriel Magalhães,,BRA,19971219,,,,,,,,70
+player,away,bench,17,Lucas Beraldo,,BRA,20031124,,,,,,,,30
+player,away,bench,23,Rafael,,BRA,19890623,,yes,,,,,,0.8
+player,away,bench,24,Éderson,,BRA,19990707,,,,,,,,40
+player,away,bench,25,Gleison Bremer,,BRA,19970318,,,,,,,,60
+player,away,bench,26,Pepê,,BRA,19970224,,,,,,,,30
+,,,,,,,,,,,,,,,
+# --- GOALS --- goal,minute,side,scorer,type,assist,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- MATCH STATS --- stat,name,home,away,,,,,,,,,,,,
+stat,Possession,40,60,,,,,,,,,,,,
+stat,Expected goals (xG),0.89,0.58,,,,,,,,,,,,
+stat,Shots,12,7,,,,,,,,,,,,
+stat,Shots on target,1,3,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- WEATHER --- weather,field,value,,,,,,,,,,,,,
+weather,condition,Clear,,,,,,,,,,,,,
+weather,temp_c,45,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- MATCHDAY --- personal,field,value,,,,,,,,,,,,,
+personal,ticket_price,242,,,,,,,,,,,,,
+personal,ticket_currency,USD,,,,,,,,,,,,,
+personal,ticket_price_usd,,,,,,,,,,,,,,
+personal,section,Section 310,,,,,,,,,,,,,
+personal,row,8,,,,,,,,,,,,,
+personal,seat,20,,,,,,,,,,,,,
+personal,seating,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- PHOTOS --- photo,file,caption,,,,,,,,,,,,,
+photo,M051_1.jpg,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- CHAMPIONS --- champion,field,value,,,,,,,,,,,,,
+champion,team,,,,,,,,,,,,,,
+champion,side,,,,,,,,,,,,,,
+champion,title,,,,,,,,,,,,,,
+champion,season,,,,,,,,,,,,,,
+champion,note,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- PENALTIES --- pen,order,side,player,result,,,,,,,,,,,
+pen,1,home,Federico Valverde,scored,,,,,,,,,,,
+pen,2,away,Éder Militão,missed,,,,,,,,,,,
+pen,3,home,Rodrigo Bentancur,scored,,,,,,,,,,,
+pen,4,away,Andreas Pereira,scored,,,,,,,,,,,
+pen,5,home,Giorgian De Arrascaeta,scored,,,,,,,,,,,
+pen,6,away,Douglas Luiz,missed,,,,,,,,,,,
+pen,7,home,José María Giménez,missed,,,,,,,,,,,
+pen,8,away,Gabriel Martinelli,scored,,,,,,,,,,,
+pen,9,home,Manuel Ugarte,scored,,,,,,,,,,,
+,,,,,,,,,,,,,,,
