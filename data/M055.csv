@@ -1,0 +1,122 @@
+,,,,,,,,,,,,,,,
+# --- MATCH --- meta,field,value,,,,,,,,,,,,,
+meta,id,M055,,,,,,,,,,,,,
+meta,status,played,,,,,,,,,,,,,
+meta,competition,FIFA Club World Cup,,,,,,,,,,,,,
+meta,round,Group B - Matchday 1,,,,,,,,,,,,,
+meta,date,2025-06-15,,,,,,,,,,,,,
+meta,kickoff,19:00,,,,,,,,,,,,,
+meta,venue,Lumen Field,,,,,,,,,,,,,
+meta,city,Seattle,,,,,,,,,,,,,
+meta,country,USA,,,,,,,,,,,,,
+meta,neutral,no,,,,,,,,,,,,,
+meta,attendance,30151,,,,,,,,,,,,,
+meta,score,2-1,,,,,,,,,,,,,
+meta,aggregate,,,,,,,,,,,,,,
+meta,decision,,,,,,,,,,,,,,
+meta,referee,Glenn Nyberg,,,,,,,,,,,,,
+meta,referee_country,SWE,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- TEAMS --- team,side,name,country,coach,coach_country,formation,squad_value,pitch_fill,pitch_number,gk_fill,stat_color,,,,
+team,home,Botafogo,BRA,Renato Paiva,POR,4-4-2,129.2,#EBEAEE,#29282C,,#29282C,,,,
+team,away,Seattle Sounders,USA,Brian Schmetzer,USA,4-2-3-1,48.1,#3DB17D,#FFFFFF,,#3DB17D,,,,
+,,,,,,,,,,,,,,,
+# --- PLAYERS -- player,side,role,number,name,kit_name,country,id,captain,goalkeeper,on,off,yellow,double yellow,red,value
+player,home,start,12,John Victor,John,BRA,19960213,,yes,,,,,,8
+player,home,start,13,Alex Telles,,BRA,19921215,,,,70,,,,4
+player,home,start,20,Alexander Barboza,,ARG,19950316,,,,,61,,,5
+player,home,start,32,Jair Cunha,Jair,BRA,20050307,,,,,,,,13
+player,home,start,2,Vitinho,,BRA,19990723,,,,,,,,6
+player,home,start,10,Jefferson Savarino,,VEN,19961111,,,,70,,,,10
+player,home,start,26,Gregore,,BRA,19940302,,,,,,,,5
+player,home,start,17,Marlon Freitas,Marlon,BRA,19950327,yes,,,86,,,,6
+player,home,start,7,Artur,,BRA,19980215,,,,,,,,8
+player,home,start,99,Igor Jesus,Igor Jesus,BRA,20010225,,,,86,,,,15
+player,home,start,39,Gonzalo Mastriani,,URU,19930428,,,,46,,,,1.5
+player,home,sub,30,Joaquín Correa,,ARG,19940813,,,46,,64,,,3
+player,home,sub,66,Cuiabano,,BRA,20030216,,,70,,,,,8
+player,home,sub,98,Arthur Cabral,,BRA,19980425,,,70,,,,,10
+player,home,sub,5,Danilo Barbosa,,BRA,19960228,,,86,,,,,2.5
+player,home,sub,23,Santiago Rodríguez,,URU,20000108,,,86,,,,,4.5
+player,home,bench,1,Raul,,BRA,19970728,,yes,,,,,,0.1
+player,home,bench,4,Mateo Ponte,,URU,20030524,,,,,,,,2
+player,home,bench,8,Álvaro Montoro,,ARG,20070417,,,,,,,,3.5
+player,home,bench,9,Rwan Cruz,,BRA,20010520,,,,,,,,5
+player,home,bench,21,Marçal,,BRA,19890219,,,,,,,,0.3
+player,home,bench,24,Léo Linck,,BRA,20010303,,yes,,,,,,1.5
+player,home,bench,25,Allan,,BRA,19910108,,,,,,,,2
+player,home,bench,28,Newton,,BRA,20000312,,,,,,,,1
+player,home,bench,31,Kaio Pantaleão,,BRA,19950908,,,,,,,,1.8
+player,home,bench,57,David Ricardo,,BRA,20021221,,,,,,,,2.5
+player,away,start,24,Stefan Frei,,SUI,19860420,yes,yes,,,,,,0.2
+player,away,start,5,Nouhou Tolo,Nouhou,CMR,19970623,,,,46,28,,,3.5
+player,away,start,25,Jackson Ragen,,USA,19980924,,,,,87,,,3
+player,away,start,20,Kim Kee-hee,Kim,KOR,19890713,,,,46,,,,0.2
+player,away,start,16,Alex Roldán,,SLV,19960728,,,,,,,,4
+player,away,start,18,Obed Vargas,,MEX,20050805,,,,,,,,6
+player,away,start,7,Cristian Roldan,,USA,19950603,,,,,,,,4
+player,away,start,77,Ryan Kent,,ENG,19961111,,,,71,,,,2.5
+player,away,start,11,Albert Rusnák,,SVK,19940707,,,,,,,,3.5
+player,away,start,9,Jesús Ferreira,,USA,20001224,,,,71,,,,4
+player,away,start,19,Danny Musovski,,USA,19951130,,,,84,,,,0.8
+player,away,sub,15,Jonathan Bell,,JAM,19970826,,,46,,,,,0.3
+player,away,sub,21,Reed Baker-Whiting,,USA,20050331,,,46,,,,,1
+player,away,sub,10,Pedro de la Vega,,ARG,20010207,,,71,,,,,4
+player,away,sub,14,Paul Rothrock,,USA,19990109,,,71,,,,,1
+player,away,sub,95,Osaze De Rosario,,GUY,20010719,,,84,,,,,0.3
+player,away,bench,3,Travian Sousa,,USA,20010919,,,,,,,,
+player,away,bench,6,João Paulo,,BRA,19910308,,,,,,,,0.8
+player,away,bench,13,Jordan Morris,,USA,19941026,,,,,,,,4
+player,away,bench,26,Andrew Thomas,,RUS,19980901,,yes,,,,,,0.2
+player,away,bench,28,Yeimar Gómez,,COL,19920630,,,,,,,,1.8
+player,away,bench,29,Jacob Castro,,USA,19991218,,yes,,,,,,0.1
+player,away,bench,33,Cody Baker,,USA,20040107,,,,,,,,0.5
+player,away,bench,75,Danny Leyva,,USA,20030505,,,,,,,,1.2
+player,away,bench,85,Kalani Kossa-Rienzi,,USA,20020627,,,,,,,,0.5
+player,away,bench,93,Georgi Minoungou,,CIV,20020725,,,,,,,,0.8
+,,,,,,,,,,,,,,,
+# --- GOALS --- goal,minute,side,scorer,type,assist,,,,,,,,,,
+goal,28,home,Jair Cunha,goal,Alex Telles,,,,,,,,,,
+goal,44,home,Igor Jesus,goal,Vitinho,,,,,,,,,,
+goal,75,away,Cristian Roldan,goal,Paul Rothrock,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- MATCH STATS --- stat,name,home,away,,,,,,,,,,,,
+stat,Possession,40,60,,,,,,,,,,,,
+stat,Expected goals (xG),0.91,2.20,,,,,,,,,,,,
+stat,Shots,12,23,,,,,,,,,,,,
+stat,Shots on target,6,5,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- WEATHER --- weather,field,value,,,,,,,,,,,,,
+weather,condition,Clear,,,,,,,,,,,,,
+weather,temp_c,20,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- MATCHDAY --- personal,field,value,,,,,,,,,,,,,
+personal,ticket_price,172,,,,,,,,,,,,,
+personal,ticket_currency,USD,,,,,,,,,,,,,
+personal,ticket_price_usd,,,,,,,,,,,,,,
+personal,section,Section 119,,,,,,,,,,,,,
+personal,row,E,,,,,,,,,,,,,
+personal,seat,1,,,,,,,,,,,,,
+personal,seating,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- PHOTOS --- photo,file,caption,,,,,,,,,,,,,
+photo,M055_1.jpg,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- CHAMPIONS --- champion,field,value,,,,,,,,,,,,,
+champion,team,,,,,,,,,,,,,,
+champion,side,,,,,,,,,,,,,,
+champion,title,,,,,,,,,,,,,,
+champion,season,,,,,,,,,,,,,,
+champion,note,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- PENALTIES --- pen,order,side,player,result,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
