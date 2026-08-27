@@ -1197,7 +1197,7 @@ function renderChampions(){
    Statistics: one shared data model powers both the summary cards
    (top 5) and the per-stat detail pages (full list + charts).
    --------------------------------------------------------------- */
-const SECTIONS=["Competitions and locations","Teams and players","Match records","Conditions"];
+const SECTIONS=["Competitions and locations","Teams","Personnel","Match records","Conditions"];
 
 function computeStats(){
   const played=MATCHES.filter(m=>m.status==="played"&&m.hg!=null);
@@ -1293,18 +1293,45 @@ function computeStats(){
   addCount("stadiums","Stadiums","Competitions and locations",tally(played.map(m=>m.meta.venue)),
     {noun:"stadiums",donut:true,groupOnes:true,avgUnit:"matches",flagFor:v=>stadiumCountry[v]});
 
-  addCount("teams-appearances","Teams by appearances","Teams and players",
+  addCount("teams-appearances","Teams by appearances","Teams",
     tally(played.flatMap(m=>[(m.teams.home||{}).name,(m.teams.away||{}).name])),
     {noun:"teams",donut:true,groupOnes:true,avgUnit:"appearances",iconFor:name=>teamIcon(name)});
-  addValue("teams-value","Teams by market value","Teams and players",
+  addCount("clubs-country","Clubs by country","Teams",
+    tally(played.flatMap(m=>[(m.teams.home||{}).country,(m.teams.away||{}).country])),{isFlag:true,noun:"countries",donut:true,groupOnes:true,avgUnit:"club appearances"});
+  addValue("teams-value","Teams by market value","Teams",
     played.flatMap(m=>["home","away"].map(sd=>{
       const t=m.teams[sd]; if(!t) return null;
       const v=squadValue(m,sd);
       return v==null?null:{name:t.name,v,id:m.id,date:m.date,icon:teamIcon(t.name)};
     })).filter(Boolean).sort((a,b)=>b.v-a.v),"valuations","teams");
-  addCount("clubs-country","Clubs by country","Teams and players",
-    tally(played.flatMap(m=>[(m.teams.home||{}).country,(m.teams.away||{}).country])),{isFlag:true,noun:"countries",donut:true,groupOnes:true,avgUnit:"club appearances"});
-  addCount("teams-titles","Teams by titles","Teams and players",
+  addValue("teams-xi-value","Teams by the most expensive starting 11","Teams",
+    played.flatMap(m=>["home","away"].map(sd=>{
+      const t=m.teams[sd]; if(!t) return null;
+      const starters=m.players.filter(p=>p.side===sd&&p.role==="start"&&p.value!=null);
+      if(!starters.length) return null;
+      const v=starters.reduce((s,p)=>s+p.value,0);
+      return {name:t.name,v,id:m.id,date:m.date,icon:teamIcon(t.name)};
+    })).filter(Boolean).sort((a,b)=>b.v-a.v),"valuations","teams");
+  /* Teams by the oldest starting 11: average age of that side's XI, one row
+     per team per match — same shape as a value stat, but in years not euros,
+     and shown with the temperature page's highest/lowest-five treatment. */
+  {
+    const rows=played.flatMap(m=>["home","away"].map(sd=>{
+      const t=m.teams[sd]; if(!t) return null;
+      const starters=m.players.filter(p=>p.side===sd&&p.role==="start");
+      const ages=starters.map(p=>ageOn(p.id,m.date)).filter(a=>a!=null);
+      if(!ages.length) return null;
+      return {name:t.name,v:ages.reduce((s,a)=>s+a,0)/ages.length,id:m.id,date:m.date,icon:teamIcon(t.name)};
+    })).filter(Boolean).sort((a,b)=>b.v-a.v);
+    defs["teams-xi-age"]={
+      key:"teams-xi-age",title:"Teams by the oldest starting 11",section:"Teams",
+      kind:"value",noun:"lineups",avgCaption:"years old, on average",
+      showLows:true,highLabel:"Oldest",lowLabel:"Youngest",
+      fmt:v=>(Math.round(v*10)/10),
+      rows:rows.map(r=>({key:r.id+"|"+r.name,label:r.name,value:r.v,id:r.id,date:r.date,icon:r.icon}))
+    };
+  }
+  addCount("teams-titles","Teams by titles","Teams",
     tally(played.filter(m=>m.isDecider).map(m=>m.champion.team)),
     {noun:"titles",avgUnit:"titles",iconFor:name=>teamIcon(name)});
   defs["teams-titles"].avgCaption="titles per team";
@@ -1317,16 +1344,16 @@ function computeStats(){
     defs["teams-titles"].yearCounts=titleYears;
     defs["teams-titles"].yearChartTitle="Titles won per year";
   }
-  addCount("players-appearances","Players by appearances","Teams and players",
+  addCount("players-appearances","Players by appearances","Personnel",
     tallyPeople(played.flatMap(appearances).map(p=>({name:p.name,id:p.id}))),
     {noun:"players",avgUnit:"appearances",flagFor:(label,meta)=>meta&&playerCountry[meta.name+"\u0000"+(meta.id||"")]});
-  addValue("players-value","Players by market value","Teams and players",
+  addCount("players-nationality","Players by nationality","Personnel",
+    tally(played.flatMap(appearances).map(p=>p.country)),{isFlag:true,noun:"nationalities",donut:true,avgUnit:"appearances"});
+  addValue("players-value","Players by market value","Personnel",
     played.flatMap(m=>appearances(m).filter(p=>p.value!=null)
       .map(p=>({name:p.name,v:p.value,id:m.id,date:m.date,dkey:p.name+"\u0000"+(p.id||""),
         flagCode:playerCountry[p.name+"\u0000"+(p.id||"")]})))
       .sort((a,b)=>b.v-a.v),"valuations","players");
-  addCount("players-nationality","Players by nationality","Teams and players",
-    tally(played.flatMap(appearances).map(p=>p.country)),{isFlag:true,noun:"nationalities",donut:true,avgUnit:"appearances"});
   /* Players by age: one row per appearance, ranked oldest first, with the exact
      age on that matchday. The chart bins them into whole years. */
   {
@@ -1336,8 +1363,9 @@ function computeStats(){
     })).filter(Boolean)
       .sort((a,b)=>(b.ex.years-a.ex.years)||(b.ex.days-a.ex.days));
     defs["players-age"]={
-      key:"players-age",title:"Players by age",section:"Teams and players",
+      key:"players-age",title:"Players by age",section:"Personnel",
       kind:"age",noun:"appearances",avgCaption:"years old, on average",
+      highLabel:"Oldest",lowLabel:"Youngest",
       fmt:v=>String(v),
       rows:rows.map(r=>({
         key:r.m.id+"|"+r.p.name+"|"+(r.p.id||""),
@@ -1358,17 +1386,17 @@ function computeStats(){
       defs["players-age"].ageBins=bins;
     }
   }
-  addCount("scorers","Scorers","Teams and players",tally(played.flatMap(m=>m.goals.map(g=>g.scorer))),
+  addCount("scorers","Scorers","Personnel",tally(played.flatMap(m=>m.goals.map(g=>g.scorer))),
     {noun:"scorers",avgUnit:"goals",flagFor:name=>scorerCountry[name]});
   defs.scorers.avgCaption="goals per scorer";
-  addCount("assists","Assists","Teams and players",
+  addCount("assists","Assists","Personnel",
     tally(played.flatMap(m=>m.goals.map(g=>g.assist))),
     {noun:"assisters",avgUnit:"assists",flagFor:name=>scorerCountry[name]});
   defs.assists.avgCaption="assists per player";
-  addCount("head-coach","Head coaches","Teams and players",
+  addCount("head-coach","Head coaches","Personnel",
     tally(played.flatMap(m=>[(m.teams.home||{}).coach,(m.teams.away||{}).coach])),
     {noun:"coaches",avgUnit:"matches",flagFor:name=>coachCountry[name]});
-  addCount("referee","Referees","Teams and players",tally(played.map(m=>m.meta.referee)),
+  addCount("referee","Referees","Personnel",tally(played.map(m=>m.meta.referee)),
     {noun:"referees",avgUnit:"matches",flagFor:name=>refCountry[name]});
 
   const cardBucket=t=>cardInfo(t).bucket;
@@ -1691,8 +1719,8 @@ function renderStatDetail(key){
     </section>
     <div class="tiles">
       <div class="tile"><div class="k">${esc(def.kind==="count"?def.noun:(mode==="best"?def.dedupNoun:(def.kind==="value"?def.noun:"Matches")))}</div>${tileVal(rows.length)}<div class="s">in the list</div></div>
-      <div class="tile"><div class="k">${def.kind==="age"?"Oldest":"Highest"}</div>${tileVal(rows[0].display||def.fmt(Math.max(...vals)))}<div class="s">${esc(rows[0].label)}</div></div>
-      ${(def.showLows||def.kind==="age")?`<div class="tile"><div class="k">${def.kind==="age"?"Youngest":"Lowest"}</div>${tileVal(rows[rows.length-1].display||def.fmt(Math.min(...vals)))}<div class="s">${esc(rows[rows.length-1].label)}</div></div>`:""}
+      <div class="tile"><div class="k">${esc(def.highLabel||"Highest")}</div>${tileVal(rows[0].display||def.fmt(Math.max(...vals)))}<div class="s">${esc(rows[0].label)}</div></div>
+      ${(def.showLows||def.kind==="age")?`<div class="tile"><div class="k">${esc(def.lowLabel||"Lowest")}</div>${tileVal(rows[rows.length-1].display||def.fmt(Math.min(...vals)))}<div class="s">${esc(rows[rows.length-1].label)}</div></div>`:""}
       <div class="tile"><div class="k">Average</div>${tileVal(def.kind==="age"?(Math.round(avg*10)/10):def.fmt(Math.round(avg*10)/10))}<div class="s">${esc(avgCaption)}</div></div>
       ${def.kind==="count"?`<div class="tile"><div class="k">Total</div>${tileVal(nf(total))}<div class="s">${esc(def.avgUnit||"entries")} counted</div></div>`:""}
     </div>
