@@ -1,0 +1,123 @@
+,,,,,,,,,,,,,,,
+# --- MATCH --- meta,field,value,,,,,,,,,,,,,
+meta,id,M056,,,,,,,,,,,,,
+meta,status,played,,,,,,,,,,,,,
+meta,competition,FIFA Club World Cup,,,,,,,,,,,,,
+meta,round,Group B - Matchday 2,,,,,,,,,,,,,
+meta,date,2025-06-19,,,,,,,,,,,,,
+meta,kickoff,15:00,,,,,,,,,,,,,
+meta,venue,Lumen Field,,,,,,,,,,,,,
+meta,city,Seattle,,,,,,,,,,,,,
+meta,country,USA,,,,,,,,,,,,,
+meta,neutral,no,,,,,,,,,,,,,
+meta,attendance,51636,,,,,,,,,,,,,
+meta,score,1-3,,,,,,,,,,,,,
+meta,aggregate,,,,,,,,,,,,,,
+meta,decision,,,,,,,,,,,,,,
+meta,referee,Yael Falcón,,,,,,,,,,,,,
+meta,referee_country,ARG,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- TEAMS --- team,side,name,country,coach,coach_country,formation,squad_value,pitch_fill,pitch_number,gk_fill,stat_color,,,,
+team,home,Seattle Sounders,USA,Brian Schmetzer,USA,4-2-3-1,48.1,#3DB17D,#FFFFFF,,#3DB17D,,,,
+team,away,Atlético Madrid,ESP,Diego Simeone,ARG,4-4-2,500.2,#E9E6EF,#D20235,,#D20235,,,,
+,,,,,,,,,,,,,,,
+# --- PLAYERS -- player,side,role,number,name,kit_name,country,id,captain,goalkeeper,on,off,yellow,double yellow,red,value
+player,home,start,24,Stefan Frei,,SUI,19860420,yes,yes,,,,,,0.2
+player,home,start,21,Reed Baker-Whiting,,USA,20050331,,,,,,,,1
+player,home,start,25,Jackson Ragen,,USA,19980924,,,,,,,,3
+player,home,start,15,Jonathan Bell,,JAM,19970826,,,,,,,,0.3
+player,home,start,85,Kalani Kossa-Rienzi,,USA,20020627,,,,79,,,,0.5
+player,home,start,18,Obed Vargas,,MEX,20050805,,,,,,,,6
+player,home,start,7,Cristian Roldan,,USA,19950603,,,,,,,,4
+player,home,start,14,Paul Rothrock,,USA,19990109,,,,66,63,,,1
+player,home,start,11,Albert Rusnák,,SVK,19940707,,,,79,,,,3.5
+player,home,start,10,Pedro de la Vega,de la Vega,ARG,20010207,,,,60,,,,4
+player,home,start,19,Danny Musovski,,USA,19951130,,,,60,,,,0.8
+player,home,sub,9,Jesús Ferreira,,USA,20001224,,,60,,,,,4
+player,home,sub,77,Ryan Kent,,ENG,19961111,,,60,,,,,2.5
+player,home,sub,16,Alex Roldán,,SLV,19960728,,,66,,,,,4
+player,home,sub,6,João Paulo,,BRA,19910308,,,79,,,,,0.8
+player,home,sub,93,Georgi Minoungou,,CIV,20020725,,,79,,,,,0.8
+player,home,bench,3,Travian Sousa,,USA,20010919,,,,,,,,
+player,home,bench,5,Nouhou Tolo,,CMR,19970623,,,,,,,,3.5
+player,home,bench,13,Jordan Morris,,USA,19941026,,,,,,,,4
+player,home,bench,20,Kim Kee-hee,,KOR,19890713,,,,,,,,0.2
+player,home,bench,26,Andrew Thomas,,RUS,19980901,,yes,,,,,,0.2
+player,home,bench,28,Yeimar Gómez,,COL,19920630,,,,,,,,1.8
+player,home,bench,29,Jacob Castro,,USA,19991218,,yes,,,,,,0.1
+player,home,bench,33,Cody Baker,,USA,20040107,,,,,,,,0.5
+player,home,bench,75,Danny Leyva,,USA,20030505,,,,,,,,1.2
+player,home,bench,95,Osaze De Rosario,,GUY,20010719,,,,,,,,0.3
+player,away,start,13,Jan Oblak,,SVN,19930107,,yes,,,,,,20
+player,away,start,21,Javi Galán,,ESP,19941119,,,,,,,,4
+player,away,start,24,Robin Le Normand,Le Normand,ESP,19961111,,,,,,,,40
+player,away,start,2,José María Giménez,,URU,19950120,,,,46,,,,20
+player,away,start,14,Marcos Llorente,,ESP,19950130,,,,,,,,25
+player,away,start,8,Pablo Barrios,,ESP,20030615,,,,,,,,55
+player,away,start,6,Koke,,ESP,19920108,yes,,,70,,,,8
+player,away,start,5,Rodrigo De Paul,De Paul,ARG,19940524,,,,65,42,,,25
+player,away,start,22,Giuliano Simeone,,ARG,20021218,,,,,,,,35
+player,away,start,19,Julián Alvarez,,ARG,20000131,,,,82,,,,100
+player,away,start,9,Alexander Sørloth,,NOR,19951205,,,,65,,,,25
+player,away,sub,20,Axel Witsel,,BEL,19890112,,,46,,,,,2
+player,away,sub,4,Conor Gallagher,,ENG,20000206,,,65,,77,,,40
+player,away,sub,7,Antoine Griezmann,,FRA,19910321,,,65,,,,,18
+player,away,sub,10,Ángel Correa,,ARG,19950309,,,70,,,,,10
+player,away,sub,16,Nahuel Molina,,ARG,19980406,,,82,,,,,20
+player,away,bench,1,Juan Musso,,ARG,19940506,,yes,,,,,,3.5
+player,away,bench,3,César Azpilicueta,,ESP,19890828,,,,,,,,1.5
+player,away,bench,11,Thomas Lemar,,FRA,19951112,,,,,,,,5
+player,away,bench,12,Samuel Lino,,BRA,19991223,,,,,,,,22
+player,away,bench,17,Rodrigo Riquelme,,ESP,20000402,,,,,,,,12
+player,away,bench,18,Carlos Martín,,ESP,20020422,,,,,,,,2.8
+player,away,bench,23,Reinildo Mandava,,MOZ,19940121,,,,,,,,5
+player,away,bench,27,Ilias Kostis,,GRE,20030227,,,,,,,,0.5
+player,away,bench,29,Javi Serrano,,ESP,20030116,,,,,,,,0.7
+player,away,bench,31,Antonio Gomis,,ESP,20030520,,yes,,,,,,0.2
+,,,,,,,,,,,,,,,
+# --- GOALS --- goal,minute,side,scorer,type,assist,,,,,,,,,,
+goal,11,away,Pablo Barrios,goal,Giuliano Simeone,,,,,,,,,,
+goal,47,away,Axel Witsel,goal,Robin Le Normand,,,,,,,,,,
+goal,50,home,Albert Rusnák,goal,,,,,,,,,,,
+goal,55,away,Pablo Barrios,goal,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- MATCH STATS --- stat,name,home,away,,,,,,,,,,,,
+stat,Possession,43,57,,,,,,,,,,,,
+stat,Expected goals (xG),1.50,3.26,,,,,,,,,,,,
+stat,Shots,16,15,,,,,,,,,,,,
+stat,Shots on target,4,7,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- WEATHER --- weather,field,value,,,,,,,,,,,,,
+weather,condition,Overcast,,,,,,,,,,,,,
+weather,temp_c,20,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- MATCHDAY --- personal,field,value,,,,,,,,,,,,,
+personal,ticket_price,166,,,,,,,,,,,,,
+personal,ticket_currency,USD,,,,,,,,,,,,,
+personal,ticket_price_usd,,,,,,,,,,,,,,
+personal,section,Section 335,,,,,,,,,,,,,
+personal,row,MM,,,,,,,,,,,,,
+personal,seat,4,,,,,,,,,,,,,
+personal,seating,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- PHOTOS --- photo,file,caption,,,,,,,,,,,,,
+photo,M056_1.jpg,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- CHAMPIONS --- champion,field,value,,,,,,,,,,,,,
+champion,team,,,,,,,,,,,,,,
+champion,side,,,,,,,,,,,,,,
+champion,title,,,,,,,,,,,,,,
+champion,season,,,,,,,,,,,,,,
+champion,note,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- PENALTIES --- pen,order,side,player,result,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
