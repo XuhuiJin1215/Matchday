@@ -18,8 +18,8 @@ meta,referee,Drew Fischer,,,,,,,,,,,,,
 meta,referee_country,CAN,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,
 # --- TEAMS --- team,side,name,country,coach,coach_country,formation,squad_value,pitch_fill,pitch_number,gk_fill,stat_color,,,,
-team,home,Seattle Sounders,USA,Brian Schmetzer,USA,3-4-3,49.5,#4E7292,#A4C2BF,,#4E7292,,,,
-team,away,Los Angeles FC,USA,Steven Cherundolo,USA,3-4-3,45,#EDEDEF,#AD9257,,#AD9257,,,,
+team,home,Seattle Sounders,USA,Brian Schmetzer,USA,3-4-3,49.5,#4E7292,#A4C2BF,#7B2C85,#4E7292,,,,
+team,away,Los Angeles FC,USA,Steven Cherundolo,USA,3-4-3,45,#EDEDEF,#AD9257,#7B2C85,#AD9257,,,,
 ,,,,,,,,,,,,,,,
 # --- PLAYERS -- player,side,role,number,name,kit_name,country,id,captain,goalkeeper,on,off,yellow,double yellow,red,value
 player,home,start,26,Andrew Thomas,,RUS,19980901,,yes,,,,,,0.2
