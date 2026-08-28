@@ -1,0 +1,116 @@
+,,,,,,,,,,,,,,,
+# --- MATCH --- meta,field,value,,,,,,,,,,,,,
+meta,id,M061,,,,,,,,,,,,,
+meta,status,played,,,,,,,,,,,,,
+meta,competition,CONCACAF Champions Cup,,,,,,,,,,,,,
+meta,round,Quarter-final - 2nd Leg,,,,,,,,,,,,,
+meta,date,2026-04-15,,,,,,,,,,,,,
+meta,kickoff,20:30,,,,,,,,,,,,,
+meta,venue,Lumen Field,,,,,,,,,,,,,
+meta,city,Seattle,,,,,,,,,,,,,
+meta,country,USA,,,,,,,,,,,,,
+meta,neutral,no,,,,,,,,,,,,,
+meta,attendance,17690,,,,,,,,,,,,,
+meta,score,3-1,,,,,,,,,,,,,
+meta,aggregate,3-3,,,,,,,,,,,,,
+meta,decision,,,,,,,,,,,,,,
+meta,referee,Ismael Cornejo,,,,,,,,,,,,,
+meta,referee_country,SLV,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- TEAMS --- team,side,name,country,coach,coach_country,formation,squad_value,pitch_fill,pitch_number,gk_fill,stat_color,,,,
+team,home,Seattle Sounders,USA,Brian Schmetzer,USA,4-2-3-1,38.6,#54CB7F,#FFFFFF,,#54CB7F,,,,
+team,away,Tigres UANL,MEX,Guido Pizarro,ARG,4-2-3-1,62.3,#16AAF0,#FFFFFF,,#16AAF0,,,,
+,,,,,,,,,,,,,,,
+# --- PLAYERS -- player,side,role,number,name,kit_name,country,id,captain,goalkeeper,on,off,yellow,double yellow,red,value
+player,home,start,24,Stefan Frei,,SUI,19860420,yes,yes,,,,,,0.2
+player,home,start,5,Nouhou Tolo,Nouhou,CMR,19970623,,,,83,,,,3.5
+player,home,start,25,Jackson Ragen,,USA,19980924,,,,,,,,3
+player,home,start,16,Alex Roldán,,SLV,19960728,,,,,,,,3.5
+player,home,start,85,Kalani Kossa-Rienzi,,USA,20020627,,,,71,,,,0.8
+player,home,start,7,Cristian Roldan,,USA,19950603,,,,,,,,3.5
+player,home,start,37,Snyder Brunell,,USA,20070327,,,,46,,,,0.8
+player,home,start,14,Paul Rothrock,,USA,19990109,,,,,87,,,2.8
+player,home,start,11,Albert Rusnák,,SVK,19940707,,,,,,,,3
+player,home,start,9,Jesús Ferreira,,USA,20001224,,,,,,,,4
+player,home,start,13,Jordan Morris,,USA,19941026,,,,,,,,3
+player,home,sub,19,Danny Musovski,,MKD,19951130,,,46,,76,,,2.5
+player,home,sub,17,Paul Arriola,,USA,19950205,,,71,,,,,3
+player,home,sub,31,Hassani Dotson,,USA,19970806,,,83,,,,,3
+player,home,bench,26,Andrew Thomas,,RUS,19980901,,yes,,,,,,0.4
+player,home,bench,33,Cody Baker,,USA,20040107,,,,,,,,0.3
+player,home,bench,35,Antino Lopez,,USA,20020521,,,,,,,,0.3
+player,home,bench,36,Yu Tsukanome,,JPN,20001221,,,,,,,,
+player,home,bench,45,Peter Kingston,,USA,20010714,,,,,,,,0.2
+player,home,bench,50,Max Anchor,,CAN,20040721,,yes,,,,,,0.2
+player,home,bench,90,Sebastian Gomez,,USA,,,,,,,,,
+player,home,bench,95,Osaze De Rosario,,GUY,20010719,,,,,,,,0.8
+player,away,start,1,Nahuel Guzmán,,ARG,19860210,,yes,,,,,,0.3
+player,away,start,27,Jesús Alberto Angulo,,MEX,19980130,,,,83,,,,4.5
+player,away,start,23,Rômulo Zwarg,Rômulo,BRA,20000301,,,,,,,,5
+player,away,start,28,Joaquim Henrique,Joaquim,BRA,19981228,,,,,,,,6
+player,away,start,14,Jesús Garza,,MEX,20000606,,,,,90+3,,,2.5
+player,away,start,5,César Araújo,,URU,20010402,,,,,,,,3.5
+player,away,start,16,Diego Lainez,,MEX,20000609,,,,46,27,,,6.5
+player,away,start,77,Ozziel Herrera,,MEX,20010523,,,,,,,,6
+player,away,start,11,Juan Brunetta,,ARG,19970512,yes,,,,,,,7
+player,away,start,7,Ángel Correa,,ARG,19950309,,,,,,,,9
+player,away,start,17,Rodrigo Aguirre,,URU,19941001,,,,85,,,,2.5
+player,away,sub,4,Juanjo Purata,,MEX,19980109,,,46,,,,,4
+player,away,sub,6,Juan Vigón,,MEX,19910720,,,83,,,,,0.5
+player,away,sub,30,Diego Sánchez,,MEX,20050412,,,85,,90+6,,,0.5
+player,away,bench,2,Francisco Reyes,,MEX,19981004,,,,,,,,0.5
+player,away,bench,10,André-Pierre Gignac,,FRA,19851205,,,,,,,,0.3
+player,away,bench,13,Antonio Carrera,,USA,20040315,,yes,,,,,,0.1
+player,away,bench,19,Iván López,,MEX,19990421,,,,,,,,1.5
+player,away,bench,22,Henrique Simeone,,MEX,20070612,,,,,,,,
+player,away,bench,25,Carlos Felipe Rodríguez,,MEX,19890403,,yes,,,,,,0.1
+player,away,bench,33,Rafael Guerrero,,MEX,20030113,,,,,,,,0.6
+player,away,bench,35,Osvaldo Rodríguez,,MEX,19960910,,,,,,,,1.5
+player,away,bench,99,Isaías Galván,,MEX,20050314,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- GOALS --- goal,minute,side,scorer,type,assist,,,,,,,,,,
+goal,11,home,Albert Rusnák,goal,Cristian Roldan,,,,,,,,,,
+goal,31,away,Joaquim Henrique,goal,Juan Brunetta,,,,,,,,,,
+goal,48,home,Danny Musovski,goal,Jordan Morris,,,,,,,,,,
+goal,82,home,Albert Rusnák,goal,Cristian Roldan,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- MATCH STATS --- stat,name,home,away,,,,,,,,,,,,
+stat,Possession,69,31,,,,,,,,,,,,
+stat,Expected goals (xG),1.80,0.65,,,,,,,,,,,,
+stat,Shots,20,10,,,,,,,,,,,,
+stat,Shots on target,4,6,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- WEATHER --- weather,field,value,,,,,,,,,,,,,
+weather,condition,Drizzle,,,,,,,,,,,,,
+weather,temp_c,5,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- MATCHDAY --- personal,field,value,,,,,,,,,,,,,
+personal,ticket_price,116,,,,,,,,,,,,,
+personal,ticket_currency,USD,,,,,,,,,,,,,
+personal,ticket_price_usd,,,,,,,,,,,,,,
+personal,section,Section 240,,,,,,,,,,,,,
+personal,row,B,,,,,,,,,,,,,
+personal,seat,7,,,,,,,,,,,,,
+personal,seating,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- PHOTOS --- photo,file,caption,,,,,,,,,,,,,
+photo,M061_1.jpg,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- CHAMPIONS --- champion,field,value,,,,,,,,,,,,,
+champion,team,,,,,,,,,,,,,,
+champion,side,,,,,,,,,,,,,,
+champion,title,,,,,,,,,,,,,,
+champion,season,,,,,,,,,,,,,,
+champion,note,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- PENALTIES --- pen,order,side,player,result,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
