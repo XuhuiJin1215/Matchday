@@ -364,6 +364,8 @@ nav.tabs a.on{background:var(--ink);color:var(--paper)}
 .rank-row .track{width:76px;height:6px;background:var(--line-soft);border-radius:999px;overflow:hidden;flex:none}
 .rank-row .track i{display:block;height:100%;background:var(--ink);border-radius:999px}
 .empty{padding:22px 18px;color:var(--muted);font-size:14px}
+.disc-col{flex:none;width:34px;text-align:center;font-family:var(--font-display);font-size:11px;
+  font-weight:700;color:var(--muted);font-variant-numeric:tabular-nums}
 .list-note{margin:0;padding:13px 18px;border-top:1px solid var(--line-soft);
   font-size:12px;color:var(--muted);line-height:1.5}
 
@@ -1264,10 +1266,10 @@ function computeStats(){
   /* match-based: a per-match measurement, so it can be plotted over time.
      Every match-based stat lives under Records or Conditions, so it always
      gets that match's competition logo. */
+  const shapeMatchRows=rows=>rows.map(r=>({key:r.m.id+"|"+r.value,label:`${(r.m.teams.home||{}).name} v ${(r.m.teams.away||{}).name}`,
+    value:r.value,id:r.m.id,date:r.m.date,icon:compMatch[r.m.meta.competition]?compLogo(r.m.id,20):null}));
   const addMatch=(key,title,section,rows,fmt,noun)=>{
-    defs[key]={key,title,section,kind:"match",fmt,noun:noun||"matches",
-      rows:rows.map(r=>({key:r.m.id+"|"+r.value,label:`${(r.m.teams.home||{}).name} v ${(r.m.teams.away||{}).name}`,
-        value:r.value,id:r.m.id,date:r.m.date,icon:compMatch[r.m.meta.competition]?compLogo(r.m.id,20):null}))};
+    defs[key]={key,title,section,kind:"match",fmt,noun:noun||"matches",rows:shapeMatchRows(rows)};
   };
   /* value-based: money figures attached to a team or player in one match */
   const addValue=(key,title,section,rows,noun,dedupNoun)=>{
@@ -1304,17 +1306,9 @@ function computeStats(){
       const v=squadValue(m,sd);
       return v==null?null:{name:t.name,v,id:m.id,date:m.date,icon:teamIcon(t.name)};
     })).filter(Boolean).sort((a,b)=>b.v-a.v),"valuations","teams");
-  addValue("teams-xi-value","Teams by the most expensive starting 11","Teams",
-    played.flatMap(m=>["home","away"].map(sd=>{
-      const t=m.teams[sd]; if(!t) return null;
-      const starters=m.players.filter(p=>p.side===sd&&p.role==="start"&&p.value!=null);
-      if(!starters.length) return null;
-      const v=starters.reduce((s,p)=>s+p.value,0);
-      return {name:t.name,v,id:m.id,date:m.date,icon:teamIcon(t.name)};
-    })).filter(Boolean).sort((a,b)=>b.v-a.v),"valuations","teams");
-  /* Teams by the oldest starting 11: average age of that side's XI, one row
-     per team per match — same shape as a value stat, but in years not euros,
-     and shown with the temperature page's highest/lowest-five treatment. */
+  /* Starting 11 by age: average age of that side's XI, one row per team per
+     match — same shape as a value stat, but in years not euros, and shown
+     with the temperature page's highest/lowest-five treatment. */
   {
     const rows=played.flatMap(m=>["home","away"].map(sd=>{
       const t=m.teams[sd]; if(!t) return null;
@@ -1324,25 +1318,12 @@ function computeStats(){
       return {name:t.name,v:ages.reduce((s,a)=>s+a,0)/ages.length,id:m.id,date:m.date,icon:teamIcon(t.name)};
     })).filter(Boolean).sort((a,b)=>b.v-a.v);
     defs["teams-xi-age"]={
-      key:"teams-xi-age",title:"Teams by the oldest starting 11",section:"Teams",
+      key:"teams-xi-age",title:"Starting 11 by age",section:"Teams",
       kind:"value",noun:"lineups",avgCaption:"years old, on average",
       showLows:true,highLabel:"Oldest",lowLabel:"Youngest",
       fmt:v=>(Math.round(v*10)/10),
       rows:rows.map(r=>({key:r.id+"|"+r.name,label:r.name,value:r.v,id:r.id,date:r.date,icon:r.icon}))
     };
-  }
-  addCount("teams-titles","Teams by titles","Teams",
-    tally(played.filter(m=>m.isDecider).map(m=>m.champion.team)),
-    {noun:"titles",avgUnit:"titles",iconFor:name=>teamIcon(name)});
-  defs["teams-titles"].avgCaption="titles per team";
-  /* Titles per year, spanning every year attended so blank years still show. */
-  {
-    const ys=played.map(m=>m.year).filter(Boolean);
-    const titleYears={};
-    if(ys.length) for(let y=Math.min(...ys);y<=Math.max(...ys);y++) titleYears[y]=0;
-    played.filter(m=>m.isDecider&&m.year).forEach(m=>{titleYears[m.year]=(titleYears[m.year]||0)+1;});
-    defs["teams-titles"].yearCounts=titleYears;
-    defs["teams-titles"].yearChartTitle="Titles won per year";
   }
   addCount("players-appearances","Players by appearances","Personnel",
     tallyPeople(played.flatMap(appearances).map(p=>({name:p.name,id:p.id}))),
@@ -1399,19 +1380,42 @@ function computeStats(){
   addCount("referee","Referees","Personnel",tally(played.map(m=>m.meta.referee)),
     {noun:"referees",avgUnit:"matches",flagFor:name=>refCountry[name]});
 
-  const cardBucket=t=>cardInfo(t).bucket;
   addMatch("attendance","Most Attendance","Match records",
     played.filter(m=>m.attendance).map(m=>({m,value:m.attendance})).sort((a,b)=>b.value-a.value),nf);
   addMatch("goals","Most goals","Match records",
     played.map(m=>({m,value:m.hg+m.ag})).sort((a,b)=>b.value-a.value),v=>String(v));
-  addMatch("goal-difference","Biggest goal differences","Match records",
-    played.map(m=>({m,value:Math.abs(m.hg-m.ag)})).sort((a,b)=>b.value-a.value),v=>String(v));
-  addMatch("yellow-cards","Most yellow cards","Match records",
-    played.map(m=>({m,value:m.cards.filter(c=>cardBucket(c.type)==="yellow").length}))
-      .sort((a,b)=>b.value-a.value),v=>String(v));
-  addMatch("red-cards","Most red cards","Match records",
-    played.map(m=>({m,value:m.cards.filter(c=>cardBucket(c.type)==="red").length}))
-      .sort((a,b)=>b.value-a.value),v=>String(v));
+  defs.goals.variants=[
+    {key:"total",label:"Total goals",rows:defs.goals.rows},
+    {key:"difference",label:"Goal difference",rows:shapeMatchRows(
+      played.map(m=>({m,value:Math.abs(m.hg-m.ag)})).sort((a,b)=>b.value-a.value))}
+  ];
+  /* Worst discipline: yellow=1pt, second yellow (indirect red)=3pts, straight
+     red=4pts, both teams combined — replaces the separate yellow/red stats.
+     Each row also carries the raw counts for the detail page's columns. */
+  {
+    const rows=played.map(m=>{
+      let yellow=0,indirect=0,direct=0;
+      m.cards.forEach(c=>{
+        const t=(c.type||"").toLowerCase();
+        if(/second|2nd|double/.test(t)) indirect++;
+        else if(/red/.test(t)) direct++;
+        else yellow++;
+      });
+      return {m,value:yellow*1+indirect*3+direct*4,yellow,indirect,direct};
+    }).sort((a,b)=>b.value-a.value);
+    defs["worst-discipline"]={
+      key:"worst-discipline",title:"Worst discipline",section:"Match records",
+      kind:"match",noun:"matches",fmt:v=>String(v),showLows:true,
+      listNote:"Points: yellow card = 1, second yellow (indirect red) = 3, straight red = 4 — both teams' cards combined for the match.",
+      rows:rows.map(r=>({
+        key:r.m.id+"|"+r.value,
+        label:`${(r.m.teams.home||{}).name} v ${(r.m.teams.away||{}).name}`,
+        value:r.value,id:r.m.id,date:r.m.date,
+        icon:compMatch[r.m.meta.competition]?compLogo(r.m.id,20):null,
+        yellow:r.yellow,indirect:r.indirect,direct:r.direct
+      }))
+    };
+  }
   addMatch("squad-value","Highest market value","Match records",
     played.map(m=>{
       const hv=squadValue(m,"home"), av=squadValue(m,"away");
@@ -1693,7 +1697,9 @@ function renderStatDetail(key){
   const S=computeStats();
   const def=S.defs[key];
   if(!def){app.innerHTML=`<div class="wrap error"><b>Not found</b>No statistic called ${esc(key)}. <a href="#/stats" style="text-decoration:underline">Back to statistics</a></div>`;return;}
-  const allRows=def.rows;
+  const hasVariants=!!(def.variants&&def.variants.length>1);
+  const activeVariant=hasVariants?(def.variants.find(v=>v.key===STAT_VIEW[def.key])||def.variants[0]):null;
+  const allRows=hasVariants?activeVariant.rows:def.rows;
   if(!allRows.length){
     app.innerHTML=`<div class="wrap"><a class="back" href="#/stats">← Statistics</a>
       <section class="big-claim"><p>${esc(def.title)}</p></section>
@@ -1715,14 +1721,18 @@ function renderStatDetail(key){
   const charts=def.ageBins?vizAgeBins(def)
     :(def.yearCounts?vizPerYear(def,def.yearChartTitle)
     :(def.donut?vizDonut(vdef):(def.kind==="count"?vizHistogram(vdef):vizTimeline(vdef))));
-  const toggle=canToggle?`<div class="seg" role="group" aria-label="List view">
+  const toggle=hasVariants?`<div class="seg" role="group" aria-label="View">
+      ${def.variants.map(v=>`<button class="${v.key===activeVariant.key?"on":""}" onclick="setStatView('${esc(def.key)}','${esc(v.key)}')">
+        ${esc(v.label)} <span class="seg-n num">${v.rows.length}</span></button>`).join("")}
+    </div>`
+    :(canToggle?`<div class="seg" role="group" aria-label="List view">
       <button class="${mode==="best"?"on":""}" onclick="setStatView('${esc(def.key)}','best')">
         Highest per ${esc((def.dedupNoun||"entry").replace(/s$/,""))} <span class="seg-n num">${bestRows.length}</span></button>
       <button class="${mode==="all"?"on":""}" onclick="setStatView('${esc(def.key)}','all')">
         Every ${esc(def.noun)} <span class="seg-n num">${allRows.length}</span></button>
       <button class="${mode==="accumulated"?"on":""}" onclick="setStatView('${esc(def.key)}','accumulated')">
         Accumulated <span class="seg-n num">${accRows.length}</span></button>
-    </div>`:"";
+    </div>`:"");
   /* "12 matches per city" reads better than a bare "across the list". */
   const singular=w=>String(w||"entry").replace(/ies$/,"y").replace(/s$/,"");
   const avgCaption=def.avgCaption
@@ -1732,6 +1742,7 @@ function renderStatDetail(key){
         : (def.kind==="value"
             ? `per ${singular(mode==="all"?def.noun:def.dedupNoun)}`
             : "per match"));
+  const isDiscipline=def.key==="worst-discipline";
 
   app.innerHTML=`<div class="wrap">
     <a class="back" href="#/stats">← Statistics</a>
@@ -1751,11 +1762,16 @@ function renderStatDetail(key){
     <section class="sec"><div class="sec-h"><h2>Full list</h2>${canToggle?`<span class="sec-tally">${mode==="best"?`highest per ${esc((def.dedupNoun||"entry").replace(/s$/,""))}`:`every ${esc(def.noun)}`}</span>`:""}</div>
       <div class="card"><div class="rank">${rows.map((r,i)=>{
         const label=r.id?`<a href="#/m/${esc(r.id)}">${esc(r.label)}</a>`:esc(r.label);
+        const discCols=isDiscipline?`
+          <span class="disc-col" title="Yellow cards">Y ${r.yellow}</span>
+          <span class="disc-col" title="Second yellow (indirect red)">2Y ${r.indirect}</span>
+          <span class="disc-col" title="Straight red">R ${r.direct}</span>`:"";
         return `<div class="rank-row">
           <span class="vb-rank num">${(i>0&&rows[i-1].value===r.value)?"":(i+1)}</span>
           ${r.icon||(r.flagCode?flag(r.flagCode,"lg"):"")}
           <span class="nm">${label}</span>
           ${r.date?`<span class="dt">${fmtDate(r.date)}</span>`:(r.note?`<span class="dt">${esc(r.note)}</span>`:"")}
+          ${discCols}
           <span class="n${r.display?" n-age":""}">${r.display||def.fmt(r.value)}</span>
         </div>`;}).join("")}</div>
       ${def.listNote?`<p class="list-note">${esc(def.listNote)}</p>`:""}</div>
