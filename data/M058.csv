@@ -1,0 +1,118 @@
+,,,,,,,,,,,,,,,
+# --- MATCH --- meta,field,value,,,,,,,,,,,,,
+meta,id,M058,,,,,,,,,,,,,
+meta,status,played,,,,,,,,,,,,,
+meta,competition,FIFA Club World Cup,,,,,,,,,,,,,
+meta,round,Group B - Matchday 3,,,,,,,,,,,,,
+meta,date,2025-06-23,,,,,,,,,,,,,
+meta,kickoff,12:00,,,,,,,,,,,,,
+meta,venue,Lumen Field,,,,,,,,,,,,,
+meta,city,Seattle,,,,,,,,,,,,,
+meta,country,USA,,,,,,,,,,,,,
+meta,neutral,no,,,,,,,,,,,,,
+meta,attendance,50628,,,,,,,,,,,,,
+meta,score,0-2,,,,,,,,,,,,,
+meta,aggregate,,,,,,,,,,,,,,
+meta,decision,,,,,,,,,,,,,,
+meta,referee,Cristián Garay,,,,,,,,,,,,,
+meta,referee_country,CHI,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- TEAMS --- team,side,name,country,coach,coach_country,formation,squad_value,pitch_fill,pitch_number,gk_fill,stat_color,,,,
+team,home,Seattle Sounders,USA,Brian Schmetzer,USA,4-2-3-1,48.1,#3DB17D,#FFFFFF,,#3DB17D,,,,
+team,away,Paris Saint-Germain,FRA,Luis Enrique,ESP,4-3-3,964.5,#EFF1FB,#DB314D,,#344054,,,,
+,,,,,,,,,,,,,,,
+# --- PLAYERS -- player,side,role,number,name,kit_name,country,id,captain,goalkeeper,on,off,yellow,double yellow,red,value
+player,home,start,24,Stefan Frei,,SUI,19860420,yes,yes,,,,,,0.2
+player,home,start,5,Nouhou Tolo,,CMR,19970623,,,,,,,,3.5
+player,home,start,25,Jackson Ragen,,USA,19980924,,,,,,,,3
+player,home,start,15,Jonathan Bell,,JAM,19970826,,,,71,,,,0.3
+player,home,start,16,Alex Roldán,,SLV,19960728,,,,,,,,4
+player,home,start,18,Obed Vargas,,MEX,20050805,,,,87,,,,6
+player,home,start,7,Cristian Roldan,,USA,19950603,,,,,,,,4
+player,home,start,14,Paul Rothrock,,USA,19990109,,,,,,,,1
+player,home,start,11,Albert Rusnák,,SVK,19940707,,,,71,,,,3.5
+player,home,start,77,Ryan Kent,,ENG,19961111,,,,57,,,,2.5
+player,home,start,9,Jesús Ferreira,,USA,20001224,,,,57,,,,4
+player,home,sub,19,Danny Musovski,,USA,19951130,,,57,,,,,0.8
+player,home,sub,85,Kalani Kossa-Rienzi,,USA,20020627,,,57,,,,,0.5
+player,home,sub,75,Danny Leyva,,USA,20030505,,,71,,,,,1.2
+player,home,sub,93,Georgi Minoungou,,CIV,20020725,,,71,,,,,0.8
+player,home,sub,13,Jordan Morris,,USA,19941026,,,87,,,,,4
+player,home,bench,3,Travian Sousa,,USA,20010919,,,,,,,,
+player,home,bench,6,João Paulo,,BRA,19910308,,,,,,,,0.8
+player,home,bench,10,Pedro de la Vega,,ARG,20010207,,,,,,,,4
+player,home,bench,20,Kim Kee-hee,,KOR,19890713,,,,,,,,0.2
+player,home,bench,21,Reed Baker-Whiting,,USA,20050331,,,,,,,,1
+player,home,bench,26,Andrew Thomas,,RUS,19980901,,yes,,,,,,0.2
+player,home,bench,28,Yeimar Gómez,,COL,19920630,,,,,,,,1.8
+player,home,bench,29,Jacob Castro,,USA,19991218,,yes,,,,,,0.1
+player,home,bench,33,Cody Baker,,USA,20040107,,,,,,,,0.5
+player,home,bench,95,Osaze De Rosario,,GUY,20010719,,,,,,,,0.3
+player,away,start,1,Gianluigi Donnarumma,,ITA,19990225,,yes,,,,,,40
+player,away,start,25,Nuno Mendes,,POR,20020619,,,,,,,,70
+player,away,start,51,Willian Pacho,,ECU,20011016,,,,,,,,65
+player,away,start,5,Marquinhos,,BRA,19940514,yes,,,,,,,35
+player,away,start,2,Achraf Hakimi,,MAR,19981104,,,,,,,,80
+player,away,start,8,Fabián Ruiz,Fabián,ESP,19960403,,,,,,,,40
+player,away,start,17,Vitinha,,POR,20000213,,,,,,,,80
+player,away,start,87,João Neves,,POR,20040927,,,,64,44,,,80
+player,away,start,7,Khvicha Kvaratskhelia,,GEO,20010212,,,,64,,,,90
+player,away,start,24,Senny Mayulu,,FRA,20060517,,,,77,,,,15
+player,away,start,14,Désiré Doué,,FRA,20050603,,,,83,,,,90
+player,away,sub,29,Bradley Barcola,,FRA,20020902,,,64,,,,,70
+player,away,sub,33,Warren Zaïre-Emery,,FRA,20060308,,,64,,,,,55
+player,away,sub,9,Gonçalo Ramos,,POR,20010620,,,77,,,,,40
+player,away,sub,49,Ibrahim Mbaye,,FRA,20080124,,,83,,,,,3
+player,away,bench,3,Presnel Kimpembe,,FRA,19950813,,,,,,,,5
+player,away,bench,4,Lucas Beraldo,,BRA,20031124,,,,,,,,25
+player,away,bench,19,Lee Kang-in,,KOR,20010219,,,,,,,,25
+player,away,bench,20,Gabriel Moscardo,,BRA,20050928,,,,,,,,8
+player,away,bench,21,Lucas Hernandez,,FRA,19960214,,,,,,,,25
+player,away,bench,39,Matvey Safonov,,RUS,19990225,,yes,,,,,,20
+player,away,bench,43,Noham Kamara,,FRA,20070122,,,,,,,,0.5
+player,away,bench,80,Arnau Tenas,,ESP,20010530,,yes,,,,,,3
+,,,,,,,,,,,,,,,
+# --- GOALS --- goal,minute,side,scorer,type,assist,,,,,,,,,,
+goal,35,away,Khvicha Kvaratskhelia,goal,Vitinha,,,,,,,,,,
+goal,67,away,Achraf Hakimi,goal,Bradley Barcola,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- MATCH STATS --- stat,name,home,away,,,,,,,,,,,,
+stat,Possession,28,72,,,,,,,,,,,,
+stat,Expected goals (xG),0.61,2.06,,,,,,,,,,,,
+stat,Shots,7,15,,,,,,,,,,,,
+stat,Shots on target,0,7,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- WEATHER --- weather,field,value,,,,,,,,,,,,,
+weather,condition,Overcast,,,,,,,,,,,,,
+weather,temp_c,19,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- MATCHDAY --- personal,field,value,,,,,,,,,,,,,
+personal,ticket_price,179,,,,,,,,,,,,,
+personal,ticket_currency,USD,,,,,,,,,,,,,
+personal,ticket_price_usd,,,,,,,,,,,,,,
+personal,section,Section 310,,,,,,,,,,,,,
+personal,row,J,,,,,,,,,,,,,
+personal,seat,5,,,,,,,,,,,,,
+personal,seating,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- PHOTOS --- photo,file,caption,,,,,,,,,,,,,
+photo,M058_1.jpg,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- CHAMPIONS --- champion,field,value,,,,,,,,,,,,,
+champion,team,,,,,,,,,,,,,,
+champion,side,,,,,,,,,,,,,,
+champion,title,,,,,,,,,,,,,,
+champion,season,,,,,,,,,,,,,,
+champion,note,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- PENALTIES --- pen,order,side,player,result,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
