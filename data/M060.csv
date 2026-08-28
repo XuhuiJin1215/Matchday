@@ -1,0 +1,115 @@
+,,,,,,,,,,,,,,,
+# --- MATCH --- meta,field,value,,,,,,,,,,,,,
+meta,id,M060,,,,,,,,,,,,,
+meta,status,played,,,,,,,,,,,,,
+meta,competition,Leagues Cup,,,,,,,,,,,,,
+meta,round,Final,,,,,,,,,,,,,
+meta,date,2025-08-31,,,,,,,,,,,,,
+meta,kickoff,17:00,,,,,,,,,,,,,
+meta,venue,Lumen Field,,,,,,,,,,,,,
+meta,city,Seattle,,,,,,,,,,,,,
+meta,country,USA,,,,,,,,,,,,,
+meta,neutral,no,,,,,,,,,,,,,
+meta,attendance,69314,,,,,,,,,,,,,
+meta,score,3-0,,,,,,,,,,,,,
+meta,aggregate,,,,,,,,,,,,,,
+meta,decision,,,,,,,,,,,,,,
+meta,referee,Juan Gabriel Calderón,,,,,,,,,,,,,
+meta,referee_country,CRC,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- TEAMS --- team,side,name,country,coach,coach_country,formation,squad_value,pitch_fill,pitch_number,gk_fill,stat_color,,,,
+team,home,Seattle Sounders,USA,Brian Schmetzer,USA,4-2-3-1,36.5,#3DB17D,#FFFFFF,,#3DB17D,,,,
+team,away,Inter Miami,USA,Javier Mascherano,ARG,4-3-3,80.5,#F390A2,#0A0E0C,,#F390A2,,,,
+,,,,,,,,,,,,,,,
+# --- PLAYERS -- player,side,role,number,name,kit_name,country,id,captain,goalkeeper,on,off,yellow,double yellow,red,value
+player,home,start,26,Andrew Thomas,,RUS,19980901,,yes,,,,,,0.2
+player,home,start,21,Reed Baker-Whiting,,USA,20050331,,,,,,,,1
+player,home,start,25,Jackson Ragen,,USA,19980924,,,,,,,,3
+player,home,start,28,Yeimar Gómez,,COL,19920630,,,,,,,,1.8
+player,home,start,16,Alex Roldán,,SLV,19960728,,,,,,,,4
+player,home,start,7,Cristian Roldan,,USA,19950603,yes,,,,,,,4
+player,home,start,18,Obed Vargas,,MEX,20050805,,,,,,,,6
+player,home,start,10,Pedro de la Vega,de la Vega,ARG,20010207,,,,61,,,,4
+player,home,start,9,Jesús Ferreira,,USA,20001224,,,,78,,,,4
+player,home,start,14,Paul Rothrock,,USA,19990109,,,,90+1,,,,1
+player,home,start,95,Osaze De Rosario,De Rosario,GUY,20010719,,,,61,,,,0.3
+player,home,sub,75,Danny Leyva,,USA,20030505,,,61,,,,,1.2
+player,home,sub,85,Kalani Kossa-Rienzi,,USA,20020627,,,61,,,,,0.5
+player,home,sub,93,Georgi Minoungou,,CIV,20020725,,,78,,,,,0.8
+player,home,sub,20,Kim Kee-hee,,KOR,19890713,,,90+1,,,,,0.2
+player,home,bench,3,Travian Sousa,,USA,20010919,,,,,,,,
+player,home,bench,11,Albert Rusnák,,SVK,19940707,,,,,,,,3.5
+player,home,bench,15,Jonathan Bell,,JAM,19970826,,,,,,,,0.3
+player,home,bench,24,Stefan Frei,,SUI,19860420,,yes,,,,,,0.2
+player,home,bench,29,Jacob Castro,,USA,19991218,,yes,,,,,,0.1
+player,home,bench,33,Cody Baker,,USA,20040107,,,,,,,,0.5
+player,home,bench,37,Snyder Brunell,,USA,20070327,,,,,,,,
+player,away,start,19,Oscar Ustari,,ARG,19860703,,yes,,,,,,0.1
+player,away,start,18,Jordi Alba,,ESP,19890321,,,,,,,,1.5
+player,away,start,37,Maximiliano Falcón,,URU,19970501,,,,,,,,1.5
+player,away,start,2,Gonzalo Luján,,ARG,20010427,,,,57,,,,2
+player,away,start,17,Ian Fray,,USA,20020831,,,,72,,,,0.5
+player,away,start,7,Rodrigo De Paul,De Paul,ARG,19940524,,,,,,,,25
+player,away,start,5,Sergio Busquets,,ESP,19880716,,,,,69,,,1.5
+player,away,start,42,Yannick Bright,,ITA,20010903,,,,85,82,,,1.5
+player,away,start,21,Tadeo Allende,,ARG,19990220,,,,,,,,2
+player,away,start,9,Luis Suárez,,URU,19870124,,,,,,,,1.8
+player,away,start,10,Lionel Messi,,ARG,19870624,yes,,,,,,,18
+player,away,sub,8,Telasco Segovia,,VEN,20030402,,,57,,,,,2.5
+player,away,sub,14,Fafà Picault,,HAI,19910223,,,72,,,,,0.4
+player,away,sub,30,Benjamin Cremaschi,,USA,20050302,,,85,,,,,5
+player,away,bench,6,Tomás Avilés,,ARG,20040203,,,,,,,,6
+player,away,bench,11,Baltasar Rodríguez,,ARG,20030709,,,,,,,,4.5
+player,away,bench,15,Ryan Sailor,,USA,19981127,,,,,,,,0.2
+player,away,bench,25,William Yarbrough,,USA,19890320,,yes,,,,,,0.1
+player,away,bench,32,Noah Allen,,GRE,20040428,,,,,,,,1.5
+player,away,bench,34,Rocco Ríos Novo,,ARG,20020604,,yes,,,,,,0.3
+player,away,bench,41,David Ruiz,,HON,20040208,,,,,,,,2.5
+player,away,bench,57,Marcelo Weigandt,,ARG,20000111,,,,,,,,2
+player,away,bench,81,Santiago Morales,,USA,20070209,,,,,,,,0.1
+,,,,,,,,,,,,,,,
+# --- GOALS --- goal,minute,side,scorer,type,assist,,,,,,,,,,
+goal,26,home,Osaze De Rosario,goal,Alex Roldán,,,,,,,,,,
+goal,84,home,Alex Roldán,penalty,,,,,,,,,,,
+goal,89,home,Paul Rothrock,goal,Alex Roldán,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- MATCH STATS --- stat,name,home,away,,,,,,,,,,,,
+stat,Possession,32,68,,,,,,,,,,,,
+stat,Expected goals (xG),,,,,,,,,,,,,,
+stat,Shots,11,9,,,,,,,,,,,,
+stat,Shots on target,6,0,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- WEATHER --- weather,field,value,,,,,,,,,,,,,
+weather,condition,Clear,,,,,,,,,,,,,
+weather,temp_c,23,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- MATCHDAY --- personal,field,value,,,,,,,,,,,,,
+personal,ticket_price,217,,,,,,,,,,,,,
+personal,ticket_currency,USD,,,,,,,,,,,,,
+personal,ticket_price_usd,,,,,,,,,,,,,,
+personal,section,Section 234,,,,,,,,,,,,,
+personal,row,F,,,,,,,,,,,,,
+personal,seat,5,,,,,,,,,,,,,
+personal,seating,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- PHOTOS --- photo,file,caption,,,,,,,,,,,,,
+photo,M060_1.jpg,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- CHAMPIONS --- champion,field,value,,,,,,,,,,,,,
+champion,team,Seattle Sounders,,,,,,,,,,,,,
+champion,side,home,,,,,,,,,,,,,
+champion,title,Leagues Cup,,,,,,,,,,,,,
+champion,season,2025,,,,,,,,,,,,,
+champion,note,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- PENALTIES --- pen,order,side,player,result,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
