@@ -1,0 +1,121 @@
+,,,,,,,,,,,,,,,
+# --- MATCH --- meta,field,value,,,,,,,,,,,,,
+meta,id,M057,,,,,,,,,,,,,
+meta,status,played,,,,,,,,,,,,,
+meta,competition,FIFA Club World Cup,,,,,,,,,,,,,
+meta,round,Group E - Matchday 2,,,,,,,,,,,,,
+meta,date,2025-06-21,,,,,,,,,,,,,
+meta,kickoff,12:00,,,,,,,,,,,,,
+meta,venue,Lumen Field,,,,,,,,,,,,,
+meta,city,Seattle,,,,,,,,,,,,,
+meta,country,USA,,,,,,,,,,,,,
+meta,neutral,no,,,,,,,,,,,,,
+meta,attendance,25090,,,,,,,,,,,,,
+meta,score,2-1,,,,,,,,,,,,,
+meta,aggregate,,,,,,,,,,,,,,
+meta,decision,,,,,,,,,,,,,,
+meta,referee,Dahane Beida,,,,,,,,,,,,,
+meta,referee_country,MTN,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- TEAMS --- team,side,name,country,coach,coach_country,formation,squad_value,pitch_fill,pitch_number,gk_fill,stat_color,,,,
+team,home,Internazionale,ITA,Cristian Chivu,ROU,3-5-2,474.6,#033181,#14D0FB,,#033181,,,,
+team,away,Urawa Red Diamonds,JPN,Maciej Skorża,POL,4-2-3-1,19.4,#F3F2F6,#1B191C,,#D92427,,,,
+,,,,,,,,,,,,,,,
+# --- PLAYERS -- player,side,role,number,name,kit_name,country,id,captain,goalkeeper,on,off,yellow,double yellow,red,value
+player,home,start,1,Yann Sommer,,SUI,19881217,,yes,,,,,,4
+player,home,start,30,Carlos Augusto,Carlos,BRA,19990107,,,,,,,,26
+player,home,start,6,Stefan de Vrij,,NED,19920205,,,,,,,,5
+player,home,start,36,Matteo Darmian,,ITA,19891202,,,,,,,,2.5
+player,home,start,32,Federico Dimarco,,ITA,19971110,,,,72,,,,50
+player,home,start,59,Nicola Zalewski,,POL,20020123,,,,46,,,,12
+player,home,start,21,Kristjan Asllani,,ALB,20020309,,,,72,,,,13
+player,home,start,23,Nicolò Barella,,ITA,19970207,,,,,,,,75
+player,home,start,11,Luis Henrique,,BRA,20011214,,,,85,,,,25
+player,home,start,70,Sebastiano Esposito,,ITA,20020702,,,,46,,,,8.5
+player,home,start,10,Lautaro Martínez,,ARG,19970822,yes,,,,,,,95
+player,home,sub,22,Henrikh Mkhitaryan,,ARM,19890121,,,46,,,,,4
+player,home,sub,94,Pio Esposito,,ITA,20050628,,,46,,,,,25
+player,home,sub,45,Valentín Carboni,,ARG,20050305,,,72,,,,,12
+player,home,sub,95,Alessandro Bastoni,,ITA,19990413,,,72,,,,,80
+player,home,sub,8,Petar Sučić,,CRO,20031025,,,85,,,,,14
+player,home,bench,12,Raffaele Di Gennaro,,ITA,19931003,,yes,,,,,,0.3
+player,home,bench,13,Josep Martínez,,ESP,19980527,,yes,,,,,,12
+player,home,bench,15,Francesco Acerbi,,ITA,19880210,,,,,,,,3
+player,home,bench,40,Alessandro Calligaris,,ITA,20050307,,yes,,,,,,0.3
+player,home,bench,42,Tomás Palacios,,ARG,20030428,,,,,,,,4
+player,home,bench,48,Gabriele Re Cecconi,,ITA,20060425,,,,,,,,
+player,home,bench,49,Giacomo De Pieri,,ITA,20061229,,,,,,,,1.5
+player,home,bench,52,Thomas Berenbruch,,ITA,20050531,,,,,,,,1
+player,home,bench,58,Matteo Cocchi,,ITA,20070201,,,,,,,,1.5
+player,away,start,1,Shūsaku Nishikawa,,JPN,19860618,,yes,,,61,,,0.2
+player,away,start,88,Yōichi Naganuma,,JPN,19970414,,,,87,,,,0.7
+player,away,start,5,Marius Høibråten,,NOR,19950123,yes,,,,,,,1.3
+player,away,start,3,Danilo Boza,,BRA,19980506,,,,,,,,1.6
+player,away,start,4,Hirokazu Ishihara,,JPN,19990226,,,,,,,,0.9
+player,away,start,11,Samuel Gustafson,,SWE,19950111,,,,87,,,,2.3
+player,away,start,25,Kaito Yasui,,JPN,20000209,,,,,,,,0.7
+player,away,start,13,Ryōma Watanabe,,JPN,19961002,,,,,,,,1.3
+player,away,start,8,Matheus Sávio,,BRA,19970415,,,,79,,,,1.5
+player,away,start,77,Takurō Kaneko,,JPN,19970730,,,,66,,,,1.5
+player,away,start,24,Yūsuke Matsuo,,JPN,19970723,,,,79,,,,0.8
+player,away,sub,14,Takahiro Sekine,,JPN,19950419,,,66,,67,,,0.5
+player,away,sub,6,Taishi Matsumoto,,JPN,19980822,,,79,,,,,0.8
+player,away,sub,12,Thiago Santana,,BRA,19930204,,,79,,80,,,1
+player,away,sub,9,Genki Haraguchi,,JPN,19910509,,,87,,,,,0.4
+player,away,sub,26,Takuya Ogiwara,,JPN,19991123,,,87,,,,,0.9
+player,away,bench,10,Shōya Nakajima,,JPN,19940823,,,,,,,,0.7
+player,away,bench,16,Ayumi Niekawa,,JPN,19940512,,yes,,,,,,0.1
+player,away,bench,17,Hiiro Komori,,JPN,20000806,,,,,,,,0.7
+player,away,bench,18,Toshiki Takahashi,,JPN,19980120,,,,,,,,0.4
+player,away,bench,21,Tomoaki Ōkubo,,JPN,19980723,,,,,,,,0.6
+player,away,bench,28,Kenta Nemoto,,JPN,20021213,,,,,,,,
+player,away,bench,31,Shun Yoshida,,JPN,19961128,,yes,,,,,,0.1
+player,away,bench,35,Rikito Inoue,,JPN,19970309,,,,,,,,0.4
+player,away,bench,39,Junpei Hayakawa,,JPN,20051205,,,,,,,,0.3
+player,away,bench,41,Rio Nitta,,JPN,20030410,,,,,,,,0.2
+,,,,,,,,,,,,,,,
+# --- GOALS --- goal,minute,side,scorer,type,assist,,,,,,,,,,
+goal,11,away,Ryōma Watanabe,goal,Takurō Kaneko,,,,,,,,,,
+goal,78,home,Lautaro Martínez,goal,Nicolò Barella,,,,,,,,,,
+goal,90+2,home,Valentín Carboni,goal,Pio Esposito,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- MATCH STATS --- stat,name,home,away,,,,,,,,,,,,
+stat,Possession,82,18,,,,,,,,,,,,
+stat,Expected goals (xG),2.32,0.57,,,,,,,,,,,,
+stat,Shots,26,5,,,,,,,,,,,,
+stat,Shots on target,4,3,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- WEATHER --- weather,field,value,,,,,,,,,,,,,
+weather,condition,Overcast,,,,,,,,,,,,,
+weather,temp_c,14,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- MATCHDAY --- personal,field,value,,,,,,,,,,,,,
+personal,ticket_price,123,,,,,,,,,,,,,
+personal,ticket_currency,USD,,,,,,,,,,,,,
+personal,ticket_price_usd,,,,,,,,,,,,,,
+personal,section,Section 113,,,,,,,,,,,,,
+personal,row,F,,,,,,,,,,,,,
+personal,seat,16,,,,,,,,,,,,,
+personal,seating,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- PHOTOS --- photo,file,caption,,,,,,,,,,,,,
+photo,M057_1.jpg,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- CHAMPIONS --- champion,field,value,,,,,,,,,,,,,
+champion,team,,,,,,,,,,,,,,
+champion,side,,,,,,,,,,,,,,
+champion,title,,,,,,,,,,,,,,
+champion,season,,,,,,,,,,,,,,
+champion,note,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- PENALTIES --- pen,order,side,player,result,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
