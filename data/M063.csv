@@ -1,0 +1,119 @@
+,,,,,,,,,,,,,,,
+# --- MATCH --- meta,field,value,,,,,,,,,,,,,
+meta,id,M063,,,,,,,,,,,,,
+meta,status,played,,,,,,,,,,,,,
+meta,competition,FIFA World Cup,,,,,,,,,,,,,
+meta,round,Group G - Matchday 3,,,,,,,,,,,,,
+meta,date,2026-06-26,,,,,,,,,,,,,
+meta,kickoff,20:00,,,,,,,,,,,,,
+meta,venue,Lumen Field,,,,,,,,,,,,,
+meta,city,Seattle,,,,,,,,,,,,,
+meta,country,USA,,,,,,,,,,,,,
+meta,neutral,no,,,,,,,,,,,,,
+meta,attendance,66925,,,,,,,,,,,,,
+meta,score,1-1,,,,,,,,,,,,,
+meta,aggregate,,,,,,,,,,,,,,
+meta,decision,,,,,,,,,,,,,,
+meta,referee,Szymon Marciniak,,,,,,,,,,,,,
+meta,referee_country,POL,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- TEAMS --- team,side,name,country,coach,coach_country,formation,squad_value,pitch_fill,pitch_number,gk_fill,stat_color,,,,
+team,home,Egypt,,Hossam Hassan,EGY,4-2-3-1,112.7,#D6222B,#FFFFFF,,#D6222B,,,,
+team,away,IR Iran,,Amir Ghalenoei,IRN,5-4-1,32.1,#EDF2F8,#B22D35,,#5B9E68,,,,
+,,,,,,,,,,,,,,,
+# --- PLAYERS -- player,side,role,number,name,kit_name,country,id,captain,goalkeeper,on,off,yellow,double yellow,red,value
+player,home,start,23,Mostafa Shobeir,,EGY,20000317,,yes,,,,,,1.2
+player,home,start,13,Ahmed Fatouh,,EGY,19980322,,,,,,,,1
+player,home,start,6,Mohamed Abdelmonem,,EGY,19990201,,,,14,,,,2.5
+player,home,start,5,Ramy Rabia,,EGY,19930520,,,,,,,,0.6
+player,home,start,3,Mohamed Hany,,EGY,19960202,,,,,,,,1.5
+player,home,start,21,Mahmoud Saber,,EGY,20010730,,,,46,19,,,1.5
+player,home,start,17,Mohanad Lasheen,,EGY,19960529,,,,,90+2,,,3
+player,home,start,7,Trézéguet,,EGY,19941001,,,,,,,,4.5
+player,home,start,10,Mohamed Salah,,EGY,19920615,yes,,,57,,,,22
+player,home,start,8,Emam Ashour,,EGY,19980220,,,,46,,,,4
+player,home,start,11,Mostafa Ziko,,EGY,19970427,,,,76,,,,1.8
+player,home,sub,2,Yasser Ibrahim,,EGY,19930210,,,14,,41,,,0.3
+player,home,sub,19,Marwan Attia,,EGY,19980801,,,46,,,,,4
+player,home,sub,22,Omar Marmoush,,EGY,19990207,,,46,,,,,50
+player,home,sub,25,Zizo,,EGY,19960110,,,57,,,,,3.5
+player,home,sub,9,Hamza Abdelkarim,,EGY,20080101,,,76,,,,,1.5
+player,home,bench,1,Mohamed El Shenawy,,EGY,19881218,,yes,,,,,,0.5
+player,home,bench,12,Haissem Hassan,,EGY,20020208,,,,,,,,3.5
+player,home,bench,15,Karim Hafez,,EGY,19960312,,,,,,,,0.7
+player,home,bench,16,El Mahdy Soliman,,EGY,19870608,,yes,,,,,,0.2
+player,home,bench,18,Nabil Emad,,EGY,19960406,,,,,,,,1
+player,home,bench,20,Ibrahim Adel,,EGY,20010423,,,,,,,,2.5
+player,home,bench,24,Tarek Alaa,,EGY,20020105,,,,,,,,0.3
+player,home,bench,26,Mohamed Alaa,,EGY,19990901,,yes,,,,,,1.2
+player,away,start,1,Alireza Beiranvand,,IRN,19920921,,yes,,,,,,0.7
+player,away,start,5,Milad Mohammadi,,IRN,19930929,,,,,,,,0.9
+player,away,start,19,Ali Nemati,,IRN,19960207,,,,,43,,,0.6
+player,away,start,4,Shojae Khalilzadeh,,IRN,19890514,,,,,90+4,,,0.1
+player,away,start,13,Hossein Kanaanizadegan,,IRN,19940323,,,,46,18,,,1.6
+player,away,start,23,Ramin Rezaeian,,IRN,19900321,,,,,,,,0.3
+player,away,start,8,Mohammad Mohebi,,IRN,19981220,,,,90+1,,,,2.5
+player,away,start,21,Mohammad Ghorbani,,IRN,20011007,,,,,,,,1.2
+player,away,start,6,Saeid Ezatolahi,,IRN,19961001,,,,,79,,,1.8
+player,away,start,14,Saman Ghoddos,,IRN,19930906,,,,67,,,,1.2
+player,away,start,9,Mehdi Taremi,,IRN,19920718,yes,,,,,,,2
+player,away,sub,2,Saleh Hardani,,IRN,19981226,,,46,,,,,0.8
+player,away,sub,20,Shahriyar Moghanlou,,IRN,19941221,,,67,,,,,0.8
+player,away,sub,7,Alireza Jahanbakhsh,,IRN,19930811,,,90+1,,,,,0.5
+player,away,bench,3,Ehsan Hajsafi,,IRN,19900225,,,,,,,,0.3
+player,away,bench,10,Mehdi Ghayedi,,IRN,19981205,,,,,,,,4.5
+player,away,bench,11,Ali Alipour,,IRN,19951111,,,,,,,,1.7
+player,away,bench,12,Payam Niazmand,,IRN,19950406,,yes,,,,,,0.7
+player,away,bench,15,Rouzbeh Cheshmi,,IRN,19930724,,,,,,,,0.5
+player,away,bench,16,Mahdi Torabi,,IRN,19940910,,,,,,,,1.2
+player,away,bench,17,Arya Yousefi,,IRN,20020422,,,,,,,,1.5
+player,away,bench,18,Amirhossein Hosseinzadeh,,IRN,20001030,,,,,,,,2.2
+player,away,bench,22,Hossein Hosseini,,IRN,19920630,,yes,,,,,,0.5
+player,away,bench,24,Dennis Eckert,,IRN,19970109,,,,,,,,2
+player,away,bench,25,Danial Eiri,,IRN,20031026,,,,,,,,1
+player,away,bench,26,Amirmohammad Razzaghinia,,IRN,20060411,,,,,,,,1.2
+,,,,,,,,,,,,,,,
+# --- GOALS --- goal,minute,side,scorer,type,assist,,,,,,,,,,
+goal,5,home,Mahmoud Saber,goal,Trézéguet,,,,,,,,,,
+goal,14,away,Ramin Rezaeian,goal,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- MATCH STATS --- stat,name,home,away,,,,,,,,,,,,
+stat,Possession,61,39,,,,,,,,,,,,
+stat,Expected goals (xG),0.84,1.97,,,,,,,,,,,,
+stat,Shots,15,13,,,,,,,,,,,,
+stat,Shots on target,3,4,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- WEATHER --- weather,field,value,,,,,,,,,,,,,
+weather,condition,Clear,,,,,,,,,,,,,
+weather,temp_c,17,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- MATCHDAY --- personal,field,value,,,,,,,,,,,,,
+personal,ticket_price,180,,,,,,,,,,,,,
+personal,ticket_currency,USD,,,,,,,,,,,,,
+personal,ticket_price_usd,,,,,,,,,,,,,,
+personal,section,Section 329,,,,,,,,,,,,,
+personal,row,AA,,,,,,,,,,,,,
+personal,seat,15,,,,,,,,,,,,,
+personal,seating,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- PHOTOS --- photo,file,caption,,,,,,,,,,,,,
+photo,M063_1.jpg,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- CHAMPIONS --- champion,field,value,,,,,,,,,,,,,
+champion,team,,,,,,,,,,,,,,
+champion,side,,,,,,,,,,,,,,
+champion,title,,,,,,,,,,,,,,
+champion,season,,,,,,,,,,,,,,
+champion,note,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- PENALTIES --- pen,order,side,player,result,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
