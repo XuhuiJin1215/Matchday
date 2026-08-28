@@ -1,0 +1,118 @@
+,,,,,,,,,,,,,,,
+# --- MATCH --- meta,field,value,,,,,,,,,,,,,
+meta,id,M059,,,,,,,,,,,,,
+meta,status,played,,,,,,,,,,,,,
+meta,competition,FIFA Club World Cup,,,,,,,,,,,,,
+meta,round,Final,,,,,,,,,,,,,
+meta,date,2025-07-13,,,,,,,,,,,,,
+meta,kickoff,15:00,,,,,,,,,,,,,
+meta,venue,MetLife Stadium,,,,,,,,,,,,,
+meta,city,East Rutherford,,,,,,,,,,,,,
+meta,country,USA,,,,,,,,,,,,,
+meta,neutral,no,,,,,,,,,,,,,
+meta,attendance,81118,,,,,,,,,,,,,
+meta,score,3-0,,,,,,,,,,,,,
+meta,aggregate,,,,,,,,,,,,,,
+meta,decision,,,,,,,,,,,,,,
+meta,referee,Alireza Faghani,,,,,,,,,,,,,
+meta,referee_country,AUS,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- TEAMS --- team,side,name,country,coach,coach_country,formation,squad_value,pitch_fill,pitch_number,gk_fill,stat_color,,,,
+team,home,Chelsea,ENG,Enzo Maresca,ITA,4-2-3-1,912.5,#0046AD,#FFFFFF,,#0046AD,,,,
+team,away,Paris Saint-Germain,FRA,Luis Enrique,ESP,4-3-3,964.5,#EFF1FB,#DB314D,,#344054,,,,
+,,,,,,,,,,,,,,,
+# --- PLAYERS -- player,side,role,number,name,kit_name,country,id,captain,goalkeeper,on,off,yellow,double yellow,red,value
+player,home,start,1,Robert Sánchez,,ESP,19971118,,yes,,,,,,20
+player,home,start,3,Marc Cucurella,,ESP,19980722,,,,,,,,35
+player,home,start,6,Levi Colwill,,ENG,20030226,,,,,81,,,55
+player,home,start,23,Trevoh Chalobah,,ENG,19990705,,,,,,,,25
+player,home,start,27,Malo Gusto,,FRA,20030519,,,,,40,,,35
+player,home,start,25,Moisés Caicedo,,ECU,20011102,,,,,36,,,90
+player,home,start,24,Reece James,,ENG,19991208,yes,,,77,,,,30
+player,home,start,7,Pedro Neto,,POR,20000309,,,,77,34,,,50
+player,home,start,8,Enzo Fernández,,ARG,20010117,,,,61,,,,75
+player,home,start,10,Cole Palmer,,ENG,20020506,,,,,,,,120
+player,home,start,20,João Pedro,João Pedro,BRA,20010926,,,,67,,,,50
+player,home,sub,17,Andrey Santos,,BRA,20040503,,,61,,,,,35
+player,home,sub,9,Liam Delap,,ENG,20030208,,,67,,,,,40
+player,home,sub,18,Christopher Nkunku,,FRA,19970120,,,77,,,,,35
+player,home,sub,22,Kiernan Dewsbury-Hall,,ENG,19980906,,,77,,,,,20
+player,home,bench,4,Tosin Adarabioyo,,ENG,19970924,,,,,,,,20
+player,home,bench,12,Filip Jörgensen,,DEN,20020416,,yes,,,,,,18
+player,home,bench,15,Nicolas Jackson,,SEN,20010620,,,,,,,,50
+player,home,bench,19,Mamadou Sarr,,FRA,20050829,,,,,,,,20
+player,home,bench,30,Aarón Anselmino,,ARG,20050429,,,,,,,,8
+player,home,bench,32,Tyrique George,,ENG,20060204,,,,,,,,10
+player,home,bench,34,Josh Acheampong,,ENG,20060505,,,,,,,,8
+player,home,bench,38,Marc Guiu,,ESP,20060104,,,,,,,,8
+player,home,bench,39,Mike Penders,,BEL,20050731,,yes,,,,,,12
+player,home,bench,44,Gabriel Slonina,,USA,20040515,,yes,,,,,,3.5
+player,home,bench,45,Roméo Lavia,,BEL,20040106,,,,,,,,40
+player,away,start,1,Gianluigi Donnarumma,,ITA,19990225,,yes,,,,,,40
+player,away,start,25,Nuno Mendes,,POR,20020619,,,,,90+4,,,70
+player,away,start,4,Lucas Beraldo,,BRA,20031124,,,,,,,,25
+player,away,start,5,Marquinhos,,BRA,19940514,yes,,,,,,,35
+player,away,start,2,Achraf Hakimi,,MAR,19981104,,,,73,,,,80
+player,away,start,8,Fabián Ruiz,Fabián,ESP,19960403,,,,73,,,,40
+player,away,start,17,Vitinha,,POR,20000213,,,,,,,,80
+player,away,start,87,João Neves,,POR,20040927,,,,,,,85,80
+player,away,start,7,Khvicha Kvaratskhelia,,GEO,20010212,,,,58,,,,90
+player,away,start,10,Ousmane Dembélé,,FRA,19970515,,,,,87,,,90
+player,away,start,14,Désiré Doué,,FRA,20050603,,,,73,,,,90
+player,away,sub,29,Bradley Barcola,,FRA,20020902,,,58,,,,,70
+player,away,sub,9,Gonçalo Ramos,,POR,20010620,,,73,,,,,40
+player,away,sub,24,Senny Mayulu,,FRA,20060517,,,73,,,,,15
+player,away,sub,33,Warren Zaïre-Emery,,FRA,20060308,,,73,,,,,55
+player,away,bench,3,Presnel Kimpembe,,FRA,19950813,,,,,,,,5
+player,away,bench,19,Lee Kang-in,,KOR,20010219,,,,,,,,25
+player,away,bench,20,Gabriel Moscardo,,BRA,20050928,,,,,,,,8
+player,away,bench,39,Matvey Safonov,,RUS,19990225,,yes,,,,,,20
+player,away,bench,43,Noham Kamara,,FRA,20070122,,,,,,,,0.5
+player,away,bench,49,Ibrahim Mbaye,,FRA,20080124,,,,,,,,3
+player,away,bench,80,Arnau Tenas,,ESP,20010530,,yes,,,,,,3
+,,,,,,,,,,,,,,,
+# --- GOALS --- goal,minute,side,scorer,type,assist,,,,,,,,,,
+goal,22,home,Cole Palmer,goal,Malo Gusto,,,,,,,,,,
+goal,30,home,Cole Palmer,goal,Levi Colwill,,,,,,,,,,
+goal,43,home,João Pedro,goal,Cole Palmer,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- MATCH STATS --- stat,name,home,away,,,,,,,,,,,,
+stat,Possession,34,66,,,,,,,,,,,,
+stat,Expected goals (xG),2.06,0.53,,,,,,,,,,,,
+stat,Shots,10,8,,,,,,,,,,,,
+stat,Shots on target,5,6,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- WEATHER --- weather,field,value,,,,,,,,,,,,,
+weather,condition,Overcast,,,,,,,,,,,,,
+weather,temp_c,29,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- MATCHDAY --- personal,field,value,,,,,,,,,,,,,
+personal,ticket_price,650,,,,,,,,,,,,,
+personal,ticket_currency,USD,,,,,,,,,,,,,
+personal,ticket_price_usd,,,,,,,,,,,,,,
+personal,section,Section 321,,,,,,,,,,,,,
+personal,row,11,,,,,,,,,,,,,
+personal,seat,9,,,,,,,,,,,,,
+personal,seating,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- PHOTOS --- photo,file,caption,,,,,,,,,,,,,
+photo,M059_1.jpg,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- CHAMPIONS --- champion,field,value,,,,,,,,,,,,,
+champion,team,Chelsea,,,,,,,,,,,,,
+champion,side,home,,,,,,,,,,,,,
+champion,title,FIFA Club World Cup,,,,,,,,,,,,,
+champion,season,2025,,,,,,,,,,,,,
+champion,note,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- PENALTIES --- pen,order,side,player,result,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
