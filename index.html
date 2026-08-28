@@ -1165,7 +1165,7 @@ function renderChampions(){
 
   const cabinet=years.map(y=>{
     const inYear=list.filter(m=>m.year===y);
-    return `<section class="sec"><div class="sec-h"><h2>${y}</h2><span class="sec-tally num">${inYear.length}</span></div>
+    return `<section class="sec"><div class="sec-h"><h2>${y}</h2></div>
       <div class="trophies">${inYear.map(m=>{
         const ch=m.champion;
         return `<a class="trophy-card" href="#/m/${esc(m.id)}">
