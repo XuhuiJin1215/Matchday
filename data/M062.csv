@@ -1,0 +1,120 @@
+,,,,,,,,,,,,,,,
+# --- MATCH --- meta,field,value,,,,,,,,,,,,,
+meta,id,M062,,,,,,,,,,,,,
+meta,status,played,,,,,,,,,,,,,
+meta,competition,FIFA World Cup,,,,,,,,,,,,,
+meta,round,Group B - Matchday 3,,,,,,,,,,,,,
+meta,date,2026-06-24,,,,,,,,,,,,,
+meta,kickoff,12:00,,,,,,,,,,,,,
+meta,venue,Lumen Field,,,,,,,,,,,,,
+meta,city,Seattle,,,,,,,,,,,,,
+meta,country,USA,,,,,,,,,,,,,
+meta,neutral,no,,,,,,,,,,,,,
+meta,attendance,66925,,,,,,,,,,,,,
+meta,score,3-1,,,,,,,,,,,,,
+meta,aggregate,,,,,,,,,,,,,,
+meta,decision,,,,,,,,,,,,,,
+meta,referee,Jesús Valenzuela,,,,,,,,,,,,,
+meta,referee_country,VEN,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- TEAMS --- team,side,name,country,coach,coach_country,formation,squad_value,pitch_fill,pitch_number,gk_fill,stat_color,,,,
+team,home,Bosnia and Herzegovina,,Sergej Barbarez,BIH,4-4-2,121.4,#022A75,#E6F26B,#D361AD,#022A75,,,,
+team,away,Qatar,,Julen Lopetegui,ESP,4-3-3,19.1,#F1F0F7,#9E4756,#D361AD,#9E4756,,,,
+,,,,,,,,,,,,,,,
+# --- PLAYERS -- player,side,role,number,name,kit_name,country,id,captain,goalkeeper,on,off,yellow,double yellow,red,value
+player,home,start,1,Nikola Vasilj,,BIH,19951202,,yes,,,,,,4.5
+player,home,start,5,Sead Kolašinac,,BIH,19930620,,,,,,,,4
+player,home,start,21,Stjepan Radeljić,,BIH,19970905,,,,,,,,2.8
+player,home,start,18,Nikola Katić,,BIH,19961010,,,,63,,,,1.8
+player,home,start,24,Arjan Malić,,BIH,20050828,,,,46,,,,1.8
+player,home,start,19,Kerim Alajbegović,,BIH,20070921,,,,82,,,,22
+player,home,start,13,Ivan Bašić,,BIH,20020430,,,,,,,,1.5
+player,home,start,14,Ivan Šunjić,,BIH,19961009,,,,46,,,,2
+player,home,start,20,Esmir Bajraktarević,,BIH,20050310,,,,,,,,8
+player,home,start,11,Edin Džeko,,BIH,19860317,yes,,,63,,,,1
+player,home,start,10,Ermedin Demirović,,BIH,19980325,,,,,,,,22
+player,home,sub,6,Benjamin Tahirović,,BIH,20030303,,,46,,,,,4.5
+player,home,sub,15,Amar Memić,,BIH,20010120,,,46,,,,,4.5
+player,home,sub,3,Dennis Hadžikadunić,,BIH,19980709,,,63,,,,,1.2
+player,home,sub,26,Ermin Mahmić,,BIH,20050314,,,63,,82,,,5
+player,home,sub,17,Dženis Burnić,,BIH,19980522,,,82,,,,,1.2
+player,home,bench,2,Nihad Mujakić,,BIH,19980415,,,,,,,,1.2
+player,home,bench,7,Amar Dedić,,BIH,20020818,,,,,,,,16
+player,home,bench,8,Armin Gigović,,BIH,20020406,,,,,,,,2.5
+player,home,bench,9,Samed Baždar,,BIH,20040131,,,,,,,,1.5
+player,home,bench,12,Mladen Jurkas,,BIH,20071007,,yes,,,,,,0.7
+player,home,bench,16,Amir Hadžiahmetović,,BIH,19970308,,,,,,,,4
+player,home,bench,22,Martin Zlomislić,,BIH,19980816,,yes,,,,,,2
+player,home,bench,23,Haris Tabaković,,BIH,19940620,,,,,,,,3.5
+player,home,bench,25,Jovo Lukić,,BIH,19981128,,,,,,,,2.2
+player,away,start,1,Mahmud Abunada,,QAT,20000205,,yes,,,,,,0.4
+player,away,start,18,Sultan Al-Brake,,QAT,19960407,,,,,,,,0.3
+player,away,start,4,Issa Laye,,QAT,19971222,,,,,,,,0.2
+player,away,start,16,Boualem Khoukhi,,QAT,19900709,,,,,,,,0.2
+player,away,start,2,Pedro Miguel,Pedro Miguel,QAT,19900806,,,,,,,,0.2
+player,away,start,12,Karim Boudiaf,,QAT,19900916,,,,72,,,,0.2
+player,away,start,20,Ahmed Fathy,,QAT,19930125,,,,79,78,,,0.3
+player,away,start,5,Jassem Gaber,,QAT,20020220,,,,46,,,,0.5
+player,away,start,10,Hassan Al-Haydos,,QAT,19901211,yes,,,55,,,,0.3
+player,away,start,11,Akram Afif,,QAT,19961118,,,,,,,,8
+player,away,start,8,Edmilson Junior,Edmilson,QAT,19940819,,,,79,,,,1.8
+player,away,sub,6,Abdulaziz Hatem,,QAT,19901028,,,46,,,,,0.3
+player,away,sub,17,Ahmed Al-Ganehi,,QAT,20000922,,,55,,,,,0.5
+player,away,sub,19,Almoez Ali,,QAT,19960819,,,72,,,,,2.5
+player,away,sub,7,Ahmed Alaaeldin,,QAT,19930131,,,79,,,,,0.3
+player,away,sub,26,Mohamed Manai,,QAT,20021025,,,79,,,,,0.5
+player,away,bench,3,Lucas Mendes,,QAT,19900703,,,,,,,,0.4
+player,away,bench,9,Mohammed Muntari,,QAT,19931220,,,,,,,,0.2
+player,away,bench,13,Ayoub Al-Oui,,QAT,20050311,,,,,,,,0.4
+player,away,bench,15,Yusuf Abdurisag,,QAT,19990806,,,,,,,,0.3
+player,away,bench,21,Salah Zakaria,,QAT,19990424,,yes,,,,,,0.4
+player,away,bench,22,Meshaal Barsham,,QAT,19980214,,yes,,,,,,0.7
+player,away,bench,24,Tahsin Jamshid,,QAT,20060616,,,,,,,,0.2
+player,away,bench,25,Al-Hashmi Al-Hussain,,QAT,20030815,,,,,,,,0.3
+,,,,,,,,,,,,,,,
+# --- GOALS --- goal,minute,side,scorer,type,assist,,,,,,,,,,
+goal,29,home,Kerim Alajbegović,goal,Ivan Bašić,,,,,,,,,,
+goal,34,home,Mahmud Abunada,own goal,,,,,,,,,,,
+goal,42,away,Hassan Al-Haydos,goal,Edmilson Junior,,,,,,,,,,
+goal,80,home,Ermin Mahmić,goal,Dennis Hadžikadunić,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- MATCH STATS --- stat,name,home,away,,,,,,,,,,,,
+stat,Possession,54,46,,,,,,,,,,,,
+stat,Expected goals (xG),0.68,0.77,,,,,,,,,,,,
+stat,Shots,14,9,,,,,,,,,,,,
+stat,Shots on target,5,3,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- WEATHER --- weather,field,value,,,,,,,,,,,,,
+weather,condition,Clear,,,,,,,,,,,,,
+weather,temp_c,27,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- MATCHDAY --- personal,field,value,,,,,,,,,,,,,
+personal,ticket_price,437,,,,,,,,,,,,,
+personal,ticket_currency,USD,,,,,,,,,,,,,
+personal,ticket_price_usd,,,,,,,,,,,,,,
+personal,section,Section 337,,,,,,,,,,,,,
+personal,row,RR,,,,,,,,,,,,,
+personal,seat,1,,,,,,,,,,,,,
+personal,seating,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- PHOTOS --- photo,file,caption,,,,,,,,,,,,,
+photo,M062_1.jpg,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- CHAMPIONS --- champion,field,value,,,,,,,,,,,,,
+champion,team,,,,,,,,,,,,,,
+champion,side,,,,,,,,,,,,,,
+champion,title,,,,,,,,,,,,,,
+champion,season,,,,,,,,,,,,,,
+champion,note,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- PENALTIES --- pen,order,side,player,result,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
