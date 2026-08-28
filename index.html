@@ -1459,7 +1459,7 @@ function statCard(def){
     return `<div class="rank-row">
       ${r.icon||(r.flagCode?flag(r.flagCode,"lg"):"")}
       <span class="nm">${label}</span>
-      ${r.date?`<span class="dt">${fmtDate(r.date)}</span>`:""}
+      ${r.date?`<span class="dt">${fmtDate(r.date)}</span>`:(r.note?`<span class="dt">${esc(r.note)}</span>`:"")}
       ${def.kind==="count"?`<span class="track"><i style="width:${Math.round(r.value/max*100)}%"></i></span>`:""}
       <span class="n${r.display?" n-age":""}">${r.display||def.fmt(r.value)}</span>
     </div>`;}).join("")}</div>`:`<div class="empty">Nothing recorded yet.</div>`;
@@ -1666,6 +1666,24 @@ function dedupRows(rows){
     seen.add(k); return true;
   });
 }
+/* Sum every occurrence per team/player — same grouping key as dedupRows, so
+   the two always agree on how many distinct entities there are. Not tied to
+   any single match, so these rows carry no date/id — just a running count
+   of how many appearances the total was built from. */
+function accumulateRows(rows){
+  const sums={}, order=[];
+  rows.forEach(r=>{
+    const k=r.dkey||r.label;
+    if(!sums[k]){ sums[k]={key:k,label:r.label,value:0,icon:r.icon,flagCode:r.flagCode,count:0}; order.push(k); }
+    sums[k].value+=r.value;
+    sums[k].count++;
+  });
+  return order.map(k=>{
+    const s=sums[k];
+    s.note=s.count>1?`×${s.count}`:"";
+    return s;
+  }).sort((a,b)=>b.value-a.value);
+}
 function setStatView(key,mode){
   STAT_VIEW[key]=mode;
   renderStatDetail(key);
@@ -1683,10 +1701,13 @@ function renderStatDetail(key){
     window.scrollTo(0,0);return;
   }
   const bestRows=def.dedupable?dedupRows(allRows):allRows;
+  const accRows=def.dedupable?accumulateRows(allRows):allRows;
   const canToggle=def.dedupable&&bestRows.length<allRows.length;
   const mode=canToggle?(STAT_VIEW[def.key]||"best"):"all";
-  const rows=mode==="best"?bestRows:allRows;
-  const vdef={...def,rows};
+  const rows=mode==="accumulated"?accRows:(mode==="best"?bestRows:allRows);
+  /* Accumulated totals aren't tied to one match, so there's no timeline to
+     draw for them — the chart always reflects the highest-per-entity view. */
+  const vdef={...def,rows:mode==="accumulated"?bestRows:rows};
   const vals=rows.map(r=>r.value);
   const total=vals.reduce((a,b)=>a+b,0);
   const avgDenom=def.avgDenominator||vals.length;
@@ -1695,10 +1716,12 @@ function renderStatDetail(key){
     :(def.yearCounts?vizPerYear(def,def.yearChartTitle)
     :(def.donut?vizDonut(vdef):(def.kind==="count"?vizHistogram(vdef):vizTimeline(vdef))));
   const toggle=canToggle?`<div class="seg" role="group" aria-label="List view">
-      <button class="${mode==="all"?"on":""}" onclick="setStatView('${esc(def.key)}','all')">
-        Every ${esc(def.noun)} <span class="seg-n num">${allRows.length}</span></button>
       <button class="${mode==="best"?"on":""}" onclick="setStatView('${esc(def.key)}','best')">
         Highest per ${esc((def.dedupNoun||"entry").replace(/s$/,""))} <span class="seg-n num">${bestRows.length}</span></button>
+      <button class="${mode==="all"?"on":""}" onclick="setStatView('${esc(def.key)}','all')">
+        Every ${esc(def.noun)} <span class="seg-n num">${allRows.length}</span></button>
+      <button class="${mode==="accumulated"?"on":""}" onclick="setStatView('${esc(def.key)}','accumulated')">
+        Accumulated <span class="seg-n num">${accRows.length}</span></button>
     </div>`:"";
   /* "12 matches per city" reads better than a bare "across the list". */
   const singular=w=>String(w||"entry").replace(/ies$/,"y").replace(/s$/,"");
@@ -1707,7 +1730,7 @@ function renderStatDetail(key){
     : (def.kind==="count"
         ? `${def.avgUnit||"matches"} per ${singular(def.noun)}`
         : (def.kind==="value"
-            ? `per ${singular(mode==="best"?def.dedupNoun:def.noun)}`
+            ? `per ${singular(mode==="all"?def.noun:def.dedupNoun)}`
             : "per match"));
 
   app.innerHTML=`<div class="wrap">
@@ -1732,7 +1755,7 @@ function renderStatDetail(key){
           <span class="vb-rank num">${(i>0&&rows[i-1].value===r.value)?"":(i+1)}</span>
           ${r.icon||(r.flagCode?flag(r.flagCode,"lg"):"")}
           <span class="nm">${label}</span>
-          ${r.date?`<span class="dt">${fmtDate(r.date)}</span>`:""}
+          ${r.date?`<span class="dt">${fmtDate(r.date)}</span>`:(r.note?`<span class="dt">${esc(r.note)}</span>`:"")}
           <span class="n${r.display?" n-age":""}">${r.display||def.fmt(r.value)}</span>
         </div>`;}).join("")}</div>
       ${def.listNote?`<p class="list-note">${esc(def.listNote)}</p>`:""}</div>
