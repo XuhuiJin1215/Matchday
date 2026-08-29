@@ -1,0 +1,122 @@
+,,,,,,,,,,,,,,,
+# --- MATCH --- meta,field,value,,,,,,,,,,,,,
+meta,id,M064,,,,,,,,,,,,,
+meta,status,played,,,,,,,,,,,,,
+meta,competition,FIFA World Cup,,,,,,,,,,,,,
+meta,round,Round of 32,,,,,,,,,,,,,
+meta,date,2026-07-01,,,,,,,,,,,,,
+meta,kickoff,13:00,,,,,,,,,,,,,
+meta,venue,Lumen Field,,,,,,,,,,,,,
+meta,city,Seattle,,,,,,,,,,,,,
+meta,country,USA,,,,,,,,,,,,,
+meta,neutral,no,,,,,,,,,,,,,
+meta,attendance,66925,,,,,,,,,,,,,
+meta,score,3-2,,,,,,,,,,,,,
+meta,aggregate,,,,,,,,,,,,,,
+meta,decision,AET,,,,,,,,,,,,,
+meta,referee,Saíd Martínez,,,,,,,,,,,,,
+meta,referee_country,HON,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- TEAMS --- team,side,name,country,coach,coach_country,formation,squad_value,pitch_fill,pitch_number,gk_fill,stat_color,,,,
+team,home,Belgium,,Rudi Garcia,FRA,4-2-3-1,519.5,#9EDBF0,#2C2B31,#12AEE5,#9EDBF0,,,,
+team,away,Senegal,,Pape Thiaw,SEN,4-3-3,474.1,#026C57,#F5CF30,#12AEE5,#026C57,,,,
+,,,,,,,,,,,,,,,
+# --- PLAYERS -- player,side,role,number,name,kit_name,country,id,captain,goalkeeper,on,off,yellow,double yellow,red,value
+player,home,start,1,Thibaut Courtois,,BEL,,,yes,,,,,,15
+player,home,start,5,Maxim De Cuyper,De Cuyper,BEL,,,,,78,,,,22
+player,home,start,3,Arthur Theate,,BEL,,,,,,,,,17
+player,home,start,4,Brandon Mechele,,BEL,,,,,,64,,,2.8
+player,home,start,21,Timothy Castagne,,BEL,,,,,,,,,8
+player,home,start,8,Youri Tielemans,,BEL,,yes,,,,,,,30
+player,home,start,20,Hans Vanaken,,BEL,,,,,63,,,,5
+player,home,start,11,Jérémy Doku,,BEL,,,,,56,,,,75
+player,home,start,7,Kevin De Bruyne,De Bruyne,BEL,,,,,56,,,,8
+player,home,start,10,Leandro Trossard,,BEL,,,,,109,,,,18
+player,home,start,17,Charles De Ketelaere,De Ketelaere,BEL,,,,,46,,,,30
+player,home,sub,9,Romelu Lukaku,,BEL,,,,46,,,,,6
+player,home,sub,14,Dodi Lukébakio,,BEL,,,,56,,,,,15
+player,home,sub,23,Nicolas Raskin,,BEL,,,,56,,,,,12
+player,home,sub,19,Diego Moreira,,BEL,,,,63,,,,,25
+player,home,sub,15,Thomas Meunier,,BEL,,,,78,,,,,1.5
+player,home,sub,24,Amadou Onana,,BEL,,,,109,,,,,45
+player,home,bench,6,Axel Witsel,,BEL,,,,,,,,,1.2
+player,home,bench,12,Senne Lammens,,BEL,,,yes,,,,,,35
+player,home,bench,13,Mike Penders,,BEL,,,yes,,,,,,25
+player,home,bench,16,Koni De Winter,,BEL,,,,,,,,,23
+player,home,bench,18,Joaquin Seys,,BEL,,,,,,,,,20
+player,home,bench,22,Alexis Saelemaekers,,BEL,,,,,,,,,20
+player,home,bench,25,Nathan Ngoy,,BEL,,,,,,,,,25
+player,home,bench,26,Matias Fernandez-Pardo,,BEL,,,,,,,,,35
+player,away,start,23,Mory Diaw,,SEN,,,yes,,,,,,0.9
+player,away,start,14,Ismail Jakobs,,SEN,,,,,93,,,,8
+player,away,start,19,Moussa Niakhaté,,SEN,,,,,,,,,15
+player,away,start,6,Pathé Ciss,,SEN,,,,,,,,,1.8
+player,away,start,15,Krépin Diatta,,SEN,,,,,,,,,6
+player,away,start,26,Pape Gueye,,SEN,,,,,66,,,,40
+player,away,start,5,Idrissa Gueye,,SEN,,yes,,,95,,,,0.5
+player,away,start,21,Habib Diarra,,SEN,,,,,73,,,,35
+player,away,start,10,Sadio Mané,,SEN,,,,,93,,,,6
+player,away,start,18,Ismaïla Sarr,,SEN,,,,,,,,,40
+player,away,start,13,Iliman Ndiaye,,SEN,,,,,73,,,,55
+player,away,sub,8,Lamine Camara,,SEN,,,,66,,67,,,40
+player,away,sub,17,Pape Matar Sarr,,SEN,,,,73,,,,,30
+player,away,sub,20,Ibrahim Mbaye,,SEN,,,,73,,,,,30
+player,away,sub,11,Nicolas Jackson,,SEN,,,,93,,,,,40
+player,away,sub,25,El Hadji Malick Diouf,,SEN,,,,93,,,,,28
+player,away,sub,22,Bara Sapoko Ndiaye,,SEN,,,,95,,,,,4
+player,away,bench,1,Yehvann Diouf,,SEN,,,yes,,,,,,7
+player,away,bench,2,Mamadou Sarr,,SEN,,,,,,,,,22
+player,away,bench,3,Kalidou Koulibaly,,SEN,,,,,,,,,4.5
+player,away,bench,4,Abdoulaye Seck,,SEN,,,,,,,,,0.4
+player,away,bench,7,Assane Diao,,SEN,,,,,,,,,30
+player,away,bench,9,Bamba Dieng,,SEN,,,,,,,,,15
+player,away,bench,12,Cherif Ndiaye,,SEN,,,,,,,,,5
+player,away,bench,24,Antoine Mendy,,SEN,,,,,,,,,10
+,,,,,,,,,,,,,,,
+# --- GOALS --- goal,minute,side,scorer,type,assist,,,,,,,,,,
+goal,24,away,Habib Diarra,goal,Ismaïla Sarr,,,,,,,,,,
+goal,51,away,Ismaïla Sarr,goal,Moussa Niakhaté,,,,,,,,,,
+goal,86,home,Romelu Lukaku,goal,Thomas Meunier,,,,,,,,,,
+goal,89,home,Youri Tielemans,goal,Leandro Trossard,,,,,,,,,,
+goal,120+5,home,Youri Tielemans,penalty,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- MATCH STATS --- stat,name,home,away,,,,,,,,,,,,
+stat,Possession,52,48,,,,,,,,,,,,
+stat,Expected goals (xG),1.74,3.58,,,,,,,,,,,,
+stat,Shots,19,19,,,,,,,,,,,,
+stat,Shots on target,5,5,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- WEATHER --- weather,field,value,,,,,,,,,,,,,
+weather,condition,Overcast,,,,,,,,,,,,,
+weather,temp_c,17,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- MATCHDAY --- personal,field,value,,,,,,,,,,,,,
+personal,ticket_price,515,,,,,,,,,,,,,
+personal,ticket_currency,USD,,,,,,,,,,,,,
+personal,ticket_price_usd,,,,,,,,,,,,,,
+personal,section,Section 131,,,,,,,,,,,,,
+personal,row,P,,,,,,,,,,,,,
+personal,seat,17,,,,,,,,,,,,,
+personal,seating,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- PHOTOS --- photo,file,caption,,,,,,,,,,,,,
+photo,M064_1.jpg,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- CHAMPIONS --- champion,field,value,,,,,,,,,,,,,
+champion,team,,,,,,,,,,,,,,
+champion,side,,,,,,,,,,,,,,
+champion,title,,,,,,,,,,,,,,
+champion,season,,,,,,,,,,,,,,
+champion,note,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- PENALTIES --- pen,order,side,player,result,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
