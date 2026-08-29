@@ -790,12 +790,18 @@ function kitName(p){
 }
 /* Long surnames used to get cut off with an ellipsis. Instead, compress the
    glyphs to fit a fixed width once a name would otherwise run past its
-   neighbours — the whole name stays visible, just narrower. Short names are
-   left at their natural width, which reads better than stretching them out. */
+   neighbours — the whole name stays visible, just narrower. Deciding this by
+   character count alone was wrong: a 10-letter name full of narrow letters
+   (i, l) can render thinner than a shorter, wider one, and forcing it to
+   fill a fixed width then stretches it. Estimate actual rendered width
+   instead, so only names that would genuinely overflow get compressed. */
+const CHAR_W={i:.28,l:.28,j:.28,I:.32,t:.36,f:.36,r:.4,'.':.28,"'":.24,
+  m:.86,w:.84,M:.92,W:1.0};
+const estWidth=s=>{let w=0;for(const ch of s) w+=(CHAR_W[ch]!=null?CHAR_W[ch]:.56); return w;};
 function nameLabel(n){
-  const name=esc(n);
-  const wide=n.length>9;
-  const attr=wide?` textLength="16" lengthAdjust="spacingAndGlyphs"`:"";
+  const name=esc(n), FONT_SIZE=2.9, MAX_WIDTH=16;
+  const natural=estWidth(n)*FONT_SIZE;
+  const attr=natural>MAX_WIDTH?` textLength="${MAX_WIDTH}" lengthAdjust="spacingAndGlyphs"`:"";
   return `<text y="7.1" text-anchor="middle" font-family="Archivo, sans-serif" font-weight="600" font-size="2.9" fill="#F2F5F3" stroke="rgba(0,0,0,.6)" stroke-width="0.85" paint-order="stroke"${attr}>${name}</text>`;
 }
 
