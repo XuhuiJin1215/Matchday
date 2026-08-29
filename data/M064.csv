@@ -22,56 +22,56 @@ team,home,Belgium,,Rudi Garcia,FRA,4-2-3-1,519.5,#9EDBF0,#2C2B31,#12AEE5,#9EDBF0
 team,away,Senegal,,Pape Thiaw,SEN,4-3-3,474.1,#026C57,#F5CF30,#12AEE5,#026C57,,,,
 ,,,,,,,,,,,,,,,
 # --- PLAYERS -- player,side,role,number,name,kit_name,country,id,captain,goalkeeper,on,off,yellow,double yellow,red,value
-player,home,start,1,Thibaut Courtois,,BEL,,,yes,,,,,,15
-player,home,start,5,Maxim De Cuyper,De Cuyper,BEL,,,,,78,,,,22
-player,home,start,3,Arthur Theate,,BEL,,,,,,,,,17
-player,home,start,4,Brandon Mechele,,BEL,,,,,,64,,,2.8
-player,home,start,21,Timothy Castagne,,BEL,,,,,,,,,8
-player,home,start,8,Youri Tielemans,,BEL,,yes,,,,,,,30
-player,home,start,20,Hans Vanaken,,BEL,,,,,63,,,,5
-player,home,start,11,Jérémy Doku,,BEL,,,,,56,,,,75
-player,home,start,7,Kevin De Bruyne,De Bruyne,BEL,,,,,56,,,,8
-player,home,start,10,Leandro Trossard,,BEL,,,,,109,,,,18
-player,home,start,17,Charles De Ketelaere,De Ketelaere,BEL,,,,,46,,,,30
-player,home,sub,9,Romelu Lukaku,,BEL,,,,46,,,,,6
-player,home,sub,14,Dodi Lukébakio,,BEL,,,,56,,,,,15
-player,home,sub,23,Nicolas Raskin,,BEL,,,,56,,,,,12
-player,home,sub,19,Diego Moreira,,BEL,,,,63,,,,,25
-player,home,sub,15,Thomas Meunier,,BEL,,,,78,,,,,1.5
-player,home,sub,24,Amadou Onana,,BEL,,,,109,,,,,45
-player,home,bench,6,Axel Witsel,,BEL,,,,,,,,,1.2
-player,home,bench,12,Senne Lammens,,BEL,,,yes,,,,,,35
-player,home,bench,13,Mike Penders,,BEL,,,yes,,,,,,25
-player,home,bench,16,Koni De Winter,,BEL,,,,,,,,,23
-player,home,bench,18,Joaquin Seys,,BEL,,,,,,,,,20
-player,home,bench,22,Alexis Saelemaekers,,BEL,,,,,,,,,20
-player,home,bench,25,Nathan Ngoy,,BEL,,,,,,,,,25
-player,home,bench,26,Matias Fernandez-Pardo,,BEL,,,,,,,,,35
-player,away,start,23,Mory Diaw,,SEN,,,yes,,,,,,0.9
-player,away,start,14,Ismail Jakobs,,SEN,,,,,93,,,,8
-player,away,start,19,Moussa Niakhaté,,SEN,,,,,,,,,15
-player,away,start,6,Pathé Ciss,,SEN,,,,,,,,,1.8
-player,away,start,15,Krépin Diatta,,SEN,,,,,,,,,6
-player,away,start,26,Pape Gueye,,SEN,,,,,66,,,,40
-player,away,start,5,Idrissa Gueye,,SEN,,yes,,,95,,,,0.5
-player,away,start,21,Habib Diarra,,SEN,,,,,73,,,,35
-player,away,start,10,Sadio Mané,,SEN,,,,,93,,,,6
-player,away,start,18,Ismaïla Sarr,,SEN,,,,,,,,,40
-player,away,start,13,Iliman Ndiaye,,SEN,,,,,73,,,,55
-player,away,sub,8,Lamine Camara,,SEN,,,,66,,67,,,40
-player,away,sub,17,Pape Matar Sarr,,SEN,,,,73,,,,,30
-player,away,sub,20,Ibrahim Mbaye,,SEN,,,,73,,,,,30
-player,away,sub,11,Nicolas Jackson,,SEN,,,,93,,,,,40
-player,away,sub,25,El Hadji Malick Diouf,,SEN,,,,93,,,,,28
-player,away,sub,22,Bara Sapoko Ndiaye,,SEN,,,,95,,,,,4
-player,away,bench,1,Yehvann Diouf,,SEN,,,yes,,,,,,7
-player,away,bench,2,Mamadou Sarr,,SEN,,,,,,,,,22
-player,away,bench,3,Kalidou Koulibaly,,SEN,,,,,,,,,4.5
-player,away,bench,4,Abdoulaye Seck,,SEN,,,,,,,,,0.4
-player,away,bench,7,Assane Diao,,SEN,,,,,,,,,30
-player,away,bench,9,Bamba Dieng,,SEN,,,,,,,,,15
-player,away,bench,12,Cherif Ndiaye,,SEN,,,,,,,,,5
-player,away,bench,24,Antoine Mendy,,SEN,,,,,,,,,10
+player,home,start,1,Thibaut Courtois,,BEL,19920511,,yes,,,,,,15
+player,home,start,5,Maxim De Cuyper,De Cuyper,BEL,20001222,,,,78,,,,22
+player,home,start,3,Arthur Theate,,BEL,20000525,,,,,,,,17
+player,home,start,4,Brandon Mechele,,BEL,19930128,,,,,64,,,2.8
+player,home,start,21,Timothy Castagne,,BEL,19951205,,,,,,,,8
+player,home,start,8,Youri Tielemans,,BEL,19970507,yes,,,,,,,30
+player,home,start,20,Hans Vanaken,,BEL,19920824,,,,63,,,,5
+player,home,start,11,Jérémy Doku,,BEL,20020527,,,,56,,,,75
+player,home,start,7,Kevin De Bruyne,De Bruyne,BEL,19910628,,,,56,,,,8
+player,home,start,10,Leandro Trossard,,BEL,19941204,,,,109,,,,18
+player,home,start,17,Charles De Ketelaere,De Ketelaere,BEL,20010310,,,,46,,,,30
+player,home,sub,9,Romelu Lukaku,,BEL,19930513,,,46,,,,,6
+player,home,sub,14,Dodi Lukébakio,,BEL,19970924,,,56,,,,,15
+player,home,sub,23,Nicolas Raskin,,BEL,20010223,,,56,,,,,12
+player,home,sub,19,Diego Moreira,,BEL,20040806,,,63,,,,,25
+player,home,sub,15,Thomas Meunier,,BEL,19910912,,,78,,,,,1.5
+player,home,sub,24,Amadou Onana,,BEL,20010816,,,109,,,,,45
+player,home,bench,6,Axel Witsel,,BEL,19890112,,,,,,,,1.2
+player,home,bench,12,Senne Lammens,,BEL,20020707,,yes,,,,,,35
+player,home,bench,13,Mike Penders,,BEL,20050731,,yes,,,,,,25
+player,home,bench,16,Koni De Winter,,BEL,20020612,,,,,,,,23
+player,home,bench,18,Joaquin Seys,,BEL,20050328,,,,,,,,20
+player,home,bench,22,Alexis Saelemaekers,,BEL,19990627,,,,,,,,20
+player,home,bench,25,Nathan Ngoy,,BEL,20030610,,,,,,,,25
+player,home,bench,26,Matias Fernandez-Pardo,,BEL,20050203,,,,,,,,35
+player,away,start,23,Mory Diaw,,SEN,19930622,,yes,,,,,,0.9
+player,away,start,14,Ismail Jakobs,,SEN,19990817,,,,93,,,,8
+player,away,start,19,Moussa Niakhaté,,SEN,19960308,,,,,,,,15
+player,away,start,6,Pathé Ciss,,SEN,19940316,,,,,,,,1.8
+player,away,start,15,Krépin Diatta,,SEN,19990225,,,,,,,,6
+player,away,start,26,Pape Gueye,,SEN,19990124,,,,66,,,,40
+player,away,start,5,Idrissa Gueye,,SEN,19890926,yes,,,95,,,,0.5
+player,away,start,21,Habib Diarra,,SEN,20040103,,,,73,,,,35
+player,away,start,10,Sadio Mané,,SEN,19920410,,,,93,,,,6
+player,away,start,18,Ismaïla Sarr,,SEN,19980225,,,,,,,,40
+player,away,start,13,Iliman Ndiaye,,SEN,20000306,,,,73,,,,55
+player,away,sub,8,Lamine Camara,,SEN,20040101,,,66,,67,,,40
+player,away,sub,17,Pape Matar Sarr,,SEN,20020914,,,73,,,,,30
+player,away,sub,20,Ibrahim Mbaye,,SEN,20080124,,,73,,,,,30
+player,away,sub,11,Nicolas Jackson,,SEN,20010620,,,93,,,,,40
+player,away,sub,25,El Hadji Malick Diouf,,SEN,20041229,,,93,,,,,28
+player,away,sub,22,Bara Sapoko Ndiaye,,SEN,20071231,,,95,,,,,4
+player,away,bench,1,Yehvann Diouf,,SEN,19991116,,yes,,,,,,7
+player,away,bench,2,Mamadou Sarr,,SEN,20050829,,,,,,,,22
+player,away,bench,3,Kalidou Koulibaly,,SEN,19910620,,,,,,,,4.5
+player,away,bench,4,Abdoulaye Seck,,SEN,19920604,,,,,,,,0.4
+player,away,bench,7,Assane Diao,,SEN,20050907,,,,,,,,30
+player,away,bench,9,Bamba Dieng,,SEN,20000323,,,,,,,,15
+player,away,bench,12,Cherif Ndiaye,,SEN,19960123,,,,,,,,5
+player,away,bench,24,Antoine Mendy,,SEN,20040527,,,,,,,,10
 ,,,,,,,,,,,,,,,
 # --- GOALS --- goal,minute,side,scorer,type,assist,,,,,,,,,,
 goal,24,away,Habib Diarra,goal,Ismaïla Sarr,,,,,,,,,,
