@@ -1,0 +1,120 @@
+,,,,,,,,,,,,,,,
+# --- MATCH --- meta,field,value,,,,,,,,,,,,,
+meta,id,M066,,,,,,,,,,,,,
+meta,status,played,,,,,,,,,,,,,
+meta,competition,FIFA World Cup,,,,,,,,,,,,,
+meta,round,Final,,,,,,,,,,,,,
+meta,date,2026-07-19,,,,,,,,,,,,,
+meta,kickoff,15:00,,,,,,,,,,,,,
+meta,venue,MetLife Stadium,,,,,,,,,,,,,
+meta,city,East Rutherford,,,,,,,,,,,,,
+meta,country,USA,,,,,,,,,,,,,
+meta,neutral,no,,,,,,,,,,,,,
+meta,attendance,80663,,,,,,,,,,,,,
+meta,score,1-0,,,,,,,,,,,,,
+meta,aggregate,,,,,,,,,,,,,,
+meta,decision,AET,,,,,,,,,,,,,
+meta,referee,Slavko Vinčić,,,,,,,,,,,,,
+meta,referee_country,SVN,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- TEAMS --- team,side,name,country,coach,coach_country,formation,squad_value,pitch_fill,pitch_number,gk_fill,stat_color,,,,
+team,home,Spain,,Luis de la Fuente,ESP,4-2-3-1,1222.8,#F63E3C,#FBBD15,#05B2E0,#F63E3C,,,,
+team,away,Argentina,,Lionel Scaloni,ARG,4-4-2,807.5,#B9E1FA,#333C45,#05B2E0,#B9E1FA,,,,
+,,,,,,,,,,,,,,,
+# --- PLAYERS -- player,side,role,number,name,kit_name,country,id,captain,goalkeeper,on,off,yellow,double yellow,red,value
+player,home,start,23,Unai Simón,,ESP,19970611,,yes,,,,,,22
+player,home,start,24,Marc Cucurella,,ESP,19980722,,,,,,,,50
+player,home,start,14,Aymeric Laporte,,ESP,19940527,,,,99,,,,8
+player,home,start,22,Pau Cubarsí,,ESP,20070122,,,,,,,,80
+player,home,start,12,Pedro Porro,,ESP,19990913,,,,,,,,35
+player,home,start,8,Fabián Ruiz,Fabián,ESP,19960403,,,,62,,,,30
+player,home,start,16,Rodri,,ESP,19960622,yes,,,99,,,,50
+player,home,start,15,Álex Baena,,ESP,20010720,,,,75,,,,40
+player,home,start,10,Dani Olmo,,ESP,19980507,,,,75,,,,60
+player,home,start,19,Lamine Yamal,,ESP,20070713,,,,,,,,200
+player,home,start,21,Mikel Oyarzabal,,ESP,19970421,,,,62,,,,25
+player,home,sub,7,Ferran Torres,,ESP,20000229,,,62,,,,,50
+player,home,sub,20,Pedri,,ESP,20021125,,,62,,,,,150
+player,home,sub,6,Mikel Merino,,ESP,19960622,,,75,,,,,25
+player,home,sub,17,Nico Williams,,ESP,20020712,,,75,,,,,40
+player,home,sub,4,Eric García,,ESP,20010109,,,99,,,,,40
+player,home,sub,18,Martín Zubimendi,,ESP,19990202,,,99,,,,,75
+player,home,bench,1,David Raya,,ESP,19950915,,yes,,,,,,30
+player,home,bench,2,Marc Pubill,,ESP,20030620,,,,,,,,35
+player,home,bench,3,Álex Grimaldo,,ESP,19950920,,,,,,,,20
+player,home,bench,5,Marcos Llorente,,ESP,19950130,,,,,,,,20
+player,home,bench,9,Gavi,,ESP,20040805,,,,,,,,30
+player,home,bench,11,Yéremy Pino,,ESP,20021020,,,,,,,,30
+player,home,bench,13,Joan Garcia,,ESP,20010504,,yes,,,,,,45
+player,home,bench,25,Víctor Muñoz,,ESP,20030713,,,,,,,,30
+player,home,bench,26,Borja Iglesias,,ESP,19930117,,,,,,,,2.8
+player,away,start,23,Emiliano Martínez,,ARG,19920902,,yes,,,,,,12
+player,away,start,3,Nicolás Tagliafico,,ARG,19920831,,,,,,,,4
+player,away,start,6,Lisandro Martínez,,ARG,19980118,,,,44,41,,,40
+player,away,start,13,Cristian Romero,,ARG,19980427,,,,70,90+2,,,45
+player,away,start,4,Gonzalo Montiel,,ARG,19970101,,,,58,,,,4.5
+player,away,start,15,Nicolás González,,ARG,19980406,,,,46,,,,22
+player,away,start,20,Alexis Mac Allister,Mac Allister,ARG,19981224,,,,,111,,,70
+player,away,start,24,Enzo Fernández,,ARG,20010117,,,,,82,90+3,,90
+player,away,start,7,Rodrigo De Paul,De Paul,ARG,19940524,,,,70,,,,14
+player,away,start,9,Julián Alvarez,,ARG,20000131,,,,102,,,,100
+player,away,start,10,Lionel Messi,,ARG,19870624,yes,,,,,,,15
+player,away,sub,19,Nicolás Otamendi,,ARG,19880212,,,44,,,,,1
+player,away,sub,5,Leandro Paredes,,ARG,19940629,,,46,,52,,,5
+player,away,sub,26,Nahuel Molina,,ARG,19980406,,,58,,,,,15
+player,away,sub,17,Giuliano Simeone,,ARG,20021218,,,70,,,,,40
+player,away,sub,25,Facundo Medina,,ARG,19990528,,,70,,,,,18
+player,away,sub,2,Marcos Senesi,,ARG,19970510,,,102,,,,,25
+player,away,bench,1,Juan Musso,,ARG,19940506,,yes,,,,,,3
+player,away,bench,8,Valentín Barco,,ARG,20040723,,,,,,,,40
+player,away,bench,11,Giovani Lo Celso,,ARG,19960409,,,,,,,,8
+player,away,bench,12,Gerónimo Rulli,,ARG,19920520,,yes,,,,,,6
+player,away,bench,14,Exequiel Palacios,,ARG,19981005,,,,,,,,25
+player,away,bench,16,Thiago Almada,,ARG,20010426,,,,,,,,15
+player,away,bench,18,Nico Paz,,ARG,20040908,,,,,,,,80
+player,away,bench,21,José Manuel López,,ARG,20001206,,,,,,,,25
+player,away,bench,22,Lautaro Martínez,,ARG,19970822,,,,,,,,85
+,,,,,,,,,,,,,,,
+# --- GOALS --- goal,minute,side,scorer,type,assist,,,,,,,,,,
+goal,106,home,Ferran Torres,goal,Nico Williams,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- MATCH STATS --- stat,name,home,away,,,,,,,,,,,,
+stat,Possession,65,35,,,,,,,,,,,,
+stat,Expected goals (xG),2.29,0.22,,,,,,,,,,,,
+stat,Shots,20,2,,,,,,,,,,,,
+stat,Shots on target,12,0,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- WEATHER --- weather,field,value,,,,,,,,,,,,,
+weather,condition,Clear,,,,,,,,,,,,,
+weather,temp_c,26,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- MATCHDAY --- personal,field,value,,,,,,,,,,,,,
+personal,ticket_price,8855,,,,,,,,,,,,,
+personal,ticket_currency,USD,,,,,,,,,,,,,
+personal,ticket_price_usd,,,,,,,,,,,,,,
+personal,section,Section 306,,,,,,,,,,,,,
+personal,row,20,,,,,,,,,,,,,
+personal,seat,1,,,,,,,,,,,,,
+personal,seating,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- PHOTOS --- photo,file,caption,,,,,,,,,,,,,
+photo,M066_1.jpg,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- CHAMPIONS --- champion,field,value,,,,,,,,,,,,,
+champion,team,Spain,,,,,,,,,,,,,
+champion,side,home,,,,,,,,,,,,,
+champion,title,FIFA World Cup,,,,,,,,,,,,,
+champion,season,2026,,,,,,,,,,,,,
+champion,note,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- PENALTIES --- pen,order,side,player,result,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
