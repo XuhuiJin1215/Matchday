@@ -1,0 +1,123 @@
+,,,,,,,,,,,,,,,
+# --- MATCH --- meta,field,value,,,,,,,,,,,,,
+meta,id,M065,,,,,,,,,,,,,
+meta,status,played,,,,,,,,,,,,,
+meta,competition,FIFA World Cup,,,,,,,,,,,,,
+meta,round,Round of 16,,,,,,,,,,,,,
+meta,date,2026-07-06,,,,,,,,,,,,,
+meta,kickoff,17:00,,,,,,,,,,,,,
+meta,venue,Lumen Field,,,,,,,,,,,,,
+meta,city,Seattle,,,,,,,,,,,,,
+meta,country,USA,,,,,,,,,,,,,
+meta,neutral,no,,,,,,,,,,,,,
+meta,attendance,66925,,,,,,,,,,,,,
+meta,score,1-4,,,,,,,,,,,,,
+meta,aggregate,,,,,,,,,,,,,,
+meta,decision,,,,,,,,,,,,,,
+meta,referee,Adham Makhadmeh,,,,,,,,,,,,,
+meta,referee_country,JOR,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- TEAMS --- team,side,name,country,coach,coach_country,formation,squad_value,pitch_fill,pitch_number,gk_fill,stat_color,,,,
+team,home,USA,,Mauricio Pochettino,ARG,4-3-3,382.2,#151A2B,#C7CCDE,,#151A2B,,,,
+team,away,Belgium,,Rudi Garcia,FRA,4-2-3-1,547.5,#9EDBF0,#2C2B31,,#9EDBF0,,,,
+,,,,,,,,,,,,,,,
+# --- PLAYERS -- player,side,role,number,name,kit_name,country,id,captain,goalkeeper,on,off,yellow,double yellow,red,value
+player,home,start,24,Matt Freese,,USA,19980902,,yes,,,,,,2
+player,home,start,5,Antonee Robinson,,USA,19970808,,,,90+2,,,,22
+player,home,start,13,Tim Ream,,USA,19871005,yes,,,,,,,0.2
+player,home,start,3,Chris Richards,,USA,20000328,,,,,,,,28
+player,home,start,16,Alex Freeman,,USA,20040809,,,,,,,,3.5
+player,home,start,17,Malik Tillman,,USA,20020528,,,,,69,,,30
+player,home,start,4,Tyler Adams,,USA,19990214,,,,72,,,,25
+player,home,start,8,Weston McKennie,,USA,19980828,,,,,35,,,30
+player,home,start,10,Christian Pulisic,,USA,19980918,,,,59,,,,40
+player,home,start,20,Folarin Balogun,,USA,20010703,,,,90+2,,,,40
+player,home,start,2,Sergiño Dest,,USA,20001103,,,,46,,,,18
+player,home,sub,7,Giovanni Reyna,,USA,20021113,,,46,,,,,4
+player,home,sub,14,Sebastian Berhalter,,USA,20010510,,,59,,,,,8
+player,home,sub,9,Ricardo Pepi,,USA,20030109,,,72,,,,,30
+player,home,sub,18,Max Arfsten,,USA,20010419,,,90+2,,,,,5
+player,home,sub,19,Haji Wright,,USA,19980327,,,90+2,,,,,16
+player,home,bench,1,Matt Turner,,USA,19940624,,yes,,,,,,2.5
+player,home,bench,6,Auston Trusty,,USA,19980812,,,,,,,,6
+player,home,bench,11,Brenden Aaronson,,USA,20001022,,,,,,,,22
+player,home,bench,12,Miles Robinson,,USA,19970314,,,,,,,,3.5
+player,home,bench,21,Timothy Weah,,USA,20000222,,,,,,,,20
+player,home,bench,22,Mark McKenzie,,USA,19990225,,,,,,,,7
+player,home,bench,23,Joe Scally,,USA,20021231,,,,,,,,7
+player,home,bench,25,Chris Brady,,USA,20040303,,yes,,,,,,2.5
+player,home,bench,26,Alejandro Zendejas,,USA,19980207,,,,,,,,10
+player,away,start,1,Thibaut Courtois,,BEL,19920511,,yes,,,,,,15
+player,away,start,5,Maxim De Cuyper,De Cuyper,BEL,20001222,,,,,,,,22
+player,away,start,4,Brandon Mechele,,BEL,19930128,,,,,,,,2.8
+player,away,start,25,Nathan Ngoy,,BEL,20030610,,,,,,,,25
+player,away,start,21,Timothy Castagne,,BEL,19951205,,,,,,,,8
+player,away,start,23,Nicolas Raskin,,BEL,20010223,,,,89,,,,12
+player,away,start,24,Amadou Onana,,BEL,20010816,,,,21,,,,45
+player,away,start,10,Leandro Trossard,,BEL,19941204,,,,89,,,,18
+player,away,start,8,Youri Tielemans,,BEL,19970507,yes,,,,,,,30
+player,away,start,14,Dodi Lukébakio,,BEL,19970924,,,,67,,,,15
+player,away,start,17,Charles De Ketelaere,De Ketelaere,BEL,20010310,,,,67,,,,30
+player,away,sub,20,Hans Vanaken,,BEL,19920824,,,21,,,,,5
+player,away,sub,9,Romelu Lukaku,,BEL,19930513,,,67,,,,,6
+player,away,sub,11,Jérémy Doku,,BEL,20020527,,,67,,,,,75
+player,away,sub,6,Axel Witsel,,BEL,19890112,,,89,,,,,1.2
+player,away,sub,22,Alexis Saelemaekers,,BEL,19990627,,,89,,,,,20
+player,away,bench,2,Zeno Debast,,BEL,20031024,,,,,,,,28
+player,away,bench,3,Arthur Theate,,BEL,20000525,,,,,,,,17
+player,away,bench,7,Kevin De Bruyne,,BEL,19910628,,,,,,,,8
+player,away,bench,12,Senne Lammens,,BEL,20020707,,yes,,,,,,35
+player,away,bench,13,Mike Penders,,BEL,20050731,,yes,,,,,,25
+player,away,bench,15,Thomas Meunier,,BEL,19910912,,,,,,,,1.5
+player,away,bench,16,Koni De Winter,,BEL,20020612,,,,,,,,23
+player,away,bench,18,Joaquin Seys,,BEL,20050328,,,,,,,,20
+player,away,bench,19,Diego Moreira,,BEL,20040806,,,,,,,,25
+player,away,bench,26,Matias Fernandez-Pardo,,BEL,20050203,,,,,,,,35
+,,,,,,,,,,,,,,,
+# --- GOALS --- goal,minute,side,scorer,type,assist,,,,,,,,,,
+goal,9,away,Charles De Ketelaere,goal,Nicolas Raskin,,,,,,,,,,
+goal,31,home,Malik Tillman,goal,,,,,,,,,,,
+goal,33,away,Charles De Ketelaere,goal,Leandro Trossard,,,,,,,,,,
+goal,57,away,Hans Vanaken,goal,Charles De Ketelaere,,,,,,,,,,
+goal,90+3,away,Romelu Lukaku,goal,Hans Vanaken,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- MATCH STATS --- stat,name,home,away,,,,,,,,,,,,
+stat,Possession,56,44,,,,,,,,,,,,
+stat,Expected goals (xG),0.63,2.01,,,,,,,,,,,,
+stat,Shots,7,15,,,,,,,,,,,,
+stat,Shots on target,2,7,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- WEATHER --- weather,field,value,,,,,,,,,,,,,
+weather,condition,Clear,,,,,,,,,,,,,
+weather,temp_c,27,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- MATCHDAY --- personal,field,value,,,,,,,,,,,,,
+personal,ticket_price,562,,,,,,,,,,,,,
+personal,ticket_currency,USD,,,,,,,,,,,,,
+personal,ticket_price_usd,,,,,,,,,,,,,,
+personal,section,Section 343,,,,,,,,,,,,,
+personal,row,U,,,,,,,,,,,,,
+personal,seat,23,,,,,,,,,,,,,
+personal,seating,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- PHOTOS --- photo,file,caption,,,,,,,,,,,,,
+photo,M065_1.jpg,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- CHAMPIONS --- champion,field,value,,,,,,,,,,,,,
+champion,team,,,,,,,,,,,,,,
+champion,side,,,,,,,,,,,,,,
+champion,title,,,,,,,,,,,,,,
+champion,season,,,,,,,,,,,,,,
+champion,note,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# --- PENALTIES --- pen,order,side,player,result,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
